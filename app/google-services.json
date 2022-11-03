@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "112294203415",
+    "project_id": "skillup-a7c6c",
+    "storage_bucket": "skillup-a7c6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:112294203415:android:bceb996ccc761f02d08c52",
+        "android_client_info": {
+          "package_name": "com.example.skillup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "112294203415-cqv93f89iu3vp8e249fnndtg0vo4ntuk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCflxVfZ_87OSG2w9pjU6LuWOOhMCGYIY8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "112294203415-cqv93f89iu3vp8e249fnndtg0vo4ntuk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
