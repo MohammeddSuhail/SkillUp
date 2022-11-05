@@ -19,7 +19,7 @@
             android:layout_marginLeft="17.5dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/mulish_bold"
-            android:text="Operating System for Placements"
+            android:text="Computer Networks for Placements"
             android:textColor="#FFF"
             android:textSize="23sp"
             android:textStyle="bold"
@@ -48,7 +48,7 @@
             android:layout_gravity="center"
             >
             <androidx.cardview.widget.CardView
-                android:id="@+id/os_intro_cardview"
+                android:id="@+id/cn_osi_cardview"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="1dp"
@@ -72,7 +72,7 @@
 
 
                     <ImageView
-                        android:id="@+id/os1imageView2"
+                        android:id="@+id/cn1imageView2"
                         android:layout_width="50dp"
                         android:layout_height="90dp"
                         android:layout_marginStart="8dp"
@@ -81,28 +81,28 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/os_intro_logo" />
+                        app:srcCompat="@drawable/cn_osi_logo" />
 
                     <TextView
-                        android:id="@+id/os1textView2"
+                        android:id="@+id/cn1textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mulish_bold"
                         android:gravity="center"
-                        android:text="Introduction\nto OS"
+                        android:text="Introduction\nand OSI"
                         android:textColor="#FFF"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/os1imageView2" />
+                        app:layout_constraintTop_toBottomOf="@+id/cn1imageView2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/os_process_cardview"
+                android:id="@+id/cn_net_cardview"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="8dp"
@@ -126,7 +126,7 @@
 
 
                     <ImageView
-                        android:id="@+id/os2imageView2"
+                        android:id="@+id/cn2imageView2"
                         android:layout_width="50dp"
                         android:layout_height="90dp"
                         android:layout_marginStart="8dp"
@@ -135,21 +135,21 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/os_process_logo" />
+                        app:srcCompat="@drawable/cn_net_logo" />
 
                     <TextView
-                        android:id="@+id/os2textView2"
+                        android:id="@+id/cn2textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mulish_bold"
                         android:gravity="center"
-                        android:text="Processes\nand Threads"
+                        android:text="Network\nLayer"
                         android:textColor="#FFF"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/os2imageView2" />
+                        app:layout_constraintTop_toBottomOf="@+id/cn2imageView2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -168,7 +168,7 @@
             android:layout_gravity="center"
             >
             <androidx.cardview.widget.CardView
-                android:id="@+id/os_schedule_cardview"
+                android:id="@+id/cn_trans_cardview"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="1dp"
@@ -192,7 +192,7 @@
 
 
                     <ImageView
-                        android:id="@+id/os3imageView2"
+                        android:id="@+id/cn3imageView2"
                         android:layout_width="50dp"
                         android:layout_height="90dp"
                         android:layout_marginStart="8dp"
@@ -201,28 +201,28 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/os_schedule_logo" />
+                        app:srcCompat="@drawable/cn_transport_logo" />
 
                     <TextView
-                        android:id="@+id/os3textView2"
+                        android:id="@+id/cn3textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mulish_bold"
                         android:gravity="center"
-                        android:text="Process\nScheduling"
+                        android:text="Transport\nLayer"
                         android:textColor="#FFF"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/os3imageView2" />
+                        app:layout_constraintTop_toBottomOf="@+id/cn3imageView2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/os_sync_cardview"
+                android:id="@+id/cn_appn_cardview"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="8dp"
@@ -246,7 +246,7 @@
 
 
                     <ImageView
-                        android:id="@+id/os4imageView2"
+                        android:id="@+id/cn4imageView2"
                         android:layout_width="50dp"
                         android:layout_height="90dp"
                         android:layout_marginStart="8dp"
@@ -255,21 +255,21 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/os_sync_logo" />
+                        app:srcCompat="@drawable/cn_appn_logo" />
 
                     <TextView
-                        android:id="@+id/os4textView2"
+                        android:id="@+id/cn4textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mulish_bold"
                         android:gravity="center"
-                        android:text="Process\nSync"
+                        android:text="Application\nLayer"
                         android:textColor="#FFF"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/os4imageView2" />
+                        app:layout_constraintTop_toBottomOf="@+id/cn4imageView2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -282,7 +282,7 @@
             android:layout_gravity="center"
             >
             <androidx.cardview.widget.CardView
-                android:id="@+id/os_mem_cardview"
+                android:id="@+id/cn_hw_cardview"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="1dp"
@@ -306,7 +306,7 @@
 
 
                     <ImageView
-                        android:id="@+id/os5imageView2"
+                        android:id="@+id/cn5imageView2"
                         android:layout_width="50dp"
                         android:layout_height="90dp"
                         android:layout_marginStart="8dp"
@@ -315,28 +315,28 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/os_memory_logo" />
+                        app:srcCompat="@drawable/cn_hard_logo" />
 
                     <TextView
-                        android:id="@+id/os5textView2"
+                        android:id="@+id/cn5textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mulish_bold"
                         android:gravity="center"
-                        android:text="Memory\nManagement"
+                        android:text="Networking\nHardware"
                         android:textColor="#FFF"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/os5imageView2" />
+                        app:layout_constraintTop_toBottomOf="@+id/cn5imageView2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/os_page_cardview"
+                android:id="@+id/cn_imp_cardview"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="8dp"
@@ -360,121 +360,7 @@
 
 
                     <ImageView
-                        android:id="@+id/os6imageView2"
-                        android:layout_width="50dp"
-                        android:layout_height="90dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/os_page_logo" />
-
-                    <TextView
-                        android:id="@+id/os6textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mulish_bold"
-                        android:gravity="center"
-                        android:text="Page\nReplacement"
-                        android:textColor="#FFF"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/os6imageView2" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            >
-            <androidx.cardview.widget.CardView
-                android:id="@+id/os_cmd_cardview"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="1dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#24282b"
-                app:cardElevation="10dp"
-                app:contentPadding="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.6">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <ImageView
-                        android:id="@+id/os7imageView2"
-                        android:layout_width="50dp"
-                        android:layout_height="90dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/os_command_logo" />
-
-                    <TextView
-                        android:id="@+id/os7textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/mulish_bold"
-                        android:gravity="center"
-                        android:text="Unix\nCommands"
-                        android:textColor="#FFF"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/os7imageView2" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/os_imp_cardview"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="8dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                app:cardCornerRadius="16dp"
-                app:cardBackgroundColor="#24282b"
-                app:cardElevation="10dp"
-                app:contentPadding="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.6">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <ImageView
-                        android:id="@+id/os8imageView2"
+                        android:id="@+id/cn6imageView2"
                         android:layout_width="50dp"
                         android:layout_height="90dp"
                         android:layout_marginStart="8dp"
@@ -486,7 +372,7 @@
                         app:srcCompat="@drawable/imp_logo" />
 
                     <TextView
-                        android:id="@+id/os8textView2"
+                        android:id="@+id/cn6textView2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mulish_bold"
@@ -497,15 +383,14 @@
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/os8imageView2" />
+                        app:layout_constraintTop_toBottomOf="@+id/cn6imageView2" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.cardview.widget.CardView>
         </LinearLayout>
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/os_pin_cardview"
+            android:id="@+id/cn_pin_cardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -529,7 +414,7 @@
                 >
 
                 <ImageView
-                    android:id="@+id/os7imageView3"
+                    android:id="@+id/cn7imageView3"
                     android:layout_width="50dp"
                     android:layout_height="70dp"
                     android:layout_marginStart="8dp"
@@ -541,7 +426,7 @@
                     app:srcCompat="@drawable/cn_pin_logo" />
 
                 <TextView
-                    android:id="@+id/os7textView3"
+                    android:id="@+id/cn7textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mulish_bold"
@@ -552,7 +437,7 @@
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/os7imageView3" />
+                    app:layout_constraintTop_toBottomOf="@+id/cn7imageView3" />
             </LinearLayout>
 
 
@@ -560,7 +445,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/os_notes_cardview"
+            android:id="@+id/cn_notes_cardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -583,7 +468,7 @@
                 >
 
                 <ImageView
-                    android:id="@+id/os8imageView3"
+                    android:id="@+id/cn8imageView3"
                     android:layout_width="50dp"
                     android:layout_height="70dp"
                     android:layout_marginStart="8dp"
@@ -595,7 +480,7 @@
                     app:srcCompat="@drawable/cn_notes_logo" />
 
                 <TextView
-                    android:id="@+id/os8textView3"
+                    android:id="@+id/cn8textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mulish_bold"
@@ -606,7 +491,7 @@
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/os8imageView3" />
+                    app:layout_constraintTop_toBottomOf="@+id/cn8imageView3" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>

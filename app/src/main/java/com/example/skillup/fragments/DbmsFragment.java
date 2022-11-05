@@ -8,17 +8,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.skillup.Adapter.ImgAdapter;
 import com.example.skillup.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class DbmsFragment extends Fragment {
-    ImgAdapter imgAdapter;
+
 
     @Nullable
     @Override

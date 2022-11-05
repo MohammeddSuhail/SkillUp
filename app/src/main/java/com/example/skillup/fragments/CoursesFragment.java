@@ -10,19 +10,11 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.skillup.Adapter.ImgAdapter;
 import com.example.skillup.R;
-
-import java.util.List;
 
 public class CoursesFragment extends Fragment {
 
-    RecyclerView dataList;
-    List<String> titles;
-    List<Integer> images;
-    ImgAdapter imgAdapter;
     public static FragmentTransaction f;
 
     CardView cn,dbms,os,oops;
