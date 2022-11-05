@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#231F20"
+    android:background="#000"
     android:orientation="vertical"
     android:paddingLeft="25dp"
     android:paddingTop="130dp"
@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:backgroundTint="@color/white"
+
         app:cardCornerRadius="10dp"
         app:cardElevation="2dp">
 
@@ -24,7 +25,7 @@
             android:layout_height="match_parent"
             android:background="#302E2E"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="16dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -32,6 +33,7 @@
                 android:layout_marginTop="15dp"
                 android:gravity="center"
                 android:text="Sign In"
+                android:fontFamily="@font/mulish"
                 android:textColor="#C0C0C0"
                 android:textSize="40dp" />
 
@@ -40,6 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
+                android:fontFamily="@font/mulish"
                 android:singleLine="true"
                 android:layout_marginTop="15dp"
                 android:hint="Email" />
@@ -49,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textVisiblePassword"
+                android:fontFamily="@font/mulish"
                 android:layout_marginTop="15dp"
                 android:singleLine="true"
                 android:hint="Password" />
@@ -59,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginTop="10dp"
-
+                android:fontFamily="@font/mulish"
                 android:text="Create new account"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#C0C0C0" />
@@ -71,7 +75,8 @@
                 android:layout_marginTop="30dp"
                 android:backgroundTint="#C0C0C0"
                 android:padding="10dp"
-                android:text="Sign In"
+                android:text="Login"
+                android:fontFamily="@font/mulish_bold"
                 android:textColor="@color/black" />
 
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SignUpActivity"
     android:orientation="vertical"
-    android:background="#231F20"
+    android:background="#000"
     android:paddingTop="130dp"
     android:paddingBottom="130dp"
     android:paddingLeft="25dp"
@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:background="#302E2E"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="16dp">
 
             <TextView
                 android:layout_width="match_parent"
@@ -32,6 +32,7 @@
                 android:gravity="center"
                 android:layout_marginTop="15dp"
                 android:text="Sign Up"
+                android:fontFamily="@font/mulish"
                 android:textSize="40dp"
                 android:textColor="#C0C0C0"/>
 
@@ -42,6 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
+                android:fontFamily="@font/mulish"
                 android:inputType="textEmailAddress"
                 android:singleLine="true"
                 android:layout_marginTop="15dp"/>
@@ -51,6 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Password"
+                android:fontFamily="@font/mulish"
                 android:inputType="textVisiblePassword"
                 android:singleLine="true"
                 android:layout_marginTop="15dp"/>
@@ -60,6 +63,7 @@
                 android:textColor="#C0C0C0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish"
                 android:layout_marginTop="10dp"
 
                 android:layout_gravity="right"
@@ -70,7 +74,8 @@
                 android:id="@+id/sign_up_button_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sign Up"
+                android:text="Register"
+                android:fontFamily="@font/mulish_bold"
                 android:backgroundTint="#C0C0C0"
                 android:textColor="@color/black"
                 android:padding="10dp"
