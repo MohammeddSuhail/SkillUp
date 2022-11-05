@@ -4,10 +4,12 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.example.skillup.databinding.ActivitySignInBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,7 +24,7 @@ public class SignInActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     ProgressDialog mLoadingBar;
     FirebaseUser mUser;
-
+    CardView signinCardview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +35,9 @@ public class SignInActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
 
-
+        //Sign-in animation - 2 lines
+        signinCardview=findViewById(R.id.signin_cardview);
+        signinCardview.startAnimation(AnimationUtils.loadAnimation(this,R.anim.zoom_in));
 
         binding.newAccountId.setOnClickListener(new View.OnClickListener() {
             @Override

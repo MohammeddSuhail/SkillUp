@@ -13,6 +13,7 @@
     tools:context=".SignInActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/signin_cardview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:backgroundTint="@color/white"
@@ -25,6 +26,7 @@
             android:layout_height="match_parent"
             android:background="#302E2E"
             android:orientation="vertical"
+            android:animateLayoutChanges="true"
             android:padding="16dp">
 
             <TextView
@@ -35,7 +37,7 @@
                 android:text="Sign In"
                 android:fontFamily="@font/mulish"
                 android:textColor="#C0C0C0"
-                android:textSize="40dp" />
+                android:textSize="35sp" />
 
             <EditText
                 android:id="@+id/email_id"
@@ -44,6 +46,7 @@
                 android:inputType="textEmailAddress"
                 android:fontFamily="@font/mulish"
                 android:singleLine="true"
+                android:textSize="18sp"
                 android:layout_marginTop="15dp"
                 android:hint="Email" />
 
@@ -54,6 +57,7 @@
                 android:inputType="textVisiblePassword"
                 android:fontFamily="@font/mulish"
                 android:layout_marginTop="15dp"
+                android:textSize="18sp"
                 android:singleLine="true"
                 android:hint="Password" />
 
@@ -64,6 +68,7 @@
                 android:layout_gravity="right"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/mulish"
+                android:textSize="14sp"
                 android:text="Create new account"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="#C0C0C0" />
