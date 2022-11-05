@@ -57,9 +57,7 @@ public class myAdapter extends FirebaseRecyclerAdapter<Posts,myAdapter.MyViewHol
     }
 
     @Override
-
     protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NotNull Posts model) {
-
         //loading the post
         final String postKey = getRef(position).getKey();
 

@@ -7,15 +7,14 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.skillup.Adapter.ImgAdapter;
 import com.example.skillup.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CoursesFragment extends Fragment {
@@ -26,6 +25,9 @@ public class CoursesFragment extends Fragment {
     ImgAdapter imgAdapter;
     public static FragmentTransaction f;
 
+    CardView cn,dbms,os,oops;
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,26 +37,38 @@ public class CoursesFragment extends Fragment {
 
 //        getSupportActionBar().setTitle("");
 //        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        dataList = view.findViewById(R.id.dataList);
 
-        titles = new ArrayList<>();
-        images = new ArrayList<>();
+        cn = (CardView) view.findViewById(R.id.cncardview);
+        dbms = (CardView)view.findViewById(R.id.dbmscardview);
+        os = (CardView)view.findViewById(R.id.oscardview);
+        oops =(CardView) view.findViewById(R.id.oopscardview);
 
-        titles.add("Computer\nNetworks");
-        titles.add("DBMS &\nSQL");
-        titles.add("Operating\nSystem");
-        titles.add("OOPS\nConcepts");
+        CoursesFragment cf = new CoursesFragment();
+        cn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).commit();
+            }
+        });
+        dbms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CoursesFragment.f.replace(R.id.fragment_container, new DbmsFragment()).commit();
+            }
+        });
+        os.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CoursesFragment.f.replace(R.id.fragment_container, new OsFragment()).commit();
+            }
+        });
+        oops.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CoursesFragment.f.replace(R.id.fragment_container, new OopsFragment()).commit();
+            }
+        });
 
-        images.add(R.drawable.cn_logo);
-        images.add(R.drawable.dbms_logo);
-        images.add(R.drawable.os_logo);
-        images.add(R.drawable.oops_logo);
-
-        imgAdapter = new ImgAdapter(getContext(),titles,images);
-
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2,GridLayoutManager.VERTICAL,false);
-        dataList.setLayoutManager(gridLayoutManager);
-        dataList.setAdapter(imgAdapter);
 
         return view;
     }

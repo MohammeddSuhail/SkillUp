@@ -14,7 +14,7 @@ import com.example.skillup.fragments.CnFragment;
 import com.example.skillup.fragments.CoursesFragment;
 import com.example.skillup.fragments.OopsFragment;
 import com.example.skillup.fragments.OsFragment;
-import com.example.skillup.fragments.dbmsFragment;
+import com.example.skillup.fragments.DbmsFragment;
 
 import java.util.List;
 
@@ -66,7 +66,7 @@ public class ImgAdapter extends RecyclerView.Adapter<ImgAdapter.ViewHolder> {
                         CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).commit();
                     }
                     else if(getAdapterPosition()==1){
-                        CoursesFragment.f.replace(R.id.fragment_container, new dbmsFragment()).commit();
+                        CoursesFragment.f.replace(R.id.fragment_container, new DbmsFragment()).commit();
                     }
                     else if(getAdapterPosition()==2){
                         CoursesFragment.f.replace(R.id.fragment_container, new OsFragment()).commit();
