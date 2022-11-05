@@ -23,43 +23,84 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#302E2E"
+            android:background="#24282b"
             android:orientation="vertical"
             android:padding="16dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="32dp"
                 android:gravity="center"
-                android:layout_marginTop="15dp"
                 android:text="Sign Up"
                 android:fontFamily="@font/mulish"
-                android:textSize="35dp"
+                android:textSize="35sp"
                 android:textColor="#C0C0C0"/>
 
-
+            <EditText
+                android:id="@+id/usn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/mulish"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:hint="University Seat Number" />
 
             <EditText
                 android:id="@+id/email_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
-                android:textSize="15sp"
-                android:fontFamily="@font/mulish"
                 android:inputType="textEmailAddress"
+                android:fontFamily="@font/mulish"
                 android:singleLine="true"
-                android:layout_marginTop="15dp"/>
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:hint="College Email" />
+
+            <EditText
+                android:id="@+id/phone_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:fontFamily="@font/mulish"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp"
+                android:hint="Phone Number" />
 
             <EditText
                 android:id="@+id/password_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
-                android:fontFamily="@font/mulish"
                 android:inputType="textVisiblePassword"
+                android:fontFamily="@font/mulish"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textColorHint="#878787"
                 android:singleLine="true"
-                android:textSize="15sp"
-                android:layout_marginTop="15dp"/>
+                android:hint="Password" />
+
+            <EditText
+                android:id="@+id/confirm_password_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textVisiblePassword"
+                android:fontFamily="@font/mulish"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textColorHint="#878787"
+                android:singleLine="true"
+                android:hint="Confirm Password" />
 
             <TextView
                 android:id="@+id/already_account_id"
