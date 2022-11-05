@@ -24,15 +24,6 @@ public class CnFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.cn_fragment,container,false);
 
-
-
-
-
-
-    return view;
+        return view;
     }
-
-
-
-
 }
