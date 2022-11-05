@@ -14,6 +14,7 @@
 
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/sign_up_cardview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardCornerRadius="10dp"
@@ -33,7 +34,7 @@
                 android:layout_marginTop="15dp"
                 android:text="Sign Up"
                 android:fontFamily="@font/mulish"
-                android:textSize="40dp"
+                android:textSize="35dp"
                 android:textColor="#C0C0C0"/>
 
 
@@ -43,6 +44,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Email"
+                android:textSize="15sp"
                 android:fontFamily="@font/mulish"
                 android:inputType="textEmailAddress"
                 android:singleLine="true"
@@ -56,6 +58,7 @@
                 android:fontFamily="@font/mulish"
                 android:inputType="textVisiblePassword"
                 android:singleLine="true"
+                android:textSize="15sp"
                 android:layout_marginTop="15dp"/>
 
             <TextView
@@ -65,9 +68,9 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mulish"
                 android:layout_marginTop="10dp"
-
+                android:textSize="14sp"
                 android:layout_gravity="right"
-                android:text="Already have an account"
+                android:text="Already have an account?"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
             <Button

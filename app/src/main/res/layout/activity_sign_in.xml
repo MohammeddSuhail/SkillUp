@@ -7,10 +7,20 @@
     android:background="#000"
     android:orientation="vertical"
     android:paddingLeft="25dp"
-    android:paddingTop="130dp"
+    android:paddingTop="60dp"
     android:paddingRight="25dp"
-    android:paddingBottom="130dp"
+    android:paddingBottom="120dp"
     tools:context=".SignInActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Placement ready with SkillUp!"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:paddingBottom="25sp"
+        android:textSize="30sp"
+        />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/signin_cardview"
@@ -24,7 +34,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#302E2E"
+            android:background="#24282b"
             android:orientation="vertical"
             android:animateLayoutChanges="true"
             android:padding="16dp">
@@ -32,7 +42,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                android:layout_margin="32dp"
                 android:gravity="center"
                 android:text="Sign In"
                 android:fontFamily="@font/mulish"
@@ -46,8 +56,10 @@
                 android:inputType="textEmailAddress"
                 android:fontFamily="@font/mulish"
                 android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 android:textSize="18sp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="16dp"
                 android:hint="Email" />
 
             <EditText
@@ -56,33 +68,66 @@
                 android:layout_height="wrap_content"
                 android:inputType="textVisiblePassword"
                 android:fontFamily="@font/mulish"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white"
                 android:textSize="18sp"
+                android:textColorHint="#878787"
                 android:singleLine="true"
                 android:hint="Password" />
-
-            <TextView
-                android:id="@+id/new_account_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/mulish"
-                android:textSize="14sp"
-                android:text="Create new account"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="#C0C0C0" />
 
             <Button
                 android:id="@+id/sign_in_button_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"
                 android:backgroundTint="#C0C0C0"
                 android:padding="10dp"
                 android:text="Login"
                 android:fontFamily="@font/mulish_bold"
                 android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+
+                android:fontFamily="@font/mulish_bold"
+                android:textSize="16sp"
+                android:text="Forgot Password?"
+                android:layout_marginBottom="16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#C0C0C0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_gravity="center"
+                >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+
+                android:fontFamily="@font/mulish"
+                android:textSize="18sp"
+                android:text="New to Skillup? "
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#C0C0C0" />
+            <TextView
+                android:id="@+id/new_account_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:fontFamily="@font/mulish_bold"
+                android:textSize="18sp"
+                android:text="Sign up now"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#C0C0C0" />
+            </LinearLayout>
+
 
 
         </LinearLayout>
