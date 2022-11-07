@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 import com.example.skillup.R;
 import com.example.skillup.model.Video;
 
-public class PlayerFrag extends Fragment {
+public class PlayerFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

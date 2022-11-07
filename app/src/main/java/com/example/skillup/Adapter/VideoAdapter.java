@@ -1,30 +1,24 @@
 package com.example.skillup.Adapter;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.skillup.R;
 import com.example.skillup.fragments.CnFragment;
-import com.example.skillup.fragments.PlayerFrag;
+import com.example.skillup.fragments.PlayerFragment;
 import com.example.skillup.model.Video;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.io.Serializable;
-import java.util.ArrayList;
 
 public class VideoAdapter extends FirebaseRecyclerAdapter<Video, VideoAdapter.MyViewHolder> {
 
@@ -53,7 +47,7 @@ public class VideoAdapter extends FirebaseRecyclerAdapter<Video, VideoAdapter.My
         holder.wholeVidRowId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PlayerFrag playerFragment = new PlayerFrag();
+                PlayerFragment playerFragment = new PlayerFragment();
                 Bundle args = new Bundle();
                 args.putStringArray("video",vid);
                 playerFragment.setArguments(args);

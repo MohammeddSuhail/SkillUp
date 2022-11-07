@@ -57,7 +57,7 @@ public class CnFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 args.putString("com","CN");
-                args.putString("mod","Network_Layer");
+                args.putString("mod"," Network_Layer");
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).commit();
             }
