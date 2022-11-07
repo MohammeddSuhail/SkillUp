@@ -8,21 +8,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.example.skillup.R;
 
-public class CnFragment extends Fragment {
-
-    public static FragmentTransaction f;
-
-    //CNVideo[] cnList;
-    //FirebaseDatabase firebaseDatabase;
-
+public class VideoListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.cn_fragment,container,false);
+        View view = inflater.inflate(R.layout.video_list_fragment, container, false);
 
 
 
