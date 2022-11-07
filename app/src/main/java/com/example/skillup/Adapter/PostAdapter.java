@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -41,7 +40,7 @@ import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class myAdapter extends FirebaseRecyclerAdapter<Posts,myAdapter.MyViewHolder> {
+public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyViewHolder> {
 
     DatabaseReference likeRef;
     DatabaseReference commentsRef;
@@ -52,7 +51,7 @@ public class myAdapter extends FirebaseRecyclerAdapter<Posts,myAdapter.MyViewHol
     public RecyclerView recyclerViewCom;
 
 
-    public myAdapter(@NonNull FirebaseRecyclerOptions<Posts> options) {
+    public PostAdapter(@NonNull FirebaseRecyclerOptions<Posts> options) {
         super(options);
     }
 

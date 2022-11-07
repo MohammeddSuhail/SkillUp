@@ -19,7 +19,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.skillup.Adapter.myAdapter;
+import com.example.skillup.Adapter.PostAdapter;
 import com.example.skillup.R;
 import com.example.skillup.model.Posts;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -61,7 +61,7 @@ public class EachCommunityFragment extends Fragment {
 
     RecyclerView recyclerView;
 
-    myAdapter adapter;
+    PostAdapter adapter;
 
     @Nullable
     @Override
@@ -123,7 +123,7 @@ public class EachCommunityFragment extends Fragment {
             }
         });
 
-        adapter = new myAdapter(options);
+        adapter = new PostAdapter(options);
         recyclerView.setAdapter(adapter);
 
 

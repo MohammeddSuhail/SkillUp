@@ -66,8 +66,8 @@ dependencies {
     //for loading image
     implementation 'com.squareup.picasso:picasso:2.71828'
 
-    //for youtubeAPI and player
-    implementation files('libs/YouTubeAndroidPlayerApi.jar')
-    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
-    implementation 'com.google.apis:google-api-services-youtube:v3-rev181-1.22.0'
+//    //for youtubeAPI and player
+//    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+//    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
+//    implementation 'com.google.apis:google-api-services-youtube:v3-rev181-1.22.0'
 }
