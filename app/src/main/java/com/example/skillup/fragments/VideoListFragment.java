@@ -24,6 +24,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 
 public class VideoListFragment extends Fragment {
@@ -76,12 +77,15 @@ public class VideoListFragment extends Fragment {
                 final String videoKey = getRef(position).getKey();
 
 
-//        holder.videoThumbNail.setImageDrawable(R.drawable.naruto);
+                holder.videoThumbNail.setImageDrawable(null);
                 holder.video_title.setText(model.getVideoTitle());
                 holder.important.setText(model.getImportant().toString());
                 holder.duration.setText(model.getDuration().toString());
                 holder.module_name.setText("Module");
 
+
+
+                Picasso.get().load("https://img.youtube.com/vi/" + model.getVideoId() + "/maxresdefault.jpg").into(holder.videoThumbNail);
 
                 Video curVid = new Video(model.getVideoId(), model.getVideoLink(), model.getVideoTitle(), model.getID(), model.getDuration(), model.getImportant());
 
