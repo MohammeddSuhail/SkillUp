@@ -1,6 +1,7 @@
 package com.example.skillup.fragments;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,6 +73,25 @@ public class CommunityFragment extends Fragment {
                 args.putString("com","OOPS");
                 eachCommunityFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container,eachCommunityFragment).commit();
+            }
+        });
+
+
+
+        //back pressed
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
+                        return true;
+                    }
+                }
+                return false;
             }
         });
 

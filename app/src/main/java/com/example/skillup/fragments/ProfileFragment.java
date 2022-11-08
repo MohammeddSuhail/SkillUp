@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,6 +63,9 @@ public class ProfileFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.profile_fragment,container,false);
+
+
+        //getActivity().getSupportFragmentManager().popBackStack();
 
         profileImageView = view.findViewById(R.id.circleImageView);
         inputUsername = view.findViewById(R.id.inputUsername);
@@ -189,6 +193,27 @@ public class ProfileFragment extends Fragment {
             }
         });
 
+
+
+        //back pressed
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
+
+
         return view;
     }
 
@@ -200,4 +225,6 @@ public class ProfileFragment extends Fragment {
             profileImageView.setImageURI(imageUri);
         }
     }
+
+
 }

@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -125,6 +126,29 @@ public class EachCommunityFragment extends Fragment {
 
         adapter = new PostAdapter(options);
         recyclerView.setAdapter(adapter);
+
+
+
+
+
+
+        //back pressed
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CommunityFragment()).commit();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
 
 
         return view;

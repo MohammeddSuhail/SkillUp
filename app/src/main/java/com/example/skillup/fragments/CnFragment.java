@@ -1,6 +1,7 @@
 package com.example.skillup.fragments;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,7 +49,7 @@ public class CnFragment extends Fragment {
                 args.putString("com","CN");
                 args.putString("mod","Introduction_and_OSI");
                 videoListFragment.setArguments(args);
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
         });
 
@@ -59,7 +60,7 @@ public class CnFragment extends Fragment {
                 args.putString("com","CN");
                 args.putString("mod"," Network_Layer");
                 videoListFragment.setArguments(args);
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
         });
 
@@ -70,7 +71,7 @@ public class CnFragment extends Fragment {
                 args.putString("com","CN");
                 args.putString("mod","Transport_Layer");
                 videoListFragment.setArguments(args);
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
         });
 
@@ -80,7 +81,7 @@ public class CnFragment extends Fragment {
                 args.putString("com","CN");
                 args.putString("mod","Application_Layer");
                 videoListFragment.setArguments(args);
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
         });
 
@@ -90,12 +91,9 @@ public class CnFragment extends Fragment {
                 args.putString("com","CN");
                 args.putString("mod","Hardware");
                 videoListFragment.setArguments(args);
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).commit();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
         });
-
-
-
 
         return view;
     }

@@ -1,9 +1,11 @@
 package com.example.skillup.fragments;
 
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,6 +27,8 @@ public class CoursesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.courses_fragment, container, false);
 
+//        getFragmentManager().popBackStack();
+
         f = getFragmentManager().beginTransaction();
 
 //        getSupportActionBar().setTitle("");
@@ -39,33 +43,49 @@ public class CoursesFragment extends Fragment {
         cn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).addToBackStack(null).commit();
             }
         });
         dbms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CoursesFragment.f.replace(R.id.fragment_container, new DbmsFragment()).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new DbmsFragment()).addToBackStack(null).commit();
             }
         });
         os.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CoursesFragment.f.replace(R.id.fragment_container, new OsFragment()).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new OsFragment()).addToBackStack(null).commit();
             }
         });
         oops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CoursesFragment.f.replace(R.id.fragment_container, new OopsFragment()).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new OopsFragment()).addToBackStack(null).commit();
+            }
+        });
+
+
+
+
+        //back pressed
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        getActivity().finish();
+                        return true;
+                    }
+                }
+                return false;
             }
         });
 
 
         return view;
     }
-
-//    public void changeFragment(Fragment obj){
-//        getFragmentManager().beginTransaction().replace(R.id.fragment_container, obj).commit();
-//    }
 }
