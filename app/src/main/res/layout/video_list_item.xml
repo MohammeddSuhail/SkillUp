@@ -41,8 +41,10 @@
             android:id="@+id/video_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
             android:text="All Concurrency Problems | Dirty Read"
             android:textColor="#FFF"
+            android:fontFamily="@font/mulish_bold"
             android:textSize="15.5sp"
             android:textStyle="bold" />
 
@@ -51,11 +53,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginBottom="6.5dp"
             android:text="IMPORTANT"
-            android:textColor="#FFFF00"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="#FFAA00"
             android:textSize="11.5sp"
-            android:visibility="visible" />
+            android:visibility="visible"
+            />
 
 
         <LinearLayout
@@ -72,27 +76,31 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:text="120"
-                android:textColor="#FFF"
-                android:textSize="10.5sp" />
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="#0F0"
+                android:textSize="12sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_marginTop="1dp"
+                android:fontFamily="@font/mulish_bold"
                 android:text="min | "
-                android:textColor="#FFF"
-                android:textSize="10.5sp" />
+                android:textColor="#0F0"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/module_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
+                android:textAllCaps="true"
                 android:layout_marginTop="1dp"
                 android:text="INTRODUCTION AND OSI"
+                android:fontFamily="@font/mulish"
                 android:textColor="#4FB8F1"
-                android:textSize="10.5sp" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
