@@ -51,7 +51,7 @@ public class VideoAdapter extends FirebaseRecyclerAdapter<Video, VideoAdapter.My
                 Bundle args = new Bundle();
                 args.putStringArray("video",vid);
                 playerFragment.setArguments(args);
-                CnFragment.f.replace(R.id.fragment_container, playerFragment).commit();
+                CnFragment.f.replace(R.id.fragment_container, playerFragment).addToBackStack(null).commit();
             }
         });
 

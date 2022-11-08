@@ -39,25 +39,25 @@ public class CoursesFragment extends Fragment {
         cn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).addToBackStack(null).commit();
             }
         });
         dbms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CoursesFragment.f.replace(R.id.fragment_container, new DbmsFragment()).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new DbmsFragment()).addToBackStack(null).commit();
             }
         });
         os.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CoursesFragment.f.replace(R.id.fragment_container, new OsFragment()).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new OsFragment()).addToBackStack(null).commit();
             }
         });
         oops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CoursesFragment.f.replace(R.id.fragment_container, new OopsFragment()).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new OopsFragment()).addToBackStack(null).commit();
             }
         });
 
