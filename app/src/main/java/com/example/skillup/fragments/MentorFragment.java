@@ -1,6 +1,5 @@
 package com.example.skillup.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -16,7 +15,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.skillup.Adapter.FindFriendViewHolder;
+import com.example.skillup.Adapter.MentorViewHolder;
 import com.example.skillup.R;
 import com.example.skillup.model.Users;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -30,10 +29,10 @@ import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
 
-public class FindFriendFragment extends Fragment {
+public class MentorFragment extends Fragment {
 
     FirebaseRecyclerOptions<Users> options;
-    FirebaseRecyclerAdapter<Users, FindFriendViewHolder> adapter;
+    FirebaseRecyclerAdapter<Users, MentorViewHolder> adapter;
 
     DatabaseReference mUserRef;
     FirebaseAuth mAuth;
@@ -45,7 +44,7 @@ public class FindFriendFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull  LayoutInflater inflater, @Nullable  ViewGroup container, @Nullable  Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.find_friend_fragment,container,false);
+        View view = inflater.inflate(R.layout.mentor_fragment,container,false);
 
 
         mUserRef = FirebaseDatabase.getInstance().getReference().child("Users");
@@ -66,9 +65,9 @@ public class FindFriendFragment extends Fragment {
         Query query = mUserRef.orderByChild("userName").startAt(s).endAt(s+"\uf8ff");
         options = new FirebaseRecyclerOptions.Builder<Users>().setQuery(query,Users.class).build();
 
-        adapter = new FirebaseRecyclerAdapter<Users, FindFriendViewHolder>(options) {
+        adapter = new FirebaseRecyclerAdapter<Users, MentorViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull FindFriendViewHolder holder, int position, @NotNull Users model) {
+            protected void onBindViewHolder(@NonNull MentorViewHolder holder, int position, @NotNull Users model) {
                 if(!mUser.getUid().equals(getRef(position).getKey())){
                     //if it's not current users info, then we display
                     Picasso.get().load(model.getProfileImage()).into(holder.profileImageF);
@@ -94,10 +93,10 @@ public class FindFriendFragment extends Fragment {
             @NonNull
             @NotNull
             @Override
-            public FindFriendViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.find_friend_row,parent,false);
+            public MentorViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.mentor_row,parent,false);
 
-                return new FindFriendViewHolder(view);
+                return new MentorViewHolder(view);
             }
         };
         adapter.startListening();

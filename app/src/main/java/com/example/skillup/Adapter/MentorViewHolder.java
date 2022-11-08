@@ -12,12 +12,12 @@ import org.jetbrains.annotations.NotNull;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class FindFriendViewHolder extends RecyclerView.ViewHolder {
+public class MentorViewHolder extends RecyclerView.ViewHolder {
 
     public CircleImageView profileImageF;
     public TextView username,profession;
 
-    public FindFriendViewHolder(@NonNull @NotNull View itemView) {
+    public MentorViewHolder(@NonNull @NotNull View itemView) {
         super(itemView);
 
         profileImageF = itemView.findViewById(R.id.profileImageFri);

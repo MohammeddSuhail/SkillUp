@@ -17,8 +17,7 @@ import android.widget.Toast;
 import com.example.skillup.databinding.ActivityAllBinding;
 import com.example.skillup.fragments.CommunityFragment;
 import com.example.skillup.fragments.CoursesFragment;
-import com.example.skillup.fragments.FindFriendFragment;
-import com.example.skillup.fragments.MentorsFragment;
+import com.example.skillup.fragments.MentorFragment;
 import com.example.skillup.fragments.ProfileFragment;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -110,11 +109,7 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 break;
 
             case R.id.nav_mentors:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MentorsFragment()).commit();
-                break;
-
-            case R.id.nav_userss:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FindFriendFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MentorFragment()).commit();
                 break;
 
             case R.id.nav_logout:

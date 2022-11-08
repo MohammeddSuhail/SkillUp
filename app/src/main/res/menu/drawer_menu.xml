@@ -21,10 +21,6 @@
             android:icon="@drawable/ic_friends"
             android:title="Mentors"/>
 
-        <item
-            android:id="@+id/nav_userss"
-            android:icon="@drawable/ic_friends"
-            android:title="Users"/>
 
         <item
             android:id="@+id/nav_logout"
