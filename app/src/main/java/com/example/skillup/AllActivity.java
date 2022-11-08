@@ -6,12 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -20,7 +17,7 @@ import android.widget.Toast;
 import com.example.skillup.databinding.ActivityAllBinding;
 import com.example.skillup.fragments.CommunityFragment;
 import com.example.skillup.fragments.CoursesFragment;
-import com.example.skillup.fragments.MentorsFragment;
+import com.example.skillup.fragments.MentorFragment;
 import com.example.skillup.fragments.ProfileFragment;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -31,8 +28,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
-
-import org.jetbrains.annotations.NotNull;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -114,7 +109,7 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 break;
 
             case R.id.nav_mentors:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MentorsFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MentorFragment()).commit();
                 break;
 
             case R.id.nav_logout:
