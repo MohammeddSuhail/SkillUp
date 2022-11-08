@@ -27,7 +27,6 @@ public class PlayerActivity extends YouTubeBaseActivity {
         }
         t.setText(vid[2]);
 
-
         YouTubePlayerView ypv = findViewById(R.id.youtube_player_view);
         YouTubePlayer.OnInitializedListener listener = new YouTubePlayer.OnInitializedListener() {
             @Override
