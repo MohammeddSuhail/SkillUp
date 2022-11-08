@@ -46,7 +46,7 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
     DatabaseReference mRef;
     String profileImageUrlV,usernameV,professionV;
 
-    CircleImageView profileImage;
+    public static CircleImageView profileImage;
     TextView name,profession;
 
     @Override

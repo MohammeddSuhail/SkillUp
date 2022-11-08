@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.skillup.AllActivity;
 import com.example.skillup.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -57,11 +59,18 @@ public class ProfileFragment extends Fragment {
 
     ProgressDialog mLoadingBar;
 
+    DatabaseReference mRef;
+
+
     @Nullable
     @org.jetbrains.annotations.Nullable
     @Override
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.profile_fragment,container,false);
+
+
+        //getActivity().getSupportFragmentManager().popBackStack();
+        //CircleImageView profileImage = view.findViewById(R.id.profile_pic_header);
 
         profileImageView = view.findViewById(R.id.circleImageView);
         inputUsername = view.findViewById(R.id.inputUsername);
@@ -137,6 +146,7 @@ public class ProfileFragment extends Fragment {
                         @Override
                         public void onSuccess(Object o) {
                             Toast.makeText(getContext(),"Updated successfully",Toast.LENGTH_SHORT).show();
+                            //getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
                         }
                     });
                 }else{
@@ -183,11 +193,43 @@ public class ProfileFragment extends Fragment {
                         @Override
                         public void onSuccess(Object o) {
                             Toast.makeText(getContext(),"Updated successfully",Toast.LENGTH_SHORT).show();
+                            //getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
                         }
                     });
+
+
+                    //setting pic
+                    //Picasso.get().load(url[0]).into(AllActivity.profileImage);
+
                 }
+
+
+
+
+
             }
         });
+
+
+
+        //back pressed
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+
+
 
         return view;
     }
@@ -200,4 +242,6 @@ public class ProfileFragment extends Fragment {
             profileImageView.setImageURI(imageUri);
         }
     }
+
+
 }
