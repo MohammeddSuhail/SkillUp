@@ -99,7 +99,7 @@
                 android:layout_marginTop="1dp"
                 android:text="INTRODUCTION AND OSI"
                 android:fontFamily="@font/mulish"
-                android:textColor="#4FB8F1"
+                android:textColor="@color/moduleBLUE"
                 android:textSize="12sp" />
 
         </LinearLayout>
