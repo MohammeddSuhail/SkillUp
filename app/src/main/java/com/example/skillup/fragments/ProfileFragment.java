@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.skillup.AllActivity;
 import com.example.skillup.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -58,6 +59,9 @@ public class ProfileFragment extends Fragment {
 
     ProgressDialog mLoadingBar;
 
+    DatabaseReference mRef;
+
+
     @Nullable
     @org.jetbrains.annotations.Nullable
     @Override
@@ -66,6 +70,7 @@ public class ProfileFragment extends Fragment {
 
 
         //getActivity().getSupportFragmentManager().popBackStack();
+        //CircleImageView profileImage = view.findViewById(R.id.profile_pic_header);
 
         profileImageView = view.findViewById(R.id.circleImageView);
         inputUsername = view.findViewById(R.id.inputUsername);
@@ -141,6 +146,7 @@ public class ProfileFragment extends Fragment {
                         @Override
                         public void onSuccess(Object o) {
                             Toast.makeText(getContext(),"Updated successfully",Toast.LENGTH_SHORT).show();
+                            //getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
                         }
                     });
                 }else{
@@ -187,9 +193,20 @@ public class ProfileFragment extends Fragment {
                         @Override
                         public void onSuccess(Object o) {
                             Toast.makeText(getContext(),"Updated successfully",Toast.LENGTH_SHORT).show();
+                            //getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
                         }
                     });
+
+
+                    //setting pic
+                    //Picasso.get().load(url[0]).into(AllActivity.profileImage);
+
                 }
+
+
+
+
+
             }
         });
 
