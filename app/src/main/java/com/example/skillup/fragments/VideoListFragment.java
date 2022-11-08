@@ -29,7 +29,7 @@ import com.squareup.picasso.Picasso;
 
 public class VideoListFragment extends Fragment {
 
-    String com, mod;
+    String com, mod,imp;
 
     DatabaseReference modRef;
 
@@ -79,10 +79,13 @@ public class VideoListFragment extends Fragment {
 
                 holder.videoThumbNail.setImageDrawable(null);
                 holder.video_title.setText(model.getVideoTitle());
-                holder.important.setText(model.getImportant().toString());
+                if(model.getImportant()==1)
+                     imp = "IMPORTANT";
+                else
+                     imp = "";
+                holder.important.setText(imp);
                 holder.duration.setText(model.getDuration().toString());
                 holder.module_name.setText("Module");
-
 
 
                 Picasso.get().load("https://img.youtube.com/vi/" + model.getVideoId() + "/maxresdefault.jpg").into(holder.videoThumbNail);
