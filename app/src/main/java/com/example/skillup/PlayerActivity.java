@@ -16,23 +16,28 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.Abs
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 public class PlayerActivity extends AppCompatActivity {
-
+    String[] vid;
+    TextView title, module;
+    YouTubePlayerView ypv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
         getSupportActionBar().hide();
 
-        String[] vid = getIntent().getStringArrayExtra("video");
-        TextView t = (TextView) findViewById(R.id.vtitle);
-        YouTubePlayerView ypv = findViewById(R.id.youtube_player_view);
+        vid = getIntent().getStringArrayExtra("video");
+        title = (TextView) findViewById(R.id.vtitle);
+        module=(TextView) findViewById(R.id.module);
 
+        ypv = findViewById(R.id.youtube_player_view);
+
+        module.setText(vid[6]);
 
         String wholeThing = "";
         for (int i = 0; i < vid.length; i++) {
             wholeThing += vid[i] +"\n";
         }
-        t.setText(vid[2]);
+        title.setText(vid[2]);
 
         getLifecycle().addObserver(ypv);
         ypv.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {

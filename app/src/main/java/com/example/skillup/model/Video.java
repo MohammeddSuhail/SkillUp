@@ -1,7 +1,7 @@
 package com.example.skillup.model;
 
 public class Video {
-    String videoId, videoLink, videoTitle, module;
+    String videoId, videoLink, videoTitle, Module;
     Long ID, duration, important;
 
     public Video() {
@@ -16,17 +16,18 @@ public class Video {
                 ", ID=" + ID +
                 ", duration=" + duration +
                 ", important=" + important +
+                ", module=" + Module +
                 '}';
     }
 
-    public Video(String videoId, String videoLink, String videoTitle, Long ID, Long duration, Long important,String module) {
+    public Video(String videoId, String videoLink, String videoTitle, Long ID, Long duration, Long important,String Module) {
         this.videoId = videoId;
         this.videoLink = videoLink;
         this.videoTitle = videoTitle;
         this.ID = ID;
         this.duration = duration;
         this.important = important;
-        this.module=module;
+        this.Module=Module;
     }
 
     public String getVideoId() {
@@ -78,10 +79,10 @@ public class Video {
     }
 
     public String getModule() {
-        return module;
+        return Module;
     }
 
-    public void setModule(String module) {
-        this.module = module;
+    public void setModule(String Module) {
+        this.Module = Module;
     }
 }
