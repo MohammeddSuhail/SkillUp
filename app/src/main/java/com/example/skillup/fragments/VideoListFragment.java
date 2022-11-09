@@ -76,23 +76,23 @@ public class VideoListFragment extends Fragment {
             protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull Video model) {
                 final String videoKey = getRef(position).getKey();
 
+                if(model.getImportant()==1)
+                    imp = "IMPORTANT";
+                else
+                    imp = "";
 
                 holder.videoThumbNail.setImageDrawable(null);
                 holder.video_title.setText(model.getVideoTitle());
-                if(model.getImportant()==1)
-                     imp = "IMPORTANT";
-                else
-                     imp = "";
                 holder.important.setText(imp);
                 holder.duration.setText(model.getDuration().toString());
-                holder.module_name.setText("Module");
+                holder.module_name.setText(model.getModule());
 
 
                 Picasso.get().load("https://img.youtube.com/vi/" + model.getVideoId() + "/maxresdefault.jpg").into(holder.videoThumbNail);
 
-                Video curVid = new Video(model.getVideoId(), model.getVideoLink(), model.getVideoTitle(), model.getID(), model.getDuration(), model.getImportant());
+                Video curVid = new Video(model.getVideoId(), model.getVideoLink(), model.getVideoTitle(), model.getID(), model.getDuration(), model.getImportant(), model.getModule());
 
-                String[] vid = {model.getVideoId(), model.getVideoLink(), model.getVideoTitle(), model.getID()+"", model.getDuration()+"", model.getImportant()+""};
+                String[] vid = {model.getVideoId(), model.getVideoLink(), model.getVideoTitle(), model.getID()+"", model.getDuration()+"", model.getImportant()+"",model.getModule()};
 
 
 

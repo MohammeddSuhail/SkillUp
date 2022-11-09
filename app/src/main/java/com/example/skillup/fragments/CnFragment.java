@@ -34,8 +34,6 @@ public class CnFragment extends Fragment {
         cn_hw_cardview = view.findViewById(R.id.cn_hw_cardview);
         cn_imp_cardview = view.findViewById(R.id.cn_imp_cardview);
 
-
-
         videoListFragment = new VideoListFragment();
         Bundle args = new Bundle();
 
