@@ -6,18 +6,18 @@
     android:foreground="?android:attr/selectableItemBackground"
     android:clickable="true"
     android:layout_height="wrap_content"
+    android:paddingLeft="6dp"
     android:background="#121517">
 
     <androidx.cardview.widget.CardView
         android:layout_width="158dp"
         android:layout_height="90dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="7dp"
-
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="8dp"
         android:background="#121517"
-        app:cardCornerRadius="5dp"
+        app:cardCornerRadius="10dp"
         app:cardElevation="8dp"
 
         >
@@ -35,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="0dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical">
 
         <TextView
@@ -87,7 +88,7 @@
                 android:layout_marginLeft="2dp"
                 android:textAllCaps="true"
                 android:layout_marginTop="1dp"
-                android:text="INTRODUCTION AND OSI"
+                android:text="Transactions SCHEDULES"
                 android:fontFamily="@font/mulish"
                 android:textColor="@color/moduleBLUE"
                 android:textSize="11sp" />
