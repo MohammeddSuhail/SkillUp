@@ -4,6 +4,7 @@ package com.example.skillup;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -15,9 +16,12 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
+import java.util.Objects;
+
 public class PlayerActivity extends AppCompatActivity {
     String[] vid;
-    TextView title, module;
+    String important;
+    TextView title, module,imp;
     YouTubePlayerView ypv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +32,17 @@ public class PlayerActivity extends AppCompatActivity {
         vid = getIntent().getStringArrayExtra("video");
         title = (TextView) findViewById(R.id.vtitle);
         module=(TextView) findViewById(R.id.module);
+        imp = (TextView) findViewById(R.id.imp);
 
         ypv = findViewById(R.id.youtube_player_view);
 
         module.setText(vid[6]);
 
+        if(vid[5].equals("0")){
+            imp.setVisibility(View.GONE);
+        }
+
+        Log.d("hihi", vid[5]+":");
         String wholeThing = "";
         for (int i = 0; i < vid.length; i++) {
             wholeThing += vid[i] +"\n";
@@ -53,8 +63,6 @@ public class PlayerActivity extends AppCompatActivity {
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             ypv.setLayoutParams(new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT));
         }
-
-
 
 
 //        YouTubePlayer.OnInitializedListener listener = new YouTubePlayer.OnInitializedListener() {
