@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.skillup"
-        minSdk 21
+        minSdk 27
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -69,4 +69,6 @@ dependencies {
     //for youtubeAPI and player
     //TODO: https://www.youtube.com/watch?v=qAHMCZBwYo4&t=13s - REF
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    //Plan-B for youtube
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
 }

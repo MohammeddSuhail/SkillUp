@@ -6,12 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".PlayerActivity">
 
-    <com.google.android.youtube.player.YouTubePlayerView
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/youtube_player_view"
-        android:keepScreenOn="true"
-        />
+         />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/vtitle"
@@ -61,6 +60,20 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="TextView" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tilt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/mulish_extralight"
+        android:text="Rotate your phone to get a Full Screen view "
+        android:drawableRight="@drawable/screen_rotate"
+        android:textColor="#CACACA"
+        android:textSize="15sp" />
 
 
 </RelativeLayout>
