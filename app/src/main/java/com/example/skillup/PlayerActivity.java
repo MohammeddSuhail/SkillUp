@@ -1,6 +1,5 @@
 package com.example.skillup;
 
-
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,7 +19,6 @@ import java.util.Objects;
 
 public class PlayerActivity extends AppCompatActivity {
     String[] vid;
-    String important;
     TextView title, module,imp;
     YouTubePlayerView ypv;
     @Override

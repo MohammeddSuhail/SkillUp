@@ -102,7 +102,7 @@ public class VideoListFragment extends Fragment {
                     public void onClick(View v) {
                         Intent intent = new Intent(getActivity().getApplication(), PlayerActivity.class);
                         intent.putExtra("video", vid);
-                        intent.putExtra("userKey",getRef(position).getKey());
+                        //intent.putExtra("userKey",getRef(position).getKey());
                         startActivity(intent);
                     }
                 });

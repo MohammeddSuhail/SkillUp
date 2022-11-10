@@ -1,4 +1,4 @@
-package com.example.skillup.fragments;
+package com.example.skillup.Notes;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,12 +11,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.skillup.R;
 
-public class OopsFragment extends Fragment {
+public class CNnotesFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.oops_fragment,container,false);
-
+        View view = inflater.inflate(R.layout.cn_notes_fragment, container, false);
 
         return view;
     }
