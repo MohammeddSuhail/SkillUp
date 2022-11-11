@@ -71,4 +71,5 @@ dependencies {
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     //Plan-B for youtube //REMOVE AUTOPLAY
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
+
 }

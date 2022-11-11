@@ -46,12 +46,17 @@ public class VideoListFragment extends Fragment {
 
         act = getActivity().getApplication();
 
-        com = getArguments().getString("com");
-        mod = getArguments().getString("mod");
+        String[] arguments = getArguments().getStringArray("arguments");
+
 
         //Toast.makeText(getContext(), com+" "+mod, Toast.LENGTH_SHORT).show();
 
-        modRef = FirebaseDatabase.getInstance().getReference().child(com).child(mod);
+        modRef = FirebaseDatabase.getInstance().getReference();
+        //.child(com).child(mod);
+
+        for (int i = 0; i < arguments.length; i++) {
+            modRef = modRef.child(arguments[i]);
+        }
 
         //Below 3 lines for Firebase RecycleView
         recyclerView = view.findViewById(R.id.recyclerViewVideoList);

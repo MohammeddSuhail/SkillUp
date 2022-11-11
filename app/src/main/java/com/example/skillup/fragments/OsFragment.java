@@ -36,8 +36,8 @@ public class OsFragment extends Fragment {
         os_intro_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","OS");
-                args.putString("mod"," Introduction_to_OS");
+                String[] arguments = {"OS"," Introduction_to_OS"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -46,8 +46,8 @@ public class OsFragment extends Fragment {
         os_process_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","OS");
-                args.putString("mod","Processes_and_Threads");
+                String[] arguments = {"OS","Processes_and_Threads"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -56,8 +56,8 @@ public class OsFragment extends Fragment {
         os_schedule_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","OS");
-                args.putString("mod","Process_Scheduling");
+                String[] arguments = {"OS","Process_Scheduling"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -66,8 +66,8 @@ public class OsFragment extends Fragment {
         os_sync_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","OS");
-                args.putString("mod","Process_Synchronization");
+                String[] arguments = {"OS","Process_Synchronization"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -76,8 +76,8 @@ public class OsFragment extends Fragment {
         os_mem_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","OS");
-                args.putString("mod","Memory_Management");
+                String[] arguments = {"OS","Memory_Management"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -86,8 +86,8 @@ public class OsFragment extends Fragment {
         os_page_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","OS");
-                args.putString("mod","Page_Replacement");
+                String[] arguments = {"OS","Page_Replacement"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -96,8 +96,8 @@ public class OsFragment extends Fragment {
         os_cmd_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","OS");
-                args.putString("mod","UNIX_Commands");
+                String[] arguments = {"OS","UNIX_Commands"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }

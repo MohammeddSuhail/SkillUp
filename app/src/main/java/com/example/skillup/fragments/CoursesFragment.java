@@ -61,7 +61,12 @@ public class CoursesFragment extends Fragment {
         oops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CoursesFragment.f.replace(R.id.fragment_container, new OopsFragment()).addToBackStack(null).commit();
+                VideoListFragment videoListFragment = new VideoListFragment();
+                Bundle args = new Bundle();
+                String[] arguments = {"OOPS","introduction_to_OOPS"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
         });
 

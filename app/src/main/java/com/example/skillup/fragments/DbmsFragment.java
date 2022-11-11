@@ -39,8 +39,8 @@ public class DbmsFragment extends Fragment {
         dbms_intro_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","DBMS");
-                args.putString("mod","Introduction_to_DBMS");
+                String[] arguments = {"DBMS","Introduction_to_DBMS"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -50,8 +50,8 @@ public class DbmsFragment extends Fragment {
         dbms_key_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","DBMS");
-                args.putString("mod"," Keys_and_Relationships");
+                String[] arguments = {"DBMS"," Keys_and_Relationships"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -60,8 +60,8 @@ public class DbmsFragment extends Fragment {
         dbms_normal_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","DBMS");
-                args.putString("mod","Normalization_in_Database");
+                String[] arguments = {"DBMS","Normalization_in_Database"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -70,8 +70,8 @@ public class DbmsFragment extends Fragment {
         dbms_sql_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","DBMS");
-                args.putString("mod","SQL_Queries");
+                String[] arguments = {"DBMS","SQL_Queries"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -80,8 +80,8 @@ public class DbmsFragment extends Fragment {
         dbms_trans_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","DBMS");
-                args.putString("mod","Transaction_and_schedules");
+                String[] arguments = {"DBMS","Transaction_and_schedules"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }

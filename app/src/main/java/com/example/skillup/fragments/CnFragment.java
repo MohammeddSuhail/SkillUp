@@ -45,8 +45,8 @@ public class CnFragment extends Fragment {
         osi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","CN");
-                args.putString("mod","Introduction_and_OSI");
+                String[] arguments = {"CN","Introduction_and_OSI"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -56,8 +56,8 @@ public class CnFragment extends Fragment {
         cn_net_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","CN");
-                args.putString("mod"," Network_Layer");
+                String[] arguments = {"CN","Network_Layer"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -67,8 +67,8 @@ public class CnFragment extends Fragment {
         cn_trans_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","CN");
-                args.putString("mod","Transport_Layer");
+                String[] arguments = {"CN","Transport_Layer"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -77,8 +77,8 @@ public class CnFragment extends Fragment {
         cn_appn_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","CN");
-                args.putString("mod","Application_Layer");
+                String[] arguments = {"CN","Application_Layer"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
@@ -87,8 +87,8 @@ public class CnFragment extends Fragment {
         cn_hw_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                args.putString("com","CN");
-                args.putString("mod","Hardware");
+                String[] arguments = {"CN","Hardware"};
+                args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
