@@ -39,7 +39,7 @@ android:layout_height="match_parent">
         android:textColor="@color/white"
         android:fontFamily="@font/mulish_extralight"
         android:textIsSelectable="true"
-        android:text="A network is a set of devices that are connected with a physical media link. In a network, two or more nodes are connected by a physical link or two or more networks are connected by one or more nodes. A network is a collection of devices connected to each other to allow the sharing of data."
+        android:text="A network is a set of devices that are connected with a physical media link. \n\nIn a network, two or more nodes are connected by a physical link or two or more networks are connected by one or more nodes. \nA network is a collection of devices connected to each other to allow the sharing of data."
         android:textSize="18dp"
         />
 
@@ -59,7 +59,7 @@ android:layout_height="match_parent">
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:fontFamily="@font/mulish_extralight"
-        android:text="Network topology specifies the layout of a computer network. It shows how devices and cables are connected to each other."
+        android:text="Network topology specifies the layout of a computer network. \nIt shows how devices and cables are connected to each other."
         android:textSize="18dp"
         android:textIsSelectable="true"
         />
@@ -91,7 +91,7 @@ android:layout_height="match_parent">
         android:textColor="@color/white"
         android:fontFamily="@font/mulish_extralight"
         android:textIsSelectable="true"
-        android:text=" ● Star topology is a network topology in which all the nodes are connected to a single device known as a central device. \n ● Star topology requires more cable compared to other topologies. Therefore, it is more robust as a failure in one cable will only disconnect a specific computer connected to this cable. \n ● If the central device is damaged, then the whole network fails.\n ● Star topology is very easy to install, manage and troubleshoot. It is commonly used in office and home networks. "
+        android:text=" ● Network topology in which all the nodes are connected to a single device known as a central device. \n ● Requires more cable compared to other topologies. \nTherefore, it is more robust as a failure in one cable will only disconnect a specific computer connected to this cable. \n ● If the central device is damaged, then the whole network fails.\n ● It is very easy to install, manage and troubleshoot. \nIt is commonly used in office and home networks. "
         android:textSize="18dp"
         />
 
@@ -112,11 +112,39 @@ android:layout_height="match_parent">
         android:textColor="@color/white"
         android:fontFamily="@font/mulish_extralight"
         android:textIsSelectable="true"
-        android:text=" 1. Ring topology is a network topology in which nodes are exactly connected to two or more nodes and thus, forming a single continuous path for the transmission.\n
+        android:text=" 1. Network topology in which nodes are exactly connected to two or more nodes and thus, forming a single continuous path for the transmission.\n
 2. It does not need any central server to control the connectivity among the nodes. \n
 3. If the single node is damaged, then the whole network fails. \n
-4. Ring topology is very rarely used as it is expensive, difficult to install and manage. \n
-5. Examples of Ring topology are SONET network, SDH network, etc. "
+4. It is very rarely used as it is expensive, difficult to install and manage. \n
+5. Examples: SONET network, SDH network, etc."
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:layout_marginTop="4dp"
+        android:text="Mesh:"
+        android:textIsSelectable="true"
+        android:textSize="19dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:text="Network topology in which all the nodes are individually connected to other nodes. \n
+1. It does not need any central switch or hub to control the connectivity among the nodes. \n
+2. Mesh topology is categorized into two parts: \n
+Fully connected mesh topology: In this topology, all the nodes are connected to each other. \n
+Partially connected mesh topology: In this topology, all the nodes are not connected to each other. \n
+4. It is robust as a failure in one cable will only disconnect the specified computer connected to this cable. \n
+5. It is rarely used as installation and configuration are difficult when connectivity gets more. \n
+6. Cabling cost is high as it requires bulk wiring. "
         android:textSize="18dp"
         />
 
@@ -137,14 +165,7 @@ android:layout_height="match_parent">
         android:textColor="@color/white"
         android:fontFamily="@font/mulish_extralight"
         android:textIsSelectable="true"
-        android:text="Mesh topology is a network topology in which all the nodes are individually connected to other nodes. \n
-1. It does not need any central switch or hub to control the connectivity among the nodes. \n
-2. Mesh topology is categorized into two parts: \n
-Fully connected mesh topology: In this topology, all the nodes are connected to each other. \n
-Partially connected mesh topology: In this topology, all the nodes are not connected to each other. \n
-4. It is robust as a failure in one cable will only disconnect the specified computer connected to this cable. \n
-5. Mesh topology is rarely used as installation and configuration are difficult when connectivity gets more. \n
-6. Cabling cost is high as it requires bulk wiring. "
+        android:text="1. Network topology in which all the nodes are connected to a single cable known as a central cable or bus.\n2. It acts as a shared communication medium, i.e., if any device wants to send the data to other devices, then it will send the data over the bus which in turn sends the data to all the attached devices.\n3. It is useful for a small number of devices.\n4. If the bus is damaged then the whole network fails."
         android:textSize="18dp"
         />
 
@@ -166,10 +187,10 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
         android:fontFamily="@font/mulish_extralight"
         android:textIsSelectable="true"
         android:text="Tree topology is a combination of star and bus topology. It is also known as the expanded star topology. \n
-1. In tree topology, all the star networks are connected to a single bus. \n
+1. All the star networks are connected to a single bus. \n
 2. Ethernet protocol is used in this topology. \n
 3. In this, the whole network is divided into segments known as star networks which can be easily maintained. If one segment is damaged, there is no effect on other segments. \n
-4. Tree topology depends on the main bus, and if it breaks, then the whole network gets damaged."
+4. Tree topology depends on the main bus, and if it breaks, then the whole network gets damaged.\n"
         android:textSize="18dp"
         />
 
@@ -191,9 +212,9 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
         android:fontFamily="@font/mulish_extralight"
         android:textIsSelectable="true"
 
-        android:text="A hybrid topology is a combination of different topologies to form a resulting topology.\n
-    1. If star topology is connected with another star topology, then it remains a star topology. If star topology is connected with different topology, then it becomes a Hybrid topology. \n
-    2. It provides flexibility as it can be implemented in a different network environment. "            android:textSize="18dp"
+        android:text="It is a combination of different topologies to form a resulting topology.\n
+     If star topology is connected with another star topology, then it remains a star topology. If star topology is connected with different topology, then it becomes a Hybrid topology. \n
+     It provides flexibility as it can be implemented in a different network environment. "            android:textSize="18dp"
         />
 
     <TextView
@@ -213,13 +234,13 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
         android:fontFamily="@font/mulish_extralight"
         android:textIsSelectable="true"
         android:textSize="18dp"
-        android:text=" ● PAN (Personal Area Network): Its range limit is up to 10 meters. It is created for personal use. Generally, personal devices are connected to this network. For example computers, telephones, fax, printers, etc. \n
-● LAN (Local Area Network): It is used for a small geographical location like office, hospital, school, etc. \n
-● HAN (House Area Network): It is actually a LAN that is used within a house and used to connect homely devices like personal computers, phones, printers, etc. \n
-● CAN (Campus Area Network): It is a connection of devices within a campus area which links to other departments of the organization within the same campus. \n
-● MAN (Metropolitan Area Network): It is used to connect the devices which span to large cities like metropolitan cities over a wide geographical area. \n
-● WAN (Wide Area Network): It is used over a wide geographical location that may range to connect cities and countries. \n
-● GAN (Global Area Network): It uses satellites to connect devices over the global area."/>
+        android:text=" ● PAN (Personal Area Network): \nIts range limit is up to 10 meters. \nIt is created for personal use. Generally, personal devices are connected to this network. \nEx: computers, fax, printers, etc. \n\n
+● LAN (Local Area Network): \nIt is used for a small geographical location like office, hospital, school, etc. \n\n
+● HAN (House Area Network): \nIt is actually a LAN that is used within a house and used to connect homely devices like personal computers, phones, printers, etc. \n\n
+● CAN (Campus Area Network): \nIt is a connection of devices within a campus area which links to other departments of the organization within the same campus. \n\n
+● MAN (Metropolitan Area Network): \nIt is used to connect the devices which span to large cities like metropolitan cities over a wide geographical area. \n\n
+● WAN (Wide Area Network): \nIt is used over a wide geographical location that may range to connect cities and countries. \n\n
+● GAN (Global Area Network): \nIt uses satellites to connect devices over the global area."/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -544,7 +565,7 @@ It is a compressed version of the OSI model with only 4 layers. The name of this
         android:textIsSelectable="true"
         android:textSize="18dp"
         android:text="
-1. Link : Decides which links such as serial lines or classic Ethernet must be used to meet the needs of the connectionless internet layer. \nEx - Sonet, Ethernet\n2. Internet : The internet layer is the most important layer which holds the whole architecture together. It delivers the IP packets where they are supposed to be delivered. \nEx - IP, ICMP.\n3. Transport : Its functionality is almost the same as the OSI transport layer. It enables peer entities on the network to carry on a conversation. \nEx - TCP, UDP (User Datagram Protocol)\n4. Application : It contains all the higher-level protocols. \nEx - HTTP, SMTP, RTP, DNS.
+\n1. Link : Decides which links such as serial lines or classic Ethernet must be used to meet the needs of the connectionless internet layer. \nEx - Sonet, Ethernet\n\n2. Internet : The internet layer is the most important layer which holds the whole architecture together. It delivers the IP packets where they are supposed to be delivered. \nEx - IP, ICMP.\n\n3. Transport : Its functionality is almost the same as the OSI transport layer. It enables peer entities on the network to carry on a conversation. \nEx - TCP, UDP (User Datagram Protocol)\n\n4. Application : It contains all the higher-level protocols. \nEx - HTTP, SMTP, RTP, DNS.
 "/>
 
 </LinearLayout>
