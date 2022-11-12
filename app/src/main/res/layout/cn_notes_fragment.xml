@@ -1,7 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <WebView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/webvie"
-            android:background="#000"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:background="#121517"
+android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="#121517"
+    android:textIsSelectable="true"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textIsSelectable="true"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:text="COMPUTER NETWORKS"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:text="Network:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:text="A network is a set of devices that are connected with a physical media link. In a network, two or more nodes are connected by a physical link or two or more networks are connected by one or more nodes. A network is a collection of devices connected to each other to allow the sharing of data."
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Network Topology:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:text="Network topology specifies the layout of a computer network. It shows how devices and cables are connected to each other."
+        android:textSize="18dp"
+        android:textIsSelectable="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Types of Network Topology:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:layout_marginTop="4dp"
+        android:text="Star:"
+        android:textIsSelectable="true"
+        android:textSize="19dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:text=" ● Star topology is a network topology in which all the nodes are connected to a single device known as a central device. \n ● Star topology requires more cable compared to other topologies. Therefore, it is more robust as a failure in one cable will only disconnect a specific computer connected to this cable. \n ● If the central device is damaged, then the whole network fails.\n ● Star topology is very easy to install, manage and troubleshoot. It is commonly used in office and home networks. "
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:layout_marginTop="4dp"
+        android:text="Ring:"
+        android:textIsSelectable="true"
+        android:textSize="19dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:text=" 1. Ring topology is a network topology in which nodes are exactly connected to two or more nodes and thus, forming a single continuous path for the transmission.\n
+2. It does not need any central server to control the connectivity among the nodes. \n
+3. If the single node is damaged, then the whole network fails. \n
+4. Ring topology is very rarely used as it is expensive, difficult to install and manage. \n
+5. Examples of Ring topology are SONET network, SDH network, etc. "
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:layout_marginTop="4dp"
+        android:text="Bus:"
+        android:textIsSelectable="true"
+        android:textSize="19dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:text="Mesh topology is a network topology in which all the nodes are individually connected to other nodes. \n
+1. It does not need any central switch or hub to control the connectivity among the nodes. \n
+2. Mesh topology is categorized into two parts: \n
+Fully connected mesh topology: In this topology, all the nodes are connected to each other. \n
+Partially connected mesh topology: In this topology, all the nodes are not connected to each other. \n
+4. It is robust as a failure in one cable will only disconnect the specified computer connected to this cable. \n
+5. Mesh topology is rarely used as installation and configuration are difficult when connectivity gets more. \n
+6. Cabling cost is high as it requires bulk wiring. "
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:layout_marginTop="4dp"
+        android:text="Tree:"
+        android:textIsSelectable="true"
+        android:textSize="19dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:text="Tree topology is a combination of star and bus topology. It is also known as the expanded star topology. \n
+1. In tree topology, all the star networks are connected to a single bus. \n
+2. Ethernet protocol is used in this topology. \n
+3. In this, the whole network is divided into segments known as star networks which can be easily maintained. If one segment is damaged, there is no effect on other segments. \n
+4. Tree topology depends on the main bus, and if it breaks, then the whole network gets damaged."
+        android:textSize="18dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:layout_marginTop="4dp"
+        android:text="Hybrid:"
+        android:textIsSelectable="true"
+        android:textSize="19dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+
+        android:text="A hybrid topology is a combination of different topologies to form a resulting topology.\n
+    1. If star topology is connected with another star topology, then it remains a star topology. If star topology is connected with different topology, then it becomes a Hybrid topology. \n
+    2. It provides flexibility as it can be implemented in a different network environment. "            android:textSize="18dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Different Types of Networks:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text=" ● PAN (Personal Area Network): Its range limit is up to 10 meters. It is created for personal use. Generally, personal devices are connected to this network. For example computers, telephones, fax, printers, etc. \n
+● LAN (Local Area Network): It is used for a small geographical location like office, hospital, school, etc. \n
+● HAN (House Area Network): It is actually a LAN that is used within a house and used to connect homely devices like personal computers, phones, printers, etc. \n
+● CAN (Campus Area Network): It is a connection of devices within a campus area which links to other departments of the organization within the same campus. \n
+● MAN (Metropolitan Area Network): It is used to connect the devices which span to large cities like metropolitan cities over a wide geographical area. \n
+● WAN (Wide Area Network): It is used over a wide geographical location that may range to connect cities and countries. \n
+● GAN (Global Area Network): It uses satellites to connect devices over the global area."            />
+
+
+</LinearLayout>
+</ScrollView>

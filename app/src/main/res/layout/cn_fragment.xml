@@ -26,7 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <TextView
@@ -34,18 +34,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="17.5dp"
-
             android:layout_marginTop="4dp"
             android:layout_marginRight="1dp"
-
             android:fontFamily="@font/mulish"
             android:text="Choose a module to start learning"
             android:textColor="#FFF"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv1" />
+            />
 
-        </LinearLayout>
+            <TextView
+                android:id="@+id/cn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="32dp"
+                android:clickable="true"
+                android:drawableRight="@drawable/blue_search"
+                android:textColor="@color/moduleBLUE" />
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"

@@ -3,6 +3,7 @@ package com.example.skillup.fragments;
 import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,7 +31,7 @@ import com.squareup.picasso.Picasso;
 public class VideoListFragment extends Fragment {
 
     String com, mod,imp;
-
+    String ch="";
     DatabaseReference modRef;
 
     RecyclerView recyclerView;
@@ -81,14 +82,18 @@ public class VideoListFragment extends Fragment {
             protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull Video model) {
                 final String videoKey = getRef(position).getKey();
 
-                if(model.getImportant()==1)
-                    imp = "IMPORTANT";
-                else
-                    imp = "";
-
                 holder.videoThumbNail.setImageDrawable(null);
                 holder.video_title.setText(model.getVideoTitle());
-                holder.important.setText(imp);
+
+                    if(model.getVideoTitle() .equals("Hub"))
+                        ch = model.getImportant().toString();
+                        Log.d("Hub: ", ch);
+
+                    if (model.getImportant() == 1)
+                        holder.important.setText("IMPORTANT");
+                    else
+                        holder.important.setVisibility(View.GONE);
+
                 holder.duration.setText(model.getDuration().toString());
                 holder.module_name.setText(model.getModule());
 
@@ -98,7 +103,6 @@ public class VideoListFragment extends Fragment {
                 Video curVid = new Video(model.getVideoId(), model.getVideoLink(), model.getVideoTitle(), model.getID(), model.getDuration(), model.getImportant(), model.getModule());
 
                 String[] vid = {model.getVideoId(), model.getVideoLink(), model.getVideoTitle(), model.getID()+"", model.getDuration()+"", model.getImportant()+"",model.getModule()};
-
 
 
                 //if the rows recyclerView in the find friend is clicked

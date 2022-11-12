@@ -5,6 +5,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,7 +21,8 @@ public class CnFragment extends Fragment {
     public static FragmentTransaction f;
 
     CardView osi, cn_net_cardview, cn_trans_cardview, cn_appn_cardview, cn_hw_cardview, cn_imp_cardview, cn_notes_cardview;
-
+    TextView search;
+    static int imp=0;
     VideoListFragment videoListFragment;
 
     @Nullable
@@ -35,7 +37,7 @@ public class CnFragment extends Fragment {
         cn_hw_cardview = view.findViewById(R.id.cn_hw_cardview);
         cn_imp_cardview = view.findViewById(R.id.cn_imp_cardview);
         cn_notes_cardview = view.findViewById(R.id.cn_notes_cardview);
-
+        search = view.findViewById(R.id.cn_search);
 
         videoListFragment = new VideoListFragment();
         Bundle args = new Bundle();
@@ -88,6 +90,27 @@ public class CnFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String[] arguments = {"CN","Hardware"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+
+        cn_imp_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imp=1;
+                String[] arguments = {"CN","All_Videos"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"CN","All_Videos"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();

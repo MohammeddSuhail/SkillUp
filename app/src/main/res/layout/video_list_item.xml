@@ -50,7 +50,17 @@
             android:textSize="15.5sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/important"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:text="IMPORTANT"
+            android:fontFamily="@font/mulish_bold"
+            android:textColor="#FFAA00"
+            android:textSize="11.5sp"
 
+            />
 
 
         <LinearLayout
@@ -65,7 +75,7 @@
                 android:id="@+id/duration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="0dp"
                 android:text="120"
                 android:fontFamily="@font/mulish_bold"
                 android:textColor="#0F0"
@@ -75,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="0dp"
                 android:fontFamily="@font/mulish_bold"
                 android:text="min | "
                 android:textColor="#0F0"
@@ -87,23 +97,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:textAllCaps="true"
-                android:layout_marginTop="1dp"
+                android:layout_marginTop="0dp"
                 android:text="Transactions SCHEDULES"
                 android:fontFamily="@font/mulish"
                 android:textColor="@color/moduleBLUE"
                 android:textSize="11sp" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/important"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="IMPORTANT"
-            android:fontFamily="@font/mulish_bold"
-            android:textColor="#FFAA00"
-            android:textSize="11.5sp"
-
-            />
     </LinearLayout>
 </LinearLayout>
