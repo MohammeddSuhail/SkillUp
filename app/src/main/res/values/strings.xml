@@ -5,4 +5,5 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="example">Routing: The network layer determines the best route from source to destination. This function is known as routing.\n● Logical addressing: The network layer defines the addressing scheme to identify each device uniquely.\n● Packetizing: The network layer receives the data from the upper layer and converts the data into packets. This process is known as packetizing.\n● Internetworking: The network layer provides the logical connection between the different types of networks for forming a bigger network.\n● Fragmentation: It is a process of dividing the packets into fragments.</string>
 </resources>

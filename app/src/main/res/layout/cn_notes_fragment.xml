@@ -219,8 +219,333 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
 ● CAN (Campus Area Network): It is a connection of devices within a campus area which links to other departments of the organization within the same campus. \n
 ● MAN (Metropolitan Area Network): It is used to connect the devices which span to large cities like metropolitan cities over a wide geographical area. \n
 ● WAN (Wide Area Network): It is used over a wide geographical location that may range to connect cities and countries. \n
-● GAN (Global Area Network): It uses satellites to connect devices over the global area."            />
+● GAN (Global Area Network): It uses satellites to connect devices over the global area."/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="VPN (Virtual Private Network):"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+        VPN or the Virtual Private Network is a private WAN (Wide Area Network) built on the internet. It allows the creation of a secured tunnel (protected network) between different networks using the internet (public network). By using the VPN, a client can connect to the organization’s network remotely.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:layout_marginTop="4dp"
+        android:text="Advantages of VPN:"
+        android:textIsSelectable="true"
+        android:textSize="19dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+1. VPN is used to connect offices in different geographical locations remotely and is cheaper when compared to WAN connections.  \n2. VPN is used for secure transactions and confidential data transfer between multiple offices located in different geographical locations.  \n3. VPN keeps an organization’s information secured against any potential threats or intrusions by using virtualization.  \n4. VPN encrypts the internet traffic and disguises the online identity.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="IPv4 Address:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+An IP address is a 32-bit dynamic address of a node in the network. An IPv4 address has 4 octets of 8-bit each with each number with a value up to 255. IPv4 classes are differentiated based on the number of hosts it supports on the network. There are five types of IPv4 classes and are based on the first octet of IP addresses which are classified as Class A, B, C, D, or E.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="OSI (Open System Interconnections) (Imp):"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+It is a network architecture model based on the ISO standards. It is called the OSI model as it deals with connecting the systems that are open for communication with other systems. The OSI model has seven layers. The principles used to arrive at the seven layers can be summarized briefly as below:\n
+1. Create a new layer if a different abstraction is needed.\n2. Each layer should have a well-defined function.\n3. The function of each layer is chosen based on internationally standardized protocols.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="1. Physical Layer:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● It is the lowest layer of the OSI reference model.\n● It is used for the transmission of an unstructured raw bit stream over a physical\nmedium.\n● Physical layer transmits the data either in the form of electrical/optical or\nmechanical form.\n● The physical layer is mainly used for the physical connection between the\ndevices, and such physical connection can be made by using twisted-pair cable, fibre-optic or wireless transmission media.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="2. Data Link Layer:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● It is used for transferring the data from one node to another node.\n● It receives the data from the network layer and converts the data into data frames and then attaches the physical address to these frames which are sent to the physical layer.\n● It enables the error-free transfer of data from one node to another node.\n
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:text="Functions of Data-link layer:"
+        android:textIsSelectable="true"
+        android:textSize="19dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● Frame synchronization: Data-link layer converts the data into frames, and it ensures that the destination must recognize the starting and ending of each frame.\n● Flow control: Data-link layer controls the data flow within the network.\n● Error control: It detects and corrects the error occurred during the transmission from source to destination.\n● Addressing: Data-link layers attach the physical address with the data frames so that the individual machines can be easily identified.\n● Link management: Data-link layer manages the initiation, maintenance and termination of the link between the source and destination for the effective exchange of data.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="3. Network Layer:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● Network layer converts the logical address into the physical address.\n● The routing concept means it determines the best route for the packet to travel from source to the destination.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:layout_marginTop="4dp"
+        android:text="Functions of network layer:"
+        android:textIsSelectable="true"
+        android:textSize="19dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="@string/example"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="4. Transport Layer:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● It delivers the message through the network and provides error checking so that no error occurs during the transfer of data.\n● It provides two kinds of services:\n    ○ Connection-oriented transmission: In this transmission, the receiver sends the acknowledgement to the sender after the packet has been received.\n    ○ Connectionless transmission: In this transmission, the receiver does not send the acknowledgement to the sender.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="5. Session Layer:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● The main responsibility of the session layer is beginning, maintaining and ending the communication between the devices.\n● Session layer also reports the error coming from the upper layers.\n● Session layer establishes and maintains the session between the two users.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="6. Presentation Layer:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● The presentation layer is also known as a Translation layer as it translates the data from one format to another format.\n● At the sender side, this layer translates the data format used by the application layer to the common format and at the receiver side, this layer translates the common format into a format used by the application layer.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish"
+        android:layout_marginTop="4dp"
+        android:text="Functions of presentation layer:"
+        android:textIsSelectable="true"
+        android:textSize="19dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="○ Character code translation\n○ Data conversion\n○ Data compression\n○ Data encryption"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="7. Application Layer:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● Application layer enables the user to access the network.\n● It is the topmost layer of the OSI reference model.\n● Application layer protocols are file transfer protocol, simple mail transfer protocol, domain name system, etc.\n● The most widely used application protocol is HTTP(Hypertext transfer protocol ). A user sends the request for the web page using HTTP.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="TCP/IP Reference Model:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+It is a compressed version of the OSI model with only 4 layers. The name of this model is based on 2 standard protocols used i.e. TCP (Transmission Control Protocol) and IP (Internet Protocol).
+"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+1. Link : Decides which links such as serial lines or classic Ethernet must be used to meet the needs of the connectionless internet layer. \nEx - Sonet, Ethernet\n2. Internet : The internet layer is the most important layer which holds the whole architecture together. It delivers the IP packets where they are supposed to be delivered. \nEx - IP, ICMP.\n3. Transport : Its functionality is almost the same as the OSI transport layer. It enables peer entities on the network to carry on a conversation. \nEx - TCP, UDP (User Datagram Protocol)\n4. Application : It contains all the higher-level protocols. \nEx - HTTP, SMTP, RTP, DNS.
+"/>
 
 </LinearLayout>
 </ScrollView>
