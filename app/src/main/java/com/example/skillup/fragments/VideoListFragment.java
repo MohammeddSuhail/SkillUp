@@ -10,9 +10,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,13 +29,19 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+
 
 public class VideoListFragment extends Fragment {
 
     String com, mod,imp;
     String ch="";
     DatabaseReference modRef;
+    List<Video> itemList;
 
+    SearchView searchView;
     RecyclerView recyclerView;
 
     FirebaseRecyclerAdapter<Video, MyViewHolder> adapter;
@@ -63,6 +71,21 @@ public class VideoListFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerViewVideoList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        searchView = view.findViewById(R.id.searchView);
+        searchView.clearFocus();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return true;
+            }
+        });
+
         FirebaseRecyclerOptions<Video> options = new FirebaseRecyclerOptions.Builder<Video>().setQuery(modRef, Video.class).build();
 
 //        adapter = new VideoAdapter(options);
@@ -80,6 +103,7 @@ public class VideoListFragment extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull Video model) {
+                itemList = new ArrayList<>();
                 final String videoKey = getRef(position).getKey();
 
                 holder.videoThumbNail.setImageDrawable(null);
@@ -89,14 +113,23 @@ public class VideoListFragment extends Fragment {
                         ch = model.getImportant().toString();
                         Log.d("Hub: ", ch);
 
-                    if (model.getImportant() == 1)
-                        holder.important.setText("IMPORTANT");
-                    else
-                        holder.important.setVisibility(View.GONE);
+//                    if (model.getImportant().toString().equals("1"))
+//                        holder.important.setText("IMPORTANT");
+//                    else
+//                        holder.important.setVisibility(View.GONE);
 
                 holder.duration.setText(model.getDuration().toString());
                 holder.module_name.setText(model.getModule());
 
+                holder.important.setVisibility(View.GONE);
+
+                if (model.getImportant().toString().equals("1")) {
+                    holder.important.setVisibility(View.VISIBLE);
+                    holder.important.setText("IMPORTANT");
+                }
+//
+
+//                    holder.important.setVisibility(View.GONE);
 
                 Picasso.get().load("https://img.youtube.com/vi/" + model.getVideoId() + "/maxresdefault.jpg").into(holder.videoThumbNail);
 
@@ -104,7 +137,7 @@ public class VideoListFragment extends Fragment {
 
                 String[] vid = {model.getVideoId(), model.getVideoLink(), model.getVideoTitle(), model.getID()+"", model.getDuration()+"", model.getImportant()+"",model.getModule()};
 
-
+                itemList.add(curVid);
                 //if the rows recyclerView in the find friend is clicked
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -122,11 +155,27 @@ public class VideoListFragment extends Fragment {
         adapter.startListening();
         recyclerView.setAdapter(adapter);
 
-
-
-
         return view;
 
+    }
+
+
+//    public void setFilteredList(List<Video> filteredList){
+//        this.itemList = filteredList;
+//        viewpager.getAdapter().notifyDataSetChanged();
+//    }
+
+    private void filterList(String text) {
+        List<Video> filteredList = new ArrayList<>();
+        for(Video video:itemList){
+            if(video.getVideoTitle().toLowerCase().contains(text.toLowerCase())){
+                filteredList.add(video);
+            }
+        }
+
+        if(filteredList.isEmpty()){
+            Toast.makeText(getContext(), "No data found", Toast.LENGTH_SHORT).show();
+        }
     }
 
     //ViewHolder

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
-android:background="#121517"
+android:background="#1f1f1f"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbarSize="10dp"
+    android:fadeScrollbars="true"
 android:layout_height="match_parent">
 
 <LinearLayout
@@ -24,19 +28,22 @@ android:layout_height="match_parent">
         />
 
     <TextView
+        android:id="@+id/network"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
         android:fontFamily="@font/mulish_bold"
         android:text="Network:"
+        android:padding="0dp"
+        android:textColor="@color/white"
         android:textIsSelectable="true"
-        android:textSize="20dp"
-        />
+        android:textSize="20dp" />
 
     <TextView
+        android:id="@+id/networkdetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
+        android:visibility="visible"
         android:fontFamily="@font/mulish_extralight"
         android:textIsSelectable="true"
         android:text="A network is a set of devices that are connected with a physical media link. \n\nIn a network, two or more nodes are connected by a physical link or two or more networks are connected by one or more nodes. \nA network is a collection of devices connected to each other to allow the sharing of data."
@@ -44,6 +51,7 @@ android:layout_height="match_parent">
         />
 
     <TextView
+        android:id="@+id/topo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
@@ -54,6 +62,13 @@ android:layout_height="match_parent">
         android:textSize="20dp"
         />
 
+    <LinearLayout
+        android:id="@+id/topod"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -95,6 +110,13 @@ android:layout_height="match_parent">
         android:textSize="18dp"
         />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:fitsSystemWindows="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/star" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -119,6 +141,13 @@ android:layout_height="match_parent">
 5. Examples: SONET network, SDH network, etc."
         android:textSize="18dp"
         />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:fitsSystemWindows="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ring" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -148,6 +177,13 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
         android:textSize="18dp"
         />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:fitsSystemWindows="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/mesh" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -168,6 +204,13 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
         android:text="1. Network topology in which all the nodes are connected to a single cable known as a central cable or bus.\n2. It acts as a shared communication medium, i.e., if any device wants to send the data to other devices, then it will send the data over the bus which in turn sends the data to all the attached devices.\n3. It is useful for a small number of devices.\n4. If the bus is damaged then the whole network fails."
         android:textSize="18dp"
         />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:fitsSystemWindows="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bus" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -194,6 +237,13 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
         android:textSize="18dp"
         />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:fitsSystemWindows="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tree" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -216,8 +266,9 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
      If star topology is connected with another star topology, then it remains a star topology. If star topology is connected with different topology, then it becomes a Hybrid topology. \n
      It provides flexibility as it can be implemented in a different network environment. "            android:textSize="18dp"
         />
-
+    </LinearLayout>
     <TextView
+        android:id="@+id/types"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
@@ -227,6 +278,13 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
         android:textSize="20dp"
         />
 
+    <LinearLayout
+        android:id="@+id/typesd"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -283,7 +341,7 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
         android:text="
 1. VPN is used to connect offices in different geographical locations remotely and is cheaper when compared to WAN connections.  \n2. VPN is used for secure transactions and confidential data transfer between multiple offices located in different geographical locations.  \n3. VPN keeps an organization’s information secured against any potential threats or intrusions by using virtualization.  \n4. VPN encrypts the internet traffic and disguises the online identity.
 "/>
-
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -304,6 +362,13 @@ Partially connected mesh topology: In this topology, all the nodes are not conne
         android:text="
 An IP address is a 32-bit dynamic address of a node in the network. An IPv4 address has 4 octets of 8-bit each with each number with a value up to 255. IPv4 classes are differentiated based on the number of hosts it supports on the network. There are five types of IPv4 classes and are based on the first octet of IP addresses which are classified as Class A, B, C, D, or E.
 "/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:fitsSystemWindows="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ip" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -567,6 +632,568 @@ It is a compressed version of the OSI model with only 4 layers. The name of this
         android:text="
 \n1. Link : Decides which links such as serial lines or classic Ethernet must be used to meet the needs of the connectionless internet layer. \nEx - Sonet, Ethernet\n\n2. Internet : The internet layer is the most important layer which holds the whole architecture together. It delivers the IP packets where they are supposed to be delivered. \nEx - IP, ICMP.\n\n3. Transport : Its functionality is almost the same as the OSI transport layer. It enables peer entities on the network to carry on a conversation. \nEx - TCP, UDP (User Datagram Protocol)\n\n4. Application : It contains all the higher-level protocols. \nEx - HTTP, SMTP, RTP, DNS.
 "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="HTTP and HTTPS:"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+HTTP is the HyperText Transfer Protocol which defines the set of rules and standards on how the information can be transmitted on the World Wide Web (WWW). \n\nIt helps the web browsers and web servers for communication.\nIt is a ‘stateless protocol’ where each command is independent with respect to the previous command. \nHTTP is an application layer protocol built upon the TCP.\nIt uses port 80 by default.\n
+\nHTTPS is the HyperText Transfer Protocol Secure or Secure HTTP. \nIt is an advanced and secured version of HTTP. \nOn top of HTTP, SSL/TLS protocol is used to provide security. \nIt enables secure transactions by encrypting the communication and also helps identify network servers securely. \nIt uses port 443 by default.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="DNS (Imp):"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+DNS is an acronym that stands for Domain Name System.\nIt is a naming system for all the resources over the internet which includes physical nodes and applications. It is used to locate resources easily over a network.\nDNS is an internet which maps the domain names to their associated IP addresses.\nWithout DNS, users must know the IP address of the web page that you wanted to access.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Working of DNS (Imp):"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+If you want to visit the website of shaurya, then the user will type https://www.shaurya.com into the address bar of the web browser. \nOnce the domain name is entered, then the domain name system will translate the domain name into the IP address which can be easily interpreted by the computer. \nUsing the IP address, the computer can locate the web page requested by the user.
+    "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="DNS Forwarder:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+A forwarder is used with a DNS server when it receives DNS queries that cannot be resolved quickly. \nSo it forwards those requests to external DNS servers for resolution. \nA DNS server which is configured as a forwarder will behave differently than the DNS server which is not configured as a forwarder.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="SMTP Protocol:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+SMTP is the Simple Mail Transfer Protocol. \nSMTP sets the rule for communication between servers. \nThis set of rules helps the software to transmit emails over the internet. \nIt supports both End-to-End and Store-and-Forward methods. \nIt is in always-listening mode on port 25.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Difference Between TCP and UDP:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+TCP is a connection-oriented protocol, whereas UDP is a connectionless protocol. \nTCP is comparatively slower than UDP. \nUDP is a much faster, simpler, and efficient protocol. \nRetransmission of lost data packets is only possible with TCP\nTCP provides extensive error checking mechanisms. \nIt is because it provides flow control and acknowledgment of data. \nUDP has only the basic error checking mechanism using checksums.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Protocols:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+A protocol is a set of rules which is used to govern all the aspects of information communication.\n\nThe main elements of a protocol are:\n● Syntax: It specifies the structure or format of the data. It also specifies the order in which they are presented.\n● Semantics: It specifies the meaning of each section of bits.\n● Timing: Timing specifies two characteristics: When data should be sent and how fast it can be sent.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Important Protocols:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● DHCP: \nDynamic Host Configuration Protocol. \nIt is an application layer protocol used to auto-configure devices on IP networks enabling them to use the TCP and UDP-based protocols. \nThe DHCP servers auto-assign the IPs and other network configurations to the devices individually which enables them to communicate over the IP network. \nIt helps to get the subnet mask, IP address and helps to resolve the DNS. \nIt uses port 67 by default.\n\n● FTP : \nFile Transfer Protocol. \nIt is an application layer protocol used to transfer files and data reliably and efficiently between hosts. \nIt can also be used to download files from remote servers to your computer.\n It uses port 27 by default.\n\n● ICMP : \nInternet Control Message Protocol. \nIt is a network layer protocol used for error handling.\nIt is mainly used by network devices like routers for diagnosing the network connection issues and crucial for error reporting and testing if the data is reaching the preferred destination in time. \nIt uses port 7 by default.\n\n● ARP: \nAddress Resolution Protocol. \nIt is a network-level protocol used to convert the logical address i.e. IP address to the device's physical address i.e. MAC address. \nIt can also be used to get the MAC address of devices when they are trying to communicate over the local network.\n\n● RIP: \nRouting Information Protocol. \nIt is accessed by the routers to send data from one network to another. \nRIP is a dynamic protocol which is used to find the best route from source to the destination over a network by using the hop count algorithm. \nRouters use this protocol to exchange the network topology information. \nThis protocol can be used by small or medium-sized networks.
+"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="MAC address and IP address (Imp):"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+Both MAC (Media Access Control) Address and IP Address are used to uniquely define a device on the internet. \nNIC Card’s Manufacturer provides the MAC Address.\n Internet Service Provider provides IP Address.\nMAC Address is used to ensure the physical address of a computer. It uniquely identifies the devices on a network. \nWhile IP addresses are used to uniquely identify the connection of a network with that device taking part in a network.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Ipconfig and Ifconfig:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+1. Ipconfig : \nInternet Protocol Configuration \nIt is a command used in Microsoft operating systems to view and configure network interfaces.\n\n2. Ifconfig : \nInterface Configuration \nIt is a command used in MAC, Linux, UNIX operating systems to view and configure network interfaces
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Firewall:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+The firewall is a network security system that is used to monitor the incoming and outgoing traffic and blocks the same based on the firewall security policies. \nIt acts as a wall between the internet (public network) and the networking devices (a private network). \nIt is either a hardware device, software program, or a combination of both. \nIt adds a layer of security to the network.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="What happens when you enter google.com in the web browser? (Most Imp):"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+Steps :\n● Check the browser cache first if the content is fresh and present in the cache display the same.\n● If not, the browser checks if the IP of the URL is present in the cache (browser and OS) if not then requests the OS to do a DNS lookup using UDP to get the corresponding IP address of the URL from the DNS server to establish a new TCP connection.\n● A new TCP connection is set between the browser and the server using three-way handshaking.\n● An HTTP request is sent to the server using the TCP connection.\n● The web servers running on the Servers handle the incoming HTTP request and send the HTTP response.\n● The browser processes the HTTP response sent by the server and may close the TCP connection or reuse the same for future requests.\n● If the response data is cacheable then browsers cache the same.\n● Browser decodes the response and renders the content.\n
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Hub:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+Hub is a networking device which is used to transmit the signal to each port (except one port) to respond from which the signal was received. \nHub is operated on a Physical layer.\nIn this packet filtering is not available. \nIt is of two types: Active Hub, Passive Hub.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Switch:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+Switch is a network device which is used to enable the connection establishment and connection termination on the basis of need. \nSwitch is operated on the Data link layer. \nIn this packet filtering is available. \nIt is a type of full duplex transmission mode. \nIt is also called an efficient bridge.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Subnet:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+A subnet is a network inside a network achieved by the process called subnetting which helps divide a network into subnets. \nIt is used for getting a higher routing efficiency and enhances the security of the network. \nIt reduces the time to extract the host address from the routing table.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="The reliability of a network can be measured by the following factors:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● Downtime: The downtime is defined as the required time to recover.\n● Failure Frequency: It is the frequency when it fails to work the way it is intended.\n● Catastrophe: It indicates that the network has been attacked by some unexpected event such as fire, earthquake.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Criteria which make a network effective and efficient:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+● Performance : \nMeasured in many ways like transmit time and response time.\n● Reliability: \nMeasured by frequency of failure.\n● Robustness: \nSpecifies the quality or condition of being strong and in good condition.\n● Security: \nSpecifies how to protect data from unauthorized access and viruses.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Node and Link:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+A network is a connection setup of two or more computers directly connected by some physical mediums like optical fiber or coaxial cable. \nThis physical medium of connection is known as a link, and the computers that it is connected to are known as nodes.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Gateway and router:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+A node that is connected to two or more networks is commonly known as a gateway. It is also known as a router. \nIt is used to forward messages from one network to another. \nBoth the gateway and router regulate the traffic in the network. \nDifferences between gateway and router: A router sends the data between two similar networks while gateway sends the data between two dissimilar networks.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="POP3 (Post Office Protocol version3):"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+POP is responsible for accessing the mail service on a client machine. \nPOP3 works on two models such as Delete mode and Keep mode.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Private IP Address:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+There are three ranges of IP addresses that have been reserved for IP addresses. \nThey are not valid for use on the internet. \nIf you want to access the internet on these private IPs, you must use a proxy server or NAT server.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Public IP Address:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+A public IP address is an address taken by the Internet Service Provider which facilitates communication on the internet.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="RAID (Redundant Array of Inexpensive/Independent Disks):"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+It is a method to provide Fault Tolerance by using multiple Hard Disc Drives.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Ping:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+The ping is a utility program that allows you to check the connectivity between the network devices. \nYou can ping devices using its IP address or name.
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+\n\nThe processes on each machine that communicate at a given layer are called peer-peer processes. (P2P).
+"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_bold"
+        android:layout_marginTop="16dp"
+        android:text="Unicast, Anycast, Multicast, Broadcast:"
+        android:textIsSelectable="true"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/mulish_extralight"
+        android:textIsSelectable="true"
+        android:textSize="18dp"
+        android:text="
+Unicasting: \nIf the message is sent to a single node from the source then it is known as unicasting. \nThis is commonly used in networks to establish a new connection.\n\nAnycasting: \nIf the message is sent to any of the nodes from the source then it is known as anycasting. \nIt is mainly used to get the content from any of the servers in the Content Delivery System.\n\nMulticasting: \nIf the message is sent to a subset of nodes from the source then it is known as multicasting. \nUsed to send the same data to multiple receivers.\n\nBroadcasting: \nIf the message is sent to all the nodes in a network from a source then it is known as broadcasting. \nDHCP and ARP in the local network use broadcasting.
+"/>
+
+
 
 </LinearLayout>
 </ScrollView>
