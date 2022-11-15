@@ -43,7 +43,6 @@ public class PlayerActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         vid = getIntent().getStringArrayExtra("video");
-
         Video vide = new Video(vid[0],vid[1],vid[2],Long.parseLong(vid[3]),Long.parseLong(vid[4]),Long.parseLong(vid[5]),vid[6]);
 
         title = (TextView) findViewById(R.id.vtitle);
@@ -52,18 +51,14 @@ public class PlayerActivity extends AppCompatActivity {
 
         ypv = findViewById(R.id.youtube_player_view);
 
-        module.setText(vid[6]);
+        module.setText(vide.getModule());
 
         if(vid[5].equals("0")){
             imp.setVisibility(View.GONE);
         }
 
-        Log.d("hihi", vid[5]+":");
-        String wholeThing = "";
-        for (int i = 0; i < vid.length; i++) {
-            wholeThing += vid[i] +"\n";
-        }
-        title.setText(vid[2]);
+        title.setText(vide.getVideoTitle());
+
 
         getLifecycle().addObserver(ypv);
         ypv.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -82,6 +77,10 @@ public class PlayerActivity extends AppCompatActivity {
 
 
 
+
+
+        //pin video
+
         FirebaseAuth mAuth;
         FirebaseUser mUser;
         DatabaseReference mRef;
@@ -91,8 +90,6 @@ public class PlayerActivity extends AppCompatActivity {
         mRef = FirebaseDatabase.getInstance().getReference();
 
         ImageView pinBtn = findViewById(R.id.pin);
-
-
 
         pinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -127,32 +124,6 @@ public class PlayerActivity extends AppCompatActivity {
                 });
             }
         });
-
-
-
-
-
-
-
-
-
-
-//        YouTubePlayer.OnInitializedListener listener = new YouTubePlayer.OnInitializedListener() {
-//            @Override
-//            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-//                youTubePlayer.loadVideo(vid[0]);
-//                youTubePlayer.play();
-//            }
-//
-//            @Override
-//            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-//                Toast.makeText(getApplicationContext(),
-//                        "Failed",
-//                        Toast.LENGTH_SHORT).show();
-//            }
-//        };
-//        ypv.initialize("AIzaSyBmNsfFLi8vqW2ZZE-ZRJTUd5sfRnw74bQ",listener);
-
 
 
     }
