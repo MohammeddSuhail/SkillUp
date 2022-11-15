@@ -114,7 +114,7 @@ public class PlayerActivity extends AppCompatActivity {
 
 
                 //Toast.makeText(PlayerActivity.this, CoursesFragment.course, Toast.LENGTH_SHORT).show();   .setValue(vide) or .updateChildren(hashMap)
-                mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(mUser.getUid()+vid[6]).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(mUser.getUid()+vid[0]).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(PlayerActivity.this, "Added", Toast.LENGTH_SHORT).show();
