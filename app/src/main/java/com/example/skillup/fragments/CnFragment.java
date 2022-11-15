@@ -15,12 +15,16 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.skillup.Notes.CNnotesFragment;
 import com.example.skillup.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class CnFragment extends Fragment {
 
     public static FragmentTransaction f;
 
-    CardView osi, cn_net_cardview, cn_trans_cardview, cn_appn_cardview, cn_hw_cardview, cn_imp_cardview, cn_notes_cardview;
+    CardView osi, cn_net_cardview, cn_trans_cardview, cn_appn_cardview, cn_hw_cardview, cn_imp_cardview, cn_notes_cardview,cn_pin_cardview;
     TextView search;
     static int imp=0;
     VideoListFragment videoListFragment;
@@ -37,7 +41,17 @@ public class CnFragment extends Fragment {
         cn_hw_cardview = view.findViewById(R.id.cn_hw_cardview);
         cn_imp_cardview = view.findViewById(R.id.cn_imp_cardview);
         cn_notes_cardview = view.findViewById(R.id.cn_notes_cardview);
+        cn_pin_cardview = view.findViewById(R.id.cn_pin_cardview);
         search = view.findViewById(R.id.cn_search);
+
+
+        FirebaseAuth mAuth;
+        FirebaseUser mUser;
+        DatabaseReference mRef;
+
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        mRef = FirebaseDatabase.getInstance().getReference();
 
         videoListFragment = new VideoListFragment();
         Bundle args = new Bundle();
@@ -121,6 +135,17 @@ public class CnFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CNnotesFragment()).addToBackStack(null).commit();
+            }
+        });
+
+
+        cn_pin_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"Pinned",mUser.getUid(),"CN"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
         });
 

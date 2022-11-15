@@ -11,10 +11,14 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.skillup.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class OsFragment extends Fragment {
 
-    CardView os_intro_cardview, os_process_cardview, os_schedule_cardview, os_sync_cardview, os_mem_cardview, os_page_cardview, os_cmd_cardview;
+    CardView os_intro_cardview, os_process_cardview, os_schedule_cardview, os_sync_cardview, os_mem_cardview, os_page_cardview, os_cmd_cardview, os_pin_cardview;
     VideoListFragment videoListFragment;
 
     @Nullable
@@ -29,6 +33,15 @@ public class OsFragment extends Fragment {
         os_mem_cardview = view.findViewById(R.id.os_mem_cardview);
         os_page_cardview = view.findViewById(R.id.os_page_cardview);
         os_cmd_cardview = view.findViewById(R.id.os_cmd_cardview);
+        os_pin_cardview = view.findViewById(R.id.os_pin_cardview);
+
+        FirebaseAuth mAuth;
+        FirebaseUser mUser;
+        DatabaseReference mRef;
+
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        mRef = FirebaseDatabase.getInstance().getReference();
 
         videoListFragment = new VideoListFragment();
         Bundle args = new Bundle();
@@ -97,6 +110,16 @@ public class OsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String[] arguments = {"OS","UNIX_Commands"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+
+        os_pin_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"Pinned",mUser.getUid(),"OS"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();

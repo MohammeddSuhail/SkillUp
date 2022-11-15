@@ -21,6 +21,8 @@ public class CoursesFragment extends Fragment {
 
     CardView cn,dbms,os,oops;
 
+    public static String course;
+
 
     @Nullable
     @Override
@@ -43,24 +45,28 @@ public class CoursesFragment extends Fragment {
         cn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                course = "CN";
                 CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).addToBackStack(null).commit();
             }
         });
         dbms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                course = "DBMS";
                 CoursesFragment.f.replace(R.id.fragment_container, new DbmsFragment()).addToBackStack(null).commit();
             }
         });
         os.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                course = "OS";
                 CoursesFragment.f.replace(R.id.fragment_container, new OsFragment()).addToBackStack(null).commit();
             }
         });
         oops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                course = "OOPS";
                 VideoListFragment videoListFragment = new VideoListFragment();
                 Bundle args = new Bundle();
                 String[] arguments = {"OOPS","introduction_to_OOPS"};

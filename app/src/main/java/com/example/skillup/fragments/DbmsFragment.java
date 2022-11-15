@@ -11,10 +11,14 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.skillup.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class DbmsFragment extends Fragment {
 
-    CardView dbms_intro_cardview, dbms_key_cardview, dbms_sql_cardview, dbms_normal_cardview, dbms_trans_cardview;
+    CardView dbms_intro_cardview, dbms_key_cardview, dbms_sql_cardview, dbms_normal_cardview, dbms_trans_cardview, dbms_imp_cardview, dbms_pin_cardview;
 
     VideoListFragment videoListFragment;
 
@@ -30,9 +34,20 @@ public class DbmsFragment extends Fragment {
         dbms_normal_cardview = view.findViewById(R.id.dbms_normal_cardview);
         dbms_sql_cardview = view.findViewById(R.id.dbms_sql_cardview);
         dbms_trans_cardview = view.findViewById(R.id.dbms_trans_cardview);
+        dbms_imp_cardview = view.findViewById(R.id.dbms_imp_cardview);
+        dbms_pin_cardview = view.findViewById(R.id.dbms_pin_cardview);
 
         videoListFragment = new VideoListFragment();
         Bundle args = new Bundle();
+
+
+        FirebaseAuth mAuth;
+        FirebaseUser mUser;
+        DatabaseReference mRef;
+
+        mAuth = FirebaseAuth.getInstance();
+        mUser = mAuth.getCurrentUser();
+        mRef = FirebaseDatabase.getInstance().getReference();
 
 
 
@@ -81,6 +96,16 @@ public class DbmsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String[] arguments = {"DBMS","Transaction_and_schedules"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+
+        dbms_pin_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"Pinned",mUser.getUid(),"DBMS"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
