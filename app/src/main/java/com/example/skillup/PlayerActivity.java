@@ -43,6 +43,9 @@ public class PlayerActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         vid = getIntent().getStringArrayExtra("video");
+
+        Video vide = new Video(vid[0],vid[1],vid[2],Long.parseLong(vid[3]),Long.parseLong(vid[4]),Long.parseLong(vid[5]),vid[6]);
+
         title = (TextView) findViewById(R.id.vtitle);
         module=(TextView) findViewById(R.id.module);
         imp = (TextView) findViewById(R.id.imp);
@@ -104,8 +107,6 @@ public class PlayerActivity extends AppCompatActivity {
                 hashMap.put("duration",Long.parseLong(vid[4]));
                 hashMap.put("important",Long.parseLong(vid[5]));
                 hashMap.put("Module", vid[6]);
-
-                Video vide = new Video(vid[0],vid[1],vid[2],Long.parseLong(vid[3]),Long.parseLong(vid[4]),Long.parseLong(vid[5]),vid[6]);
 
                 Date date = new Date();
                 SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyy hh:mm:ss");
