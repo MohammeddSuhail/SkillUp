@@ -38,7 +38,7 @@ public class PlayerActivity extends AppCompatActivity {
     String[] vid;
     TextView title, module,imp;
     YouTubePlayerView ypv;
-    ImageView pinBtn;
+    ImageView pinBtn, unPinBtn;
 
 
 
@@ -96,6 +96,7 @@ public class PlayerActivity extends AppCompatActivity {
         mRef = FirebaseDatabase.getInstance().getReference();
 
         pinBtn = findViewById(R.id.pin);
+        unPinBtn = findViewById(R.id.unpin);
 
         setPin();
 
@@ -104,56 +105,86 @@ public class PlayerActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).addValueEventListener(new ValueEventListener() {
+                HashMap hashMap = new HashMap();
+                String videoId, videoLink, videoTitle, Module;
+                Long ID, duration, important;
+                hashMap.put("videoId",vid[0]);
+                hashMap.put("videoLink",vid[1]);
+                hashMap.put("videoTitle", vid[2]);
+                hashMap.put("ID",Long.parseLong(vid[3]));
+                hashMap.put("duration",Long.parseLong(vid[4]));
+                hashMap.put("important",Long.parseLong(vid[5]));
+                hashMap.put("Module", vid[6]);
+
+
+                //Toast.makeText(PlayerActivity.this, CoursesFragment.course, Toast.LENGTH_SHORT).show();   .setValue(vide) or .updateChildren(hashMap)
+                mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        if(snapshot.exists()){
-
-//                            mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).removeValue();
-                            Toast.makeText(PlayerActivity.this,"Removed",Toast.LENGTH_SHORT).show();
-
-                        }
-                        else{
-                            //not there so add
-                            HashMap hashMap = new HashMap();
-                            String videoId, videoLink, videoTitle, Module;
-                            Long ID, duration, important;
-                            hashMap.put("videoId",vid[0]);
-                            hashMap.put("videoLink",vid[1]);
-                            hashMap.put("videoTitle", vid[2]);
-                            hashMap.put("ID",Long.parseLong(vid[3]));
-                            hashMap.put("duration",Long.parseLong(vid[4]));
-                            hashMap.put("important",Long.parseLong(vid[5]));
-                            hashMap.put("Module", vid[6]);
-
-                            Date date = new Date();
-                            SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyy hh:mm:ss");
-                            String strDate = formatter.format(date);
-
-
-                            //Toast.makeText(PlayerActivity.this, CoursesFragment.course, Toast.LENGTH_SHORT).show();   .setValue(vide) or .updateChildren(hashMap)
-                            mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void unused) {
-                                    Toast.makeText(PlayerActivity.this, "Added", Toast.LENGTH_SHORT).show();
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(PlayerActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
-                                }
-                            });
-
-                        }
+                    public void onSuccess(Void unused) {
+                        Toast.makeText(PlayerActivity.this, "Added", Toast.LENGTH_SHORT).show();
                     }
-
+                }).addOnFailureListener(new OnFailureListener() {
                     @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(PlayerActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
 
+//                mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+//
+//                        if(snapshot.exists()){
+////                            mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).removeValue();
+////                            Toast.makeText(PlayerActivity.this,"Removed",Toast.LENGTH_SHORT).show();
+//                        }
+//                        else{
+//                            //not there so add
+//                            HashMap hashMap = new HashMap();
+//                            String videoId, videoLink, videoTitle, Module;
+//                            Long ID, duration, important;
+//                            hashMap.put("videoId",vid[0]);
+//                            hashMap.put("videoLink",vid[1]);
+//                            hashMap.put("videoTitle", vid[2]);
+//                            hashMap.put("ID",Long.parseLong(vid[3]));
+//                            hashMap.put("duration",Long.parseLong(vid[4]));
+//                            hashMap.put("important",Long.parseLong(vid[5]));
+//                            hashMap.put("Module", vid[6]);
+//
+//
+//                            //Toast.makeText(PlayerActivity.this, CoursesFragment.course, Toast.LENGTH_SHORT).show();   .setValue(vide) or .updateChildren(hashMap)
+//                            mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+//                                @Override
+//                                public void onSuccess(Void unused) {
+//                                    Toast.makeText(PlayerActivity.this, "Added", Toast.LENGTH_SHORT).show();
+//                                }
+//                            }).addOnFailureListener(new OnFailureListener() {
+//                                @Override
+//                                public void onFailure(@NonNull Exception e) {
+//                                    Toast.makeText(PlayerActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
+//                                }
+//                            });
+//                        }
+//
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError error) {
+//
+//                    }
+//                });
+
+
+            }
+        });
+
+
+        unPinBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).removeValue();
+                Toast.makeText(PlayerActivity.this,"Removed",Toast.LENGTH_SHORT).show();
             }
         });
 
