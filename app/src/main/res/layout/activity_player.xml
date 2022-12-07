@@ -55,20 +55,18 @@
 
         <ImageView
             android:id="@+id/pin"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="16dp"
-            android:layout_weight="1"
             android:src="@drawable/ic_baseline_push_pin_24" />
 
         <ImageView
             android:id="@+id/unpin"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="16dp"
-            android:layout_weight="1"
             android:src="@drawable/unpin" />
     </LinearLayout>
     <com.google.android.material.textview.MaterialTextView
