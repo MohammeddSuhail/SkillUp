@@ -39,9 +39,7 @@ public class VideoListFragment extends Fragment {
     String com, mod,imp;
     String ch="";
     DatabaseReference modRef;
-    List<Video> itemList;
 
-    SearchView searchView;
     RecyclerView recyclerView;
 
     FirebaseRecyclerAdapter<Video, MyViewHolder> adapter;
@@ -71,20 +69,7 @@ public class VideoListFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerViewVideoList);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        searchView = view.findViewById(R.id.searchView);
-        searchView.clearFocus();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
 
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                filterList(newText);
-                return true;
-            }
-        });
 
         FirebaseRecyclerOptions<Video> options = new FirebaseRecyclerOptions.Builder<Video>().setQuery(modRef, Video.class).build();
 
@@ -103,7 +88,7 @@ public class VideoListFragment extends Fragment {
 
             @Override
             protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NonNull Video model) {
-                itemList = new ArrayList<>();
+
                 final String videoKey = getRef(position).getKey();
 
                 holder.videoThumbNail.setImageDrawable(null);
@@ -137,7 +122,7 @@ public class VideoListFragment extends Fragment {
 
                 String[] vid = {model.getVideoId(), model.getVideoLink(), model.getVideoTitle(), model.getID()+"", model.getDuration()+"", model.getImportant()+"",model.getModule()};
 
-                itemList.add(curVid);
+
                 //if the rows recyclerView in the find friend is clicked
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -160,23 +145,7 @@ public class VideoListFragment extends Fragment {
     }
 
 
-//    public void setFilteredList(List<Video> filteredList){
-//        this.itemList = filteredList;
-//        viewpager.getAdapter().notifyDataSetChanged();
-//    }
 
-    private void filterList(String text) {
-        List<Video> filteredList = new ArrayList<>();
-        for(Video video:itemList){
-            if(video.getVideoTitle().toLowerCase().contains(text.toLowerCase())){
-                filteredList.add(video);
-            }
-        }
-
-        if(filteredList.isEmpty()){
-            Toast.makeText(getContext(), "No data found", Toast.LENGTH_SHORT).show();
-        }
-    }
 
     //ViewHolder
     public static class MyViewHolder extends RecyclerView.ViewHolder {

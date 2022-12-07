@@ -20,8 +20,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
@@ -35,6 +38,13 @@ public class PlayerActivity extends AppCompatActivity {
     String[] vid;
     TextView title, module,imp;
     YouTubePlayerView ypv;
+    ImageView pinBtn;
+
+
+
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
+    DatabaseReference mRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,50 +91,92 @@ public class PlayerActivity extends AppCompatActivity {
 
         //pin video
 
-        FirebaseAuth mAuth;
-        FirebaseUser mUser;
-        DatabaseReference mRef;
-
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         mRef = FirebaseDatabase.getInstance().getReference();
 
-        ImageView pinBtn = findViewById(R.id.pin);
+        pinBtn = findViewById(R.id.pin);
+
+        setPin();
+
 
         pinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                HashMap hashMap = new HashMap();
-                String videoId, videoLink, videoTitle, Module;
-                Long ID, duration, important;
-                hashMap.put("videoId",vid[0]);
-                hashMap.put("videoLink",vid[1]);
-                hashMap.put("videoTitle", vid[2]);
-                hashMap.put("ID",Long.parseLong(vid[3]));
-                hashMap.put("duration",Long.parseLong(vid[4]));
-                hashMap.put("important",Long.parseLong(vid[5]));
-                hashMap.put("Module", vid[6]);
 
-                Date date = new Date();
-                SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyy hh:mm:ss");
-                String strDate = formatter.format(date);
-
-
-                //Toast.makeText(PlayerActivity.this, CoursesFragment.course, Toast.LENGTH_SHORT).show();   .setValue(vide) or .updateChildren(hashMap)
-                mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(mUser.getUid()+vid[0]).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).addValueEventListener(new ValueEventListener() {
                     @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(PlayerActivity.this, "Added", Toast.LENGTH_SHORT).show();
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.exists()){
+
+//                            mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).removeValue();
+                            Toast.makeText(PlayerActivity.this,"Removed",Toast.LENGTH_SHORT).show();
+
+                        }
+                        else{
+                            //not there so add
+                            HashMap hashMap = new HashMap();
+                            String videoId, videoLink, videoTitle, Module;
+                            Long ID, duration, important;
+                            hashMap.put("videoId",vid[0]);
+                            hashMap.put("videoLink",vid[1]);
+                            hashMap.put("videoTitle", vid[2]);
+                            hashMap.put("ID",Long.parseLong(vid[3]));
+                            hashMap.put("duration",Long.parseLong(vid[4]));
+                            hashMap.put("important",Long.parseLong(vid[5]));
+                            hashMap.put("Module", vid[6]);
+
+                            Date date = new Date();
+                            SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyy hh:mm:ss");
+                            String strDate = formatter.format(date);
+
+
+                            //Toast.makeText(PlayerActivity.this, CoursesFragment.course, Toast.LENGTH_SHORT).show();   .setValue(vide) or .updateChildren(hashMap)
+                            mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Toast.makeText(PlayerActivity.this, "Added", Toast.LENGTH_SHORT).show();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(PlayerActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+                        }
                     }
-                }).addOnFailureListener(new OnFailureListener() {
+
                     @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(PlayerActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
+                    public void onCancelled(@NonNull DatabaseError error) {
+
                     }
                 });
+
+
             }
         });
 
+    }
 
+    private void setPin() {
+        mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    //pinBtn.setVisibility(View.GONE);
+
+                }
+                else{
+                    //pinBtn.setVisibility(View.VISIBLE);
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }
