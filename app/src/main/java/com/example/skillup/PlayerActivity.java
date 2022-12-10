@@ -196,9 +196,11 @@ public class PlayerActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     pinBtn.setVisibility(View.GONE);
+                    unPinBtn.setVisibility(View.VISIBLE);
                 }
                 else{
                     unPinBtn.setVisibility(View.GONE);
+                    pinBtn.setVisibility(View.VISIBLE);
                 }
             }
 
