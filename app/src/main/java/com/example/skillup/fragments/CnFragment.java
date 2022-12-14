@@ -71,7 +71,7 @@ public class CnFragment extends Fragment {
         cn_net_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String[] arguments = {"CN","Network_Layer"};
+                String[] arguments = {"CN"," Network_Layer"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
