@@ -1,10 +1,9 @@
-package com.example.skillup.Notes;
+package com.example.skillup.Note;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -14,8 +13,6 @@ import androidx.fragment.app.Fragment;
 
 import com.example.skillup.R;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class CNnotesFragment extends Fragment {

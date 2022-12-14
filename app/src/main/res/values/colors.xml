@@ -6,6 +6,15 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#f2f2f2</color>
     <color name="moduleBLUE">#4FB8F1</color>
+    <color name="main">#4864e6</color>
+    <color name="secondary">#F2F4FF</color>
+    <color name="dark_grey">#6E6D6D</color>
+
+    <color name="col1">#F2F4FF</color>
+    <color name="col2">#F2F4FF</color>
+    <color name="col3">#F2F4FF</color>
+    <color name="col4">#F2F4FF</color>
+    <color name="col5">#F2F4FF</color>
 </resources>

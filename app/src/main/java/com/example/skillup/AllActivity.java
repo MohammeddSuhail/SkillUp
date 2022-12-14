@@ -104,6 +104,11 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new ProfileFragment()).commit();
                 break;
 
+            case R.id.nav_notes:
+                Intent intent = new Intent(AllActivity.this,NotesActivity.class);
+                startActivity(intent);
+                break;
+
             case R.id.nav_community:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
                 break;

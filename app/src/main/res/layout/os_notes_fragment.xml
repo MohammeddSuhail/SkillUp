@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#1f1f1f"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbarSize="10dp"
+    android:fadeScrollbars="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:background="#121517"
+        android:textIsSelectable="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:text="OPERATING SYSTEMS"
+            android:textSize="30dp"
+            />
+
+        <TextView
+            android:id="@+id/network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="Operating System:"
+            android:padding="0dp"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/networkdetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:text="Interface between user and hardware.\nIt is responsible for the execution of all the processes, Resource Allocation, CPU management, File Management and many other tasks.\nThe purpose of an operating system is to provide an environment in which a user can execute programs in a convenient and efficient manner.
+"
+            android:textSize="18dp"
+            />
+
+
+
+        <LinearLayout
+            android:id="@+id/topod"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish_bold"
+                android:layout_marginTop="16dp"
+                android:text="Types of Operating Systems:"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish"
+                android:layout_marginTop="4dp"
+                android:text="Batch OS:"
+                android:textIsSelectable="true"
+                android:textSize="19dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish_extralight"
+                android:textIsSelectable="true"
+                android:text="A job gets assigned to the CPU, only when the execution of the previous job completes."
+                android:textSize="18dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish"
+                android:layout_marginTop="4dp"
+                android:text="Multiprogramming OS:"
+                android:textIsSelectable="true"
+                android:textSize="19dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish_extralight"
+                android:textIsSelectable="true"
+                android:text="The main memory consists of jobs waiting for CPU time. The OS selects one of the processes and assigns it to the CPU. Whenever the executing process needs to wait for any other operation (like I/O), the OS selects another process from the job queue and assigns it to the CPU. This way, the CPU is never kept idle"
+                android:textSize="18dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish"
+                android:layout_marginTop="4dp"
+                android:text="Multitasking OS:"
+                android:textIsSelectable="true"
+                android:textSize="19dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish_extralight"
+                android:textIsSelectable="true"
+                android:text="Multitasking OS combines the benefits of Multiprogramming OS and CPU scheduling to perform quick switches between jobs. The switch is so quick that the user can interact with each program as it runs.
+"
+                android:textSize="18dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish"
+                android:layout_marginTop="4dp"
+                android:text="Time Sharing OS:"
+                android:textIsSelectable="true"
+                android:textSize="19dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish_extralight"
+                android:textIsSelectable="true"
+                android:text="Time-sharing systems require interaction with the user to instruct the OS to perform various tasks.
+"
+                android:textSize="18dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish"
+                android:layout_marginTop="4dp"
+                android:text="Real Time OS:"
+                android:textIsSelectable="true"
+                android:textSize="19dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish_extralight"
+                android:textIsSelectable="true"
+                android:text="Real-Time OS are usually built for dedicated systems to accomplish a specific set of tasks within deadlines.
+"
+                android:textSize="18dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish"
+                android:layout_marginTop="4dp"
+                android:text="Process:"
+                android:textSize="19dp"
+                android:textIsSelectable="true"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish_extralight"
+                android:textIsSelectable="true"
+                android:textSize="19dp"
+                android:text="Process is a program under execution. Each process is represented by a Process Control Block (PCB).
+"/>
+"             />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="Process Scheduling:"
+            android:textSize="20dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/typesd"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish_extralight"
+                android:textIsSelectable="true"
+                android:textSize="18dp"
+                android:text="1. Arrival Time: Time at which the process arrives in the ready queue. \n2. Completion Time: Time at which process completes its execution.\n3. Burst Time: Time required by a process for CPU execution. \n4. Turn Around Time: Time Difference between completion time and arrival time.  Turn Around Time = Completion Time - Arrival Time \n5. Waiting Time (WT): Time Difference between turn around time and burst time.  Waiting Time = Turnaround Time - Burst Time
+"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish_bold"
+                android:layout_marginTop="16dp"
+                android:text="Thread (Important):"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish_extralight"
+                android:textIsSelectable="true"
+                android:textSize="18dp"
+                android:text="A thread is a lightweight process.\nA process can perform more than one task at the same time by including multiple threads.\n● A thread has its own program counter, register set, and stack\n● A thread shares resources with other threads of the same process: the code section, the data section, files and signals.\n\nA new thread, or a child process of a given process, can be introduced by using the fork() system call. \nA process with n fork() system call generates 2^n – 1 child processes.\nThere are two types of threads:\n● User threads (User threads are implemented by users) \n● Kernel threads (Kernel threads are implemented by OS)
+        "/>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="Scheduling Algorithms:"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+1. First Come First Serve (FCFS) : Simplest scheduling algorithm that schedules according to arrival times of processes.\n\n2. Shortest Job First (SJF): Processes which have the shortest burst time are scheduled first.\n\n3. Shortest Remaining Time First (SRTF): It is a preemptive mode of SJF algorithm in which jobs are scheduled according to the shortest remaining time.\n\n4. Round Robin (RR) Scheduling: Each process is assigned a fixed time, in a cyclic way.\n\n5. Priority Based scheduling (Non Preemptive): In this scheduling, processes are scheduled according to their priorities, i.e., highest priority process is scheduled first. If priorities of two processes match, then scheduling is according to the arrival time.\n\n6. Highest Response Ratio Next (HRRN): In this scheduling, processes with the highest response ratio are scheduled. This algorithm avoids starvation.\nResponse Ratio = (Waiting Time + Burst time) / Burst time\n\n7. Multilevel Queue Scheduling (MLQ): According to the priority of the process, processes are placed in the different queues. Generally high priority processes are placed in the top level queue. Only after completion of processes from the top level queue, lower level queued processes are scheduled.\n\n8. Multilevel Feedback Queue (MLFQ) Scheduling: It allows the process to move in between queues. The idea is to separate processes according to the characteristics of their CPU bursts. If a process uses too much CPU time, it is moved to a lower-priority queue.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="The Critical Section Problem:"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+1. Critical Section – The portion of the code in the program where shared variables are accessed and/or updated.\n\n2. Remainder Section – The remaining portion of the program excluding the Critical Section.\n\n3. Race around Condition – The final output of the code depends on the order in which the variables are accessed. This is termed as the race around condition.\n\n\nA solution for the critical section problem must satisfy the following three conditions:\n1. Mutual Exclusion – If a process Pi is executing in its critical section, then no other process is allowed to enter into the critical section.\n\n2. Progress – If no process is executing in the critical section, then the decision of a process to enter a critical section cannot be made by any other process that is executing in its remainder section. The selection of the process cannot be postponed indefinitely.\n\n3. Bounded Waiting – There exists a bound on the number of times other processes can enter into the critical section after a process has made a request to access the critical section and before the request is granted.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="Synchronization Tools:"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+Semaphore : \nSemaphore is a protected variable or abstract data type that is used to lock the resource being used. \nThe value of the semaphore indicates the status of a common resource.\nThere are two types of semaphores:\nBinary semaphores (Binary semaphores take only 0 and 1 as value and are used to implement mutual exclusion and synchronize concurrent processes.) \nCounting semaphores (A counting semaphore is an integer variable whose value can range over an unrestricted domain.)\n\nMutex:\nA mutex provides mutual exclusion, either producer or consumer can have the key (mutex) and proceed with their work. \nAs long as the buffer is filled by the producer, the consumer needs to wait, and vice versa.\nAt any point of time, only one thread can work with the entire buffer.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="Deadlocks (Important):"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+A situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process. \n\nDeadlock can arise if following four conditions hold simultaneously (Necessary Conditions):\n1. Mutual Exclusion – One or more than one resource is non-sharable (Only one process can use at a time).\n2. Hold and Wait – A process is holding at least one resource and waiting for resources.\n3. No Preemption – A resource cannot be taken from a process unless the process releases the resource.\n4. Circular Wait – A set of processes are waiting for each other in circular form.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish"
+            android:text="Methods for handling deadlock::"
+            android:textIsSelectable="true"
+            android:textSize="19dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+1. Deadlock prevention or avoidance : The idea is to not let the system into a deadlock state.\n2. Deadlock detection and recovery : Let deadlock occur, then do preemption to handle it once occurred.\n3. Ignore the problem all together : If deadlock is very rare, then let it happen and reboot the system.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="Banker's Algorithm:"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+Banker's algorithm is used to avoid deadlock. \nIt is one of the deadlock-avoidance methods. \nIt is named as Banker's algorithm on the banking system where a bank never allocates available cash in such a manner that it can no longer satisfy the requirements of all of its customers.
+"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="Memory Management:"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+These techniques allow the memory to be shared among multiple processes.\n● Overlays – The memory should contain only those instructions and data that are required at a given time.\n● Swapping – In multiprogramming, the instructions that have used the time slice are swapped out from the memory.\n\nTechniques :\n\n(a) Single Partition Allocation Schemes:\n The memory is divided into two parts. One part is kept to be used by the OS and the other is kept to be used by the users.\n\n(b) Multiple Partition Schemes:\n1. Fixed Partition – The memory is divided into fixed size partitions.\n2. Variable Partition – The memory is divided into variable sized partitions.\n\nNote : Variable partition allocation schemes:\n1. First Fit – The arriving process is allotted the first hole of memory in which it fits completely.\n2. Best Fit – The arriving process is allotted the hole of memory in which it fits the best by leaving the minimum memory empty.\n3. Worst Fit – The arriving process is allotted the hole of memory in which it leaves the maximum gap.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="Note:"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+1. Paging: The physical memory is divided into equal sized frames. The main memory is divided into fixed size pages. The size of a physical memory frame is equal to the size of a virtual memory frame.\n\n2. Segmentation: Segmentation is implemented to give users a view of memory. The logical address space is a collection of segments. Segmentation can be implemented with or without the use of paging.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="Page Fault:"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+A page fault is a type of interrupt, raised by the hardware when a running program accesses a memory page that is mapped into the virtual address space, but not loaded in physical memory.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="PAGE REPLACEMENT ALGORITHMS (Important):"
+            android:textSize="20dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="1. First In First Out (FIFO):"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+This is the simplest page replacement algorithm. In this algorithm, the operating system keeps track of all pages in the memory in a queue, the oldest page is in the front of the queue. When a page needs to be replaced, the page in the front of the queue is selected for removal.\n\nFor example, consider page reference string 1, 3, 0, 3, 5, 6 and 3 page slots. Initially, all slots are empty, so when 1, 3, 0 come they are allocated to the empty slots —> 3 Page Faults. When 3 comes, it is already in memory so —> 0 Page Faults. Then 5 comes, it is not available in memory so it replaces the oldest page slot i.e 1. —> 1 Page Fault. Finally, 6 comes, it is also not available in memory so it replaces the oldest page slot i.e 3 —> 1 Page Fault.\n\nBelady’s anomaly:\nBelady’s anomaly proves that it is possible to have more page faults when increasing the number of page frames while using the First in First Out (FIFO) page replacement algorithm. \nFor example, if we consider reference string ( 3 2 1 0 3 2 4 3 2 1 0 4) and 3 slots, we get 9 total page faults, but if we increase slots to 4, we get 10 page faults.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="2. Optimal Page replacement:"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+In this algorithm, pages are replaced which are not used for the longest duration of time in the future.\n\nLet us consider page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 and 4 page slots. \nInitially, all slots are empty, so when 7 0 1 2 are allocated to the empty slots —> 4 Page faults. 0 is already there so —> 0 Page fault. \nWhen 3 came it will take the place of 7 because it is not used for the longest duration of time in the future.—> 1 Page fault. \n0 is already there so —> 0 Page fault. 4 will takes place of 1 —> 1 Page Fault. Now for the further page reference string —> 0 Page fault because they are already available in the memory.\nOptimal page replacement is perfect, but not possible in practice as an operating system cannot know future requests. \nThe use of Optimal Page replacement is to set up a benchmark so that other replacement algorithms can be analyzed against it.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="3. Least Recently Used (LRU):"
+            android:textIsSelectable="true"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+In this algorithm, the page will be replaced with the one which is least recently used. \n\nLet say the page reference string 7 0 1 2 0 3 0 4 2 3 0 3 2 . \nInitially, we had 4-page slots empty. Initially, all slots are empty, so when 7 0 1 2 are allocated to the empty slots —> 4 Page faults. 0 is already there so —> 0 Page fault. \nWhen 3 comes it will take the place of 7 because it is least recently used —> 1 Page fault. \n0 is already in memory so —> 0 Page fault. \n4 will take place of 1 —> 1 Page Fault. \nNow for the further page reference string —> 0 Page fault because they are already available in the memory.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="Disk Scheduling:"
+            android:textIsSelectable="true"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+Disk scheduling is done by operating systems to schedule I/O requests arriving for disk. \nDisk scheduling is also known as I/O scheduling.\n\n1. Seek Time: Seek time is the time taken to locate the disk arm to a specified track where the data is to be read or written.\n2. Rotational Latency: Rotational Latency is the time taken by the desired sector of disk to rotate into a position so that it can access the read/write heads.\n3. Transfer Time: Transfer time is the time to transfer the data. It depends on the rotating speed of the disk and number of bytes to be transferred.\n4. Disk Access Time: Seek Time + Rotational Latency + Transfer Time\n5. Disk Response Time: Response Time is the average of time spent by a request waiting to perform its I/O operation. Average Response time is the response time of all requests.
+"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:layout_marginTop="16dp"
+            android:text="KEY TERMS:"
+            android:textIsSelectable="true"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_extralight"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:text="
+●  Real-time system: \nIt is used in the case when rigid-time requirements have been placed on the operation of a processor. It contains well defined and fixed time constraints.  \n\n●  Monolithic kernel: \nIt is a kernel which includes all operating system code in a single executable image.  \n\n●  Micro kernel: \nIt is the kernel which runs minimal performance affecting services for the operating system. In the microkernel operating system all other operations are performed by the processor. \n\n ●  Macro Kernel: \nIt is a combination of micro and monolithic kernel.  \n\n●  Re-entrancy : \nIt is a very useful memory saving technique that is used for multi-programmed time sharing systems. It provides functionality that multiple users can share a single copy of a program during the same period. It has two key aspects:The program code cannot modify itself and the local data for each user process must be stored separately.  \n\n●  Demand paging: \nIt specifies that if an area of memory is not currently being used, it is swapped to disk to make room for an application's need.  \n\n●  Virtual memory (Imp): \nIt is a very useful memory management technique which enables processes to execute outside of memory. This technique is especially used when an executing program cannot fit in the physical memory.  \n\n●  RAID:\nIt stands for Redundant Array of Independent Disks. \nIt is used to store the same data redundantly to improve the overall performance. There are 7 RAID levels.  \n\n●  Logical address space: \nIt specifies the address that is generated by the CPU. On the other hand, physical address space specifies the address that is seen by the memory unit.  \n\n●  Fragmentation: \nIt is a phenomenon of memory wastage. It reduces the capacity and performance because space is used inefficiently. \n    1. Internal fragmentation: It occurs when we deal with the systems that have fixed size allocation units.  \n    2. External fragmentation: It occurs when we deal with systems that have variable-size allocation units.  \n\n●  Spooling: \nIt is a process in which data is temporarily gathered to be used and executed by a device, program or the system. It is associated with printing. When different applications send output to the printer at the same time, spooling keeps these all jobs into a disk file and queues them accordingly to the printer.  \n\n●  Starvation: \nIt is Resource management problem. In this problem, a waiting process does not get the resources it needs for a long time because the resources are being allocated to other processes.  \n\n●  Aging: \nIt is a technique used to avoid starvation in the resource scheduling system.  \n\n●  Advantages of multithreaded programming: \n    1. Enhance the responsiveness to the users.\n    2. Resource sharing within the process. \n    3. Economical \n    4. Completely utilize the multiprocessing architecture.  \n\n●  Thrashing: \nIt is a phenomenon in virtual memory schemes when the processor spends most of its time in swapping pages, rather than executing instructions.  
+"/>
+    </LinearLayout>
+</ScrollView>
