@@ -43,7 +43,7 @@ public class NotesListAdapter extends RecyclerView.Adapter<NotesViewHolder>{
         holder.textview_date.setSelected(true);
 
         if(list.get(position).isPinned()){                       //NOTE this pinning
-            holder.imageView_pin.setImageResource(R.drawable.ic_pin);
+            holder.imageView_pin.setImageResource(R.drawable.imp_logo);
         }
         else{
             holder.imageView_pin.setImageResource(0); //SEE this
