@@ -19,7 +19,7 @@ public class CoursesFragment extends Fragment {
 
     public static FragmentTransaction f;
 
-    CardView cn,dbms,os,oops;
+    CardView cn,dbms,os,oops, dsa;
 
     public static String course;
 
@@ -40,6 +40,7 @@ public class CoursesFragment extends Fragment {
         dbms = (CardView)view.findViewById(R.id.dbmscardview);
         os = (CardView)view.findViewById(R.id.oscardview);
         oops =(CardView) view.findViewById(R.id.oopscardview);
+        dsa=(CardView) view.findViewById(R.id.dsacardview);
 
         CoursesFragment cf = new CoursesFragment();
         cn.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +64,15 @@ public class CoursesFragment extends Fragment {
                 CoursesFragment.f.replace(R.id.fragment_container, new OsFragment()).addToBackStack(null).commit();
             }
         });
+
+        dsa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                course = "DSA";
+                CoursesFragment.f.replace(R.id.fragment_container, new DSAFragment()).addToBackStack(null).commit();
+            }
+        });
+
         oops.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
