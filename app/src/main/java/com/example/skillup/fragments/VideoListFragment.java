@@ -94,9 +94,6 @@ public class VideoListFragment extends Fragment {
                 holder.videoThumbNail.setImageDrawable(null);
                 holder.video_title.setText(model.getVideoTitle());
 
-                    if(model.getVideoTitle() .equals("Hub"))
-                        ch = model.getImportant().toString();
-                        Log.d("Hub: ", ch);
 
 //                    if (model.getImportant().toString().equals("1"))
 //                        holder.important.setText("IMPORTANT");
@@ -115,7 +112,7 @@ public class VideoListFragment extends Fragment {
 //
 
 //                    holder.important.setVisibility(View.GONE);
-
+//              https://img.youtube.com/vi/9SgLBjXqwd4/maxresdefault.jpg
                 Picasso.get().load("https://img.youtube.com/vi/" + model.getVideoId() + "/maxresdefault.jpg").into(holder.videoThumbNail);
 
                 Video curVid = new Video(model.getVideoId(), model.getVideoLink(), model.getVideoTitle(), model.getID(), model.getDuration(), model.getImportant(), model.getModule());
