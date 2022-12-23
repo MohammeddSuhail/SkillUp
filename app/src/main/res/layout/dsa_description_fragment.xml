@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="#1f1f1f"
+    android:background="@color/almost_black"
     android:scrollbars="vertical"
     android:scrollbarStyle="outsideInset"
     android:scrollbarSize="10dp"
@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:padding="16dp"
         android:orientation="vertical"
-        android:background="#121517"
+        android:background="@color/almost_black"
         android:textIsSelectable="true"
         >
 
@@ -28,14 +28,15 @@
             />
 
         <TextView
-            android:id="@+id/networkdetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:visibility="visible"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/mulish"
             android:textIsSelectable="true"
-            android:text="\nWelcome to the Data Structures and Algorithms course! \n\nThe Data Structures and Algorithms course consists of videos from each topic that would help you with understanding the basic concepts related to each topic.
+            android:background="@color/almost_black"
+            android:text="Welcome to the Data Structures and Algorithms course! \n\nThe Data Structures and Algorithms course consists of videos from each topic that would help you with understanding the basic concepts related to each topic.
 \n\nThe content in this section is based on the experiences of the people who are placed in top IT companies like Amazon, Capilliary Technologies, Nutanix, Informatica, ACI Worldwide, etc. \n\nPlease do not restrict your DSA study to this and keep practicing more questions from Leetcode, GFG, etc. to gain a better understanding of concepts. This course will only help you to move to the intermediate level when it comes to coding."
             android:textSize="18dp"
             />
