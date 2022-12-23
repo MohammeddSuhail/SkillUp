@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class DSAFragment extends Fragment {
 
     public static FragmentTransaction f;
-    CardView time_complex_cardview, math_cardview, binsearch_cardview, slidwindow_cardview, recursion_cardview, array_cardview, dsa_guide_cardview, desc_cardview;
+    CardView time_complex_cardview, dp_cardview, math_cardview, binsearch_cardview, strings_cardview, slidwindow_cardview, recursion_cardview, array_cardview, dsa_guide_cardview, desc_cardview;
     VideoListFragment videoListFragment;
     DSADescFragment dsaDescFragment;
     DSAGuideFragment dsaGuideFragment;
@@ -55,6 +55,9 @@ public class DSAFragment extends Fragment {
         math_cardview = view.findViewById(R.id.math_cardview);
         recursion_cardview = view.findViewById(R.id.recursion_cardview);
         array_cardview = view.findViewById(R.id.array_cardview);
+        strings_cardview = view.findViewById(R.id.strings_cardview);
+        dp_cardview = view.findViewById(R.id.dp_cardview);
+
         desc_cardview = view.findViewById(R.id.desc_cardview);
         dsa_guide_cardview = view.findViewById(R.id.dsa_guide_cardview);
 
@@ -72,6 +75,15 @@ public class DSAFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String[] arguments = {"DSA","Arrays"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+        strings_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"DSA","Strings"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
@@ -99,6 +111,15 @@ public class DSAFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String[] arguments = {"DSA","Sliding_Window"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+        dp_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"DSA","Dynamic_Programming"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();

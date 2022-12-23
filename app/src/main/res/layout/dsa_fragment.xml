@@ -20,7 +20,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/mulish_bold"
-            android:text="Data Structures and Algorithms for Beginners"
+            android:text="Data Structures and Algorithms for Beginners*"
             android:textColor="#FFF"
             android:textSize="23sp"
             android:textStyle="bold"
