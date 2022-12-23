@@ -20,8 +20,10 @@ import com.google.firebase.database.FirebaseDatabase;
 public class DSAFragment extends Fragment {
 
     public static FragmentTransaction f;
-    CardView time_complex_cardview, math_cardview;
+    CardView time_complex_cardview, math_cardview, binsearch_cardview, slidwindow_cardview, recursion_cardview, array_cardview, dsa_guide_cardview, desc_cardview;
     VideoListFragment videoListFragment;
+    DSADescFragment dsaDescFragment;
+    DSAGuideFragment dsaGuideFragment;
 
     @Nullable
     @Override
@@ -36,6 +38,10 @@ public class DSAFragment extends Fragment {
         mUser = mAuth.getCurrentUser();
         mRef = FirebaseDatabase.getInstance().getReference();
 
+        dsaDescFragment = new DSADescFragment();
+        dsaGuideFragment = new DSAGuideFragment();
+
+
         videoListFragment = new VideoListFragment();
         Bundle args = new Bundle();
 
@@ -44,12 +50,55 @@ public class DSAFragment extends Fragment {
 
 
         time_complex_cardview = view.findViewById(R.id.time_complex_cardview);
+        binsearch_cardview = view.findViewById(R.id.binsearch_cardview);
+        slidwindow_cardview = view.findViewById(R.id.slidwindow_cardview);
         math_cardview = view.findViewById(R.id.math_cardview);
+        recursion_cardview = view.findViewById(R.id.recursion_cardview);
+        array_cardview = view.findViewById(R.id.array_cardview);
+        desc_cardview = view.findViewById(R.id.desc_cardview);
+        dsa_guide_cardview = view.findViewById(R.id.dsa_guide_cardview);
+
 
         time_complex_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String[] arguments = {"DSA","Time_Complexity"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+        array_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"DSA","Arrays"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+        binsearch_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"DSA","Binary_Search"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+        recursion_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"DSA","Recursion"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+        slidwindow_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"DSA","Sliding_Window"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
@@ -63,6 +112,22 @@ public class DSAFragment extends Fragment {
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+
+
+        desc_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, dsaDescFragment).addToBackStack(null).commit();
+            }
+        });
+
+        dsa_guide_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, dsaGuideFragment).addToBackStack(null).commit();
             }
         });
         return view;

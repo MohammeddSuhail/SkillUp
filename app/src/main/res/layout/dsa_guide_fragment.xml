@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#1f1f1f"
+    android:scrollbars="vertical"
+    android:scrollbarStyle="outsideInset"
+    android:scrollbarSize="10dp"
+    android:fadeScrollbars="true"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:background="#121517"
+        android:textIsSelectable="true"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:text="Data Structures and Algorithms Guide"
+            android:textSize="30dp"
+            />
+
+        <TextView
+            android:id="@+id/network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="\n1. DSA:"
+            android:padding="0dp"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:fontFamily="@font/mulish"
+            android:textIsSelectable="true"
+            android:text="Data structures and algorithms form the backbone of the entire placement journey. It is a must to have a good grasp on every data structure concept starting with arrays to trees. \n\nIs it a must to cover all of it in algorithms? \nThe answer is NO! \n\nHaving a good understanding of time complexity is essential and the sorting algorithms and the way they work should be at your fingertips. \n\nWhen it comes to graphs DFS and BFS is a must other than that not most of it asked. \n\nAnd then comes Dynamic Programming, even googlers fear it, but what people miss out on is good tricks and tactics to approach it.\n\nIf you go out to any coding platform and filter out DP questions most of them are categorized into medium level questions and believe me they are hard. But to spit facts, if you solve certain standard problems like coin change, house robber to name a few then that should be it. \n\nDSA sheets available online have specific DP questions solved, if you can solve them then you are on good track."
+            android:textSize="18dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="\n2. Choosing a Programming Language:"
+            android:padding="0dp"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/networkdetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:fontFamily="@font/mulish"
+            android:textIsSelectable="true"
+            android:text="Students are encouraged to know the basics of all the languages below but they need to strengthen themselves in one of the languages for problem solving.\n\n•  Java: Most used by the companies for development. They should make themselves familiar with the Collections libraries for ease in competitive coding.\n\n• C++: Easy to learn and master. STL libraries will be very useful for DSA and competitive problems. \n\n• Python: Good for projects, and can be used competitively. However some companies might not have it in the IDE during the online tests."
+            android:textSize="18dp"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
