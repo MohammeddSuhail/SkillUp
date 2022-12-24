@@ -1,4 +1,4 @@
-package com.example.skillup;
+package com.example.skillup.Notes;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

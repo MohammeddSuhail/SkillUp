@@ -22,14 +22,14 @@
         android:theme="@style/Theme.SkillUp"
         tools:targetApi="31">
         <activity
-            android:name=".NotesTakerActivity"
+            android:name=".Notes.NotesTakerActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".NotesActivity"
+            android:name=".Notes.NotesActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

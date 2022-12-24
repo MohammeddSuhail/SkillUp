@@ -1,4 +1,4 @@
-package com.example.skillup;
+package com.example.skillup.Notes;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.skillup.R;
 
 import java.util.ArrayList;
 import java.util.List;

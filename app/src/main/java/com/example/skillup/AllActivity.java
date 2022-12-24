@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.skillup.Notes.NotesActivity;
 import com.example.skillup.databinding.ActivityAllBinding;
 import com.example.skillup.fragments.CommunityFragment;
 import com.example.skillup.fragments.CoursesFragment;
@@ -105,7 +106,7 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 break;
 
             case R.id.nav_notes:
-                Intent intent = new Intent(AllActivity.this,NotesActivity.class);
+                Intent intent = new Intent(AllActivity.this, NotesActivity.class);
                 startActivity(intent);
                 break;
 

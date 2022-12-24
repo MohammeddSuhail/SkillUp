@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#121212"
-    tools:context=".NotesActivity">
+    tools:context=".Notes.NotesActivity">
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView_home"

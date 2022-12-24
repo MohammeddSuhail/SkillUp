@@ -1,4 +1,4 @@
-package com.example.skillup;
+package com.example.skillup.Notes;
 
 
 import androidx.annotation.NonNull;
@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.skillup.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;

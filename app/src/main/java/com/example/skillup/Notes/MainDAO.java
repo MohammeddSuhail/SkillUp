@@ -1,4 +1,4 @@
-package com.example.skillup;
+package com.example.skillup.Notes;
 
 
 import static androidx.room.OnConflictStrategy.REPLACE;
