@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class DSAFragment extends Fragment {
 
     public static FragmentTransaction f;
-    CardView time_complex_cardview, greedy_cardview, dp_cardview, math_cardview, binsearch_cardview, strings_cardview, slidwindow_cardview, recursion_cardview, array_cardview, dsa_guide_cardview, desc_cardview;
+    CardView time_complex_cardview, binarytree_cardview, greedy_cardview, dp_cardview, math_cardview, binsearch_cardview, strings_cardview, slidwindow_cardview, recursion_cardview, array_cardview, dsa_guide_cardview, desc_cardview;
     VideoListFragment videoListFragment;
     DSADescFragment dsaDescFragment;
     DSAGuideFragment dsaGuideFragment;
@@ -55,6 +55,7 @@ public class DSAFragment extends Fragment {
         math_cardview = view.findViewById(R.id.math_cardview);
         recursion_cardview = view.findViewById(R.id.recursion_cardview);
         array_cardview = view.findViewById(R.id.array_cardview);
+        binarytree_cardview = view.findViewById(R.id.binarytree_cardview);
         strings_cardview = view.findViewById(R.id.strings_cardview);
         greedy_cardview = view.findViewById(R.id.greedy_cardview);
         dp_cardview = view.findViewById(R.id.dp_cardview);
@@ -94,6 +95,15 @@ public class DSAFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String[] arguments = {"DSA","Binary_Search"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+        binarytree_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"DSA","Binary_Trees"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();

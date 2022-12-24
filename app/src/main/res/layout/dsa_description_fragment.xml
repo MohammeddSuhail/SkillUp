@@ -37,7 +37,8 @@
             android:textIsSelectable="true"
             android:background="@color/almost_black"
             android:text="Welcome to the Data Structures and Algorithms course! \n\nThe Data Structures and Algorithms course consists of videos from each topic that would help you with understanding the basic concepts related to each topic.
-\n\nThe content in this section is based on the experiences of the people who are placed in top IT companies like Amazon, Capilliary Technologies, Nutanix, Informatica, ACI Worldwide, etc. \n\nPlease do not restrict your DSA study to this and keep practicing more questions from Leetcode, GFG, etc. to gain a better understanding of concepts. This course will only help you to move to the intermediate level when it comes to coding."
+\n\nThe content in this section is based on the experiences of the people who are placed in top IT companies like Amazon, Capilliary Technologies, Nutanix, Informatica, ACI Worldwide, etc. \n\nPlease do not restrict your DSA study to this and keep practicing more questions from Leetcode, GFG, etc. to gain a better understanding of concepts. This course will only help you to move to the intermediate level when it comes to coding.
+\n\nPrerequisites: Basic knowledge of C++ (STL) or Java (Collection Framework)"
             android:textSize="18dp"
             />
 
