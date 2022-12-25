@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class DSAFragment extends Fragment {
 
     public static FragmentTransaction f;
-    CardView time_complex_cardview, binarytree_cardview, greedy_cardview, dp_cardview, math_cardview, binsearch_cardview, strings_cardview, slidwindow_cardview, recursion_cardview, array_cardview, dsa_guide_cardview, desc_cardview;
+    CardView time_complex_cardview, binarytree_cardview, binsearchTree_cardview, graph_cardview, greedy_cardview, dp_cardview, math_cardview, binsearch_cardview, strings_cardview, slidwindow_cardview, recursion_cardview, array_cardview, dsa_guide_cardview, desc_cardview;
     VideoListFragment videoListFragment;
     DSADescFragment dsaDescFragment;
     DSAGuideFragment dsaGuideFragment;
@@ -57,7 +57,9 @@ public class DSAFragment extends Fragment {
         array_cardview = view.findViewById(R.id.array_cardview);
         binarytree_cardview = view.findViewById(R.id.binarytree_cardview);
         strings_cardview = view.findViewById(R.id.strings_cardview);
+        graph_cardview = view.findViewById(R.id.graph_cardview);
         greedy_cardview = view.findViewById(R.id.greedy_cardview);
+        binsearchTree_cardview = view.findViewById(R.id.binsearchTree_cardview);
         dp_cardview = view.findViewById(R.id.dp_cardview);
 
         desc_cardview = view.findViewById(R.id.desc_cardview);
@@ -100,10 +102,28 @@ public class DSAFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
         });
+        graph_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"DSA","Graph"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
         binarytree_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String[] arguments = {"DSA","Binary_Trees"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+        binsearchTree_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"DSA","BST"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
