@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
+
         android:orientation="vertical"
         android:background="@color/almost_black"
         android:textIsSelectable="true"
@@ -20,27 +21,54 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textIsSelectable="true"
-            android:textColor="@color/white"
             android:fontFamily="@font/mulish_bold"
             android:text="Data Structures and Algorithms for Beginners"
-            android:textSize="30dp"
-            />
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="30dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:visibility="visible"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/mulish"
-            android:textIsSelectable="true"
+            android:layout_marginTop="16dp"
             android:background="@color/almost_black"
+            android:fontFamily="@font/mulish"
             android:text="Welcome to the Data Structures and Algorithms course! \n\nThe Data Structures and Algorithms course consists of videos from each topic that would help you with understanding the basic concepts related to each topic.
 \n\nThe content in this section is based on the experiences of the people who are placed in top IT companies like Amazon, Capilliary Technologies, Nutanix, Informatica, ACI Worldwide, etc. \n\nPlease do not restrict your DSA study to this and keep practicing more questions from Leetcode, GFG, etc. to gain a better understanding of concepts. This course will only help you to move to the intermediate level when it comes to coding.
-\n\nPrerequisites: Basic knowledge of C++ (STL) or Java (Collection Framework)"
+"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
             android:textSize="18dp"
-            />
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_bold"
+            android:text="Prerequisites:"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textIsSelectable="true"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/almost_black"
+            android:fontFamily="@font/mulish"
+            android:text="Basic knowledge of C++ (STL) or Java (Collection Framework). \nIt is recommended to have deep understanding of one and basic understanding of the other"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="18dp"
+            android:visibility="visible" />
+
+
 
     </LinearLayout>
 
