@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#000"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/mulish_bold"
+            android:text="ACI Worldwide"
+            android:textColor="@color/moduleBLUE"
+            android:textAllCaps="true"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish"
+                android:layout_marginLeft="17.5dp"
+                android:text="Associate Software Engineer"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17.5dp"
+                android:fontFamily="@font/mulish"
+                android:text="Internship + Full time"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.5dp"
+            android:fontFamily="@font/mulish"
+            android:text="NMAMIT - "
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/placed_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish"
+            android:text="2022"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17.5dp"
+                android:fontFamily="@font/mulish"
+                android:text="CTC Offered: "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ctc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mulish"
+                android:text="9.6 LPA + $7000 RSU"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/mulish_bold"
+            android:text="Rounds:"
+            android:textColor="@color/moduleBLUE"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rounds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.5dp"
+            android:fontFamily="@font/mulish"
+            android:text="Round 1:\nOnline MCQ test: \nIt consisted of MCQs on OOPs, Java, pseudocode, general aptitude, technical questions, etc. \nNo coding.\nAbout 70 students were shortlisted.\n\nRound 2-4:\nThere was 3 technical rounds.\nAll 3 technical interviews were about an hour.\nQuestions:\n-> Tell me about yourself and other basic hr questions throughout the round\n-> Basic SQL queries:\nFind the employee with the highest salary from each department of the Employee table\n-> Basic questions on Computer Networks\n-> A lot of questions on Object Oriented Programming\n-> Threads\n-> Projects\nCoding Question were on:\nSorting algos\nTree Traversals\nBST\nLeft view of a binary tree\nMaximum sum sub-array\nAll types of linked lists, hashmap working.\n\nRound 5:\nManagerial Round:\nThis went on for 30 minutes.\nTell me about yourself.\nHe asked me to explain any one project mentioned in my resume.\nAsked about cryptography, cloud, etc.\n\n17 students were selected."
+            android:textColor="@color/white"
+            android:textIsSelectable="true"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/mulish_bold"
+            android:text="Placement Advice:"
+            android:textColor="@color/moduleBLUE"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/advice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:layout_marginLeft="17.5dp"
+            android:fontFamily="@font/mulish"
+            android:text="Start preparing for placements as soon as possible. Make at least one good project which u can explain properly in the interview."
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+</ScrollView>
