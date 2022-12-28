@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="17.5dp"
             android:fontFamily="@font/mulish"
-            android:text="NMAMIT - "
+            android:text="Campus Drive, NMAMIT - "
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
