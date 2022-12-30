@@ -123,6 +123,11 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MentorFragment()).commit();
                 break;
 
+            case R.id.nav_contributors:
+                Intent inten = new Intent(AllActivity.this, ContributorActivity.class);
+                startActivity(inten);
+                break;
+
             case R.id.nav_logout:
                 mAuth.signOut();
                 Intent i = new Intent(AllActivity.this,SignInActivity.class);
