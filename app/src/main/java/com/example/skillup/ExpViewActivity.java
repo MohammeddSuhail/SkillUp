@@ -35,7 +35,8 @@ public class ExpViewActivity extends AppCompatActivity {
         rounds = (TextView) findViewById(R.id.rounds);
         advice = (TextView) findViewById(R.id.advice);
 
-        String round = exp.getRounds().replace('₹','\n');
+        String round = exp.getRounds().replaceAll("₹","\n");
+        String advices = exp.getAdviceToFreshers().replaceAll("₹","\n");
 
 
         company_name.setText(exp.getCompanyName());
@@ -43,8 +44,8 @@ public class ExpViewActivity extends AppCompatActivity {
         type.setText(exp.getType());
         placed_year.setText(exp.getCampusDriveYear()+"");
         ctc.setText(exp.getCTCOffered());
-        rounds.setText(exp.getRounds());
-        advice.setText(exp.getAdviceToFreshers());
+        rounds.setText(round);
+        advice.setText(advices);
 
     }
 }
