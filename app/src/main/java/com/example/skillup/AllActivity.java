@@ -110,6 +110,11 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 startActivity(intent);
                 break;
 
+            case R.id.nav_guide:
+                Intent inte = new Intent(AllActivity.this, GuideActivity.class);
+                startActivity(inte);
+                break;
+
             case R.id.nav_community:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
                 break;

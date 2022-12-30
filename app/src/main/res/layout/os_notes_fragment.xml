@@ -44,6 +44,8 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:visibility="visible"
+            android:autoLink="web"
+            android:linksClickable="true"
             android:fontFamily="@font/mulish_extralight"
             android:textIsSelectable="true"
             android:text="Interface between user and hardware.\nIt is responsible for the execution of all the processes, Resource Allocation, CPU management, File Management and many other tasks.\nThe purpose of an operating system is to provide an environment in which a user can execute programs in a convenient and efficient manner.

@@ -14,7 +14,12 @@
         <item
             android:id="@+id/nav_notes"
             android:icon="@drawable/ic_baseline_note_add_24"
-            android:title="Notes"/>
+            android:title="Add Notes"/>
+
+        <item
+            android:id="@+id/nav_guide"
+            android:icon="@drawable/guide"
+            android:title="Placement FAQs"/>
 
         <item
             android:id="@+id/nav_community"
