@@ -24,7 +24,6 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class IntExpListFragment extends Fragment {
 
-
     DatabaseReference modRef;
 
     RecyclerView recyclerView;
@@ -71,7 +70,6 @@ public class IntExpListFragment extends Fragment {
                 holder.role.setText(exp.getRole());
                 holder.type.setText(exp.getType());
                 holder.ctc.setText(exp.getCTCOffered());
-
 
                 String[] experience = {exp.getCTCOffered(),exp.getAdviceToFreshers(),exp.getCompanyName(),exp.getRole(),exp.getRounds(),exp.getSelected(),exp.getType(),exp.getCampusDriveYear()+""};
 

@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import com.example.skillup.model.Experience;
 
+import java.util.Locale;
+
 public class ExpViewActivity extends AppCompatActivity {
 
     String[] experience;
@@ -17,6 +19,8 @@ public class ExpViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ie_each_fragment);
+
+        getSupportActionBar().hide();
 
         experience = getIntent().getStringArrayExtra("experience");
 
@@ -30,13 +34,15 @@ public class ExpViewActivity extends AppCompatActivity {
         ctc = (TextView) findViewById(R.id.ctc);
         rounds = (TextView) findViewById(R.id.rounds);
 
+        String round = exp.getRounds().replace('₹','\n');
+
 
         company_name.setText(exp.getCompanyName());
         role.setText(exp.getRole());
         type.setText(exp.getType());
         placed_year.setText(exp.getCampusDriveYear()+"");
         ctc.setText(exp.getCTCOffered());
-        rounds.setText(exp.getRounds());
+        rounds.setText(round);
 
     }
 }
