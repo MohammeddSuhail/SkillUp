@@ -60,6 +60,7 @@
         </activity>
         <activity android:name=".SignInActivity" />
         <activity android:name=".SignUpActivity" />
+        <activity android:name=".ExpViewActivity" />
         <activity
             android:name=".AllActivity"
             android:theme="@style/Theme.Design.NoActionBar" />
