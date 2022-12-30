@@ -22,6 +22,9 @@
         android:theme="@style/Theme.SkillUp"
         tools:targetApi="31">
         <activity
+            android:name=".ExpViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".GuideActivity"
             android:exported="false">
             <meta-data

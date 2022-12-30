@@ -5,7 +5,6 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,7 +18,7 @@ public class CoursesFragment extends Fragment {
 
     public static FragmentTransaction f;
 
-    CardView cn,dbms,os,oops, dsa;
+    CardView cn,dbms,os,oops, dsa, ie;
 
     public static String course;
 
@@ -41,6 +40,8 @@ public class CoursesFragment extends Fragment {
         os = (CardView)view.findViewById(R.id.oscardview);
         oops =(CardView) view.findViewById(R.id.oopscardview);
         dsa=(CardView) view.findViewById(R.id.dsacardview);
+        ie = (CardView) view.findViewById(R.id.ie_cardview);
+
 
         CoursesFragment cf = new CoursesFragment();
         cn.setOnClickListener(new View.OnClickListener() {
@@ -65,13 +66,6 @@ public class CoursesFragment extends Fragment {
             }
         });
 
-        dsa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                course = "DSA";
-                CoursesFragment.f.replace(R.id.fragment_container, new DSAFragment()).addToBackStack(null).commit();
-            }
-        });
 
         oops.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +77,21 @@ public class CoursesFragment extends Fragment {
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+
+        dsa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                course = "DSA";
+                CoursesFragment.f.replace(R.id.fragment_container, new DSAFragment()).addToBackStack(null).commit();
+            }
+        });
+
+        ie.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CoursesFragment.f.replace(R.id.fragment_container, new IntExpListFragment()).addToBackStack(null).commit();
             }
         });
 
