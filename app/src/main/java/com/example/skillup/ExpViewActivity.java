@@ -13,7 +13,7 @@ public class ExpViewActivity extends AppCompatActivity {
 
     String[] experience;
 
-    TextView company_name, role, type, placed_year, ctc, rounds;
+    TextView company_name, role, type, placed_year, ctc, rounds,advice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class ExpViewActivity extends AppCompatActivity {
         placed_year = (TextView) findViewById(R.id.placed_year);
         ctc = (TextView) findViewById(R.id.ctc);
         rounds = (TextView) findViewById(R.id.rounds);
+        advice = (TextView) findViewById(R.id.advice);
 
         String round = exp.getRounds().replace('₹','\n');
 
@@ -42,7 +43,8 @@ public class ExpViewActivity extends AppCompatActivity {
         type.setText(exp.getType());
         placed_year.setText(exp.getCampusDriveYear()+"");
         ctc.setText(exp.getCTCOffered());
-        rounds.setText(round);
+        rounds.setText(exp.getRounds());
+        advice.setText(exp.getAdviceToFreshers());
 
     }
 }
