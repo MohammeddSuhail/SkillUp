@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:text="Hewlett Packard Enterprises"
-            android:textColor="#FFF"
+            android:textColor="@color/moduleBLUE"
             android:fontFamily="@font/mulish_bold"
             android:textSize="15.5sp"
             android:textStyle="bold" />
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:text="NMAMIT, "
-            android:textColor="#FFF"
+            android:textColor="@color/moduleBLUE"
             android:fontFamily="@font/mulish_bold"
             android:textSize="15.5sp"
             android:textStyle="bold" />
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:text="2022"
-                android:textColor="#FFF"
+                android:textColor="@color/moduleBLUE"
                 android:fontFamily="@font/mulish_bold"
                 android:textSize="15.5sp"
                 android:textStyle="bold" />
@@ -66,7 +66,7 @@
             android:layout_marginBottom="1dp"
             android:text="Software Development Engineer"
             android:fontFamily="@font/mulish_bold"
-            android:textColor="#0F0"
+            android:textColor="@color/white"
             android:textSize="11.5sp"
 
             />
@@ -77,7 +77,7 @@
             android:layout_marginBottom="1dp"
             android:text="Internship + Full time"
             android:fontFamily="@font/mulish_bold"
-            android:textColor="@color/moduleBLUE"
+            android:textColor="@color/white"
             android:textSize="11.5sp"
 
             />
@@ -97,7 +97,7 @@
                 android:layout_marginTop="0dp"
                 android:text="CTC: "
                 android:fontFamily="@font/mulish_bold"
-                android:textColor="#FFAA00"
+                android:textColor="@color/white"
                 android:textSize="11sp" />
 
 
@@ -111,7 +111,7 @@
                 android:textStyle="bold"
                 android:text="Rs. 9.6LPA + $7000 RSU"
                 android:fontFamily="@font/mulish"
-                android:textColor="#FFAA00"
+                android:textColor="@color/white"
                 android:textSize="11sp" />
         </LinearLayout>
 
