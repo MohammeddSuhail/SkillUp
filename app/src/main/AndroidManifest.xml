@@ -22,7 +22,21 @@
         android:theme="@style/Theme.SkillUp"
         tools:targetApi="31">
         <activity
+            android:name=".ContriDetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".GuideActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ContributorActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

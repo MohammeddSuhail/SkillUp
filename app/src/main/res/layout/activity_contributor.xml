@@ -29,6 +29,9 @@
         >
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/prathamesh"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             android:layout_width="168dp"
             android:layout_height="224dp"
             android:layout_weight="1"
@@ -79,7 +82,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFF"
-                    android:text="CTC: 9.6LPA + $7000RSU"
+                    android:text="CTC: 15 Lakhs"
                     android:fontFamily="@font/mulish"
                     android:textSize="11.5dp"
                     />
@@ -96,6 +99,9 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/suhail"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             android:layout_width="168dp"
             android:layout_height="224dp"
             android:layout_weight="1"
@@ -145,7 +151,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFF"
-                    android:text="CTC: 12 LPA"
+                    android:text="CTC: 12 Lakhs"
                     android:fontFamily="@font/mulish"
                     android:textSize="12dp"
                     />
@@ -179,6 +185,9 @@
         >
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/anuroop"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             android:layout_width="168dp"
             android:layout_height="224dp"
             android:layout_weight="1"
@@ -228,11 +237,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#FFF"
-                    android:text="CTC: 14.5 LPA"
                     android:fontFamily="@font/mulish"
-                    android:textSize="12dp"
-                    />
+                    android:text="CTC: 14.5 Lakhs"
+                    android:textColor="#FFF"
+                    android:textSize="12dp" />
 
                 <View
                     android:layout_width="85dp"
@@ -246,10 +254,12 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/ranjith"
             android:layout_width="168dp"
             android:layout_height="224dp"
             android:layout_weight="1"
-
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
             app:cardCornerRadius="16dp"
             >
             <ImageView
@@ -295,7 +305,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFF"
-                    android:text="CTC: 10 LPA"
+                    android:text="CTC: 10 Lakhs"
                     android:fontFamily="@font/mulish"
                     android:textSize="12dp"
                     />
@@ -330,9 +340,12 @@
             >
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/sabarinath"
                 android:layout_width="168dp"
                 android:layout_height="224dp"
                 android:layout_weight="1"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 android:layout_marginRight="16dp"
                 app:cardCornerRadius="16dp"
                 >
@@ -380,7 +393,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
-                        android:text="CTC: 22 LPA"
+                        android:text="CTC: 22 Lakhs"
                         android:fontFamily="@font/mulish"
                         android:textSize="12dp"
                         />
@@ -397,10 +410,12 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/ranjan"
                 android:layout_width="168dp"
                 android:layout_height="224dp"
                 android:layout_weight="1"
-
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
                 app:cardCornerRadius="16dp"
                 >
                 <ImageView
@@ -426,7 +441,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
-                        android:text="Ranjan Upadhyay"
+                        android:text="Ranjan Upadhya"
                         android:fontFamily="@font/mulish_bold"
                         android:textStyle="bold"
 
@@ -446,7 +461,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
-                        android:text="CTC: 10 LPA"
+                        android:text="CTC: 10 Lakhs"
                         android:fontFamily="@font/mulish"
                         android:textSize="12dp"
                         />
