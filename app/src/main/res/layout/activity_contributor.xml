@@ -229,7 +229,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFF"
-                    android:text="Capilliary Technologies"
+                    android:text="Capillary Technologies"
                     android:fontFamily="@font/mulish"
                     android:textSize="12dp"
                     />
@@ -238,7 +238,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/mulish"
-                    android:text="CTC: 14.5 Lakhs"
+                    android:text="CTC: 14 Lakhs"
                     android:textColor="#FFF"
                     android:textSize="12dp" />
 

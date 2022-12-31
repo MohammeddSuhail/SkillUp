@@ -8,7 +8,9 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Objects;
@@ -18,6 +20,7 @@ public class ContriDetailActivity extends AppCompatActivity {
     String name, ctc, companies_placed, cgpa, core;
     TextView nametv, company_listtv, Cgpatv, Coretv;
     ImageView img;
+    LinearLayout full_desc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +40,9 @@ public class ContriDetailActivity extends AppCompatActivity {
         name = intent.getStringExtra("name");
 
         img = findViewById(R.id.image);
+        full_desc = findViewById(R.id.full_desc);
 
+        full_desc.startAnimation(AnimationUtils.loadAnimation(this,R.anim.go_up));
         if(Objects.equals(name, "Prathamesh S Pai")){
             ctc="15 Lakhs";
             companies_placed = "• Informatica (CTC: 15 Lakhs)\n• TCS (MRC - CTC: 3.3 Lakhs)";
