@@ -4,21 +4,28 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.View;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.List;
 import java.util.Objects;
 
 public class ContriDetailActivity extends AppCompatActivity {
 
-    String name, ctc, companies_placed, cgpa, core;
+    String name, ctc, companies_placed, cgpa, core,linkedId;
     TextView nametv, company_listtv, Cgpatv, Coretv;
+    Button linkedin;
     ImageView img;
     LinearLayout full_desc;
 
@@ -40,6 +47,8 @@ public class ContriDetailActivity extends AppCompatActivity {
         name = intent.getStringExtra("name");
 
         img = findViewById(R.id.image);
+        linkedin = findViewById(R.id.linkedin);
+
         full_desc = findViewById(R.id.full_desc);
 
         full_desc.startAnimation(AnimationUtils.loadAnimation(this,R.anim.go_up));
@@ -48,6 +57,7 @@ public class ContriDetailActivity extends AppCompatActivity {
             companies_placed = "• Informatica (CTC: 15 Lakhs)\n• TCS (MRC - CTC: 3.3 Lakhs)";
             cgpa = "8.50";
             core = "Mobile Application Development";
+            linkedId = "prathameshspai";
             img.setImageResource(R.drawable.me);
         }
 
@@ -57,14 +67,16 @@ public class ContriDetailActivity extends AppCompatActivity {
             cgpa = "8.88";
             core = "• Web Development (MERN)\n• Cloud Computing";
             img.setImageResource(R.drawable.sab);
+            linkedId = "sabarinath3072001";
         }
 
         if(Objects.equals(name, "R Anuroop")){
             ctc="14.5 Lakhs";
-            companies_placed = "Capillary Technologies (CTC: 14.5 Lakhs)";
+            companies_placed = "Capillary Technologies (CTC: 14 Lakhs)";
             cgpa = "9.61";
             core = "• Web Development\n• Blockchain";
             img.setImageResource(R.drawable.anuroop);
+            linkedId = "anuroop-ravindra-821b67231";
         }
 
         if(Objects.equals(name, "Ranjan Upadhya")){
@@ -72,6 +84,7 @@ public class ContriDetailActivity extends AppCompatActivity {
             companies_placed = "Daimler Truck (CTC: 10 Lakhs)";
             cgpa = "9.17";
             core = "• Web Development\n• Java Programming";
+            linkedId = "ranjanrupadhya180901";
             img.setImageResource(R.drawable.ranjan);
         }
 
@@ -80,6 +93,8 @@ public class ContriDetailActivity extends AppCompatActivity {
             companies_placed = "ACI Worldwide (CTC: 12 Lakhs)";
             cgpa = "9.39";
             core = "Android Development";
+
+            linkedId = "mohammed-suhail-997aa1213";
             img.setImageResource(R.drawable.suhail);
         }
 
@@ -88,8 +103,22 @@ public class ContriDetailActivity extends AppCompatActivity {
             companies_placed = "• Daimler Truck (CTC: 10 Lakhs)\n• Accenture (MRC - CTC: 4.5 Lakhs)\n• Capgemini (MRC - CTC: 4.25 Lakhs)\n• DXC (MRC - CTC: 4.2 Lakhs)";
             cgpa = "9.31";
             core = "Web Development";
+            linkedId = "ranjithkumarr999";
             img.setImageResource(R.drawable.ran);
         }
+
+        linkedin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("linkedin://add/%@" + linkedId));
+                final PackageManager packageManager = getApplicationContext().getPackageManager();
+                final List<ResolveInfo> list = packageManager.queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+                if (list.isEmpty()) {
+                    intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/" + linkedId));
+                }
+                startActivity(intent);
+            }
+        });
 
         nametv = findViewById(R.id.name);
         company_listtv=findViewById(R.id.company_list);

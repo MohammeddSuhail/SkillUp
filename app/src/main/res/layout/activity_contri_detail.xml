@@ -147,13 +147,14 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/linkedin"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:textColor="@color/white"
         android:text="LinkedIn"
         android:textAllCaps="false"
         android:fontFamily="@font/mulish"
-        android:background="#022FFF"
+        android:background="#133DFF"
         android:shadowRadius="16"
         android:foreground="?android:attr/selectableItemBackground"
         android:clickable="true"
