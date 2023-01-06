@@ -90,9 +90,9 @@ public class ContriDetailActivity extends AppCompatActivity {
 
         if(Objects.equals(name, "Mohammed Suhail")){
             ctc="12 Lakhs";
-            companies_placed = "ACI Worldwide (CTC: 12 Lakhs)";
+            companies_placed = "• ACI Worldwide (CTC: 12 Lakhs)\n• Accenture (CTC: 4.5 Lakhs)";
             cgpa = "9.39";
-            core = "Android Development";
+            core = "• Android Development\n• Web Development";
 
             linkedId = "mohammed-suhail-997aa1213";
             img.setImageResource(R.drawable.suhail);
