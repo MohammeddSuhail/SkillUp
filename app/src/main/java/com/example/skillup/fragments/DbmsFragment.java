@@ -1,5 +1,7 @@
 package com.example.skillup.fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class DbmsFragment extends Fragment {
 
-    CardView dbms_intro_cardview, dbms_key_cardview, dbms_sql_cardview, dbms_normal_cardview, dbms_trans_cardview, dbms_imp_cardview, dbms_pin_cardview;
+    CardView dbms_notes_cardview, dbms_intro_cardview, dbms_key_cardview, dbms_sql_cardview, dbms_normal_cardview, dbms_trans_cardview, dbms_imp_cardview, dbms_pin_cardview;
 
     VideoListFragment videoListFragment;
 
@@ -36,6 +38,7 @@ public class DbmsFragment extends Fragment {
         dbms_trans_cardview = view.findViewById(R.id.dbms_trans_cardview);
         dbms_imp_cardview = view.findViewById(R.id.dbms_imp_cardview);
         dbms_pin_cardview = view.findViewById(R.id.dbms_pin_cardview);
+        dbms_notes_cardview = view.findViewById(R.id.dbms_notes_cardview);
 
         videoListFragment = new VideoListFragment();
         Bundle args = new Bundle();
@@ -112,6 +115,15 @@ public class DbmsFragment extends Fragment {
             }
         });
 
+        dbms_notes_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://drive.google.com/file/d/1E6L93W-tUSWgnKhoJr8UqaIQmJbGiqJg/view?usp=sharing";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
         return view;
     }
 }

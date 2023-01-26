@@ -5,6 +5,7 @@ import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 
 public class GuideActivity extends AppCompatActivity {
@@ -86,6 +87,7 @@ public class GuideActivity extends AppCompatActivity {
                 else{
                     v0.setBackgroundResource(R.drawable.down_24);
                     efaq0.setVisibility(View.GONE);
+
                 }
 
             }

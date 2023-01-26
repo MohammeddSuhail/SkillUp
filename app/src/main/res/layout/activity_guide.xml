@@ -65,7 +65,7 @@
                     android:paddingRight="13dp"
                     android:paddingBottom="4dp"
 
-                    android:text="Q1 How can I prepare for placements being in the third year of college? Is there any roadmap that I can follow?"
+                    android:text="Q1 How to prepare for placements being in the third year of college? Is there any roadmap that I can follow?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
 
