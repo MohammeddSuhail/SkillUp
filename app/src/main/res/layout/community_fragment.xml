@@ -4,95 +4,273 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black1"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="10sp"
+        android:fontFamily="@font/mulish"
+        android:text="Have any doubts?"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/textViewDSA"
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/mulish"
+        android:text="The below sections help you to post any doubts regarding respective fields. Also, you can clarify others' doubts."
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/csDSA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:gravity="center"
-            android:text="DSA"
-            android:textSize="30sp" />
+            android:layout_height="match_parent"
+            android:background="@color/black2"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="128px"
+                android:layout_height="128px"
+                android:layout_marginLeft="15dp"
+                app:srcCompat="@drawable/community_dsa" />
+
+            <TextView
+                android:id="@+id/textViewDSA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="DSA"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="25dp"
+                app:srcCompat="@drawable/right_arrow"
+                app:tint="@color/white" />
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp">
-
-        <TextView
-            android:id="@+id/textViewCN"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="Computer Networks"
-            android:textSize="30sp"
-            android:gravity="center"/>
-    </androidx.cardview.widget.CardView>
-
+        android:layout_height="2dp"
+        android:background="@color/white"
+        />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/csCN"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/textViewDBMS"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="DBMS and SQL"
-            android:textSize="30sp"
-            android:gravity="center"/>
+            android:layout_height="match_parent"
+            android:background="@color/black2"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
-    </androidx.cardview.widget.CardView>
+            <ImageView
+                android:layout_width="128px"
+                android:layout_height="128px"
+                android:layout_marginLeft="15dp"
+                app:srcCompat="@drawable/community_cn" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp">
+            <TextView
+                android:id="@+id/textViewCN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Computer Networks"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/textViewOS"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="Operating System"
-            android:textSize="30sp"
-            android:gravity="center"/>
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="25dp"
+                app:srcCompat="@drawable/right_arrow"
+                app:tint="@color/white" />
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="8dp">
+        android:layout_height="2dp"
+        android:background="@color/white"
+        />
 
-        <TextView
-            android:id="@+id/textViewOOPS"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/csDBMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:text="OOPS"
-            android:textSize="30sp"
-            android:gravity="center"/>
+            android:layout_height="match_parent"
+            android:background="@color/black2"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="128px"
+                android:layout_height="128px"
+                android:layout_marginLeft="15dp"
+                app:srcCompat="@drawable/community_dbms" />
+
+            <TextView
+                android:id="@+id/textViewDBMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="DBMS and SQL"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="25dp"
+                app:srcCompat="@drawable/right_arrow"
+                app:tint="@color/white" />
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/csOS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black2"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="128px"
+                android:layout_height="128px"
+                android:layout_marginLeft="15dp"
+                app:srcCompat="@drawable/community_os" />
+
+            <TextView
+                android:id="@+id/textViewOS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="Operating System"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="25dp"
+                app:srcCompat="@drawable/right_arrow"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/csOOPS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black2"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="128px"
+                android:layout_height="128px"
+                android:layout_marginLeft="15dp"
+                app:srcCompat="@drawable/community_oop" />
+
+            <TextView
+                android:id="@+id/textViewOOPS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/mulish_bold"
+                android:gravity="center|left"
+                android:paddingLeft="10dp"
+                android:text="OOPS"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="25dp"
+                app:srcCompat="@drawable/right_arrow"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>
