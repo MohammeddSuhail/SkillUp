@@ -9,29 +9,31 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.skillup.R;
 
 public class CommunityFragment extends Fragment {
-    TextView textViewDSA, textViewCN, textViewDBMS, textViewOS, textViewOOPS;
+    CardView csDSA, csCN, csDBMS, csOS, csOOPS; //community section options
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.community_fragment, container, false);
 
-        textViewDSA = view.findViewById(R.id.textViewDSA);
-        textViewCN = view.findViewById(R.id.textViewCN);
-        textViewDBMS = view.findViewById(R.id.textViewDBMS);
-        textViewOS = view.findViewById(R.id.textViewOS);
-        textViewOOPS = view.findViewById(R.id.textViewOOPS);
+        csDSA = view.findViewById(R.id.csDSA);
+        csCN = view.findViewById(R.id.csCN);
+        csDBMS = view.findViewById(R.id.csDBMS);
+        csOS = view.findViewById(R.id.csOS);
+        csOOPS = view.findViewById(R.id.csOOPS);
 
         EachCommunityFragment eachCommunityFragment = new EachCommunityFragment();
         Bundle args = new Bundle();
 
+        getActivity().setTitle("Community");
 
-        textViewDSA.setOnClickListener(new View.OnClickListener() {
+        csDSA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 args.putString("com","DSA");
@@ -40,7 +42,7 @@ public class CommunityFragment extends Fragment {
             }
         });
 
-        textViewCN.setOnClickListener(new View.OnClickListener() {
+        csCN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 args.putString("com","CN");
@@ -49,7 +51,7 @@ public class CommunityFragment extends Fragment {
             }
         });
 
-        textViewDBMS.setOnClickListener(new View.OnClickListener() {
+        csDBMS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 args.putString("com","DBMS");
@@ -58,7 +60,7 @@ public class CommunityFragment extends Fragment {
             }
         });
 
-        textViewOS.setOnClickListener(new View.OnClickListener() {
+        csOS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 args.putString("com","OS");
@@ -67,7 +69,7 @@ public class CommunityFragment extends Fragment {
             }
         });
 
-        textViewOOPS.setOnClickListener(new View.OnClickListener() {
+        csOOPS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 args.putString("com","OOPS");
@@ -87,6 +89,7 @@ public class CommunityFragment extends Fragment {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (event.getAction() == KeyEvent.ACTION_DOWN) {
                     if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        getActivity().setTitle("Placemaker");
                         getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
                         return true;
                     }
