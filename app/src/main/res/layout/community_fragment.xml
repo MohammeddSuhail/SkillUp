@@ -14,7 +14,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20sp"
         android:layout_marginBottom="10sp"
-        android:fontFamily="@font/mulish"
+        android:fontFamily="@font/mulish_bold"
         android:text="Have any doubts?"
         android:textColor="@color/white"
         android:textSize="18sp" />
@@ -48,7 +48,7 @@
                 android:layout_width="128px"
                 android:layout_height="128px"
                 android:layout_marginLeft="15dp"
-                app:srcCompat="@drawable/community_dsa" />
+                app:srcCompat="@drawable/dsa_logo" />
 
             <TextView
                 android:id="@+id/textViewDSA"
@@ -98,7 +98,7 @@
                 android:layout_width="128px"
                 android:layout_height="128px"
                 android:layout_marginLeft="15dp"
-                app:srcCompat="@drawable/community_cn" />
+                app:srcCompat="@drawable/cn_hard_logo" />
 
             <TextView
                 android:id="@+id/textViewCN"
@@ -147,7 +147,7 @@
                 android:layout_width="128px"
                 android:layout_height="128px"
                 android:layout_marginLeft="15dp"
-                app:srcCompat="@drawable/community_dbms" />
+                app:srcCompat="@drawable/dbms_logo" />
 
             <TextView
                 android:id="@+id/textViewDBMS"
@@ -196,7 +196,8 @@
                 android:layout_width="128px"
                 android:layout_height="128px"
                 android:layout_marginLeft="15dp"
-                app:srcCompat="@drawable/community_os" />
+                app:tint = "@color/orange"
+                app:srcCompat="@drawable/os_memory_logo" />
 
             <TextView
                 android:id="@+id/textViewOS"
@@ -245,7 +246,7 @@
                 android:layout_width="128px"
                 android:layout_height="128px"
                 android:layout_marginLeft="15dp"
-                app:srcCompat="@drawable/community_oop" />
+                app:srcCompat="@drawable/oops_logo" />
 
             <TextView
                 android:id="@+id/textViewOOPS"
