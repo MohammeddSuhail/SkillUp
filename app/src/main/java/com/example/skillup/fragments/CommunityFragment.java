@@ -31,8 +31,6 @@ public class CommunityFragment extends Fragment {
         EachCommunityFragment eachCommunityFragment = new EachCommunityFragment();
         Bundle args = new Bundle();
 
-        getActivity().setTitle("Community");
-
         csDSA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,7 +87,6 @@ public class CommunityFragment extends Fragment {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (event.getAction() == KeyEvent.ACTION_DOWN) {
                     if (keyCode == KeyEvent.KEYCODE_BACK) {
-                        getActivity().setTitle("Placemaker");
                         getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
                         return true;
                     }

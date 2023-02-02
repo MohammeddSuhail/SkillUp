@@ -45,8 +45,8 @@
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="128px"
-                android:layout_height="128px"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
                 app:srcCompat="@drawable/dsa_logo" />
 
@@ -95,8 +95,8 @@
             android:padding="10dp">
 
             <ImageView
-                android:layout_width="128px"
-                android:layout_height="128px"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
                 app:srcCompat="@drawable/cn_hard_logo" />
 
@@ -144,8 +144,8 @@
             android:padding="10dp">
 
             <ImageView
-                android:layout_width="128px"
-                android:layout_height="128px"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
                 app:srcCompat="@drawable/dbms_logo" />
 
@@ -193,11 +193,11 @@
             android:padding="10dp">
 
             <ImageView
-                android:layout_width="128px"
-                android:layout_height="128px"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
-                app:tint = "@color/orange"
-                app:srcCompat="@drawable/os_memory_logo" />
+                app:srcCompat="@drawable/os_memory_logo"
+                app:tint="@color/orange" />
 
             <TextView
                 android:id="@+id/textViewOS"
@@ -243,8 +243,8 @@
             android:padding="10dp">
 
             <ImageView
-                android:layout_width="128px"
-                android:layout_height="128px"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
                 app:srcCompat="@drawable/oops_logo" />
 
