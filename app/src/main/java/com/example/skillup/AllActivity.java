@@ -153,11 +153,13 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
             mRef.child("Users").child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    profileImageUrlV = snapshot.child("profileImage").getValue().toString();
+                    if(snapshot.child("profileImage").exists()){
+                        profileImageUrlV = snapshot.child("profileImage").getValue().toString();
+                        Picasso.get().load(profileImageUrlV).into(profileImage);
+                    }
                     usernameV = snapshot.child("userName").getValue().toString();
                     professionV = snapshot.child("profession").getValue().toString();
 
-                    Picasso.get().load(profileImageUrlV).into(profileImage);
                     name.setText(usernameV);
                     profession.setText(professionV);
 

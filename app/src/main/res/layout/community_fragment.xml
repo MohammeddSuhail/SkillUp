@@ -29,7 +29,7 @@
         android:fontFamily="@font/mulish"
         android:text="The below sections help you to post any doubts regarding respective fields. Also, you can clarify others' doubts."
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="16sp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/csDSA"

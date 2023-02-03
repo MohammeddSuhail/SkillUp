@@ -13,6 +13,7 @@
         android:id="@+id/profile_pic_header"
         android:layout_width="80dp"
         android:layout_height="80dp"
+        android:src="@drawable/ic_profile"
         app:civ_border_color="#FF000000"
         app:civ_border_width="2dp"/>
 

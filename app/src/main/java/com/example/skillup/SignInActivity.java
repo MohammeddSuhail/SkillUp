@@ -136,13 +136,34 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
-        //if user is already logged in
+        //if user is already logged in (mainly when user comes to setup page and exits app without completing setup)
         if(mAuth.getCurrentUser()!=null){
-//            Intent intent = new Intent(SignInActivity.this,AllActivity.class);
-            Intent intent = new Intent(SignInActivity.this,AllActivity.class);
+            mRef.child("Users").child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    setupFlag = snapshot.child("setupFlag").getValue(Boolean.class);
+                    if(setupFlag){
+                        Intent intent = new Intent(SignInActivity.this,AllActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                    else{
+                        Intent intent = new Intent(SignInActivity.this,SetUpActivity.class);
+                        startActivity(intent);
+                        finish();
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
+
+            //Intent intent = new Intent(SignInActivity.this,AllActivity.class);
 //            intent.putExtra("interest",interest);
-            startActivity(intent);
-            finish();
+           // startActivity(intent);
+           // finish();
         }
 
     }

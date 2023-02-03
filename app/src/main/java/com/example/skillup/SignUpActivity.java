@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.example.skillup.databinding.ActivitySignUpBinding;
+import com.example.skillup.model.Users;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -66,6 +67,9 @@ public class SignUpActivity extends AppCompatActivity {
                 String email = binding.emailId.getText().toString();
                 String pw = binding.passwordId.getText().toString();
 
+                String usn = binding.usn.getText().toString();
+                String phoneNo = binding.phoneNo.getText().toString();
+
                 auth.createUserWithEmailAndPassword(email,pw)
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -74,7 +78,11 @@ public class SignUpActivity extends AppCompatActivity {
                                     //done adding email and password in auth
                                     mLoadingBar.dismiss();
                                     FirebaseUser user = task.getResult().getUser();
-                                    mRef.child("Users").child(user.getUid()).child("setupFlag").setValue(false);
+
+                                    //setupFlag = false, since setup part of the user is not completed.
+                                    Users newUser = new Users(usn,phoneNo,false);
+                                    mRef.child("Users").child(user.getUid()).setValue(newUser);
+
                                     user.sendEmailVerification()
                                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                                 @Override
