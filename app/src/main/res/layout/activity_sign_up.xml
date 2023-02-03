@@ -4,37 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity"
-    android:orientation="vertical"
     android:background="#000"
-    android:paddingTop="50dp"
-    android:paddingBottom="97dp"
-    android:paddingLeft="25dp"
-    android:paddingRight="25dp">
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
 
-    <TextView
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Getting Started"
-        android:textColor="@color/white"
-        android:fontFamily="@font/mulish"
-        android:paddingBottom="2sp"
-        android:textSize="30sp"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Create an account to continue!"
-        android:textColor="@color/white"
-        android:fontFamily="@font/mulish_extralight"
-        android:paddingBottom="23sp"
-        android:textSize="18sp"
-        />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
+        android:paddingRight="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish"
+            android:paddingBottom="2sp"
+            android:text="Getting Started"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_extralight"
+            android:text="Create an account to continue!"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/sign_up_cardview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="2dp">
 
@@ -48,77 +54,77 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="32dp"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/mulish"
                 android:gravity="center"
                 android:text="Sign Up"
-                android:fontFamily="@font/mulish"
-                android:textSize="35sp"
-                android:textColor="#C0C0C0"/>
+                android:textColor="#C0C0C0"
+                android:textSize="35sp" />
 
             <EditText
                 android:id="@+id/usn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/mulish"
+                android:hint="University Seat Number"
+                android:inputType="textPersonName"
                 android:singleLine="true"
                 android:textColor="@color/white"
                 android:textColorHint="#878787"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"
-                android:hint="University Seat Number" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/email_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/mulish"
+                android:hint="College Email"
+                android:inputType="textEmailAddress"
                 android:singleLine="true"
                 android:textColor="@color/white"
                 android:textColorHint="#878787"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"
-                android:hint="College Email" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/phone_no"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:layout_marginTop="16dp"
                 android:fontFamily="@font/mulish"
+                android:hint="Phone Number"
+                android:inputType="number"
                 android:singleLine="true"
                 android:textColor="@color/white"
                 android:textColorHint="#878787"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"
-                android:hint="Phone Number" />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/password_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:fontFamily="@font/mulish"
                 android:layout_marginTop="16dp"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textColorHint="#878787"
+                android:fontFamily="@font/mulish"
+                android:hint="Password"
+                android:inputType="textPassword"
                 android:singleLine="true"
-                android:hint="Password" />
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
+                android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/confirm_password_id"
+                android:id="@+id/pwd_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:fontFamily="@font/mulish"
                 android:layout_marginTop="16dp"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textColorHint="#878787"
+                android:fontFamily="@font/mulish"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
                 android:singleLine="true"
-                android:hint="Confirm Password" />
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/already_account_id"
@@ -126,24 +132,24 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="32dp"
-                android:fontFamily="@font/mulish_bold"
-                android:textSize="16sp"
                 android:layout_marginBottom="12dp"
                 android:clickable="true"
-                android:textColor="#C0C0C0"
+                android:fontFamily="@font/mulish_bold"
                 android:text="Already have an account?"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#C0C0C0"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/sign_up_button_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Register"
-                android:fontFamily="@font/mulish_bold"
+                android:layout_marginTop="10dp"
                 android:backgroundTint="#C0C0C0"
-                android:textColor="@color/black"
+                android:fontFamily="@font/mulish_bold"
                 android:padding="10dp"
-                android:layout_marginTop="30dp"/>
+                android:text="Register"
+                android:textColor="@color/black" />
 
 
         </LinearLayout>

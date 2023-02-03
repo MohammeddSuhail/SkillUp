@@ -2,17 +2,27 @@ package com.example.skillup.model;
 
 public class Users {
     String userName,city,country,profession,status, profileImage;
+    Boolean setupFlag;
 
     public Users() {
     }
 
-    public Users(String userName, String city, String counrty, String profession, String profileImage, String status) {
+    public Users(String userName, String city, String country, String profession, String profileImage, String status, Boolean setupFlag) {
         this.userName = userName;
         this.city = city;
-        this.country = counrty;
+        this.country = country;
         this.profession = profession;
         this.status = status;
         this.profileImage = profileImage;
+        this.setupFlag = setupFlag;
+    }
+
+    public Boolean getSetupFlag() {
+        return setupFlag;
+    }
+
+    public void setSetupFlag(Boolean setupFlag) {
+        this.setupFlag = setupFlag;
     }
 
     public String getUserName() {

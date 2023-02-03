@@ -111,7 +111,7 @@ public class SetUpActivity extends AppCompatActivity {
                         StorageRef.child(mUser.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                             @Override
                             public void onSuccess(Uri uri) {  //Image successfully stored
-                                Users user = new Users(userName,city,country,profession,uri.toString(),"Offline");
+                                Users user = new Users(userName,city,country,profession,uri.toString(),"Offline",true);
 
                                 //adding user under "Users" directory
                                 mRef.child("Users").child(mUser.getUid()).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
