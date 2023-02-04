@@ -99,9 +99,9 @@ public class SetUpActivity extends AppCompatActivity {
             if(imageUri!=null){
                 addUserAlongWithImage();
             }
-            else{
+           /* else{
                 addUserWithoutImage();
-            }
+            }*/
         }
     }
 
@@ -151,7 +151,7 @@ public class SetUpActivity extends AppCompatActivity {
                 });
     }
 
-    private void addUserWithoutImage() {
+   /* private void addUserWithoutImage() {
         Users user = new Users(fullName,yearOfGrad,course,branch,currYear,profession,city,null,"Offline",true);
 
         //adding user under "Users" directory
@@ -173,7 +173,7 @@ public class SetUpActivity extends AppCompatActivity {
                 Toast.makeText(SetUpActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
             }
         });
-    }
+    }*/
 
     private boolean CheckAllFields() {
         if(fullName.isEmpty() || fullName.length()<3){
@@ -204,9 +204,10 @@ public class SetUpActivity extends AppCompatActivity {
             showError(binding.cityId,"This field is required!");
             return false;
         }
-        /*else if(imageUri==null){
+        else if(imageUri==null){
             Toast.makeText(this,"Please select an image",Toast.LENGTH_SHORT).show();
-        }*/
+            return false;
+        }
         return true;
     }
 

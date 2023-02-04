@@ -115,7 +115,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/pwd_id"
+                android:id="@+id/conPwd_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
