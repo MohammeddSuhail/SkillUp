@@ -25,17 +25,6 @@ public class Users {
         this.setupFlag = setupFlag;
     }
 
-    public Users(String userName, String yearOfGrad, String course, String branch, String currYear, String profession, String city, String status, Boolean setupFlag) {
-        this.userName = userName;
-        this.yearOfGrad = yearOfGrad;
-        this.course = course;
-        this.branch = branch;
-        this.currYear = currYear;
-        this.profession = profession;
-        this.city = city;
-        this.status = status;
-        this.setupFlag = setupFlag;
-    }
 
 
     public Users(String usn, String phoneNo, Boolean setupFlag) {

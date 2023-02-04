@@ -152,7 +152,7 @@ public class SetUpActivity extends AppCompatActivity {
     }
 
     private void addUserWithoutImage() {
-        Users user = new Users(fullName,yearOfGrad,course,branch,currYear,profession,city,"Offline",true);
+        Users user = new Users(fullName,yearOfGrad,course,branch,currYear,profession,city,null,"Offline",true);
 
         //adding user under "Users" directory
         mRef.child("Users").child(mUser.getUid()).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
