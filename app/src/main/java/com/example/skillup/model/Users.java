@@ -1,7 +1,7 @@
 package com.example.skillup.model;
 
 public class Users {
-    String userName,yearOfGrad,course,branch,currYear,profession,city,status, profileImage;
+    String userName,yearOfGrad,course,branch,currYear,profession,status, profileImage;
     String usn, phoneNo;
     Boolean setupFlag; //to check if the user completed setup part
 
@@ -12,14 +12,13 @@ public class Users {
         return usn;
     }
 
-    public Users(String userName, String yearOfGrad, String course, String branch, String currYear, String profession, String city, String profileImage, String status, Boolean setupFlag) {
+    public Users(String userName, String yearOfGrad, String course, String branch, String currYear, String profession, String profileImage, String status, Boolean setupFlag) {
         this.userName = userName;
         this.yearOfGrad = yearOfGrad;
         this.course = course;
         this.branch = branch;
         this.currYear = currYear;
         this.profession = profession;
-        this.city = city;
         this.profileImage = profileImage;
         this.status = status;
         this.setupFlag = setupFlag;
@@ -93,15 +92,6 @@ public class Users {
     public void setCurrYear(String currYear) {
         this.currYear = currYear;
     }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
 
     public String getProfession() {
         return profession;

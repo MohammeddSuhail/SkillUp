@@ -102,14 +102,14 @@ public class ProfileFragment extends Fragment {
                 if (snapshot.exists()){
                     String profileImageUrl = snapshot.child("profileImage").getValue().toString();
                     String city = snapshot.child("city").getValue().toString();
-                    String country = snapshot.child("country").getValue().toString();
+                 //   String country = snapshot.child("country").getValue().toString();
                     String profession = snapshot.child("profession").getValue().toString();
                     String username = snapshot.child("userName").getValue().toString();
 
                     Picasso.get().load(profileImageUrl).into(profileImageView);
                     inputCity.setText(city);
                     inputUsername.setText(username);
-                    inputCountry.setText(country);
+                 //   inputCountry.setText(country);
                     inputProfession.setText(profession);
                 }else{
                     Toast.makeText(getContext(),"Data doesn't exist",Toast.LENGTH_SHORT).show();
