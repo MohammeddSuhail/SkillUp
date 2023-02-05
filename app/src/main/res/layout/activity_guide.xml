@@ -80,21 +80,41 @@
                     />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#24282b"
-                    android:fontFamily="@font/mulish"
-                    android:backgroundTint="#134EFF"
+                    android:background="#134EFF"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
                     android:paddingLeft="4dp"
                     android:paddingRight="4dp"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
                     android:layout_marginLeft="13dp"
+                    android:text="THIRD-YEAR ROADMAP"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#134EFF"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="6dp"
                     android:text="MUST-READ"
                     android:layout_marginBottom="8dp"
                     android:textColor="@color/white"
                     android:textSize="10sp"/>
+            </LinearLayout>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -108,7 +128,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#FFF"
+                android:background="@color/white"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"/>
 
@@ -119,8 +139,8 @@
                 android:textIsSelectable="true"
                 android:linksClickable="true"
                 android:autoLink="web"
-                android:text="Third year is the best time to take a lead in your professional career. No one enjoys college life more than a fourth-year student who gets placed by the middle of the 7th sem because they will have a lot of time to go for trips, hangouts, sleep a little extra on Sundays, etc. So, work hard in the 3rd year and enjoy your life to the fullest in the 4th year.\n\nWhen it comes to the 5th sem, your top priority must be placements. \nHere is a roadmap for the 5th sem that you can follow:\n1. Practice! Practice! Practice!\nWhat? Data Structures and Algorithms.\nKeep practising questions on platforms like GeeksForGeeks, Leetcode, etc. and participate in weekly contests if possible. It is okay if you don’t get the answer initially but being in touch with such questions is important. Try to solve at least 3 questions a day. \n\n2. Projects:\nChoose a technology and start working on building a project. Keep improving it throughout the year. Web Development/App Development would be the fastest and easiest way to do a project.\n\n3. Create and improve your GitHub and LinkedIn profile and keep it updated.\n\nThis is the roadmap if you are in the 6th sem:\n1. Start learning the theory subjects like OOPS, CN, DBMS and OS. Focus more on SQL and keeps practising SQL questions on either Hackerrank or Leetcode.\n2. Prepare a sexy resume and always keep it updated.\n3. Most Important - Keep practising DSA.\n\nIf you didn’t get an internship in 3rd year, do not worry. Take it positively as you will have more time to prepare for placements than someone who is working as an intern in some company."
-                android:textColor="#FFF"
+                android:text="Third year is the best time to take a lead in your professional career. No one enjoys college life more than a fourth-year student who gets placed by the middle of the 7th sem because they will have a lot of time to go for trips, hangouts, sleep a little extra on Sundays, etc. So, work hard in the 3rd year and enjoy your life to the fullest in the 4th year.\n\nWhen it comes to the 5th sem, your top priority must be placements. \nHere is a roadmap for the 5th sem that you can follow:\n1. Practice! Practice! Practice!\nWhat? Data Structures and Algorithms.\nKeep practising questions on platforms like GeeksForGeeks, Leetcode, etc. and participate in weekly contests if possible. It is okay if you don’t get the answer initially but being in touch with such questions is important. Try to solve at least 3 questions a day. \n\n2. Projects:\nChoose a technology and start working on building a project. Keep improving it throughout the year. Web Development/App Development would be the fastest and easiest way to do a project.\n\n3. Create and improve your GitHub and LinkedIn profile and keep it updated.\n\nThis is the roadmap if you are in the 6th sem:\n1. Start learning the theory subjects like OOPS, CN, DBMS and OS. Focus more on SQL and keeps practising SQL questions on either Hackerrank or Leetcode.\n2. Prepare a decent resume and always keep it updated.\n3. Most Important - Keep practising DSA.\n\nIf you didn’t get an internship in 3rd year, do not worry. Take it positively as you will have more time to prepare for placements than someone who is working as an intern in some company."
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:background="#24282b"
                 android:padding="13dp"
@@ -179,21 +199,42 @@
                         />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#24282b"
-                    android:fontFamily="@font/mulish"
-                    android:backgroundTint="#134EFF"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
                     android:paddingLeft="4dp"
                     android:paddingRight="4dp"
                     android:paddingTop="2dp"
                     android:paddingBottom="2dp"
                     android:layout_marginLeft="13dp"
+                    android:text="CRACKING MRC"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#134EFF"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="6dp"
                     android:text="MUST-READ"
                     android:layout_marginBottom="8dp"
                     android:textColor="@color/white"
                     android:textSize="10sp"/>
+                </LinearLayout>
+
             </LinearLayout>
 
 
@@ -207,7 +248,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#FFF"
+                android:background="@color/white"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"/>
 
@@ -219,7 +260,7 @@
                 android:linksClickable="true"
                 android:autoLink="web"
                 android:text="MRC stands for Mass Recruiting Company. MRCs are the easiest to crack if your preparation is right and if you utilise your time well.\n\nThis is how the rounds usually go for an MRC:\n-To start with, you'll have an aptitude test.\n-You might have a coding test but it depends from company to company.\n-Some companies also have a communication test after the coding round, this is nothing complex, all you need is a quiet place and you can see things happening the same as what you did in your English lab.\n\nTechnical Round:\nFirstly, you'll have to be good at your communication skills. If you speak well and you portray yourself as a confident and able candidate, the spotlight is all yours.\nSecond, for the aptitude test brush up on the topics covered in the ESD classes and you can also use IndiaBix for your reference. Usually, questions of similar types as IndiaBix are asked for an MRC. Focus a bit more on logical aptitude questions which cover blood relation, encoding decoding, seating arrangement questions etc.\nThird, for the coding round simple questions are asked and the types of questions depend from company to company but they might not involve a lot of DSA compared to what Dream or Superdream would ask.\n\nAnd then the INTERVIEW,\nFirstly, greet the interviewer, dress well, appear confident and have a smile on your face but don't grin or show your teeth. The interviewers are usually chill. Mostly all of them will ask for an introduction, and then they move on to the projects that you have worked on. Tell them about the features the project has and the technology stack used. The interviewer might also ask for some coding and these will be the most basic ones which include Fibonacci, reversing a number/string, palindrome program and other easy ones you can think of. Also, have good command over OOP concepts.\n\nThis should help you get placed in an MRC with ease! \nGood Luck"
-                android:textColor="#FFF"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:background="#24282b"
                 android:padding="13dp"
@@ -243,19 +284,28 @@
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp">
 
+
             <LinearLayout
                 android:id="@+id/q_exp_lay2"
                 android:background="#24282b"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+            <LinearLayout
+                android:background="#24282b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q3 Which programming language should I learn?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -270,6 +320,22 @@
                     android:background="@drawable/down_24"
                     />
             </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="LANGUAGE"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+            </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
@@ -283,7 +349,7 @@
                 android:id="@+id/view_q_exp_lay2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#FFF"
+                android:background="@color/white"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"/>
 
@@ -296,7 +362,7 @@
                 android:linksClickable="true"
                 android:autoLink="web"
                 android:text="Students are encouraged to know the basics of all the languages below but they need to strengthen themselves in one of the languages for problem solving.\n\n•Java: Most used by the companies for development. They should make themselves familiar with the Collections libraries for ease in competitive coding.\n\n•C++: Easy to learn and master. STL libraries will be very useful for DSA and competitive problems. \n\n•Python: Good for projects, and can be used competitively. However some companies might not have it in the IDE during the online tests."
-                android:textColor="#FFF"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:background="#24282b"
                 android:padding="13dp"
@@ -322,16 +388,24 @@
 
             <LinearLayout
                 android:background="#24282b"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+            <LinearLayout
+                android:background="#24282b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q4 Are certifications important? If yes, where can I earn them?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -346,6 +420,22 @@
                     android:background="@drawable/down_24"
                     />
             </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="CERTIFICATES"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+            </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
@@ -358,7 +448,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#FFF"
+                android:background="@color/white"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"/>
 
@@ -373,7 +463,7 @@ etc. These certifications are paid generally but they add value to your resume.
 certifications, because these certifications don’t add value to your resume and companies generally don’t
 consider these certificates.\n\nIf you just want to learn the skills , Udemy is a good source, but you can
 find better sources on YouTube like LoveBabbar, freecodecamp, Striver, ProgrammingwithMosh, etc."
-                android:textColor="#FFF"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textIsSelectable="true"
                 android:linksClickable="true"
@@ -402,15 +492,23 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
             <LinearLayout
                 android:background="#24282b"
                 android:layout_width="match_parent"
+                android:orientation="vertical"
                 android:layout_height="match_parent">
 
+            <LinearLayout
+                android:background="#24282b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q5 What are the different categories in which I can build some projects to be put in my resume? "
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -425,6 +523,22 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:background="@drawable/down_24"
                     />
             </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="PROJECTS"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+            </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
@@ -437,7 +551,7 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#FFF"
+                android:background="@color/white"
                 android:layout_marginRight="15dp"
                 android:layout_marginLeft="15dp"/>
 
@@ -474,15 +588,23 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
             <LinearLayout
                 android:background="#24282b"
                 android:layout_width="match_parent"
+                android:orientation="vertical"
                 android:layout_height="match_parent">
 
+            <LinearLayout
+                android:background="#24282b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q6 How important is the aptitude and how to prepare for it?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -496,6 +618,22 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:layout_gravity="center"
                     android:background="@drawable/down_24"
                     />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="APTITUDE"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
             </LinearLayout>
 
 
@@ -545,15 +683,23 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
             <LinearLayout
                 android:background="#24282b"
                 android:layout_width="match_parent"
+                android:orientation="vertical"
                 android:layout_height="match_parent">
 
+            <LinearLayout
+                android:background="#24282b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q7 How to start coding? Which are the top coding platforms?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -567,6 +713,22 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:layout_gravity="center"
                     android:background="@drawable/down_24"
                     />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="CODING"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
             </LinearLayout>
 
 
@@ -617,15 +779,23 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
             <LinearLayout
                 android:background="#24282b"
                 android:layout_width="match_parent"
+                android:orientation="vertical"
                 android:layout_height="match_parent">
 
-                <TextView
+                <LinearLayout
+                    android:background="#24282b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+            <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q8 How to prepare for puzzles that are asked by some of the companies?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -639,6 +809,22 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:layout_gravity="center"
                     android:background="@drawable/down_24"
                     />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="PUZZLES"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
             </LinearLayout>
 
 
@@ -690,6 +876,12 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
             <LinearLayout
                 android:background="#24282b"
                 android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="#24282b"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
@@ -698,7 +890,10 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q9 How important is Data Structures and Algorithms? Is it a must to cover all of it in algorithms?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -712,6 +907,22 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:layout_gravity="center"
                     android:background="@drawable/down_24"
                     />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="DATA STRUCTURES AND ALGORITHMS"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
             </LinearLayout>
 
 
@@ -761,16 +972,24 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
 
             <LinearLayout
                 android:background="#24282b"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+            <LinearLayout
+                android:background="#24282b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q10 What are the different DSA Sheets available that I can try to get placed in top IT Companies?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -784,6 +1003,22 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:layout_gravity="center"
                     android:background="@drawable/down_24"
                     />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="DSA SHEETS"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
             </LinearLayout>
 
 
@@ -832,16 +1067,24 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
 
             <LinearLayout
                 android:background="#24282b"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+            <LinearLayout
+                android:background="#24282b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q11 How to approach a coding problem? When should I look at the solution?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -855,6 +1098,22 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:layout_gravity="center"
                     android:background="@drawable/down_24"
                     />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="CODING APPROACH"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
             </LinearLayout>
 
 
@@ -903,6 +1162,12 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
 
             <LinearLayout
                 android:background="#24282b"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="#24282b"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -912,7 +1177,10 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q12 How long should I spend on a coding question if I am not being able to solve it initially?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -926,6 +1194,22 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:layout_gravity="center"
                     android:background="@drawable/down_24"
                     />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="TIME SPENT ON CODING"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
             </LinearLayout>
 
 
@@ -974,6 +1258,12 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
 
             <LinearLayout
                 android:background="#24282b"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="#24282b"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
@@ -983,7 +1273,10 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q13 How important is it to understand the time and space complexity?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -997,6 +1290,23 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:layout_gravity="center"
                     android:background="@drawable/down_24"
                     />
+            </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#24282b"
+            android:fontFamily="@font/mulish_bold"
+            android:backgroundTint="#009688"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginLeft="13dp"
+            android:text="TIME &amp; SPACE COMPLEXITY "
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"/>
             </LinearLayout>
 
 
@@ -1046,15 +1356,23 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
             <LinearLayout
                 android:background="#24282b"
                 android:layout_width="match_parent"
+                android:orientation="vertical"
                 android:layout_height="match_parent">
 
+            <LinearLayout
+                android:background="#24282b"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#24282b"
                     android:layout_weight="1"
                     android:fontFamily="@font/mulish_bold"
-                    android:padding="13dp"
+                    android:paddingTop="13dp"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:paddingBottom="4dp"
                     android:text="Q14 What are the most asked theory topics in the interviews? Where can I get the resources?"
                     android:textColor="@color/white"
                     android:textSize="16sp"/>
@@ -1068,6 +1386,22 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                     android:layout_gravity="center"
                     android:background="@drawable/down_24"
                     />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#24282b"
+                    android:fontFamily="@font/mulish_bold"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginLeft="13dp"
+                    android:text="THEORY TOPICS"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
             </LinearLayout>
 
 
@@ -1090,7 +1424,7 @@ find better sources on YouTube like LoveBabbar, freecodecamp, Striver, Programmi
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mulish"
                 android:text="OOPS,DBMS,OS,DC &amp; CN are some of the most asked theory topics in interviews. So students should be in touch with these concepts. Too much detail in these topics isn't necessary but they should be thorough with the core topics, e.g. in CN, OSI Model and its working is an important topic but in depths of these isn’t required.\n\nSome resources are given below:\nLast Minute Notes: https://www.geeksforgeeks.org/lmns-gq/\nImportant Interview questions: https://takeuforward.org/interviews/must-do-questions-for-dbms-cn-os-interviews-sde-core-sheet/\n\nInterviewBit:\nDBMS: https://www.interviewbit.com/dbms-interview-questions/\nOOPS: https://www.interviewbit.com/oops-interview-questions/\nOS: https://www.interviewbit.com/operating-system-interview-questions/\nCN: https://www.interviewbit.com/networking-interview-questions"
-                android:textColor="#FFF"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textIsSelectable="true"
                 android:linksClickable="true"
