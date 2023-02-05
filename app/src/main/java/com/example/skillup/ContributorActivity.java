@@ -13,7 +13,7 @@ import android.view.View;
 
 public class ContributorActivity extends AppCompatActivity {
 
-    CardView prathamesh, suhail, ranjan, ranjith, anuroop, sabarinath;
+    CardView prathamesh, suhail, ranjan, ranjith, anuroop, sabarinath, prajith;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +36,7 @@ public class ContributorActivity extends AppCompatActivity {
         ranjith = findViewById(R.id.ranjith);
         anuroop = findViewById(R.id.anuroop);
         sabarinath = findViewById(R.id.sabarinath);
+        prajith = findViewById(R.id.prajith);
 
         prathamesh.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +62,16 @@ public class ContributorActivity extends AppCompatActivity {
                 startActivity(i1);
             }
         });
+
+        prajith.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i1 = new Intent(ContributorActivity.this, ContriDetailActivity.class);
+                i1.putExtra("name", "Prajith Shetty");
+                startActivity(i1);
+            }
+        });
+
         sabarinath.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
