@@ -3,9 +3,11 @@ package com.example.skillup;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 public class GuideActivity extends AppCompatActivity {
@@ -13,11 +15,23 @@ public class GuideActivity extends AppCompatActivity {
     CardView faq0, faq01, faq1, faq2, faq3, faq4, faq5, faq6, faq7, faq8, faq9, faq10, faq11, faq12, faq13, faq14, faq4i;
     LinearLayout efaq0, efaq01, efaq1, efaq2, efaq3, efaq4, efaq5, efaq6, efaq7, efaq8, efaq9, efaq10, efaq11, efaq12, efaq13, efaq14, efaq4i;
     View v0, v01, v1, v2, v3, v4,v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v4i;
+    ImageView back_press;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guide);
+
+        getSupportActionBar().hide();
+
+        back_press = findViewById(R.id.back_press);
+        back_press.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(GuideActivity.this, AllActivity.class);
+                startActivity(in);
+            }
+        });
 
         faq0=(CardView) findViewById(R.id.faq0);
         v0=findViewById(R.id.v0);

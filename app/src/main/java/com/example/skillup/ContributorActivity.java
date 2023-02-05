@@ -10,11 +10,12 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.ImageView;
 
 public class ContributorActivity extends AppCompatActivity {
 
     CardView prathamesh, suhail, ranjan, ranjith, anuroop, sabarinath, prajith;
-
+    ImageView back_press;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,15 @@ public class ContributorActivity extends AppCompatActivity {
         // Set BackgroundDrawable
         actionBar.setBackgroundDrawable(colorDrawable);
         actionBar.setTitle(Html.fromHtml("<font color='#FFFFFF'>Top Contributors</font>"));
+
+        back_press = findViewById(R.id.back_press);
+        back_press.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(ContributorActivity.this, AllActivity.class);
+                startActivity(in);
+            }
+        });
 
         prathamesh = findViewById(R.id.prathamesh);
         suhail = findViewById(R.id.suhail);
