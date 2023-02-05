@@ -23,8 +23,8 @@
 
         <ImageView
             android:id="@+id/back_press"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:layout_gravity="left|center_vertical"
             app:srcCompat="@drawable/left_arrow"
             app:tint="@color/white" />
@@ -38,7 +38,7 @@
             android:paddingLeft="20dp"
             android:text="Profile"
             android:textColor="@color/white"
-            android:textSize="25sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
 

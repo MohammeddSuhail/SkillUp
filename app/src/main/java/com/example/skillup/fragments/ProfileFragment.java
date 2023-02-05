@@ -81,6 +81,7 @@ public class ProfileFragment extends Fragment {
         View view = inflater.inflate(R.layout.profile_fragment,container,false);
 
 
+
         //getActivity().getSupportFragmentManager().popBackStack();
         //CircleImageView profileImage = view.findViewById(R.id.profile_pic_header);
 
@@ -377,6 +378,7 @@ public class ProfileFragment extends Fragment {
             imageUri = data.getData();
             profileImageView.setImageURI(imageUri);
 
+
             //adding the image
             final String[] url = {null};
             StorageRef.child(mUser.getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
@@ -391,9 +393,9 @@ public class ProfileFragment extends Fragment {
                                 url[0] = uri.toString();
                             }
                         });
-                        mLoadingBar.dismiss();
+
                     }else{
-                        mLoadingBar.dismiss();
+
                         Toast.makeText(getContext(), "Profile Image Update Failed", Toast.LENGTH_SHORT).show();
                     }
                 }
