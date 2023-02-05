@@ -189,16 +189,16 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        cv_usn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                args.putString("tv_name","USN");
-                args.putString("et_name",usn);
-                args.putString("db_child_name","usn");
-                eachProfileUpdateFragment.setArguments(args);
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container,eachProfileUpdateFragment).commit();
-            }
-        });
+//        cv_usn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                args.putString("tv_name","USN");
+//                args.putString("et_name",usn);
+//                args.putString("db_child_name","usn");
+//                eachProfileUpdateFragment.setArguments(args);
+//                getFragmentManager().beginTransaction().replace(R.id.fragment_container,eachProfileUpdateFragment).commit();
+//            }
+//        });
 
         cv_phone.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -129,7 +129,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_usn"
         android:layout_width="match_parent"
-        android:clickable="true"
+        android:clickable="false"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground"
         android:layout_height="wrap_content">
@@ -165,7 +165,8 @@
                     android:layout_marginTop="5dp"
                     android:fontFamily="@font/mulish_bold"
                     android:text="tv_usn"
-                    android:textColor="@color/white"
+                    android:clickable="false"
+                    android:textColor="@color/dark_grey"
                     android:textSize="18sp" />
             </LinearLayout>
 
@@ -175,7 +176,7 @@
                 android:layout_gravity="right|center_vertical|end"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="25dp"
-                app:tint="@color/white"
+                app:tint="@color/dark_grey"
                 app:srcCompat="@drawable/right_arrow" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
