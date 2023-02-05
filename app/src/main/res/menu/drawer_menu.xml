@@ -5,7 +5,7 @@
         <item
             android:id="@+id/nav_courses"
             android:icon="@drawable/ic_home"
-            android:title="Courses"/>
+            android:title="Home"/>
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_profile"
@@ -21,15 +21,15 @@
             android:icon="@drawable/guide"
             android:title="Placement FAQs"/>
 
-        <item
-            android:id="@+id/nav_community"
-            android:icon="@drawable/ic_invite_friend"
-            android:title="Community"/>
+<!--        <item-->
+<!--            android:id="@+id/nav_community"-->
+<!--            android:icon="@drawable/ic_invite_friend"-->
+<!--            android:title="Community"/>-->
 
-        <item
-            android:id="@+id/nav_mentors"
-            android:icon="@drawable/ic_friends"
-            android:title="Mentors"/>
+<!--        <item-->
+<!--            android:id="@+id/nav_mentors"-->
+<!--            android:icon="@drawable/ic_friends"-->
+<!--            android:title="Mentors"/>-->
 
         <item
             android:id="@+id/nav_contributors"

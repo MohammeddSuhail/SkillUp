@@ -483,7 +483,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@drawable/imp_logo" />
+                        app:srcCompat="@drawable/ic_videos" />
 
                     <TextView
                         android:id="@+id/os8textView2"
@@ -491,7 +491,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mulish_bold"
                         android:gravity="center"
-                        android:text="Important\nTopics"
+                        android:text="All OS\nVideos"
                         android:textColor="#FFF"
                         android:textSize="20sp"
                         android:textStyle="bold"

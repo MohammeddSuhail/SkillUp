@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/mulish"
-            android:text="Computer Science and Engineering - 2023 batch"
+            android:text="Computer Science and Engineering (2019 - 2023 batch)"
             android:textColor="#FFF"
             android:textSize="18sp" />
 

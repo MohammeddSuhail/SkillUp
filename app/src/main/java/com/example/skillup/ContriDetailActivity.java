@@ -98,6 +98,16 @@ public class ContriDetailActivity extends AppCompatActivity {
             img.setImageResource(R.drawable.suhail);
         }
 
+        if(Objects.equals(name, "Prajith Shetty")){
+            ctc="12 Lakhs";
+            companies_placed = "• Tismo Technology (CTC: 7.25 Lakhs)\n• Capgemini (CTC: 4.25 Lakhs)";
+            cgpa = "9.50";
+            core = "• Web Development\n• Machine Learning";
+
+            linkedId = "prajith-shetty";
+            img.setImageResource(R.drawable.prajith);
+        }
+
         if(Objects.equals(name, "Ranjith Kumar R")){
             ctc="12 Lakhs";
             companies_placed = "• Daimler Truck (CTC: 10 Lakhs)\n• Accenture (MRC - CTC: 4.5 Lakhs)\n• Capgemini (MRC - CTC: 4.25 Lakhs)\n• DXC (MRC - CTC: 4.2 Lakhs)";
