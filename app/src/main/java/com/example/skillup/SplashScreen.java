@@ -50,9 +50,20 @@ public class SplashScreen extends AppCompatActivity {
                             if(snapshot.exists()){
                                 Toast.makeText(SplashScreen.this,"success",Toast.LENGTH_SHORT);
 
-                                Intent intent = new Intent(SplashScreen.this,AllActivity.class);
-                                startActivity(intent);
-                                finish();
+
+                                Boolean setupFlag = snapshot.child("setupFlag").getValue(Boolean.class);
+                                if(setupFlag){
+                                    Intent intent = new Intent(SplashScreen.this,AllActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                                else{
+                                    //if user is already logged in (mainly when user comes to setup page and exits app without completing setup)
+                                    Intent intent = new Intent(SplashScreen.this,SetUpActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+
                             }
                             else{
                                 Intent intent = new Intent(SplashScreen.this,SetUpActivity.class);

@@ -55,7 +55,6 @@ public class ProfileFragment extends Fragment {
     Button btnUpdate;*/
     TextView tv_userName,tv_usn,tv_phone,tv_yearOfGrad, tv_course, tv_branch, tv_currYear, tv_profession;
 
-    ImageView backPress;
 
     Uri imageUri;
 
@@ -92,7 +91,6 @@ public class ProfileFragment extends Fragment {
         inputProfession = view.findViewById(R.id.inputProfession);
         btnUpdate = view.findViewById(R.id.btnUpdate);*/
 
-        backPress = view.findViewById(R.id.back_press);
         profileImageView = view.findViewById(R.id.profileImage);
         tv_userName = view.findViewById(R.id.tv_userName);
         tv_usn = view.findViewById(R.id.tv_usn);
@@ -116,13 +114,6 @@ public class ProfileFragment extends Fragment {
         mUser = mAuth.getCurrentUser();
         mUserRef = FirebaseDatabase.getInstance().getReference().child("Users");
         StorageRef = FirebaseStorage.getInstance().getReference().child("ProfileImage");
-
-        backPress.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
-            }
-        });
 
         profileImageView.setOnClickListener(new View.OnClickListener() {
             @Override
