@@ -41,7 +41,7 @@ public class SetUpActivity extends AppCompatActivity {
     StorageReference StorageRef;
 
     boolean isAllFieldsChecked = false;
-    String fullName, yearOfGrad, course, branch, currYear, profession, city;
+    String fullName, yearOfGrad, course, branch, currYear, profession;
 
     ProgressDialog mLoadingBar;
 
@@ -83,7 +83,6 @@ public class SetUpActivity extends AppCompatActivity {
         branch = binding.branch.getText().toString();
         currYear = binding.currYear.getText().toString();
         profession = binding.profession.getText().toString();
-        city = binding.cityId.getText().toString();
 
         // store the returned value of the dedicated function which checks
         // whether the entered data is valid or if any fields are left blank.
@@ -118,7 +117,7 @@ public class SetUpActivity extends AppCompatActivity {
                             StorageRef.child(mUser.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {  //Image successfully stored
-                                    Users user = new Users(fullName,yearOfGrad,course,branch,currYear,profession,city,uri.toString(),"Offline",true);
+                                    Users user = new Users(fullName,yearOfGrad,course,branch,currYear,profession,uri.toString(),"Offline",true);
 
                                     //adding user under "Users" directory
                                     mRef.child("Users").child(mUser.getUid()).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -198,10 +197,6 @@ public class SetUpActivity extends AppCompatActivity {
         }
         else if(profession.isEmpty() || profession.length()<3){
             showError(binding.profession,"Profession is not valid");
-            return false;
-        }
-        else if(city.isEmpty()){
-            showError(binding.cityId,"This field is required!");
             return false;
         }
         else if(imageUri==null){
