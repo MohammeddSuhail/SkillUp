@@ -21,7 +21,11 @@ import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.example.skillup.AllActivity;
+import com.example.skillup.ContriDetailActivity;
+import com.example.skillup.ContributorActivity;
 import com.example.skillup.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -36,21 +40,23 @@ public class NotesActivity extends AppCompatActivity implements PopupMenu.OnMenu
     FloatingActionButton fab_add;
     SearchView searchView_home;
     Notes selectedNote;
+    ImageView back_press;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
 
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
-        ColorDrawable colorDrawable
-                = new ColorDrawable(Color.parseColor("#121212"));
+        getSupportActionBar().hide();
 
-        // Set BackgroundDrawable
-        actionBar.setBackgroundDrawable(colorDrawable);
-
-        actionBar.setTitle(Html.fromHtml("<font color='#FFFFFF'>Add Notes</font>"));
+        back_press = findViewById(R.id.back_press);
+        back_press.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(NotesActivity.this, AllActivity.class);
+                startActivity(in);
+            }
+        });
 
         recyclerView=findViewById(R.id.recycler_home);
         fab_add = findViewById(R.id.fab_add);

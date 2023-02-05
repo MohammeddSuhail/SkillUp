@@ -22,14 +22,7 @@ public class ContributorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contributor);
 
 
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
-        ColorDrawable colorDrawable
-                = new ColorDrawable(Color.parseColor("#121212"));
-
-        // Set BackgroundDrawable
-        actionBar.setBackgroundDrawable(colorDrawable);
-        actionBar.setTitle(Html.fromHtml("<font color='#FFFFFF'>Top Contributors</font>"));
+      getSupportActionBar().hide();
 
         back_press = findViewById(R.id.back_press);
         back_press.setOnClickListener(new View.OnClickListener() {
