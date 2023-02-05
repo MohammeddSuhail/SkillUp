@@ -72,12 +72,12 @@ public class ProfileFragment extends Fragment {
         //getActivity().getSupportFragmentManager().popBackStack();
         //CircleImageView profileImage = view.findViewById(R.id.profile_pic_header);
 
-        profileImageView = view.findViewById(R.id.circleImageView);
+        /*profileImageView = view.findViewById(R.id.circleImageView);
         inputUsername = view.findViewById(R.id.inputUsername);
         inputCity = view.findViewById(R.id.inputCity);
         inputCountry = view.findViewById(R.id.inputCountry);
         inputProfession = view.findViewById(R.id.inputProfession);
-        btnUpdate = view.findViewById(R.id.btnUpdate);
+        btnUpdate = view.findViewById(R.id.btnUpdate);*/
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();

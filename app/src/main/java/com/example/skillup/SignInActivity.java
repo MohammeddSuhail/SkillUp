@@ -1,12 +1,16 @@
 package com.example.skillup;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -61,6 +65,13 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
 
+        binding.forgotPwd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showResetPasswordDialog();
+            }
+        });
+
         binding.signInButtonId.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,6 +110,7 @@ public class SignInActivity extends AppCompatActivity {
         }
 
     }
+
 
     private void checkAndSignIn() {
         email = binding.emailId.getText().toString();
@@ -204,6 +216,64 @@ public class SignInActivity extends AppCompatActivity {
     private void showError(EditText input, String s) {
         input.setError(s);
         input.requestFocus();
+    }
+
+    ProgressDialog loadingBar;
+    private void showResetPasswordDialog() {
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
+        builder.setTitle("Recover Password");
+        LinearLayout linearLayout=new LinearLayout(this);
+        final EditText emailet= new EditText(this);
+
+        emailet.setHint("Email");
+        emailet.setMinEms(16);
+        emailet.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+        linearLayout.addView(emailet);
+        linearLayout.setPadding(20,20,20,20);
+        builder.setView(linearLayout);
+
+        // Click on Recover and a email will be sent to your registered email id
+        builder.setPositiveButton("Recover", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                String email=emailet.getText().toString().trim();
+                beginRecovery(email);
+            }
+        });
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.create().show();
+    }
+
+    private void beginRecovery(String email) {
+        loadingBar=new ProgressDialog(this);
+        loadingBar.setMessage("Sending Email....");
+        loadingBar.setCanceledOnTouchOutside(false);
+        loadingBar.show();
+
+        // calling sendPasswordResetEmail
+        // open your email and write the new
+        // password and then you can login
+        mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                loadingBar.dismiss();
+                if(task.isSuccessful())
+                {
+                    // if isSuccessful then done message will be shown
+                    // and you can change the password
+                    Toast.makeText(SignInActivity.this,"Password reset email sent",Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Toast.makeText(SignInActivity.this,"Failed to send password reset email",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
 
 }

@@ -66,8 +66,8 @@
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="32px"
-                android:layout_height="32px"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:layout_gravity="center|right"
                 android:layout_marginRight="25dp"
                 app:srcCompat="@drawable/right_arrow"
@@ -115,8 +115,8 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="32px"
-                android:layout_height="32px"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:layout_gravity="center|right"
                 android:layout_marginRight="25dp"
                 app:srcCompat="@drawable/right_arrow"
@@ -164,8 +164,8 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="32px"
-                android:layout_height="32px"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:layout_gravity="center|right"
                 android:layout_marginRight="25dp"
                 app:srcCompat="@drawable/right_arrow"
@@ -214,8 +214,8 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="32px"
-                android:layout_height="32px"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:layout_gravity="center|right"
                 android:layout_marginRight="25dp"
                 app:srcCompat="@drawable/right_arrow"
@@ -263,8 +263,8 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="32px"
-                android:layout_height="32px"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
                 android:layout_gravity="center|right"
                 android:layout_marginRight="25dp"
                 app:srcCompat="@drawable/right_arrow"
