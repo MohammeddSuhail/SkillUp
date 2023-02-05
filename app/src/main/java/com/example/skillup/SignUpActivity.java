@@ -23,6 +23,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Locale;
+
 public class SignUpActivity extends AppCompatActivity {
 
     ActivitySignUpBinding binding;
@@ -175,7 +177,7 @@ public class SignUpActivity extends AppCompatActivity {
             showError(binding.conPwdId,"Password is not matching with confirm password");
             return false;
         }
-        else if(!usnFromEmail.equals(usn)){
+        else if(!usnFromEmail.toLowerCase(Locale.ROOT).equals(usn.toLowerCase(Locale.ROOT))){
             showError(binding.usn,"USN is not matching with USN from college email");
             return false;
         }

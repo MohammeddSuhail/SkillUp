@@ -401,7 +401,7 @@ public class ProfileFragment extends Fragment {
                             }
                         });
                         mLoadingBar.dismiss();
-
+                        Toast.makeText(getContext(), "Profile Image will be updated shortly", Toast.LENGTH_SHORT).show();
                     }else{
                         mLoadingBar.dismiss();
                         Toast.makeText(getContext(), "Profile Image Update Failed", Toast.LENGTH_SHORT).show();
