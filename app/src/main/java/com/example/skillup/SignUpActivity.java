@@ -34,6 +34,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     boolean isAllFieldsChecked = false;
     String email, pw, usn, phoneNo, conPwd;
+    String usnFromEmail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,9 @@ public class SignUpActivity extends AppCompatActivity {
 
         usn = binding.usn.getText().toString();
         phoneNo = binding.phoneNo.getText().toString();
+
+        int index = email.indexOf('@');
+        usnFromEmail = email.substring(0,index);
 
         isAllFieldsChecked = CheckAllFields();
 
@@ -169,6 +173,10 @@ public class SignUpActivity extends AppCompatActivity {
         }
         else if(!pw.equals(conPwd)){
             showError(binding.conPwdId,"Password is not matching with confirm password");
+            return false;
+        }
+        else if(!usnFromEmail.equals(usn)){
+            showError(binding.usn,"USN is not matching with USN from college email");
             return false;
         }
         return true;
