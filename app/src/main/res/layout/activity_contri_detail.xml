@@ -5,9 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ContriDetailActivity">
+    <LinearLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2a2b2d"
+        android:paddingLeft="20dp"
+        android:layout_alignParentTop="true"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
 
+        <ImageView
+            android:id="@+id/back_press"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="left|center_vertical"
+            app:srcCompat="@drawable/left_arrow"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:fontFamily="@font/mulish_bold"
+            android:paddingLeft="20dp"
+            android:text="Top Contributor"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
     <ImageView
         android:id="@+id/image"
+        android:layout_below="@+id/actionbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"

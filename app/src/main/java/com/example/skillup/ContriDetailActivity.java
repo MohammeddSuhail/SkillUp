@@ -26,22 +26,25 @@ public class ContriDetailActivity extends AppCompatActivity {
     String name, ctc, companies_placed, cgpa, core,linkedId;
     TextView nametv, company_listtv, Cgpatv, Coretv;
     Button linkedin;
-    ImageView img;
+    ImageView img, back_press;
     LinearLayout full_desc;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contri_detail);
 
-        ActionBar actionBar;
-        actionBar = getSupportActionBar();
-        ColorDrawable colorDrawable
-                = new ColorDrawable(Color.parseColor("#121212"));
+        getSupportActionBar().hide();
 
-        // Set BackgroundDrawable
-        actionBar.setBackgroundDrawable(colorDrawable);
-        actionBar.setTitle(Html.fromHtml("<font color='#FFFFFF'>Top Contributor</font>"));
+        back_press = findViewById(R.id.back_press);
+        back_press.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(ContriDetailActivity.this, ContributorActivity.class);
+                startActivity(in);
+            }
+        });
 
         Intent intent = getIntent();
         name = intent.getStringExtra("name");
