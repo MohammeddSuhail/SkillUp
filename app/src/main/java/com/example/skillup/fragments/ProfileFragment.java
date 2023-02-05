@@ -144,8 +144,18 @@ public class ProfileFragment extends Fragment {
                     //String city = snapshot.child("city").getValue().toString();
                  // String country = snapshot.child("country").getValue().toString();
                     userName = snapshot.child("userName").getValue().toString();
-                    usn = snapshot.child("usn").getValue().toString();
-                    phoneNo = snapshot.child("phoneNo").getValue().toString();
+                    try {
+                        usn = snapshot.child("usn").getValue().toString();
+                    }
+                    catch (Exception e){
+                        usn=" ";
+                    }
+                    try {
+                        phoneNo = snapshot.child("phoneNo").getValue().toString();
+                    }
+                    catch (Exception e){
+                        phoneNo="";
+                    }
                     yearOfGrad = snapshot.child("yearOfGrad").getValue().toString();
                     course = snapshot.child("course").getValue().toString();
                     branch = snapshot.child("branch").getValue().toString();
