@@ -115,6 +115,16 @@ public class DbmsFragment extends Fragment {
             }
         });
 
+        dbms_imp_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"DBMS","All_Videos"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+
         dbms_notes_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

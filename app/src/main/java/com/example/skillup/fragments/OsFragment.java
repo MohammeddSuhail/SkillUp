@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class OsFragment extends Fragment {
 
-    CardView os_intro_cardview, os_notes_cardview, os_process_cardview, os_schedule_cardview, os_sync_cardview, os_mem_cardview, os_page_cardview, os_cmd_cardview, os_pin_cardview;
+    CardView os_imp_cardview, os_intro_cardview, os_notes_cardview, os_process_cardview, os_schedule_cardview, os_sync_cardview, os_mem_cardview, os_page_cardview, os_cmd_cardview, os_pin_cardview;
     VideoListFragment videoListFragment;
 
     @Nullable
@@ -36,6 +36,7 @@ public class OsFragment extends Fragment {
         os_mem_cardview = view.findViewById(R.id.os_mem_cardview);
         os_page_cardview = view.findViewById(R.id.os_page_cardview);
         os_cmd_cardview = view.findViewById(R.id.os_cmd_cardview);
+        os_imp_cardview = view.findViewById(R.id.os_imp_cardview);
         os_pin_cardview = view.findViewById(R.id.os_pin_cardview);
 
         FirebaseAuth mAuth;
@@ -131,6 +132,16 @@ public class OsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String[] arguments = {"Pinned",mUser.getUid(),"OS"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+
+        os_imp_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String[] arguments = {"OS","All_Videos"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
