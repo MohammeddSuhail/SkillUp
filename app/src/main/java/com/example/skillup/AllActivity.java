@@ -115,13 +115,13 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 startActivity(inte);
                 break;
 
-            case R.id.nav_community:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
-                break;
-
-            case R.id.nav_mentors:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MentorFragment()).commit();
-                break;
+//            case R.id.nav_community:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
+//                break;
+//
+//            case R.id.nav_mentors:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MentorFragment()).commit();
+//                break;
 
             case R.id.nav_contributors:
                 Intent inten = new Intent(AllActivity.this, ContributorActivity.class);
