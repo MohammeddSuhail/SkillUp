@@ -3,13 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_width="match_parent"
     android:background="#242527">
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="30dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,6 +70,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv_userName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -83,36 +85,388 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:paddingLeft="15dp"
+                android:paddingLeft="20dp"
                 android:paddingTop="15dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="15dp">
 
                 <TextView
-                    android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish"
                     android:text="Name"
                     android:textColor="#939395"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/tv_userName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="tv_name"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="tv_userName"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageView7"
                 android:layout_width="12dp"
-                android:layout_height="12dp"
+                android:layout_height="8dp"
                 android:layout_gravity="right|center_vertical|end"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="25dp"
-                android:tint="@color/white"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/right_arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_usn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2a2b2d"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish"
+                    android:text="USN"
+                    android:textColor="#939395"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_usn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="tv_usn"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|center_vertical|end"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/right_arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2a2b2d"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish"
+                    android:text="Phone"
+                    android:textColor="#939395"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="tv_phone"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|center_vertical|end"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/right_arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_yearOfGrad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2a2b2d"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish"
+                    android:text="Year of Graduation"
+                    android:textColor="#939395"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_yearOfGrad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="tv_yearOfGrad"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|center_vertical|end"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/right_arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2a2b2d"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish"
+                    android:text="Course of Study"
+                    android:textColor="#939395"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="tv_course"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|center_vertical|end"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/right_arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_branch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2a2b2d"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish"
+                    android:text="Branch of Study"
+                    android:textColor="#939395"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_branch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="tv_branch"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|center_vertical|end"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/right_arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_currYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2a2b2d"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish"
+                    android:text="Current Year of Study"
+                    android:textColor="#939395"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_currYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="tv_currYear"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|center_vertical|end"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/right_arrow" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_profession"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2a2b2d"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mulish"
+                    android:text="Profession"
+                    android:textColor="#939395"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_profession"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="tv_profession"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|center_vertical|end"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="25dp"
+                app:tint="@color/white"
                 app:srcCompat="@drawable/right_arrow" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

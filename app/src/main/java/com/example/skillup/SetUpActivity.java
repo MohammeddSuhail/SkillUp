@@ -28,6 +28,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.HashMap;
+
 public class SetUpActivity extends AppCompatActivity {
 
     private static final int REQUEST_CODE = 101;
@@ -117,27 +119,36 @@ public class SetUpActivity extends AppCompatActivity {
                             StorageRef.child(mUser.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {  //Image successfully stored
-                                    Users user = new Users(fullName,yearOfGrad,course,branch,currYear,profession,uri.toString(),"Offline",true);
+                                    HashMap<String, Object> hashMap = new HashMap<String, Object>();
+                                    hashMap.put("userName",fullName);
+                                    hashMap.put("yearOfGrad",yearOfGrad);
+                                    hashMap.put("course",course);
+                                    hashMap.put("branch",branch);
+                                    hashMap.put("currYear",currYear);
+                                    hashMap.put("profession",profession);
+                                    hashMap.put("profileImage",uri.toString());
+                                    hashMap.put("status","Offline");
+                                    hashMap.put("setupFlag",true);
 
                                     //adding user under "Users" directory
-                                    mRef.child("Users").child(mUser.getUid()).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void unused) {
-                                            mLoadingBar.dismiss();
+                                    mRef.child("Users").child(mUser.getUid()).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                @Override
+                                                public void onSuccess(Void unused) {
+                                                    mLoadingBar.dismiss();
 
-                                            Intent intent = new Intent(SetUpActivity.this,AllActivity.class);
-                                            startActivity(intent);
+                                                    Intent intent = new Intent(SetUpActivity.this,AllActivity.class);
+                                                    startActivity(intent);
 
-                                            Toast.makeText(SetUpActivity.this, "Setup Profile Completed", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(SetUpActivity.this, "Setup Profile Completed", Toast.LENGTH_SHORT).show();
 
-                                        }
-                                    }).addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            mLoadingBar.dismiss();
-                                            Toast.makeText(SetUpActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
+                                                }
+                                            }).addOnFailureListener(new OnFailureListener() {
+                                                @Override
+                                                public void onFailure(@NonNull Exception e) {
+                                                    mLoadingBar.dismiss();
+                                                    Toast.makeText(SetUpActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
                                 }
                             });
                             mLoadingBar.dismiss();
