@@ -4,18 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#231F20">
+    android:background="#242527">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#231F20"
+        android:background="#242527"
         android:orientation="vertical"
         android:paddingLeft="30dp"
         android:paddingTop="40dp"
         android:paddingRight="30dp"
         android:paddingBottom="70dp"
         tools:context=".SetUpActivity">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please provide following details"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mulish_bold"
+            android:textSize="18sp"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -26,7 +36,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#24282b"
+                android:background="#2a2b2d"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:paddingLeft="15dp"
@@ -41,7 +51,7 @@
                     android:src="@drawable/ic_profile"
                     app:civ_border_color="#FF000000"
                     app:civ_border_width="2dp"
-                    app:civ_circle_background_color="#878787" />
+                    app:civ_circle_background_color="@color/white" />
 
                 <EditText
                     android:id="@+id/name"
