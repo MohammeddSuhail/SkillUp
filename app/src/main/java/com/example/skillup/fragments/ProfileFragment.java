@@ -379,6 +379,10 @@ public class ProfileFragment extends Fragment {
             profileImageView.setImageURI(imageUri);
 
 
+            mLoadingBar =  new ProgressDialog(getContext());
+            mLoadingBar.setTitle("Updating Profile image");
+            mLoadingBar.setCanceledOnTouchOutside(false);
+            mLoadingBar.show();
             //adding the image
             final String[] url = {null};
             StorageRef.child(mUser.getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
@@ -393,9 +397,10 @@ public class ProfileFragment extends Fragment {
                                 url[0] = uri.toString();
                             }
                         });
+                        mLoadingBar.dismiss();
 
                     }else{
-
+                        mLoadingBar.dismiss();
                         Toast.makeText(getContext(), "Profile Image Update Failed", Toast.LENGTH_SHORT).show();
                     }
                 }

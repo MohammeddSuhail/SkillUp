@@ -186,19 +186,35 @@ public class SetUpActivity extends AppCompatActivity {
     }*/
 
     private boolean CheckAllFields() {
-        if(fullName.isEmpty() || fullName.length()<3){
+        if(fullName.isEmpty()){
+            showError(binding.name,"This field is required!");
+            return false;
+        }
+        else if(fullName.length()<3){
             showError(binding.name,"Username is not valid");
             return false;
         }
-        else if(yearOfGrad.isEmpty() || yearOfGrad.length()<4){
+        else if(yearOfGrad.isEmpty()){
+            showError(binding.graduationYear,"This field is required!");
+            return false;
+        }
+        else if(yearOfGrad.length()<4){
             showError(binding.graduationYear,"Year of Graduation is not valid");
             return false;
         }
-        else if(course.isEmpty() || course.length()<2){
+        else if(course.isEmpty()){
+            showError(binding.course,"This field is required!");
+            return false;
+        }
+        else if(course.length()<2){
             showError(binding.course,"Course is not valid");
             return false;
         }
-        else if(branch.isEmpty() || branch.length()<2){
+        else if(branch.isEmpty()){
+            showError(binding.branch,"This field is required!");
+            return false;
+        }
+        else if(branch.length()<2){
             showError(binding.branch,"Branch is not valid");
             return false;
         }
@@ -206,7 +222,11 @@ public class SetUpActivity extends AppCompatActivity {
             showError(binding.currYear,"This field is required!");
             return false;
         }
-        else if(profession.isEmpty() || profession.length()<3){
+        else if(profession.isEmpty()){
+            showError(binding.profession,"This field is required!");
+            return false;
+        }
+        else if(profession.length()<3){
             showError(binding.profession,"Profession is not valid");
             return false;
         }
