@@ -27,7 +27,7 @@
             android:fontFamily="@font/mulish"
             android:text="Get Placement ready with Placemaker!"
             android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textSize="30dp" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/signin_cardview"
@@ -57,7 +57,7 @@
                     android:gravity="center"
                     android:text="Sign In"
                     android:textColor="#C0C0C0"
-                    android:textSize="35sp" />
+                    android:textSize="35dp" />
 
                 <EditText
                     android:id="@+id/email_id"
@@ -70,7 +70,7 @@
                     android:singleLine="true"
                     android:textColor="@color/white"
                     android:textColorHint="#878787"
-                    android:textSize="18sp" />
+                    android:textSize="18dp" />
 
                 <EditText
                     android:id="@+id/pwd_id"
@@ -83,7 +83,7 @@
                     android:singleLine="true"
                     android:textColor="@color/white"
                     android:textColorHint="#878787"
-                    android:textSize="18sp" />
+                    android:textSize="18dp" />
 
                 <Button
                     android:id="@+id/sign_in_button_id"
@@ -109,7 +109,7 @@
                     android:text="Forgot Password?"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="#C0C0C0"
-                    android:textSize="16sp" />
+                    android:textSize="16dp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -127,7 +127,7 @@
                         android:text="New to Placemaker? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="#C0C0C0"
-                        android:textSize="18sp" />
+                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/new_account_id"
@@ -138,7 +138,7 @@
                         android:text="Sign up now"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="#C0C0C0"
-                        android:textSize="18sp" />
+                        android:textSize="18dp" />
                 </LinearLayout>
 
 
@@ -150,3 +150,4 @@
     </LinearLayout>
 
 </ScrollView>
+

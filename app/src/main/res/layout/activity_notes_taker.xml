@@ -39,7 +39,7 @@
         android:padding="8dp"
         android:textStyle="bold"
         android:fontFamily="@font/mulish"
-        android:textSize="24sp"
+        android:textSize="24dp"
         android:textColor="@color/white"
 
         android:singleLine="true"
@@ -57,7 +57,7 @@
         android:padding="8dp"
         android:textColor="@color/white"
         android:textColorHint="#9E9E9E"
-        android:textSize="16sp"
+        android:textSize="16dp"
         android:textStyle="normal" />
 
 </LinearLayout>

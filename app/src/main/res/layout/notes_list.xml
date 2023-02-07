@@ -20,7 +20,7 @@
             <TextView
                 android:id="@+id/textview_title"
                 android:text="Title"
-                android:textSize="18sp"
+                android:textSize="18dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:padding="8dp"
@@ -47,7 +47,7 @@
         <TextView
             android:id="@+id/textview_notes"
             android:text="Notes."
-            android:textSize="14sp"
+            android:textSize="14dp"
             android:textStyle="normal"
             android:textColor="@color/white"
             android:maxLines="10"
@@ -67,7 +67,7 @@
             android:ellipsize="marquee"
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
-            android:textSize="14sp"
+            android:textSize="14dp"
             android:textStyle="normal"
 
             android:maxLines="10"

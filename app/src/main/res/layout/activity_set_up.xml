@@ -25,7 +25,7 @@
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
             android:fontFamily="@font/mulish_bold"
-            android:textSize="18sp"/>
+            android:textSize="18dp"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -64,7 +64,7 @@
                     android:singleLine="true"
                     android:textColor="@color/white"
                     android:textColorHint="#878787"
-                    android:textSize="18sp" />
+                    android:textSize="18dp" />
 
 
                 <EditText
@@ -78,7 +78,7 @@
                     android:singleLine="true"
                     android:textColor="@color/white"
                     android:textColorHint="#878787"
-                    android:textSize="18sp" />
+                    android:textSize="18dp" />
 
                 <EditText
                     android:id="@+id/course"
@@ -86,11 +86,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/mulish"
-                    android:hint="Course of Study"
+                    android:hint="Course (B.E./M.E./B.Tech/M.Tech)"
                     android:singleLine="true"
                     android:textColor="@color/white"
                     android:textColorHint="#878787"
-                    android:textSize="18sp" />
+                    android:textSize="18dp" />
 
                 <EditText
                     android:id="@+id/branch"
@@ -98,11 +98,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/mulish"
-                    android:hint="Branch of Study"
+                    android:hint="Branch"
                     android:singleLine="true"
                     android:textColor="@color/white"
                     android:textColorHint="#878787"
-                    android:textSize="18sp" />
+                    android:textSize="18dp" />
 
                 <EditText
                     android:id="@+id/curr_year"
@@ -110,12 +110,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/mulish"
-                    android:hint="Current Year of Study"
+                    android:hint="Current Year (1/2/3/4)"
                     android:maxLength="1"
+                    android:inputType="number"
                     android:singleLine="true"
                     android:textColor="@color/white"
                     android:textColorHint="#878787"
-                    android:textSize="18sp" />
+                    android:textSize="18dp" />
 
                 <EditText
                     android:id="@+id/profession"
@@ -127,7 +128,7 @@
                     android:singleLine="true"
                     android:textColor="@color/white"
                     android:textColorHint="#878787"
-                    android:textSize="18sp" />
+                    android:textSize="18dp" />
 
                 <Button
                     android:id="@+id/submitButton"

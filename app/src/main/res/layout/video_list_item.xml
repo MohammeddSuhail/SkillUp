@@ -47,7 +47,7 @@
             android:text="All Concurrency Problems | Dirty Read"
             android:textColor="#FFF"
             android:fontFamily="@font/mulish_bold"
-            android:textSize="15.5sp"
+            android:textSize="15.5dp"
             android:textStyle="bold" />
 
         <TextView
@@ -58,7 +58,7 @@
             android:text="IMPORTANT"
             android:fontFamily="@font/mulish_bold"
             android:textColor="#FFAA00"
-            android:textSize="11.5sp"
+            android:textSize="11.5dp"
 
             />
 
@@ -79,7 +79,7 @@
                 android:text="120"
                 android:fontFamily="@font/mulish_bold"
                 android:textColor="#0F0"
-                android:textSize="11sp" />
+                android:textSize="11dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -89,7 +89,7 @@
                 android:fontFamily="@font/mulish_bold"
                 android:text="min | "
                 android:textColor="#0F0"
-                android:textSize="11sp" />
+                android:textSize="11dp" />
 
             <TextView
                 android:id="@+id/module_name"
@@ -101,7 +101,7 @@
                 android:text="Transactions SCHEDULES"
                 android:fontFamily="@font/mulish"
                 android:textColor="@color/moduleBLUE"
-                android:textSize="11sp" />
+                android:textSize="11dp" />
         </LinearLayout>
 
     </LinearLayout>

@@ -31,7 +31,7 @@
             android:text="Hewlett Packard Enterprises"
             android:textColor="@color/moduleBLUE"
             android:fontFamily="@font/mulish_bold"
-            android:textSize="15.5sp"
+            android:textSize="15.5dp"
             android:textStyle="bold" />
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
             android:text="NMAMIT, "
             android:textColor="@color/moduleBLUE"
             android:fontFamily="@font/mulish_bold"
-            android:textSize="15.5sp"
+            android:textSize="15.5dp"
             android:textStyle="bold" />
 
             <TextView
@@ -55,7 +55,7 @@
                 android:text="2022"
                 android:textColor="@color/moduleBLUE"
                 android:fontFamily="@font/mulish_bold"
-                android:textSize="15.5sp"
+                android:textSize="15.5dp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -67,7 +67,7 @@
             android:text="Software Development Engineer"
             android:fontFamily="@font/mulish_bold"
             android:textColor="@color/white"
-            android:textSize="11.5sp"
+            android:textSize="11.5dp"
 
             />
         <TextView
@@ -78,7 +78,7 @@
             android:text="Internship + Full time"
             android:fontFamily="@font/mulish_bold"
             android:textColor="@color/white"
-            android:textSize="11.5sp"
+            android:textSize="11.5dp"
 
             />
 
@@ -98,7 +98,7 @@
                 android:text="CTC: "
                 android:fontFamily="@font/mulish_bold"
                 android:textColor="@color/white"
-                android:textSize="11sp" />
+                android:textSize="11dp" />
 
 
             <TextView
@@ -112,7 +112,7 @@
                 android:text="Rs. 9.6LPA + $7000 RSU"
                 android:fontFamily="@font/mulish"
                 android:textColor="@color/white"
-                android:textSize="11sp" />
+                android:textSize="11dp" />
         </LinearLayout>
 
         <View

@@ -35,7 +35,7 @@
             android:paddingLeft="20dp"
             android:text="Notes"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="20dp" />
     </LinearLayout>
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView_home"
