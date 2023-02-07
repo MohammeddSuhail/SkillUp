@@ -100,4 +100,14 @@ public class ContributorActivity extends AppCompatActivity {
             }
         });
     }
+
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(ContributorActivity.this, AllActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
 }

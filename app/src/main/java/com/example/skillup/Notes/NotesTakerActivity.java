@@ -16,6 +16,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
+import com.example.skillup.AllActivity;
+import com.example.skillup.ContributorActivity;
 import com.example.skillup.R;
 
 import java.text.SimpleDateFormat;
@@ -105,5 +107,14 @@ public class NotesTakerActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(NotesTakerActivity.this, AllActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

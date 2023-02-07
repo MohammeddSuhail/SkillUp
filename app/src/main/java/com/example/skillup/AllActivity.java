@@ -107,6 +107,8 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
 
             case R.id.nav_notes:
                 Intent intent = new Intent(AllActivity.this, NotesActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 break;
 
@@ -114,6 +116,8 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
 
             case R.id.nav_guide:
                 Intent in = new Intent(AllActivity.this, GuideActivity.class);
+                in.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                in.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(in);
                 break;
 
@@ -127,6 +131,8 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
 
             case R.id.nav_contributors:
                 Intent inten = new Intent(AllActivity.this, ContributorActivity.class);
+                inten.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                inten.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(inten);
                 break;
 

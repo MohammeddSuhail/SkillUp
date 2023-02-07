@@ -86,6 +86,7 @@ public class SetUpActivity extends AppCompatActivity {
         currYear = binding.currYear.getText().toString().trim();
         profession = binding.profession.getText().toString().trim();
 
+
         // store the returned value of the dedicated function which checks
         // whether the entered data is valid or if any fields are left blank.
         isAllFieldsChecked = CheckAllFields();

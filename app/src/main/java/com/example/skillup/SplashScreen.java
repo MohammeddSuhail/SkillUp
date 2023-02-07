@@ -41,7 +41,7 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run()
             {
-                //if user exists then we check if he has filed setup activity, if yes->ChatActivity if no->setUpActivity
+                //if user exists then we check if he has filed setup activity, if yes->AllActivity if no->setUpActivity
                 if(mUser!=null){
                     mRef.child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
                         @Override
