@@ -138,6 +138,8 @@ public class SetUpActivity extends AppCompatActivity {
                                                     mLoadingBar.dismiss();
 
                                                     Intent intent = new Intent(SetUpActivity.this,AllActivity.class);
+                                                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                                     startActivity(intent);
 
                                                     Toast.makeText(SetUpActivity.this, "Setup Profile Completed", Toast.LENGTH_SHORT).show();
