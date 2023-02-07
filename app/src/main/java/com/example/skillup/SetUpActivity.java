@@ -79,12 +79,12 @@ public class SetUpActivity extends AppCompatActivity {
 
     private void checkAndSaveData() {
 
-        fullName = binding.name.getText().toString();
-        yearOfGrad = binding.graduationYear.getText().toString();
-        course = binding.course.getText().toString();
-        branch = binding.branch.getText().toString();
-        currYear = binding.currYear.getText().toString();
-        profession = binding.profession.getText().toString();
+        fullName = binding.name.getText().toString().trim();
+        yearOfGrad = binding.graduationYear.getText().toString().trim();
+        course = binding.course.getText().toString().trim();
+        branch = binding.branch.getText().toString().trim();
+        currYear = binding.currYear.getText().toString().trim();
+        profession = binding.profession.getText().toString().trim();
 
         // store the returned value of the dedicated function which checks
         // whether the entered data is valid or if any fields are left blank.
@@ -152,7 +152,7 @@ public class SetUpActivity extends AppCompatActivity {
                                 }
                             });
                             mLoadingBar.dismiss();
-                            Toast.makeText(SetUpActivity.this, "Done", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SetUpActivity.this, "Done. Thank you!", Toast.LENGTH_SHORT).show();
                         }else{
                             mLoadingBar.dismiss();
                             Toast.makeText(SetUpActivity.this, "Not Done", Toast.LENGTH_SHORT).show();

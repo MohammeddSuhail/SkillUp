@@ -23,7 +23,7 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="25dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="30dp"
             android:fontFamily="@font/mulish"
             android:text="Get Placement ready with Placemaker!"
             android:textColor="@color/white"
@@ -59,31 +59,65 @@
                     android:textColor="#C0C0C0"
                     android:textSize="35dp" />
 
-                <EditText
-                    android:id="@+id/email_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:textColorHint="#A1A1A1"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="@font/mulish"
-                    android:hint="College email"
-                    android:inputType="textEmailAddress"
-                    android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textColorHint="#878787"
-                    android:textSize="18dp" />
 
-                <EditText
-                    android:id="@+id/pwd_id"
+                    app:boxStrokeColor="#A1A1A1"
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/email_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/mulish"
+                        android:hint="College email"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#878787"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name_text_input"
+                    android:textColorHint="#A1A1A1"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="@font/mulish"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textColorHint="#878787"
-                    android:textSize="18dp" />
+
+                    app:boxStrokeColor="#A1A1A1"
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pwd_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/mulish"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#878787"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
 
                 <Button
                     android:id="@+id/sign_in_button_id"

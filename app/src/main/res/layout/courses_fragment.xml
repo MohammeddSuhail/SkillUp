@@ -30,13 +30,14 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/cncardview"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="1dp"
+                android:layout_weight="1"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
@@ -88,6 +89,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/dbmscardview"
+                android:layout_weight="1"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
                 android:layout_marginStart="8dp"
@@ -150,12 +152,14 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal"
+
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/oscardview"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
+                android:layout_weight="1"
                 android:layout_marginStart="1dp"
                 android:layout_marginTop="1dp"
                 android:layout_marginEnd="0dp"
@@ -210,6 +214,7 @@
                 android:id="@+id/oopscardview"
                 android:layout_width="180dp"
                 android:layout_height="180dp"
+                android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="1dp"
                 android:layout_marginEnd="1dp"

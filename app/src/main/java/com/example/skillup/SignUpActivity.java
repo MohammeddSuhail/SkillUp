@@ -71,12 +71,11 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void checkAndSignUp() {
-        email = binding.emailId.getText().toString();
+        email = binding.emailId.getText().toString().trim().toLowerCase();
         pw = binding.passwordId.getText().toString();
         conPwd = binding.conPwdId.getText().toString();
-
-        usn = binding.usn.getText().toString();
-        phoneNo = binding.phoneNo.getText().toString();
+        usn = binding.usn.getText().toString().trim();
+        phoneNo = binding.phoneNo.getText().toString().trim();
 
         int index = email.indexOf('@');
         usnFromEmail = email.substring(0,index);
@@ -120,7 +119,7 @@ public class SignUpActivity extends AppCompatActivity {
                                                     // Error sending verification email
                                                     Log.e("TAG", "sendEmailVerification", task.getException());
                                                     Toast.makeText(getApplicationContext(),
-                                                            "Failed to send verification email.",
+                                                            "Failed to send verification email. Please wait and try again!",
                                                             Toast.LENGTH_SHORT).show();
                                                 }
                                             }

@@ -21,7 +21,7 @@
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Please provide following details"
+            android:text="Just one step and you're finished!\nWe hate paperwork, too."
             android:layout_marginBottom="10dp"
             android:textColor="@color/white"
             android:fontFamily="@font/mulish_bold"
@@ -52,83 +52,167 @@
                     app:civ_border_color="#FF000000"
                     app:civ_border_width="2dp"
                     app:civ_circle_background_color="@color/white" />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:textColorHint="#A1A1A1"
+                    app:boxStrokeColor="#A1A1A1"
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
 
-                <EditText
-                    android:id="@+id/name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/mulish"
-                    android:hint="Full Name"
-                    android:inputType="textPersonName"
-                    android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textColorHint="#878787"
-                    android:textSize="18dp" />
+                    >
 
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/mulish"
+                        android:hint="Full Name"
+                        android:inputType="textPersonName"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#878787"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/graduation_year"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:textColorHint="#A1A1A1"
+                    app:boxStrokeColor="#A1A1A1"
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/mulish"
-                    android:hint="Year of Graduation"
-                    android:maxLength="4"
-                    android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textColorHint="#878787"
-                    android:textSize="18dp" />
+                    >
 
-                <EditText
-                    android:id="@+id/course"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/graduation_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/mulish"
+                        android:hint="Year of Graduation"
+                        android:maxLength="4"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#878787"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:textColorHint="#A1A1A1"
+                    app:boxStrokeColor="#A1A1A1"
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/mulish"
-                    android:hint="Course (B.E./M.E./B.Tech/M.Tech)"
-                    android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textColorHint="#878787"
-                    android:textSize="18dp" />
+                    >
 
-                <EditText
-                    android:id="@+id/branch"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/course"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/mulish"
+                        android:hint="Course (B.E./M.E./B.Tech/M.Tech)"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#878787"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:textColorHint="#A1A1A1"
+                    app:boxStrokeColor="#A1A1A1"
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/mulish"
-                    android:hint="Branch"
-                    android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textColorHint="#878787"
-                    android:textSize="18dp" />
+                    >
 
-                <EditText
-                    android:id="@+id/curr_year"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/branch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/mulish"
+                        android:hint="Branch"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#878787"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:textColorHint="#A1A1A1"
+                    app:boxStrokeColor="#A1A1A1"
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/mulish"
-                    android:hint="Current Year (1/2/3/4)"
-                    android:maxLength="1"
-                    android:inputType="number"
-                    android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textColorHint="#878787"
-                    android:textSize="18dp" />
+                    >
 
-                <EditText
-                    android:id="@+id/profession"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/curr_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/mulish"
+                        android:hint="Current Year (1/2/3/4)"
+                        android:maxLength="1"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#878787"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:textColorHint="#A1A1A1"
+                    app:boxStrokeColor="#A1A1A1"
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/mulish"
-                    android:hint="Profession"
-                    android:singleLine="true"
-                    android:textColor="@color/white"
-                    android:textColorHint="#878787"
-                    android:textSize="18dp" />
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/profession"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/mulish"
+                        android:hint="Profession"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textColorHint="#878787"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
 
                 <Button
                     android:id="@+id/submitButton"
