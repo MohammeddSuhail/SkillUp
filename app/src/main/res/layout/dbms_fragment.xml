@@ -36,7 +36,7 @@
             android:layout_marginRight="16dp"
 
             android:fontFamily="@font/mulish"
-            android:text="Choose a module to start learning"
+            android:text="Choose a module to start learning\nPro Tip: Upon completion of SQL Queries module, you can confidently add SQL to your resume as a top skill."
             android:textColor="#FFF"
             android:textSize="14dp"
             app:layout_constraintStart_toStartOf="parent"
