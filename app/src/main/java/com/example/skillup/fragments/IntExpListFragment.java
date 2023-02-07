@@ -1,5 +1,6 @@
 package com.example.skillup.fragments;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -30,10 +31,19 @@ public class IntExpListFragment extends Fragment {
 
     FirebaseRecyclerAdapter<Experience, IntExpListFragment.ExpViewHolder> adapter;
 
+    ProgressDialog mLoadingBar;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.video_list_fragment,container,false);
+
+
+        //for loading bar
+        mLoadingBar =  new ProgressDialog(getContext());
+        mLoadingBar.setTitle("Loading");
+        mLoadingBar.setCanceledOnTouchOutside(false);
+        mLoadingBar.show();
 
 
         modRef = FirebaseDatabase.getInstance().getReference().child("Interview_Experiences");
@@ -86,6 +96,11 @@ public class IntExpListFragment extends Fragment {
 
             }
 
+            //removing loading bar once data is fetched and displayed
+            @Override
+            public void onDataChanged() {
+                mLoadingBar.dismiss();
+            }
 
         };
 
