@@ -1,5 +1,6 @@
 package com.example.skillup.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,9 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.skillup.AllActivity;
+import com.example.skillup.ContributorActivity;
+import com.example.skillup.DSASheet;
 import com.example.skillup.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -20,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class DSAFragment extends Fragment {
 
     public static FragmentTransaction f;
-    CardView linkedlist_cardview, stack_cardview, time_complex_cardview, binarytree_cardview, binsearchTree_cardview, graph_cardview, greedy_cardview, dp_cardview, math_cardview, binsearch_cardview, strings_cardview, slidwindow_cardview, recursion_cardview, array_cardview, dsa_guide_cardview, desc_cardview, cn_pin_cardview;
+    CardView linkedlist_cardview, stack_cardview, time_complex_cardview, binarytree_cardview, binsearchTree_cardview, graph_cardview, greedy_cardview, dp_cardview, math_cardview, binsearch_cardview, strings_cardview, slidwindow_cardview, recursion_cardview, array_cardview, dsa_guide_cardview, desc_cardview, cn_pin_cardview, dsa_sheet_pin_cardview;
     VideoListFragment videoListFragment;
     DSADescFragment dsaDescFragment;
     DSAGuideFragment dsaGuideFragment;
@@ -64,6 +68,7 @@ public class DSAFragment extends Fragment {
         stack_cardview = view.findViewById(R.id.stack_cardview);
         dp_cardview = view.findViewById(R.id.dp_cardview);
         cn_pin_cardview = view.findViewById(R.id.cn_pin_cardview);
+        dsa_sheet_pin_cardview = view.findViewById(R.id.dsa_sheet_pin_cardview);
 
 
         desc_cardview = view.findViewById(R.id.desc_cardview);
@@ -227,6 +232,16 @@ public class DSAFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
         });
+
+
+
+        dsa_sheet_pin_cardview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getContext(), DSASheet.class));
+            }
+        });
+
 
         return view;
     }
