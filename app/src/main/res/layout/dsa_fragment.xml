@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+
         >
 
         <TextView
@@ -20,7 +21,7 @@
             android:layout_marginRight="16dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/mulish_bold"
-            android:text="Data Structures and Algorithms for Beginners*"
+            android:text="Data Structures and Algorithms for Beginners"
             android:textColor="#FFF"
             android:textSize="23dp"
             android:textStyle="bold"
@@ -36,9 +37,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="17.5dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="1dp"
+                android:layout_marginRight="16dp"
                 android:fontFamily="@font/mulish"
-                android:text="*This course covers important concepts only"
+                android:text="Pro Tip: Pay extra attention to videos from 'Time Complexity' and 'Math, Patterns &amp; Bit Manipulation' modules"
                 android:textColor="#FFF"
                 android:textSize="14dp"
                 />
@@ -253,6 +254,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/time_complex_cardview"
@@ -345,6 +348,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/array_cardview"
@@ -441,6 +446,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/binsearch_cardview"
@@ -534,6 +541,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/strings_cardview"
@@ -630,6 +639,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/stack_cardview"
@@ -723,6 +734,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/binsearchTree_cardview"
@@ -819,6 +832,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             >
             <androidx.cardview.widget.CardView
                 android:id="@+id/dp_cardview"

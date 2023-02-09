@@ -52,6 +52,16 @@
                     app:civ_border_color="#FF000000"
                     app:civ_border_width="2dp"
                     app:civ_circle_background_color="@color/white" />
+                <ImageView
+                    android:id="@+id/addProfileImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="-25dp"
+                    android:layout_weight="1"
+                    app:tint="@color/white"
+                    app:srcCompat="@drawable/plus_sign" />
                 <com.google.android.material.textfield.TextInputLayout
                     android:textColorHint="#A1A1A1"
                     app:boxStrokeColor="#A1A1A1"

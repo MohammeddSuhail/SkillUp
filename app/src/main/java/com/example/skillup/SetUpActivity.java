@@ -2,6 +2,7 @@ package com.example.skillup;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -28,6 +29,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class SetUpActivity extends AppCompatActivity {
@@ -47,6 +50,9 @@ public class SetUpActivity extends AppCompatActivity {
 
     ProgressDialog mLoadingBar;
 
+    Bitmap bmp;
+    ByteArrayOutputStream baos;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +66,7 @@ public class SetUpActivity extends AppCompatActivity {
         mRef = FirebaseDatabase.getInstance().getReference();
         StorageRef = FirebaseStorage.getInstance().getReference().child("ProfileImage");
 
-        binding.profileImage.setOnClickListener(new View.OnClickListener() {
+        binding.addProfileImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //for getting images
@@ -110,7 +116,8 @@ public class SetUpActivity extends AppCompatActivity {
 
     private void addUserAlongWithImage() {
         //adding the image
-        StorageRef.child(mUser.getUid()).putFile(imageUri)
+        byte[] fileInBytes = baos.toByteArray();
+        StorageRef.child(mUser.getUid()).putBytes(fileInBytes)
                 .addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onComplete(@NonNull  Task<UploadTask.TaskSnapshot> task) {
@@ -251,6 +258,17 @@ public class SetUpActivity extends AppCompatActivity {
         if(requestCode==REQUEST_CODE && resultCode==RESULT_OK && data!=null){
             imageUri = data.getData();
             binding.profileImage.setImageURI(imageUri);
+
+            bmp = null;
+            try {
+                bmp = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            baos = new ByteArrayOutputStream();
+
+            //here you can choose quality factor in third parameter(ex. i choosen 25)
+            bmp.compress(Bitmap.CompressFormat.JPEG, 25, baos);
         }
     }
 }

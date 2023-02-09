@@ -5,6 +5,7 @@ import static android.app.Activity.RESULT_OK;
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -42,6 +43,8 @@ import com.squareup.picasso.Picasso;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -72,6 +75,9 @@ public class ProfileFragment extends Fragment {
     String usn, phoneNo;
 
     CardView cv_userName,cv_usn,cv_phone,cv_yearOfGrad, cv_course, cv_branch, cv_currYear, cv_profession;
+
+    Bitmap bmp;
+    ByteArrayOutputStream baos;
 
     @SuppressLint("MissingInflatedId")
     @Nullable
@@ -381,6 +387,8 @@ public class ProfileFragment extends Fragment {
             imageUri = data.getData();
             profileImageView.setImageURI(imageUri);
 
+            byte[] fileInBytes = compressImage();
+
 
             mLoadingBar =  new ProgressDialog(getContext());
             mLoadingBar.setTitle("Updating Profile image");
@@ -388,7 +396,7 @@ public class ProfileFragment extends Fragment {
             mLoadingBar.show();
             //adding the image
             final String[] url = {null};
-            StorageRef.child(mUser.getUid()).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+            StorageRef.child(mUser.getUid()).putBytes(fileInBytes).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                     if(task.isSuccessful())
@@ -398,27 +406,43 @@ public class ProfileFragment extends Fragment {
                             @Override
                             public void onSuccess(Uri uri) {  //Image successfully stored
                                 url[0] = uri.toString();
+                                if(url[0] != null){
+                                    //updating profileImage url, if the image was successfully stored
+                                    //hashMap.put("profileImage", url[0]);
+                                    mUserRef.child(mUser.getUid()).child("profileImage").setValue(url[0]).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            Toast.makeText(getContext(),"Profile image updated successfully",Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                }
                             }
                         });
                         mLoadingBar.dismiss();
                         Toast.makeText(getContext(), "Profile Image will be updated shortly", Toast.LENGTH_SHORT).show();
+
                     }else{
                         mLoadingBar.dismiss();
                         Toast.makeText(getContext(), "Profile Image Update Failed", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
-            if(url[0] != null){
-                //updating profileImage url, if the image was successfully stored
-                //hashMap.put("profileImage", url[0]);
-                mUserRef.child(mUser.getUid()).child("profileImage").setValue(url[0]).addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void unused) {
-                        Toast.makeText(getContext(),"Profile image updated successfully",Toast.LENGTH_SHORT).show();
-                    }
-                });
-            }
+
         }
+    }
+
+    private byte[] compressImage() {
+        bmp = null;
+        try {
+            bmp = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        baos = new ByteArrayOutputStream();
+
+        //here you can choose quality factor in third parameter(ex. I chose 25)
+        bmp.compress(Bitmap.CompressFormat.JPEG, 25, baos);
+        return baos.toByteArray();
     }
 
 
