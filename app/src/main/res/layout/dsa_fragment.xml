@@ -257,6 +257,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             >
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/time_complex_cardview"
                 android:layout_width="180dp"
@@ -265,10 +266,11 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -279,10 +281,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    >
-
-
+                    android:gravity="center">
 
 
                     <TextView
@@ -294,7 +293,7 @@
                         android:text="Time Complexity"
                         android:textColor="#FFF"
                         android:textSize="17dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -309,10 +308,11 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="8dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -351,6 +351,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             >
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/array_cardview"
                 android:layout_width="180dp"
@@ -359,10 +360,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -373,10 +375,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    >
-
-
+                    android:gravity="center">
 
 
                     <TextView
@@ -388,7 +387,7 @@
                         android:text="Arrays"
                         android:textColor="#FFF"
                         android:textSize="17dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -403,10 +402,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="8dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -449,6 +449,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             >
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/binsearch_cardview"
                 android:layout_width="180dp"
@@ -457,10 +458,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -471,10 +473,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    >
-
-
+                    android:gravity="center">
 
 
                     <TextView
@@ -486,7 +485,7 @@
                         android:text="Binary Search"
                         android:textColor="#FFF"
                         android:textSize="17dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -501,10 +500,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="8dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -544,6 +544,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             >
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/strings_cardview"
                 android:layout_width="180dp"
@@ -552,10 +553,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -566,10 +568,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    >
-
-
+                    android:gravity="center">
 
 
                     <TextView
@@ -581,7 +580,7 @@
                         android:text="Strings"
                         android:textColor="#FFF"
                         android:textSize="17dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -596,10 +595,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="8dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -642,6 +642,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             >
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/stack_cardview"
                 android:layout_width="180dp"
@@ -650,10 +651,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -664,10 +666,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    >
-
-
+                    android:gravity="center">
 
 
                     <TextView
@@ -679,7 +678,7 @@
                         android:text="Stack &amp; Queue"
                         android:textColor="#FFF"
                         android:textSize="17dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -694,10 +693,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="8dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -737,6 +737,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             >
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/binsearchTree_cardview"
                 android:layout_width="180dp"
@@ -745,10 +746,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -759,10 +761,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    >
-
-
+                    android:gravity="center">
 
 
                     <TextView
@@ -774,7 +773,7 @@
                         android:text="Binary Search Tree"
                         android:textColor="#FFF"
                         android:textSize="17dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -789,10 +788,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="8dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -835,6 +835,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             >
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/dp_cardview"
                 android:layout_width="180dp"
@@ -843,10 +844,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="1dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -857,10 +859,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    >
-
-
+                    android:gravity="center">
 
 
                     <TextView
@@ -872,7 +871,7 @@
                         android:text="Dynamic Programming"
                         android:textColor="#FFF"
                         android:textSize="17dp"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -887,10 +886,11 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="1dp"
                 android:layout_marginBottom="8dp"
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_weight="2"
                 android:clickable="true"
-                app:cardCornerRadius="24dp"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardBackgroundColor="#24282b"
+                app:cardCornerRadius="24dp"
                 app:cardElevation="10dp"
                 app:contentPadding="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
