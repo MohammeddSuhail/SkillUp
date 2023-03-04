@@ -20,6 +20,7 @@ import com.example.skillup.fragments.CommunityFragment;
 import com.example.skillup.fragments.CoursesFragment;
 import com.example.skillup.fragments.MentorFragment;
 import com.example.skillup.fragments.ProfileFragment;
+import com.example.skillup.fragments.QrScannerFragment;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -113,6 +114,13 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 break;
 
 
+            case R.id.nav_scanner:
+                QrScannerFragment qrScannerFragment = new QrScannerFragment();
+                Bundle args = new Bundle();
+                args.putString("et_qr_result","QR Code Result");
+                qrScannerFragment.setArguments(args);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,qrScannerFragment).commit();
+                break;
 
             case R.id.nav_guide:
                 Intent in = new Intent(AllActivity.this, GuideActivity.class);

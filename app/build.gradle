@@ -72,6 +72,10 @@ dependencies {
     //Plan-B for youtube //REMOVE AUTOPLAY
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
 
+    //for qr scanner
+    implementation 'me.dm7.barcodescanner:zxing:1.9.8'
+    implementation 'com.karumi:dexter:6.2.2'
+
     //ButterKnife
     implementation 'com.jakewharton:butterknife:10.2.3'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
