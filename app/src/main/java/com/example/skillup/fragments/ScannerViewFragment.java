@@ -68,6 +68,28 @@ public class ScannerViewFragment extends Fragment implements ZXingScannerView.Re
                 }).check();
 
 
+        //back pressed
+        view.setFocusableInTouchMode(true);
+        view.requestFocus();
+
+        view.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+                        scannerView.stopCamera();
+                        getActivity().setContentView(R.layout.activity_all);
+                        QrScannerFragment qrScannerFragment = new QrScannerFragment();
+                        Bundle args = new Bundle();
+                        args.putString("et_qr_result","QR Code Result");
+                        qrScannerFragment.setArguments(args);
+                        getFragmentManager().beginTransaction().replace(R.id.fragment_container, qrScannerFragment).commit();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
 
         return view;
     }
@@ -88,10 +110,11 @@ public class ScannerViewFragment extends Fragment implements ZXingScannerView.Re
 
     @Override
     public void handleResult(Result result) {
+        getActivity().setContentView(R.layout.activity_all);
         //what should we do with result of scan
         Bundle args = new Bundle();
-        //testing
-        Toast.makeText(getContext(),result.getText(),Toast.LENGTH_SHORT).show();
+
+       // Toast.makeText(getContext(),result.getText(),Toast.LENGTH_SHORT).show();
 
         args.putString("et_qr_result",result.getText());
         qrScannerFragment.setArguments(args);
