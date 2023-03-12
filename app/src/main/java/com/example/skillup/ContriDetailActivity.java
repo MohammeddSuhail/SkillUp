@@ -59,7 +59,7 @@ public class ContriDetailActivity extends AppCompatActivity {
             ctc="15 Lakhs";
             companies_placed = "• Informatica (CTC: 15 Lakhs)\n• TCS (MRC - CTC: 3.3 Lakhs)";
             cgpa = "8.50";
-            core = "Mobile Application Development";
+            core = "• Mobile Application Development\n• API/UI Testing";
             linkedId = "prathameshspai";
             img.setImageResource(R.drawable.me);
         }
@@ -86,7 +86,7 @@ public class ContriDetailActivity extends AppCompatActivity {
             ctc="14.5 Lakhs";
             companies_placed = "Daimler Truck (CTC: 10 Lakhs)";
             cgpa = "9.17";
-            core = "• Web Development\n• Java Programming";
+            core = "• Web Development\n• Core Java";
             linkedId = "ranjanrupadhya180901";
             img.setImageResource(R.drawable.ranjan);
         }
