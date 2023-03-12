@@ -64,7 +64,7 @@ public class QrScannerFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String scannedtext = scantext.getText().toString().trim();
-                if(scannedtext.equals("This text is editable")){
+                if(scannedtext.equals("QR Code Result")){
                     Toast.makeText(getContext(),"Please scan the QR Code First!!!",Toast.LENGTH_SHORT).show();
                 }else {
                     ClipboardManager clipboard = (ClipboardManager)  getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
@@ -79,7 +79,7 @@ public class QrScannerFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 String scannedtext = scantext.getText().toString().trim();
-                if(scannedtext.equals("This text is editable")){
+                if(scannedtext.equals("QR Code Result")){
                     Toast.makeText(getContext(),"Please scan the QR Code First!!!",Toast.LENGTH_SHORT).show();
                 }else {
                     Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
