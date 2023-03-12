@@ -36,6 +36,7 @@
                     android:fontFamily="@font/mulish_bold"
                     android:text="Important DSA Questions"
                     android:textColor="@color/white"
+                    android:textIsSelectable="true"
                     android:textSize="20dp" />
             </LinearLayout>
 
@@ -57,6 +58,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/set-matrix-zeroes/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -66,6 +68,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=M65xBewcqcI&amp;list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&amp;index=7"/>
             <View
                 android:layout_width="match_parent"
@@ -83,6 +86,7 @@
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Q2"/>
             <TextView
                 android:layout_width="match_parent"
@@ -92,6 +96,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/pascals-triangle/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -100,6 +105,7 @@
                 android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://takeuforward.org/data-structure/program-to-generate-pascals-triangle/?amp=1"/>
             <View
@@ -125,6 +131,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/next-permutation/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -134,6 +141,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/next_permutation-find-next-lexicographically-greater-permutation/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -158,6 +166,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/maximum-subarray/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -167,6 +176,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=w_KEocd__20&amp;list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&amp;index=5"/>
             <View
                 android:layout_width="match_parent"
@@ -191,6 +201,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/sort-colors/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -200,6 +211,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/sort-an-array-of-0s-1s-and-2s/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -224,6 +236,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -232,6 +245,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/stock-buy-and-sell/?amp=1"
                 android:textColor="@color/white"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -260,6 +274,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/rotate-image/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -269,6 +284,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/rotate-image-by-90-degree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -294,6 +310,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/merge-intervals/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -301,6 +318,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:text="Solution link: https://takeuforward.org/data-structure/merge-overlapping-sub-intervals/?amp=1"/>
@@ -328,6 +346,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/merge-sorted-array/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -337,6 +356,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/merge-two-sorted-arrays-without-extra-space/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -362,6 +382,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="https://leetcode.com/problems/find-the-duplicate-number/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -371,6 +392,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=32Ll35mhWg0&amp;list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2&amp;index=1"/>
             <View
                 android:layout_width="match_parent"
@@ -396,6 +418,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://www.interviewbit.com/problems/repeat-and-missing-number-array/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -405,6 +428,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/find-the-repeating-and-missing-numbers/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -430,6 +454,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://www.codingninjas.com/codestudio/problems/count-inversions_615"/>
             <TextView
                 android:layout_width="match_parent"
@@ -438,6 +463,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://www.codingninjas.com/codestudio/problems/count-inversions_615"/>
             <View
@@ -464,6 +490,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/search-a-2d-matrix/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -473,6 +500,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/search-in-a-sorted-2d-matrix/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -498,6 +526,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/powx-n/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -506,6 +535,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://takeuforward.org/data-structure/implement-powxn-x-raised-to-the-power-n/?amp=1"/>
             <View
@@ -532,6 +562,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/majority-element/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -541,6 +572,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/find-the-majority-element-that-occurs-more-than-n-2-times/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -566,6 +598,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/majority-element-ii/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -575,6 +608,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/majority-elementsn-3-times-find-the-elements-that-appears-more-than-n-3-times-in-the-array/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -600,6 +634,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/unique-paths/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -609,6 +644,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/grid-unique-paths-count-paths-from-left-top-to-the-right-bottom-of-a-matrix/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -634,6 +670,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/reverse-pairs/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -642,6 +679,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://takeuforward.org/data-structure/count-reverse-pairs/?amp=1"/>
             <View
@@ -668,6 +706,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/two-sum/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -676,6 +715,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://takeuforward.org/data-structure/two-sum-check-if-a-pair-with-given-sum-exists-in-array/?amp=1"/>
             <View
@@ -702,6 +742,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/4sum/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -711,6 +752,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/4-sum-find-quads-that-add-up-to-a-target-value/?amp=1/"/>
             <View
                 android:layout_width="match_parent"
@@ -736,6 +778,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/longest-consecutive-sequence/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -744,6 +787,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://www.youtube.com/watch?v=qgizvmgeyUM&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=22"/>
             <View
@@ -770,6 +814,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/largest-subarray-with-0-sum/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -779,6 +824,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/length-of-the-longest-subarray-with-zero-sum/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -804,6 +850,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://www.interviewbit.com/problems/subarray-with-given-xor/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -813,6 +860,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/count-the-number-of-subarrays-with-given-xor-k/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -838,6 +886,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/longest-substring-without-repeating-characters/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -847,6 +896,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/length-of-longest-substring-without-any-repeating-character/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -872,6 +922,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/reverse-linked-list/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -880,6 +931,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://takeuforward.org/data-structure/reverse-a-linked-list/?amp=1"/>
             <View
@@ -906,6 +958,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/middle-of-the-linked-list/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -915,6 +968,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/find-middle-element-in-a-linked-list/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -940,6 +994,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/merge-two-sorted-lists/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -948,6 +1003,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://takeuforward.org/data-structure/merge-two-sorted-linked-lists/?amp=1"/>
             <View
@@ -974,6 +1030,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/remove-nth-node-from-end-of-list/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -983,6 +1040,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/remove-n-th-node-from-the-end-of-a-linked-list/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -1008,6 +1066,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/add-two-numbers/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1016,6 +1075,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://takeuforward.org/data-structure/add-two-numbers-represented-as-linked-lists/?amp=1"/>
             <View
@@ -1042,6 +1102,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/delete-node-in-a-linked-list/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1050,6 +1111,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://www.youtube.com/watch?v=qgizvmgeyUM&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=22"/>
             <View
@@ -1076,6 +1138,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/intersection-of-two-linked-lists/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1085,6 +1148,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=u4FWXfgS8jw&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=33"/>
             <View
                 android:layout_width="match_parent"
@@ -1110,6 +1174,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/linked-list-cycle/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1119,6 +1184,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=354J83hX7RI&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=34"/>
             <View
                 android:layout_width="match_parent"
@@ -1144,6 +1210,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/reverse-nodes-in-k-group/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1153,6 +1220,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=Of0HPkk3JgI&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=34"/>
             <View
                 android:layout_width="match_parent"
@@ -1178,6 +1246,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/palindrome-linked-list/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1187,6 +1256,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=-DtNInqFUXs&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=36"/>
             <View
                 android:layout_width="match_parent"
@@ -1212,6 +1282,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/linked-list-cycle-ii/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1221,6 +1292,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=QfbOhn0WZ88&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=37"/>
             <View
                 android:layout_width="match_parent"
@@ -1246,6 +1318,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/flattening-a-linked-list/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1255,6 +1328,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=ysytSSXpAI0&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=38"/>
             <View
                 android:layout_width="match_parent"
@@ -1280,6 +1354,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/rotate-list/description/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1288,6 +1363,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://www.youtube.com/watch?v=9VPm6nEbVPA&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=39"/>
             <View
@@ -1314,6 +1390,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/copy-list-with-random-pointer/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1323,6 +1400,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=VNf6VynfpdM"/>
             <View
                 android:layout_width="match_parent"
@@ -1348,6 +1426,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/3sum/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1357,6 +1436,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/3-sum-find-triplets-that-add-up-to-a-zero/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -1381,6 +1461,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:textColor="@color/white"
                 android:text="Problem link: https://leetcode.com/problems/trapping-rain-water/"/>
             <TextView
@@ -1391,6 +1472,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/trapping-rainwater/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -1416,6 +1498,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1425,6 +1508,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/remove-duplicates-in-place-from-sorted-array/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -1450,6 +1534,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/max-consecutive-ones/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1459,6 +1544,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/count-maximum-consecutive-ones-in-the-array/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -1484,6 +1570,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1493,6 +1580,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=II6ziNnub1Q&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=45"/>
             <View
                 android:layout_width="match_parent"
@@ -1518,6 +1606,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/minimum-platforms-1587115620/1#"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1527,6 +1616,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/minimum-number-of-platforms-required-for-a-railway/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -1552,6 +1642,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1#"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1561,6 +1652,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=LjPx4wQaRIs&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=47"/>
             <View
                 android:layout_width="match_parent"
@@ -1586,6 +1678,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/fractional-knapsack-1587115620/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1595,6 +1688,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=F_DDzYnxO14&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=49"/>
             <View
                 android:layout_width="match_parent"
@@ -1620,6 +1714,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://www.geeksforgeeks.org/find-minimum-number-of-coins-that-make-a-change/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1628,6 +1723,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://www.youtube.com/watch?v=mVg9CfJvayM&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=48"/>
             <View
@@ -1654,6 +1750,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1663,6 +1760,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=II6ziNnub1Q&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=45"/>
             <View
                 android:layout_width="match_parent"
@@ -1688,6 +1786,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/subset-sums2234/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1697,6 +1796,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/subset-sum-sum-of-all-subsets/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -1722,6 +1822,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/subsets-ii/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1730,6 +1831,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://www.youtube.com/watch?v=RIn3gOkbhQE&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=53"/>
             <View
@@ -1756,6 +1858,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/combination-sum/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1765,6 +1868,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/combination-sum-1/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -1790,6 +1894,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/combination-sum-ii/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1799,6 +1904,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=G1fRTGRxXU8&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=50"/>
             <View
                 android:layout_width="match_parent"
@@ -1824,6 +1930,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/palindrome-partitioning/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1833,6 +1940,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/palindrome-partitioning/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -1858,6 +1966,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/permutation-sequence/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1867,6 +1976,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/find-the-duplicate-in-an-array-of-n1-integers/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -1892,6 +2002,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/permutations/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1901,6 +2012,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=f2ic2Rsc9pU&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=52"/>
             <View
                 android:layout_width="match_parent"
@@ -1926,6 +2038,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/n-queens/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1935,6 +2048,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=i05Ju7AftcM&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=57"/>
             <View
                 android:layout_width="match_parent"
@@ -1960,6 +2074,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/sudoku-solver/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -1969,6 +2084,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=FWAIf_EVUKE&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=58"/>
             <View
                 android:layout_width="match_parent"
@@ -1994,6 +2110,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/m-coloring-problem-1587115620/1#"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2003,6 +2120,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=wuVwUK25Rfc&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=59"/>
             <View
                 android:layout_width="match_parent"
@@ -2028,6 +2146,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2037,6 +2156,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=bLGZhJlt4y0&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=60"/>
             <View
                 android:layout_width="match_parent"
@@ -2062,6 +2182,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: Word Break(Print All Ways)"/>
             <View
                 android:layout_width="match_parent"
@@ -2087,6 +2208,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: The N-th Root of an integer"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2096,6 +2218,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/nth-root-of-a-number-using-binary-search/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2121,6 +2244,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://www.interviewbit.com/problems/matrix-median/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2130,6 +2254,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=63fPPOdIr2c&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=62"/>
             <View
                 android:layout_width="match_parent"
@@ -2155,6 +2280,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/single-element-in-a-sorted-array/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2164,6 +2290,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/search-single-element-in-a-sorted-array/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2189,6 +2316,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/search-in-rotated-sorted-array/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2198,6 +2326,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/search-element-in-a-rotated-sorted-array/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2223,6 +2352,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/median-of-two-sorted-arrays/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2232,6 +2362,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/median-of-two-sorted-arrays-of-different-sizes/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2257,6 +2388,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/k-th-element-of-two-sorted-array1317/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2266,6 +2398,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/k-th-element-of-two-sorted-arrays/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2291,6 +2424,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://www.interviewbit.com/problems/allocate-books/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2300,6 +2434,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/allocate-minimum-number-of-pages/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2325,6 +2460,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://www.spoj.com/problems/AGGRCOW/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2334,6 +2470,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/aggressive-cows-detailed-solution/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2359,6 +2496,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/implement-trie-prefix-tree/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2368,6 +2506,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=dBGUmUQhjaM&amp;list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp"/>
             <View
                 android:layout_width="match_parent"
@@ -2393,6 +2532,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://bit.ly/3qwT4OL"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2402,6 +2542,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=K5pcpkEMCN0&amp;list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&amp;index=2"/>
             <View
                 android:layout_width="match_parent"
@@ -2427,6 +2568,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://bit.ly/3n3kedU"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2436,6 +2578,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=AWnBa91lThI&amp;list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&amp;index=3"/>
             <View
                 android:layout_width="match_parent"
@@ -2461,6 +2604,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://bit.ly/3ocRQW0"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2470,6 +2614,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=RV0QeTyHZxo&amp;list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&amp;index=4"/>
             <View
                 android:layout_width="match_parent"
@@ -2495,6 +2640,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/power-set4302/1#"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2504,6 +2650,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=b7AYbpM5YrE&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=67"/>
             <View
                 android:layout_width="match_parent"
@@ -2529,6 +2676,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2538,6 +2686,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=EIhAwfHubE8&amp;list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&amp;index=6"/>
             <View
                 android:layout_width="match_parent"
@@ -2563,6 +2712,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/maximum-xor-with-an-element-from-array/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2571,6 +2721,7 @@
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:layout_marginBottom="10dp"
                 android:text="Solution link: https://www.youtube.com/watch?v=Q8LhG9Pi5KM&amp;list=PLgUwDviBIf0pcIDCZnxhv0LkHf5KzG9zp&amp;index=7"/>
             <View
@@ -2597,6 +2748,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: Implement Stack Using Arrays"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2606,6 +2758,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/implement-stack-using-array/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2631,6 +2784,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: Implement Queue using Arrays"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2640,6 +2794,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/implement-queue-using-array/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2665,6 +2820,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/implement-stack-using-queues/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2674,6 +2830,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/implement-stack-using-single-queue/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2699,6 +2856,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/implement-queue-using-stacks/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2708,6 +2866,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/implement-queue-using-stack/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2733,6 +2892,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/valid-parentheses/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2742,6 +2902,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/check-for-balanced-parentheses/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2767,6 +2928,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/next-greater-element-i/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2776,6 +2938,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/next-greater-element-using-stack/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2801,6 +2964,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: Sort a Stack"/>
             <View
                 android:layout_width="match_parent"
@@ -2826,6 +2990,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://www.interviewbit.com/problems/nearest-smaller-element/"/>
             <View
                 android:layout_width="match_parent"
@@ -2851,6 +3016,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/lru-cache/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2860,6 +3026,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/implement-lru-cache/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2885,6 +3052,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/lfu-cache/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2894,6 +3062,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=0PSB9y8ehbk&amp;list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma&amp;index=79"/>
             <View
                 android:layout_width="match_parent"
@@ -2919,6 +3088,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/largest-rectangle-in-histogram/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2928,6 +3098,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/area-of-largest-rectangle-in-histogram/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2953,6 +3124,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/sliding-window-maximum/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2962,6 +3134,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/sliding-window-maximum/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -2987,6 +3160,7 @@
                 android:layout_marginBottom="5dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/min-stack/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -2995,6 +3169,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:textColor="@color/white"
                 android:text="Solution link: https://takeuforward.org/data-structure/implement-min-stack-o2n-and-on-space-complexity/?amp=1"/>
             <View
@@ -3021,6 +3196,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/rotting-oranges/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3030,6 +3206,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/rotten-oranges-min-time-to-rot-all-oranges-bfs/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3055,6 +3232,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/online-stock-span/"/>
             <View
                 android:layout_width="match_parent"
@@ -3080,6 +3258,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: Find the maximum of minimums of every window size"/>
             <View
                 android:layout_width="match_parent"
@@ -3105,6 +3284,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/accounts/login/?next=/problems/find-the-celebrity/"/>
             <View
                 android:layout_width="match_parent"
@@ -3130,6 +3310,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/reverse-words-in-a-string/"/>
             <View
                 android:layout_width="match_parent"
@@ -3155,6 +3336,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/longest-palindromic-substring/"/>
             <View
                 android:layout_width="match_parent"
@@ -3180,6 +3362,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/roman-to-integer/"/>
             <View
                 android:layout_width="match_parent"
@@ -3205,6 +3388,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/string-to-integer-atoi/"/>
             <View
                 android:layout_width="match_parent"
@@ -3230,6 +3414,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/longest-common-prefix/"/>
             <View
                 android:layout_width="match_parent"
@@ -3255,6 +3440,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/repeated-string-match/discuss/416144/Rabin-Karp-algorithm-C%2B%2B-implementation"/>
             <View
                 android:layout_width="match_parent"
@@ -3280,6 +3466,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/implement-strstr/"/>
             <View
                 android:layout_width="match_parent"
@@ -3305,6 +3492,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/implement-strstr/"/>
             <View
                 android:layout_width="match_parent"
@@ -3330,6 +3518,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://www.interviewbit.com/problems/minimum-characters-required-to-make-a-string-palindromic/"/>
             <View
                 android:layout_width="match_parent"
@@ -3355,6 +3544,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/valid-anagram/"/>
             <View
                 android:layout_width="match_parent"
@@ -3380,6 +3570,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/count-and-say/"/>
             <View
                 android:layout_width="match_parent"
@@ -3405,6 +3596,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/compare-version-numbers/"/>
             <View
                 android:layout_width="match_parent"
@@ -3430,6 +3622,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/binary-tree-inorder-traversal/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3439,6 +3632,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/morris-inorder-traversal-of-a-binary-tree/?amp=1  and  https://takeuforward.org/data-structure/inorder-traversal-of-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3464,6 +3658,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/binary-tree-preorder-traversal/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3473,6 +3668,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/morris-preorder-traversal-of-a-binary-tree/?amp=1  and  https://takeuforward.org/data-structure/preorder-traversal-of-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3498,6 +3694,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/binary-tree-postorder-traversal/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3507,6 +3704,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/post-order-traversal-of-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3532,6 +3730,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/left-view-of-binary-tree/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3541,6 +3740,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/right-left-view-of-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3566,6 +3766,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3575,6 +3776,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/bottom-view-of-a-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3600,6 +3802,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3608,6 +3811,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:textColor="@color/white"
                 android:text="Solution link: https://takeuforward.org/data-structure/top-view-of-a-binary-tree/?amp=1"/>
             <View
@@ -3634,6 +3838,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: Preorder inorder postorder in a single traversal"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3643,6 +3848,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/preorder-inorder-postorder-traversals-in-one-traversal/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3668,6 +3874,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: Vertical order traversal"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3677,6 +3884,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/vertical-order-traversal-of-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3702,6 +3910,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/binary-tree-level-order-traversal/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3710,6 +3919,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:textColor="@color/white"
                 android:text="Solution link: https://takeuforward.org/data-structure/level-order-traversal-of-a-binary-tree/?amp=1"/>
             <View
@@ -3736,6 +3946,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/maximum-depth-of-binary-tree/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3745,6 +3956,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/maximum-depth-of-a-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3770,6 +3982,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/diameter-of-binary-tree/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3779,6 +3992,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/calculate-the-diameter-of-a-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3804,6 +4018,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/balanced-binary-tree/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3813,6 +4028,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/check-if-the-binary-tree-is-balanced-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3838,6 +4054,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3847,6 +4064,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/lowest-common-ancestor-for-two-given-nodes/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3872,6 +4090,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/same-tree/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3881,6 +4100,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/check-if-two-trees-are-identical/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3906,6 +4126,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: ZigZag Traversal of Binary Tree"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3915,6 +4136,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/zig-zag-traversal-of-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3940,6 +4162,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: Boundary Traversal of Binary Tree"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3949,6 +4172,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/boundary-traversal-of-a-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -3974,6 +4198,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/binary-tree-maximum-path-sum/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -3983,6 +4208,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/maximum-sum-path-in-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -4008,6 +4234,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"/>
             <View
                 android:layout_width="match_parent"
@@ -4033,6 +4260,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/"/>
             <View
                 android:layout_width="match_parent"
@@ -4058,6 +4286,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/symmetric-tree/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4067,6 +4296,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/check-for-symmetrical-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -4092,6 +4322,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/"/>
             <View
                 android:layout_width="match_parent"
@@ -4118,6 +4349,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/mirror-tree/1"/>
             <View
                 android:layout_width="match_parent"
@@ -4143,6 +4375,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/"/>
             <View
                 android:layout_width="match_parent"
@@ -4168,6 +4401,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/search-in-a-binary-search-tree/"/>
             <View
                 android:layout_width="match_parent"
@@ -4193,6 +4427,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/"/>
             <View
                 android:layout_width="match_parent"
@@ -4218,6 +4453,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/validate-binary-search-tree/"/>
             <View
                 android:layout_width="match_parent"
@@ -4243,6 +4479,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"/>
             <View
                 android:layout_width="match_parent"
@@ -4268,6 +4505,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/predecessor-and-successor/1"/>
             <View
                 android:layout_width="match_parent"
@@ -4293,6 +4531,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: Floor in a BST"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4302,6 +4541,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=xm_W1ub-K-w&amp;list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&amp;index=43"/>
             <View
                 android:layout_width="match_parent"
@@ -4327,6 +4567,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem Name: Ceil in a BST"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4336,6 +4577,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=KSsk8AhdOZA&amp;list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&amp;index=42"/>
             <View
                 android:layout_width="match_parent"
@@ -4361,6 +4603,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/kth-smallest-element-in-a-bst/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4370,6 +4613,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/kth-largest-smallest-element-in-binary-search-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -4395,6 +4639,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/kth-largest-element-in-bst/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4404,6 +4649,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/kth-largest-smallest-element-in-binary-search-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -4430,6 +4676,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/two-sum-iv-input-is-a-bst/"/>
             <View
                 android:layout_width="match_parent"
@@ -4455,6 +4702,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/binary-search-tree-iterator/"/>
             <View
                 android:layout_width="match_parent"
@@ -4480,6 +4728,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/maximum-sum-bst-in-binary-tree/"/>
             <View
                 android:layout_width="match_parent"
@@ -4505,6 +4754,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/serialize-and-deserialize-binary-tree/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4514,6 +4764,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://takeuforward.org/data-structure/serialize-and-deserialize-a-binary-tree/?amp=1"/>
             <View
                 android:layout_width="match_parent"
@@ -4539,6 +4790,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/flatten-binary-tree-to-linked-list/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4548,6 +4800,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=sWf7k1x9XR4&amp;list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk&amp;index=39"/>
             <View
                 android:layout_width="match_parent"
@@ -4573,6 +4826,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/find-median-from-data-stream/"/>
             <View
                 android:layout_width="match_parent"
@@ -4598,6 +4852,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/kth-largest-element-in-a-stream/"/>
             <View
                 android:layout_width="match_parent"
@@ -4623,6 +4878,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://www.interviewbit.com/problems/distinct-numbers-in-window/"/>
             <View
                 android:layout_width="match_parent"
@@ -4648,6 +4904,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/kth-largest-element-in-an-array/"/>
             <View
                 android:layout_width="match_parent"
@@ -4673,6 +4930,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/flood-fill/"/>
             <View
                 android:layout_width="match_parent"
@@ -4698,6 +4956,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/clone-graph/"/>
             <View
                 android:layout_width="match_parent"
@@ -4723,6 +4982,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/depth-first-traversal-for-a-graph/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4732,6 +4992,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=uDWljP2PGmU&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=7"/>
             <View
                 android:layout_width="match_parent"
@@ -4757,6 +5018,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/bfs-traversal-of-graph/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4766,6 +5028,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=UeE67iCK2lQ&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=6"/>
             <View
                 android:layout_width="match_parent"
@@ -4791,6 +5054,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/course-schedule/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4800,6 +5064,7 @@
                 android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=A8ko93TyOns&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=8"/>
             <View
                 android:layout_width="match_parent"
@@ -4825,6 +5090,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/course-schedule/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4834,6 +5100,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=Y9NFqI6Pzd4&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=9"/>
             <View
                 android:layout_width="match_parent"
@@ -4859,6 +5126,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/course-schedule/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4868,6 +5136,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=uzVUw90ZFIg&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=12"/>
             <View
                 android:layout_width="match_parent"
@@ -4893,6 +5162,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/course-schedule/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4902,6 +5172,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=V6GxfKDyLBM&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=15"/>
             <View
                 android:layout_width="match_parent"
@@ -4927,6 +5198,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/topological-sort/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4936,6 +5208,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=Yh6EFazXipA&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=13   and   https://www.youtube.com/watch?v=rZv_jHZva34&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=14"/>
             <View
                 android:layout_width="match_parent"
@@ -4961,6 +5234,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/number-of-islands/"/>
             <View
                 android:layout_width="match_parent"
@@ -4986,6 +5260,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/is-graph-bipartite/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -4995,6 +5270,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=nbgaEu-pvkU&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=10"/>
             <View
                 android:layout_width="match_parent"
@@ -5020,6 +5296,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/is-graph-bipartite/"/>
             <TextView
                 android:layout_width="match_parent"
@@ -5029,6 +5306,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=uC884ske2uQ&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=11"/>
             <View
                 android:layout_width="match_parent"
@@ -5054,6 +5332,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/maximum-number-of-non-overlapping-substrings/discuss/766485/kosaraju-algorithm-on"/>
             <TextView
                 android:layout_width="match_parent"
@@ -5063,6 +5342,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=V8qIqJxCioo&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=27"/>
             <View
                 android:layout_width="match_parent"
@@ -5088,6 +5368,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/implementing-dijkstra-set-1-adjacency-matrix/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -5097,6 +5378,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=jbhuqIASjoM&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=18"/>
             <View
                 android:layout_width="match_parent"
@@ -5122,6 +5404,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/distance-from-the-source-bellman-ford-algorithm/0/?fbclid=IwAR2_lL0T84DnciLyzMTQuVTMBOi82nTWNLuXjUgahnrtBgkphKiYk6xcyJU"/>
             <TextView
                 android:layout_width="match_parent"
@@ -5131,6 +5414,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=75yC1vbS8S8&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=28"/>
             <View
                 android:layout_width="match_parent"
@@ -5156,6 +5440,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/implementing-floyd-warshall2042/1"/>
             <View
                 android:layout_width="match_parent"
@@ -5181,6 +5466,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -5190,6 +5476,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=HnD676J56ak&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=20"/>
             <View
                 android:layout_width="match_parent"
@@ -5215,6 +5502,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="5dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/minimum-spanning-tree/1"/>
             <TextView
                 android:layout_width="match_parent"
@@ -5224,6 +5512,7 @@
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/white"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Solution link: https://www.youtube.com/watch?v=1KRmCzBl_mQ&amp;list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw&amp;index=24"/>
             <View
                 android:layout_width="match_parent"
@@ -5249,6 +5538,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/maximum-product-subarray/"/>
             <View
                 android:layout_width="match_parent"
@@ -5274,6 +5564,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/longest-increasing-subsequence/"/>
             <View
                 android:layout_width="match_parent"
@@ -5299,6 +5590,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/longest-common-subsequence/"/>
             <View
                 android:layout_width="match_parent"
@@ -5324,6 +5616,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/ones-and-zeroes/"/>
             <View
                 android:layout_width="match_parent"
@@ -5349,6 +5642,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/edit-distance/"/>
             <View
                 android:layout_width="match_parent"
@@ -5374,6 +5668,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1"/>
             <View
                 android:layout_width="match_parent"
@@ -5399,6 +5694,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1"/>
             <View
                 android:layout_width="match_parent"
@@ -5424,6 +5720,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/minimum-path-sum/"/>
             <View
                 android:layout_width="match_parent"
@@ -5449,6 +5746,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/coin-change/"/>
             <View
                 android:layout_width="match_parent"
@@ -5474,6 +5772,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/partition-equal-subset-sum/"/>
             <View
                 android:layout_width="match_parent"
@@ -5499,6 +5798,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://leetcode.com/problems/minimum-cost-to-cut-a-stick/"/>
             <View
                 android:layout_width="match_parent"
@@ -5524,6 +5824,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1"/>
             <View
                 android:layout_width="match_parent"
@@ -5549,6 +5850,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/word-break1352/1"/>
             <View
                 android:layout_width="match_parent"
@@ -5574,6 +5876,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/palindromic-patitioning4845/1"/>
             <View
                 android:layout_width="match_parent"
@@ -5599,6 +5902,7 @@
                 android:textColor="@color/white"
                 android:layout_marginBottom="10dp"
                 android:autoLink="web"
+                android:textIsSelectable="true"
                 android:text="Problem link: https://practice.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1"/>
             <View
                 android:layout_width="match_parent"

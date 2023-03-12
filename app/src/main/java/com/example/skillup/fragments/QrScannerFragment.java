@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.KeyEvent;
@@ -30,12 +31,14 @@ public class QrScannerFragment extends Fragment {
 
     String et_qr_result;
 
-    Button scanbtn, copybtn,openinbrowser;
+    Button  copybtn,openinbrowser;
+    CardView scanbtn;
     EditText scantext;
 
     public QrScannerFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,7 +46,7 @@ public class QrScannerFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_qr_scanner, container, false);
 
-        scanbtn = (Button) view.findViewById(R.id.scanbtn);
+        scanbtn = (CardView) view.findViewById(R.id.scanbtn);
         scantext = (EditText) view.findViewById(R.id.scantext);
         copybtn = (Button) view.findViewById(R.id.copybtn);
         openinbrowser = (Button) view.findViewById(R.id.openinbrowser);
@@ -65,23 +68,33 @@ public class QrScannerFragment extends Fragment {
             public void onClick(View view) {
                 String scannedtext = scantext.getText().toString().trim();
                 if(scannedtext.equals("QR Code Result")){
-                    Toast.makeText(getContext(),"Please scan the QR Code First!!!",Toast.LENGTH_SHORT).show();
-                }else {
+                    Toast.makeText(getContext(),"Please scan a QR Code",Toast.LENGTH_SHORT).show();
+                }
+                else if(scannedtext.length()==0){
+                    Toast.makeText(getContext(),"Nothing to copy!",Toast.LENGTH_SHORT).show();
+                }
+                else {
                     ClipboardManager clipboard = (ClipboardManager)  getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
                     ClipData clip = ClipData.newPlainText("Copied Data", scannedtext);
                     clipboard.setPrimaryClip(clip);
-                    Toast.makeText(getContext(),"Text Copied",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(),"Copied to clipboard",Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+
 
         openinbrowser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String scannedtext = scantext.getText().toString().trim();
                 if(scannedtext.equals("QR Code Result")){
-                    Toast.makeText(getContext(),"Please scan the QR Code First!!!",Toast.LENGTH_SHORT).show();
-                }else {
+                    Toast.makeText(getContext(),"Please scan a QR Code",Toast.LENGTH_SHORT).show();
+                }
+                else if(scannedtext.length()==0){
+                    Toast.makeText(getContext(),"Invalid action!",Toast.LENGTH_SHORT).show();
+                }
+                else {
                     Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
                     intent.putExtra(SearchManager.QUERY,scannedtext);
                     startActivity(intent);
@@ -107,5 +120,15 @@ public class QrScannerFragment extends Fragment {
         });
 
         return view;
+    }
+
+    public void copy(){
+        String scannedtext = scantext.getText().toString().trim();
+
+            ClipboardManager clipboard = (ClipboardManager)  getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("Copied Data", scannedtext);
+            clipboard.setPrimaryClip(clip);
+            Toast.makeText(getContext(),"Copied to clipboard",Toast.LENGTH_SHORT).show();
+
     }
 }

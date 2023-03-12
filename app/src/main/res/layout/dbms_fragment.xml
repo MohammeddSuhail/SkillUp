@@ -31,10 +31,8 @@
             android:id="@+id/tv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="4dp"
             android:layout_marginRight="16dp"
-
             android:fontFamily="@font/mulish"
             android:text="Choose a module to start learning\nPro Tip: Upon completion of SQL Queries module, you can confidently add SQL to your resume as a top skill."
             android:textColor="#FFF"
