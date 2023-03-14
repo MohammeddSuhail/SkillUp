@@ -16,11 +16,8 @@ import android.widget.Toast;
 
 import com.example.skillup.Notes.NotesActivity;
 import com.example.skillup.databinding.ActivityAllBinding;
-import com.example.skillup.fragments.CommunityFragment;
 import com.example.skillup.fragments.CoursesFragment;
-import com.example.skillup.fragments.MentorFragment;
 import com.example.skillup.fragments.ProfileFragment;
-import com.example.skillup.fragments.QrScannerFragment;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -115,11 +112,15 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
 
 
             case R.id.nav_scanner:
-                QrScannerFragment qrScannerFragment = new QrScannerFragment();
-                Bundle args = new Bundle();
-                args.putString("et_qr_result","QR Code Result");
-                qrScannerFragment.setArguments(args);
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,qrScannerFragment).commit();
+//                QrScannerFragment qrScannerFragment = new QrScannerFragment();
+//                Bundle args = new Bundle();
+//                args.putString("et_qr_result","QR Code Result");
+//                qrScannerFragment.setArguments(args);
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,qrScannerFragment).commit();
+                Intent intentt = new Intent(AllActivity.this, QrScannerActivity.class);
+                intentt.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intentt.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intentt);
                 break;
 
             case R.id.nav_guide:
