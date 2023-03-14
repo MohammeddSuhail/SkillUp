@@ -112,7 +112,7 @@ public class NotesTakerActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(NotesTakerActivity.this, AllActivity.class);
+        Intent intent = new Intent(NotesTakerActivity.this, NotesActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
