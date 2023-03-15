@@ -36,7 +36,7 @@
         android:id="@+id/editText_title"
         android:hint="Title:"
         android:textColorHint="#9E9E9E"
-        android:padding="8dp"
+        android:padding="12dp"
         android:textStyle="bold"
         android:fontFamily="@font/mulish"
         android:textSize="24dp"
@@ -54,10 +54,10 @@
         android:fontFamily="@font/mulish_extralight"
         android:gravity="top"
         android:hint="Add notes..."
-        android:padding="8dp"
+        android:padding="12dp"
         android:textColor="@color/white"
         android:textColorHint="#9E9E9E"
-        android:textSize="16dp"
+        android:textSize="18dp"
         android:textStyle="normal" />
 
 </LinearLayout>
