@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.example.skillup.Notes.NotesActivity;
 import com.example.skillup.databinding.ActivityAllBinding;
+import com.example.skillup.fragments.CommunityFragment;
 import com.example.skillup.fragments.CoursesFragment;
 import com.example.skillup.fragments.ProfileFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -130,9 +131,9 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 startActivity(in);
                 break;
 
-//            case R.id.nav_community:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
-//                break;
+            case R.id.nav_community:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
+                break;
 //
 //            case R.id.nav_mentors:
 //                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new MentorFragment()).commit();
