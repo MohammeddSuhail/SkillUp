@@ -124,6 +124,7 @@ public class EachCommunityFragment extends Fragment {
             }
         });
 
+        //using PostAdapter
         adapter = new PostAdapter(options);
         recyclerView.setAdapter(adapter);
 
@@ -190,6 +191,7 @@ public class EachCommunityFragment extends Fragment {
             String finalPostDesc = postDesc;
 
             if(imageUri != null){
+                //with image post
                 postImgRef.child(mUser.getUid()+strDate).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
@@ -199,6 +201,8 @@ public class EachCommunityFragment extends Fragment {
                             postImgRef.child(mUser.getUid()+strDate).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
+
+                                    //storing in the real-time database
                                     HashMap hashMap = new HashMap();
                                     hashMap.put("datePost",strDate);
                                     hashMap.put("postImageUrl",uri.toString());
@@ -231,6 +235,7 @@ public class EachCommunityFragment extends Fragment {
                     }
                 });
             }else{
+                //without image post
                 HashMap hashMap = new HashMap();
                 hashMap.put("datePost",strDate);
                 hashMap.put("postImageUrl",null);
@@ -254,6 +259,8 @@ public class EachCommunityFragment extends Fragment {
                     }
                 });
             }
+
+            //old code: for posting image with image
 //            postImgRef.child(mUser.getUid()+strDate).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
 //                @Override
 //                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
