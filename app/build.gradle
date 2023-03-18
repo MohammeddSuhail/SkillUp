@@ -7,7 +7,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.skillup"
+        applicationId "com.codingchallengers.skillup"
         minSdk 27
         targetSdk 32
         versionCode 1
