@@ -77,9 +77,6 @@ public class SignUpActivity extends AppCompatActivity {
         usn = binding.usn.getText().toString().trim();
         phoneNo = binding.phoneNo.getText().toString().trim();
 
-        int index = email.indexOf('@');
-        usnFromEmail = email.substring(0,index);
-
         isAllFieldsChecked = CheckAllFields();
 
         if(isAllFieldsChecked){
@@ -176,10 +173,14 @@ public class SignUpActivity extends AppCompatActivity {
             showError(binding.conPwdId,"Password is not matching with confirm password");
             return false;
         }
-        else if(!usnFromEmail.toLowerCase(Locale.ROOT).equals(usn.toLowerCase(Locale.ROOT))){
+
+        int index = email.indexOf('@');
+        usnFromEmail = email.substring(0,index);
+        if(!usnFromEmail.toLowerCase(Locale.ROOT).equals(usn.toLowerCase(Locale.ROOT))){
             showError(binding.usn,"USN is not matching with USN from college email");
             return false;
         }
+
         return true;
     }
 

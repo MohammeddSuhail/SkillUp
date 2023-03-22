@@ -7,22 +7,24 @@
     android:layout_height="match_parent"
     android:background="#000"
     >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#000"
         android:orientation="vertical"
-        tools:context=".SignUpActivity"
-        android:paddingBottom="40dp">
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="40dp"
+        tools:context=".SignUpActivity">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="30dp"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
@@ -31,7 +33,7 @@
                 android:paddingBottom="2dp"
                 android:text="Getting Started"
                 android:textColor="@color/white"
-                android:textSize="30dp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -39,15 +41,13 @@
                 android:fontFamily="@font/mulish_extralight"
                 android:text="Create an account to continue!"
                 android:textColor="@color/white"
-                android:textSize="18dp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/sign_up_cardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             app:cardCornerRadius="10dp"
             app:cardElevation="2dp">
 
@@ -56,34 +56,33 @@
                 android:layout_height="match_parent"
                 android:background="#24282b"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="25dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:layout_marginBottom="16dp"
                     android:fontFamily="@font/mulish"
                     android:gravity="center"
                     android:text="Sign Up"
-                    android:layout_marginBottom="16dp"
                     android:textColor="#C0C0C0"
                     android:textSize="35dp" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/name_text_input"
-                    android:textColorHint="#A1A1A1"
-                    android:layout_marginTop="16dp"
-
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
-
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
+
                     android:layout_height="wrap_content"
-                    >
+                    android:layout_marginTop="16dp"
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/usn"
@@ -100,17 +99,16 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="#A1A1A1"
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
-
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/email_id"
@@ -127,17 +125,16 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="#A1A1A1"
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
-
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/phone_no"
@@ -155,17 +152,16 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="#A1A1A1"
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
-
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/password_id"
@@ -182,17 +178,16 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="#A1A1A1"
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
-
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/conPwd_id"
@@ -207,7 +202,6 @@
                         android:textColorHint="#878787"
                         android:textSize="18dp" />
                 </com.google.android.material.textfield.TextInputLayout>
-
 
 
                 <TextView
@@ -229,6 +223,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
                     android:backgroundTint="#C0C0C0"
                     android:fontFamily="@font/mulish_bold"
                     android:padding="10dp"
@@ -243,4 +238,3 @@
     </LinearLayout>
 
 </ScrollView>
-

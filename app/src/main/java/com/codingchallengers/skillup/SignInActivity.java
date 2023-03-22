@@ -237,7 +237,12 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String email=emailet.getText().toString().trim();
-                beginRecovery(email);
+                if(email.isEmpty()){
+                    Toast.makeText(SignInActivity.this,"Please enter valid email",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    beginRecovery(email);
+                }
             }
         });
 
