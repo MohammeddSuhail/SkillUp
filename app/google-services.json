@@ -1,15 +1,16 @@
 {
   "project_info": {
     "project_number": "112294203415",
+    "firebase_url": "https://skillup-a7c6c-default-rtdb.firebaseio.com",
     "project_id": "skillup-a7c6c",
     "storage_bucket": "skillup-a7c6c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:112294203415:android:bceb996ccc761f02d08c52",
+        "mobilesdk_app_id": "1:112294203415:android:2112bf15dc33dc47d08c52",
         "android_client_info": {
-          "package_name": "com.example.skillup"
+          "package_name": "com.codingchallengers.skillup"
         }
       },
       "oauth_client": [
