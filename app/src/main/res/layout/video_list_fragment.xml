@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#121517"
     android:orientation="vertical">
 
 
@@ -12,7 +11,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="14dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="#1f1f1f"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbarSize="10dp"
+        android:fadeScrollbars="true"/>
 
 
 </LinearLayout>
