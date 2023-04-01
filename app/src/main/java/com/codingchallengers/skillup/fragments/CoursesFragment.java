@@ -95,6 +95,7 @@ public class CoursesFragment extends Fragment {
             }
         });
 
+
         dsa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
