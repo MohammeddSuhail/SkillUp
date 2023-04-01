@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/almost_black"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
@@ -12,7 +13,7 @@
         android:layout_marginBottom="14dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#1f1f1f"
+        android:background="@color/almost_black"
         android:scrollbars="vertical"
         android:scrollbarStyle="outsideInset"
         android:scrollbarSize="10dp"

@@ -499,8 +499,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/dbms8imageView3" />
             </LinearLayout>
 
-
-
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
