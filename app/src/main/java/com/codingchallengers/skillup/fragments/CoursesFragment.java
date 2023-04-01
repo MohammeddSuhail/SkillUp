@@ -18,7 +18,7 @@ public class CoursesFragment extends Fragment {
 
     public static FragmentTransaction f;
 
-    CardView cn,dbms,os,oops, dsa, ie;
+    CardView cn,dbms,os,oops, dsa, ie, res;
 
     public static String course;
 
@@ -41,6 +41,7 @@ public class CoursesFragment extends Fragment {
         oops =(CardView) view.findViewById(R.id.oopscardview);
         dsa=(CardView) view.findViewById(R.id.dsacardview);
         ie = (CardView) view.findViewById(R.id.ie_cardview);
+        res = (CardView) view.findViewById(R.id.rescardview);
 
 
         CoursesFragment cf = new CoursesFragment();
@@ -51,6 +52,7 @@ public class CoursesFragment extends Fragment {
                 CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).addToBackStack(null).commit();
             }
         });
+
         dbms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,6 +76,19 @@ public class CoursesFragment extends Fragment {
                 VideoListFragment videoListFragment = new VideoListFragment();
                 Bundle args = new Bundle();
                 String[] arguments = {"OOPS","introduction_to_OOPS"};
+                args.putStringArray("arguments",arguments);
+                videoListFragment.setArguments(args);
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
+            }
+        });
+
+        res.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                course = "RES";
+                VideoListFragment videoListFragment = new VideoListFragment();
+                Bundle args = new Bundle();
+                String[] arguments = {"RES","resume_building"};
                 args.putStringArray("arguments",arguments);
                 videoListFragment.setArguments(args);
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
