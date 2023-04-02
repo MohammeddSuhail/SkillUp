@@ -35,6 +35,8 @@
             android:fontFamily="@font/mulish_bold"
             android:textColor="@color/black"
             android:layout_gravity="center_horizontal"
+            android:singleLine="false"
+            android:gravity="center_horizontal"
             android:text="TextView" />
 
         <TextView

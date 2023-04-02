@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#242527">
+    android:background="@color/black">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#242527"
+        android:background="@color/black"
         android:orientation="vertical"
         android:paddingLeft="30dp"
         android:paddingTop="40dp"
@@ -21,11 +21,11 @@
             android:id="@+id/textView8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Just one step and you're finished!\nWe hate paperwork, too."
             android:layout_marginBottom="10dp"
-            android:textColor="@color/white"
             android:fontFamily="@font/mulish_bold"
-            android:textSize="18dp"/>
+            android:text="Just one step and you're finished!\nWe hate paperwork, too."
+            android:textColor="@color/white"
+            android:textSize="18dp" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#2a2b2d"
+                android:background="#24282b"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:paddingLeft="15dp"
@@ -52,6 +52,7 @@
                     app:civ_border_color="#FF000000"
                     app:civ_border_width="2dp"
                     app:civ_circle_background_color="@color/white" />
+
                 <ImageView
                     android:id="@+id/addProfileImage"
                     android:layout_width="30dp"
@@ -60,20 +61,20 @@
                     android:layout_marginLeft="35dp"
                     android:layout_marginTop="-25dp"
                     android:layout_weight="1"
-                    app:tint="@color/white"
-                    app:srcCompat="@drawable/plus_sign" />
-                <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="#A1A1A1"
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
+                    app:srcCompat="@drawable/plus_sign"
+                    app:tint="@color/white" />
 
+                <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/name"
@@ -90,17 +91,16 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="#A1A1A1"
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
-
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/graduation_year"
@@ -117,17 +117,16 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="#A1A1A1"
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
-
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/course"
@@ -144,17 +143,16 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="#A1A1A1"
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
-
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/branch"
@@ -170,17 +168,16 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="#A1A1A1"
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
-
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/curr_year"
@@ -189,8 +186,8 @@
                         android:layout_marginTop="16dp"
                         android:fontFamily="@font/mulish"
                         android:hint="Current Year (1/2/3/4)"
-                        android:maxLength="1"
                         android:inputType="number"
+                        android:maxLength="1"
                         android:singleLine="true"
                         android:textColor="@color/white"
                         android:textColorHint="#878787"
@@ -198,17 +195,16 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:textColorHint="#A1A1A1"
-                    app:boxStrokeColor="#A1A1A1"
-                    android:outlineAmbientShadowColor="#A1A1A1"
-                    android:outlineSpotShadowColor="#A1A1A1"
-                    app:placeholderTextColor="#A1A1A1"
-                    app:hintTextColor="#A1A1A1"
-
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:outlineAmbientShadowColor="#A1A1A1"
+                    android:outlineSpotShadowColor="#A1A1A1"
+                    android:textColorHint="#A1A1A1"
+
+                    app:boxStrokeColor="#A1A1A1"
+                    app:hintTextColor="#A1A1A1"
+                    app:placeholderTextColor="#A1A1A1">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/profession"

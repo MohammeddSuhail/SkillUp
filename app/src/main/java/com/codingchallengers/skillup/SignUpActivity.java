@@ -174,7 +174,7 @@ public class SignUpActivity extends AppCompatActivity {
             showError(binding.usn,"This field is required!");
             return false;
         }
-        else if(usn.length()<5){
+        else if(usn.length()<4){
             showError(binding.usn,"USN is not valid");
             return false;
         }
@@ -182,8 +182,8 @@ public class SignUpActivity extends AppCompatActivity {
             showError(binding.emailId,"This field is required!");
             return false;
         }
-        else if(!email.endsWith("@nmamit.in")){
-            showError(binding.emailId,"The email should end with '@nmamit.in' domain");
+        else if(!(email.endsWith("@nmamit.in")||email.endsWith("@nitte.edu.in"))){
+            showError(binding.emailId,"The email should end with '@nmamit.in' or '@nitte.edu.in' domain");
             return false;
         }
         else if(phoneNo.isEmpty()){
@@ -213,7 +213,11 @@ public class SignUpActivity extends AppCompatActivity {
 
         int index = email.indexOf('@');
         usnFromEmail = email.substring(0,index);
-        if(!usnFromEmail.toLowerCase(Locale.ROOT).equals(usn.toLowerCase(Locale.ROOT))){
+        String email_dom = email.substring(index);
+        if(email_dom.toLowerCase(Locale.ROOT).equals("@nitte.edu.in")){
+            return true;
+        }
+        else if(!usnFromEmail.toLowerCase(Locale.ROOT).equals(usn.toLowerCase(Locale.ROOT))){
             showError(binding.usn,"USN is not matching with USN from college email");
             return false;
         }

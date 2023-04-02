@@ -30,6 +30,8 @@
             android:fontFamily="@font/mulish"
             android:textSize="18sp"
             android:layout_gravity="center_horizontal"
+            android:singleLine="false"
+            android:gravity="center_horizontal"
             android:text="Verification email has been sent to" />
 
         <TextView
@@ -41,6 +43,8 @@
             android:fontFamily="@font/mulish_bold"
             android:textColor="@color/black"
             android:layout_gravity="center_horizontal"
+            android:singleLine="false"
+            android:gravity="center_horizontal"
             android:text="TextView" />
 
         <TextView
