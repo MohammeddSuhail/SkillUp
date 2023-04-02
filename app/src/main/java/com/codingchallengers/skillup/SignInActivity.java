@@ -1,6 +1,9 @@
 package com.codingchallengers.skillup;
 
 import android.app.AlertDialog;
+
+import android.app.Dialog;
+
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,9 +11,14 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
+
+import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -34,12 +42,18 @@ public class SignInActivity extends AppCompatActivity {
     ActivitySignInBinding binding;
     private FirebaseAuth mAuth;
     DatabaseReference mRef;
+
+    FirebaseUser user;
     ProgressDialog mLoadingBar;
     FirebaseUser mUser;
+
     CardView signinCardview;
     Boolean setupFlag;
     boolean isAllFieldsChecked = false;
     String email,pwd;
+
+    Button btn_cancel, btn_resend, btn_okay;
+    TextView tv_email, tv_email2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,28 +147,11 @@ public class SignInActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 mLoadingBar.dismiss();
                                 //credentials were valid
-                                FirebaseUser user = task.getResult().getUser();
+
+                                user = task.getResult().getUser();
                                 if(!user.isEmailVerified()){
-                                    user.sendEmailVerification()
-                                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    if (task.isSuccessful()) {
-                                                        // Verification email sent
-                                                        FirebaseAuth.getInstance().signOut();
-                                                        Toast.makeText(getApplicationContext(),
-                                                                "Verification email sent to " + user.getEmail() + "\nPlease verify your email id" ,
-                                                                Toast.LENGTH_LONG).show();
-                                                        Log.d("Verification", "Verification email sent to " + user.getEmail());
-                                                    } else {
-                                                        // Error sending verification email
-                                                        Log.e("TAG", "sendEmailVerification", task.getException());
-                                                        Toast.makeText(getApplicationContext(),
-                                                                "Failed to send verification email. Please wait and try again!",
-                                                                Toast.LENGTH_SHORT).show();
-                                                    }
-                                                }
-                                            });
+                                    FirebaseAuth.getInstance().signOut();
+                                    resendEmailDialog();
                                 }
                                 else{
                                     mRef.child("Users").child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -191,6 +188,84 @@ public class SignInActivity extends AppCompatActivity {
                         }
                     });
         }
+    }
+
+    private void resendEmailDialog() {
+        Dialog dialog = new Dialog(this);
+
+        dialog.setContentView(R.layout.verify_email_dialog2);
+        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.verify_email_dialog_bg));
+
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
+
+        btn_resend = dialog.findViewById(R.id.btn_resend);
+        btn_cancel = dialog.findViewById(R.id.btn_cancel);
+        tv_email2 = dialog.findViewById(R.id.tv_email2);
+
+        tv_email2.setText(user.getEmail());
+
+        btn_resend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                user.sendEmailVerification()
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    // Verification email sent
+                                    verifyEmailDialog();
+                                  /*  Toast.makeText(getApplicationContext(),
+                                            "Verification email sent to " + user.getEmail() + "\nPlease verify your email id" ,
+                                            Toast.LENGTH_LONG).show();*/
+                                    Log.d("Verification", "Verification email sent to " + user.getEmail());
+                                } else {
+                                    // Error sending verification email
+                                    Log.e("TAG", "sendEmailVerification", task.getException());
+                                    Toast.makeText(getApplicationContext(),
+                                            "Failed to send verification email. Please wait and try again!",
+                                            Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+            }
+        });
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void verifyEmailDialog() {
+        Dialog dialog = new Dialog(this);
+
+        dialog.setContentView(R.layout.verify_email_dialog);
+        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.verify_email_dialog_bg));
+
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
+
+        btn_okay = dialog.findViewById(R.id.btn_okay);
+        tv_email = dialog.findViewById(R.id.tv_email);
+
+        tv_email.setText(user.getEmail());
+
+        btn_okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
     private boolean CheckAllFields() {

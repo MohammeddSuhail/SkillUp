@@ -124,7 +124,6 @@ public class EachCommunityFragment extends Fragment {
             }
         });
 
-        //using PostAdapter
         adapter = new PostAdapter(options);
         recyclerView.setAdapter(adapter);
 
@@ -191,7 +190,7 @@ public class EachCommunityFragment extends Fragment {
             String finalPostDesc = postDesc;
 
             if(imageUri != null){
-                //with image post
+
                 postImgRef.child(mUser.getUid()+strDate).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
@@ -235,6 +234,7 @@ public class EachCommunityFragment extends Fragment {
                     }
                 });
             }else{
+
                 //without image post
                 HashMap hashMap = new HashMap();
                 hashMap.put("datePost",strDate);
@@ -259,6 +259,7 @@ public class EachCommunityFragment extends Fragment {
                     }
                 });
             }
+
 
             //old code: for posting image with image
 //            postImgRef.child(mUser.getUid()+strDate).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
