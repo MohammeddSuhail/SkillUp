@@ -11,39 +11,38 @@
             android:icon="@drawable/ic_profile"
             android:title="Profile"/>
 
-
-
         <item
             android:id="@+id/nav_notes"
             android:icon="@drawable/ic_baseline_note_add_24"
             android:title="Add Notes"/>
 
         <item
-            android:id="@+id/nav_scanner"
-            android:icon="@drawable/ic_baseline_qr_code_scanner_24"
-            android:title="QR Code Scanner"/>
+            android:id="@+id/nav_community"
+            android:icon="@drawable/ic_invite_friend"
+            android:title="Community"/>
+
+        <item
+            android:id="@+id/nav_contributors"
+            android:icon="@drawable/ic_baseline_assistant_24"
+            android:title="Top Contributors"/>
 
         <item
             android:id="@+id/nav_guide"
             android:icon="@drawable/guide"
             android:title="Placement FAQs"/>
 
+        <item
+            android:id="@+id/nav_scanner"
+            android:icon="@drawable/ic_baseline_qr_code_scanner_24"
+            android:title="QR Code Scanner"/>
 
-
-<!--        <item-->
-<!--            android:id="@+id/nav_community"-->
-<!--            android:icon="@drawable/ic_invite_friend"-->
-<!--            android:title="Community"/>-->
 
 <!--        <item-->
 <!--            android:id="@+id/nav_mentors"-->
 <!--            android:icon="@drawable/ic_friends"-->
 <!--            android:title="Mentors"/>-->
 
-        <item
-            android:id="@+id/nav_contributors"
-            android:icon="@drawable/ic_baseline_assistant_24"
-            android:title="Top Contributors"/>
+
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_logout"

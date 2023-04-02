@@ -18,6 +18,7 @@ public class CoursesFragment extends Fragment {
 
     public static FragmentTransaction f;
 
+
     CardView cn,dbms,os,oops, dsa, ie, res;
 
     public static String course;
@@ -52,7 +53,6 @@ public class CoursesFragment extends Fragment {
                 CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).addToBackStack(null).commit();
             }
         });
-
         dbms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,6 +82,7 @@ public class CoursesFragment extends Fragment {
             }
         });
 
+
         res.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -94,7 +95,6 @@ public class CoursesFragment extends Fragment {
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
             }
         });
-
 
         dsa.setOnClickListener(new View.OnClickListener() {
             @Override

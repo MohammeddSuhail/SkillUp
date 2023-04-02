@@ -1,7 +1,9 @@
 package com.codingchallengers.skillup;
 
 import android.app.AlertDialog;
+
 import android.app.Dialog;
+
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -9,12 +11,14 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
+
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,6 +42,7 @@ public class SignInActivity extends AppCompatActivity {
     ActivitySignInBinding binding;
     private FirebaseAuth mAuth;
     DatabaseReference mRef;
+
     FirebaseUser user;
     ProgressDialog mLoadingBar;
     FirebaseUser mUser;
@@ -142,6 +147,7 @@ public class SignInActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 mLoadingBar.dismiss();
                                 //credentials were valid
+
                                 user = task.getResult().getUser();
                                 if(!user.isEmailVerified()){
                                     FirebaseAuth.getInstance().signOut();

@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -41,10 +43,12 @@ public class SignUpActivity extends AppCompatActivity {
     boolean isAllFieldsChecked = false;
     String email, pw, usn, phoneNo, conPwd;
     String usnFromEmail;
+
     FirebaseUser user;
 
     Button btn_okay;
     TextView tv_email;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +89,6 @@ public class SignUpActivity extends AppCompatActivity {
         usn = binding.usn.getText().toString().trim();
         phoneNo = binding.phoneNo.getText().toString().trim();
 
-
         isAllFieldsChecked = CheckAllFields();
 
         if(isAllFieldsChecked){
@@ -102,6 +105,7 @@ public class SignUpActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 //done adding email and password in auth
                                 mLoadingBar.dismiss();
+
                                 user = task.getResult().getUser();
 
                                 //setupFlag = false, since setup part of the user is not completed.
@@ -115,11 +119,13 @@ public class SignUpActivity extends AppCompatActivity {
                                                 if (task.isSuccessful()) {
                                                     // Verification email sent
                                                     FirebaseAuth.getInstance().signOut();
+
                                                     verifyEmailDialog();
 
                                                  /*   Toast.makeText(getApplicationContext(),
                                                             "Verification email sent to " + user.getEmail() + "\nPlease verify your email id" ,
                                                             Toast.LENGTH_LONG).show();*/
+
                                                     Log.d("Verification", "Verification email sent to " + user.getEmail());
                                                 } else {
                                                     // Error sending verification email
@@ -140,6 +146,7 @@ public class SignUpActivity extends AppCompatActivity {
         }
 
     }
+
 
     private void verifyEmailDialog() {
         Dialog dialog = new Dialog(this);
@@ -174,6 +181,7 @@ public class SignUpActivity extends AppCompatActivity {
             showError(binding.usn,"This field is required!");
             return false;
         }
+
         else if(usn.length()<4){
             showError(binding.usn,"USN is not valid");
             return false;
@@ -214,6 +222,7 @@ public class SignUpActivity extends AppCompatActivity {
         int index = email.indexOf('@');
         usnFromEmail = email.substring(0,index);
         String email_dom = email.substring(index);
+        
         if(email_dom.toLowerCase(Locale.ROOT).equals("@nitte.edu.in")){
             return true;
         }
