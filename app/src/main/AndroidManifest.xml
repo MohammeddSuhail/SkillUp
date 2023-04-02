@@ -87,15 +87,6 @@
                 android:value="" />
         </activity>
         <activity
-
-            android:name="com.codingchallengers.skillup.ImageViewActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-
             android:name="com.codingchallengers.skillup.PlayerActivity"
             android:exported="false">
             <meta-data
