@@ -1,12 +1,16 @@
 package com.codingchallengers.skillup;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -37,6 +41,10 @@ public class SignUpActivity extends AppCompatActivity {
     boolean isAllFieldsChecked = false;
     String email, pw, usn, phoneNo, conPwd;
     String usnFromEmail;
+    FirebaseUser user;
+
+    Button btn_okay;
+    TextView tv_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +102,7 @@ public class SignUpActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 //done adding email and password in auth
                                 mLoadingBar.dismiss();
-                                FirebaseUser user = task.getResult().getUser();
+                                user = task.getResult().getUser();
 
                                 //setupFlag = false, since setup part of the user is not completed.
                                 Users newUser = new Users(usn,phoneNo,false);
@@ -107,11 +115,11 @@ public class SignUpActivity extends AppCompatActivity {
                                                 if (task.isSuccessful()) {
                                                     // Verification email sent
                                                     FirebaseAuth.getInstance().signOut();
-                                                    Intent i = new Intent(SignUpActivity.this,SignInActivity.class);
-                                                    startActivity(i);
-                                                    Toast.makeText(getApplicationContext(),
+                                                    verifyEmailDialog();
+
+                                                 /*   Toast.makeText(getApplicationContext(),
                                                             "Verification email sent to " + user.getEmail() + "\nPlease verify your email id" ,
-                                                            Toast.LENGTH_LONG).show();
+                                                            Toast.LENGTH_LONG).show();*/
                                                     Log.d("Verification", "Verification email sent to " + user.getEmail());
                                                 } else {
                                                     // Error sending verification email
@@ -131,6 +139,34 @@ public class SignUpActivity extends AppCompatActivity {
                     });
         }
 
+    }
+
+    private void verifyEmailDialog() {
+        Dialog dialog = new Dialog(this);
+
+        dialog.setContentView(R.layout.verify_email_dialog);
+        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.verify_email_dialog_bg));
+
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.setCancelable(false);
+        dialog.getWindow().getAttributes().windowAnimations = R.style.animation;
+
+        btn_okay = dialog.findViewById(R.id.btn_okay);
+        tv_email = dialog.findViewById(R.id.tv_email);
+
+        tv_email.setText(user.getEmail());
+
+        btn_okay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent i = new Intent(SignUpActivity.this,SignInActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+        dialog.show();
     }
 
     private boolean CheckAllFields() {
