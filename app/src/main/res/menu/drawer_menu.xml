@@ -21,6 +21,7 @@
             android:icon="@drawable/ic_baseline_qr_code_scanner_24"
             android:title="QR Code Scanner"/>
 
+
 <!--        <item-->
 <!--            android:id="@+id/nav_community"-->
 <!--            android:icon="@drawable/ic_invite_friend"-->
@@ -30,14 +31,6 @@
             android:icon="@drawable/guide"
             android:title="Placement FAQs"/>
 
-        <item
-            android:id="@+id/nav_contributors"
-            android:icon="@drawable/ic_baseline_assistant_24"
-            android:title="Top Contributors"/>
-
-
-
-
 
 
 <!--        <item-->
@@ -45,6 +38,10 @@
 <!--            android:icon="@drawable/ic_friends"-->
 <!--            android:title="Mentors"/>-->
 
+        <item
+            android:id="@+id/nav_contributors"
+            android:icon="@drawable/ic_baseline_assistant_24"
+            android:title="Top Contributors"/>
 
         <item
             android:id="@+id/nav_logout"
