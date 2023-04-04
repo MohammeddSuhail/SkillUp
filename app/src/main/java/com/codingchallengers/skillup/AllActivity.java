@@ -132,9 +132,11 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 break;
 
 
-      /*      case R.id.nav_community:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
-                break;*/
+
+//            case R.id.nav_community:
+//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
+//                break;
+
 
 //
 //            case R.id.nav_mentors:
