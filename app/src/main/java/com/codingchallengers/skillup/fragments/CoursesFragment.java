@@ -96,19 +96,6 @@ public class CoursesFragment extends Fragment {
             }
         });
 
-        res.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                course = "RES";
-                VideoListFragment videoListFragment = new VideoListFragment();
-                Bundle args = new Bundle();
-                String[] arguments = {"RES","resume_building"};
-                args.putStringArray("arguments",arguments);
-                videoListFragment.setArguments(args);
-                getFragmentManager().beginTransaction().replace(R.id.fragment_container, videoListFragment).addToBackStack(null).commit();
-            }
-        });
-
         dsa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
