@@ -105,9 +105,11 @@ public class SetUpActivity extends AppCompatActivity {
             if(imageUri!=null){
                 addUserAlongWithImage();
             }
-           /* else{
-                addUserWithoutImage();
-            }*/
+           else{
+               //set boas to default image
+               //boas = drawable/user_icon_default.png
+               addUserAlongWithImage();
+           }
         }
     }
 
