@@ -1,6 +1,9 @@
 package com.codingchallengers.skillup;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
@@ -40,6 +43,13 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run()
             {
+
+                //checking internet connectivity
+                if(!isNetworkAvailable(SplashScreen.this)){
+                    Toast.makeText(SplashScreen.this, "No Internet", Toast.LENGTH_LONG).show();
+                }
+
+
                 //if user exists then we check if he has filed setup activity, if yes->AllActivity if no->setUpActivity
                 if(mUser!=null){
                     mRef.child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
@@ -85,5 +95,13 @@ public class SplashScreen extends AppCompatActivity {
             }
         }, 1300);
 
+    }
+
+    //for checl=king internet connectivity
+    public static boolean isNetworkAvailable(Context activity) {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }
