@@ -64,8 +64,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="1dp"
-            android:text="Software Development Engineer"
             android:fontFamily="@font/mulish_bold"
+            android:text="Software Development Engineer"
             android:textColor="@color/white"
             android:textSize="13dp"
 
@@ -95,10 +95,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
-                android:text="CTC: "
                 android:fontFamily="@font/mulish_bold"
-                android:textColor="@color/white"
-                android:textSize="13dp" />
+                android:text="CTC: "
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="13sp" />
 
 
             <TextView
@@ -106,13 +106,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
-                android:textAllCaps="true"
                 android:layout_marginTop="0dp"
-                android:textStyle="bold"
-                android:text="Rs. 9.6LPA + $7000 RSU"
                 android:fontFamily="@font/mulish"
-                android:textColor="@color/white"
-                android:textSize="13dp" />
+                android:text="Rs. 9.6LPA + $7000 RSU"
+                android:textAllCaps="true"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="13sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <View

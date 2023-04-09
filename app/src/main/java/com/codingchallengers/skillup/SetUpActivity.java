@@ -105,12 +105,12 @@ public class SetUpActivity extends AppCompatActivity {
             if(imageUri!=null){
                 addUserAlongWithImage();
             }
-           /* else{
+           else{
+                imageUri = Uri.parse("android.resource://com.codingchallengers.skillup/drawable/user_icon_default_dark");
                 addUserWithoutImage();
-            }*/
+           }
         }
     }
-
 
     private void addUserAlongWithImage() {
         //adding the image
@@ -169,29 +169,60 @@ public class SetUpActivity extends AppCompatActivity {
                 });
     }
 
-   /* private void addUserWithoutImage() {
-        Users user = new Users(fullName,yearOfGrad,course,branch,currYear,profession,city,null,"Offline",true);
+    private void addUserWithoutImage() {
+        StorageRef.child(mUser.getUid()).putFile(imageUri)
+                .addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull  Task<UploadTask.TaskSnapshot> task) {
+                        if(task.isSuccessful())
+                        {
+                            //getting the url of the place where image is stored
+                            StorageRef.child(mUser.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {  //Image successfully stored
+                                    HashMap<String, Object> hashMap = new HashMap<String, Object>();
+                                    hashMap.put("userName",fullName);
+                                    hashMap.put("yearOfGrad",yearOfGrad);
+                                    hashMap.put("course",course);
+                                    hashMap.put("branch",branch);
+                                    hashMap.put("currYear",currYear);
+                                    hashMap.put("profession",profession);
+                                    hashMap.put("profileImage",uri.toString());
+                                    hashMap.put("status","Offline");
+                                    hashMap.put("setupFlag",true);
 
-        //adding user under "Users" directory
-        mRef.child("Users").child(mUser.getUid()).setValue(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
-                mLoadingBar.dismiss();
+                                    //adding user under "Users" directory
+                                    mRef.child("Users").child(mUser.getUid()).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void unused) {
+                                            mLoadingBar.dismiss();
 
-                Intent intent = new Intent(SetUpActivity.this,AllActivity.class);
-                startActivity(intent);
+                                            Intent intent = new Intent(SetUpActivity.this,AllActivity.class);
+                                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                            startActivity(intent);
 
-                Toast.makeText(SetUpActivity.this, "Setup Profile Completed", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SetUpActivity.this, "Setup Profile Completed", Toast.LENGTH_SHORT).show();
 
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                mLoadingBar.dismiss();
-                Toast.makeText(SetUpActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
-    }*/
+                                        }
+                                    }).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            mLoadingBar.dismiss();
+                                            Toast.makeText(SetUpActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                }
+                            });
+                            mLoadingBar.dismiss();
+                            Toast.makeText(SetUpActivity.this, "Done. Thank you!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            mLoadingBar.dismiss();
+                            Toast.makeText(SetUpActivity.this, "Not Done", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+    }
 
     private boolean CheckAllFields() {
         if(fullName.isEmpty()){
@@ -238,10 +269,10 @@ public class SetUpActivity extends AppCompatActivity {
             showError(binding.profession,"Profession is not valid");
             return false;
         }
-        else if(imageUri==null){
+        /*else if(imageUri==null){
             Toast.makeText(this,"Please select an image",Toast.LENGTH_SHORT).show();
             return false;
-        }
+        }*/
         return true;
     }
 
@@ -257,6 +288,7 @@ public class SetUpActivity extends AppCompatActivity {
             imageUri = data.getData();
             binding.profileImage.setImageURI(imageUri);
 
+            //steps to compress image before uploading
             bmp = null;
             try {
                 bmp = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
@@ -265,7 +297,7 @@ public class SetUpActivity extends AppCompatActivity {
             }
             baos = new ByteArrayOutputStream();
 
-            //here you can choose quality factor in third parameter(ex. i choosen 25)
+            //here you can choose quality factor in third parameter(ex. i chosen 25)
             bmp.compress(Bitmap.CompressFormat.JPEG, 25, baos);
         }
     }

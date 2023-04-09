@@ -14,7 +14,8 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:src="@drawable/ic_profile"
-        app:civ_border_color="#FF000000"
+        app:civ_circle_background_color="@color/white"
+        app:civ_border_color="#424244"
         app:civ_border_width="2dp"/>
 
 
