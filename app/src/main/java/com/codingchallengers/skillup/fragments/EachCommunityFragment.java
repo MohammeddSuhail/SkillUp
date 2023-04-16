@@ -4,8 +4,10 @@ import static android.app.Activity.RESULT_OK;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,6 +40,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -63,6 +67,9 @@ public class EachCommunityFragment extends Fragment {
     RecyclerView recyclerView;
 
     PostAdapter adapter;
+
+    Bitmap bmp;
+    ByteArrayOutputStream baos;
 
     @Nullable
     @Override
@@ -199,7 +206,8 @@ public class EachCommunityFragment extends Fragment {
             //New Code
             if(imageUri != null){
 
-                postImgRef.child(mUser.getUid()+strDate).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                byte[] fileInBytes = baos.toByteArray();
+                postImgRef.child(mUser.getUid()+strDate).putBytes(fileInBytes).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
 
@@ -334,6 +342,18 @@ public class EachCommunityFragment extends Fragment {
         if(requestCode==REQUEST_CODE && resultCode==RESULT_OK && data!=null){
             imageUri = data.getData();
             addImagePost.setImageURI(imageUri);
+
+            //steps to compress image before uploading
+            bmp = null;
+            try {
+                bmp = MediaStore.Images.Media.getBitmap(getActivity().getContentResolver(), imageUri);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            baos = new ByteArrayOutputStream();
+
+            //here you can choose quality factor in third parameter(ex. i chosen 25)
+            bmp.compress(Bitmap.CompressFormat.JPEG, 25, baos);
         }
     }
 
