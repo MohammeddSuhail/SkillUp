@@ -206,7 +206,11 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         hashMap.put("profileImage", EachCommunityFragment.profileImageUrlV);
         hashMap.put("comment",comment);
 
-        commentsRef.child(postKey).child(userId).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+        Date date1 = new Date();
+        SimpleDateFormat formatter1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String strDate1 = formatter1.format(date1);
+
+        commentsRef.child(postKey).child(strDate1+userId).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
                 if (task.isSuccessful()){
@@ -222,7 +226,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
     }
 
     private String getTimeAgo(String datePost) {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyy hh:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
             long time = sdf.parse(datePost).getTime();
 //            long now = System.currentTimeMillis();

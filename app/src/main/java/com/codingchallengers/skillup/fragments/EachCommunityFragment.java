@@ -191,7 +191,7 @@ public class EachCommunityFragment extends Fragment {
             mLoadingBar.show();
 
             Date date = new Date();
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-M-yyy hh:mm:ss");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String strDate = formatter.format(date);
 
             String finalPostDesc = postDesc;
@@ -207,13 +207,13 @@ public class EachCommunityFragment extends Fragment {
             if(imageUri != null){
 
                 byte[] fileInBytes = baos.toByteArray();
-                postImgRef.child(mUser.getUid()+strDate).putBytes(fileInBytes).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                postImgRef.child(strDate+mUser.getUid()).putBytes(fileInBytes).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
 
                         if(task.isSuccessful()){//image successfully added to firebase
                             //getting the url of the place where image is stored
-                            postImgRef.child(mUser.getUid()+strDate).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            postImgRef.child(strDate+mUser.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
                                 public void onSuccess(Uri uri) {
 
@@ -225,7 +225,7 @@ public class EachCommunityFragment extends Fragment {
                                     hashMap.put("userProfileImage",profileImageUrlV);
                                     hashMap.put("username",usernameV);
 
-                                    PostRef.child(com).child(mUser.getUid()+strDate).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+                                    PostRef.child(com).child(strDate+mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                                         @Override
                                         public void onComplete(@NonNull Task task) {
                                             if(task.isSuccessful()){
@@ -259,13 +259,13 @@ public class EachCommunityFragment extends Fragment {
                 hashMap.put("userProfileImage",profileImageUrlV);
                 hashMap.put("username",usernameV);
 
-                PostRef.child(com).child(mUser.getUid()+strDate).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+                PostRef.child(com).child(strDate+mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull Task task) {
                         if(task.isSuccessful()){
                             mLoadingBar.dismiss();
                             Toast.makeText(getContext(),"Post added",Toast.LENGTH_SHORT).show();
-                            addImagePost.setImageResource(R.drawable.ic_add_post_image);
+                           // addImagePost.setImageResource(R.drawable.ic_add_post_image);
                             inputPostDesc.setText("");
                         }
                         else{
