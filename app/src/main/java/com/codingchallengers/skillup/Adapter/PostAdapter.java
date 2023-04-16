@@ -68,30 +68,58 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         holder.username.setText(model.getUsername());
 
 
-        //some changes
-        if(model.getPostImageUrl() == null){
-            holder.postImage.setVisibility(View.GONE);
-            holder.commentSend.setVisibility(View.GONE);
-            //recyclerViewCom.setVisibility(View.GONE);
-            holder.commentImage.setVisibility(View.GONE);
-            holder.inputComment.setVisibility(View.GONE);
-            holder.commentSend.setVisibility(View.GONE);
-            holder.likeCounter.setVisibility(View.GONE);
-            holder.likeImage.setVisibility(View.GONE);
-            holder.commentsCounter.setVisibility(View.GONE);
-        }else{
-            holder.postImage.setVisibility(View.VISIBLE);
-            holder.commentSend.setVisibility(View.VISIBLE);
-            //recyclerViewCom.setVisibility(View.VISIBLE);
-            holder.commentImage.setVisibility(View.VISIBLE);
-            holder.inputComment.setVisibility(View.VISIBLE);
-            holder.commentSend.setVisibility(View.VISIBLE);
-            holder.likeCounter.setVisibility(View.VISIBLE);
-            holder.likeImage.setVisibility(View.VISIBLE);
-            holder.commentsCounter.setVisibility(View.VISIBLE);
+        //some changes with or without image
+//        if(model.getPostImageUrl() == null){
+//            holder.postImage.setVisibility(View.GONE);
+//            holder.commentSend.setVisibility(View.GONE);
+//            //recyclerViewCom.setVisibility(View.GONE);
+//            holder.commentImage.setVisibility(View.GONE);
+//            holder.inputComment.setVisibility(View.GONE);
+//            holder.commentSend.setVisibility(View.GONE);
+//            holder.likeCounter.setVisibility(View.GONE);
+//            holder.likeImage.setVisibility(View.GONE);
+//            holder.commentsCounter.setVisibility(View.GONE);
+//
+//            //new
+////            holder.postImage.setVisibility(View.GONE);
+////            holder.commentSend.setVisibility(View.VISIBLE);
+////            //recyclerViewCom.setVisibility(View.VISIBLE);
+////            holder.commentImage.setVisibility(View.VISIBLE);
+////            holder.inputComment.setVisibility(View.VISIBLE);
+////            holder.commentSend.setVisibility(View.VISIBLE);
+////            holder.likeCounter.setVisibility(View.VISIBLE);
+////            holder.likeImage.setVisibility(View.VISIBLE);
+////            holder.commentsCounter.setVisibility(View.VISIBLE);
+//        }else{
+//            holder.postImage.setVisibility(View.VISIBLE);
+//            holder.commentSend.setVisibility(View.VISIBLE);
+//            //recyclerViewCom.setVisibility(View.VISIBLE);
+//            holder.commentImage.setVisibility(View.VISIBLE);
+//            holder.inputComment.setVisibility(View.VISIBLE);
+//            holder.commentSend.setVisibility(View.VISIBLE);
+//            holder.likeCounter.setVisibility(View.VISIBLE);
+//            holder.likeImage.setVisibility(View.VISIBLE);
+//            holder.commentsCounter.setVisibility(View.VISIBLE);
+//
+//            Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
+//        }
 
-            Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
-        }
+
+        //just with image
+        holder.postImage.setVisibility(View.VISIBLE);
+        holder.commentSend.setVisibility(View.VISIBLE);
+        //recyclerViewCom.setVisibility(View.VISIBLE);
+        holder.commentImage.setVisibility(View.VISIBLE);
+        holder.inputComment.setVisibility(View.VISIBLE);
+        holder.commentSend.setVisibility(View.VISIBLE);
+        holder.likeCounter.setVisibility(View.VISIBLE);
+        holder.likeImage.setVisibility(View.VISIBLE);
+        holder.commentsCounter.setVisibility(View.VISIBLE);
+
+        Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
+
+
+
 
 
 //        Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
