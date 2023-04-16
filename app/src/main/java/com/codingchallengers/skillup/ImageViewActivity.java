@@ -18,7 +18,7 @@ public class ImageViewActivity extends AppCompatActivity {
 
         getSupportActionBar().hide();
 
-        imageView = findViewById(R.id.imageView);
+        imageView = findViewById(R.id.imageViewScreen);
 
         String url = getIntent().getStringExtra("url");
         Picasso.get().load(url).into(imageView);
