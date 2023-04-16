@@ -36,6 +36,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -234,7 +235,10 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyy hh:mm:ss");
         try {
             long time = sdf.parse(datePost).getTime();
-            long now = System.currentTimeMillis();
+//            long now = System.currentTimeMillis();
+            Date date = new Date();
+            String strDate = sdf.format(date);
+            long now = sdf.parse(strDate).getTime();
             CharSequence ago = DateUtils.getRelativeTimeSpanString(time, now, DateUtils.MINUTE_IN_MILLIS);
             return ago+"";
         } catch (ParseException e) {
