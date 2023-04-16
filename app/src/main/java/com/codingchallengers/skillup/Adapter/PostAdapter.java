@@ -75,21 +75,8 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 
         //some changes with or without image
         if(model.getPostImageUrl() == null){
-//            holder.postImage.setVisibility(View.GONE);
-//            holder.commentSend.setVisibility(View.GONE);
-//            //recyclerViewCom.setVisibility(View.GONE);
-//            holder.commentImage.setVisibility(View.GONE);
-//            holder.inputComment.setVisibility(View.GONE);
-//            holder.commentSend.setVisibility(View.GONE);
-//            holder.likeCounter.setVisibility(View.GONE);
-//            holder.likeImage.setVisibility(View.GONE);
-//            holder.commentsCounter.setVisibility(View.GONE);
-//            holder.editTextTextPersonName.setVisibility(View.GONE);
-
-            //new
             holder.postImage.setVisibility(View.GONE);
             holder.commentSend.setVisibility(View.VISIBLE);
-            //recyclerViewCom.setVisibility(View.VISIBLE);
             holder.commentImage.setVisibility(View.VISIBLE);
             holder.inputComment.setVisibility(View.VISIBLE);
             holder.commentSend.setVisibility(View.VISIBLE);
@@ -99,7 +86,6 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         }else{
             holder.postImage.setVisibility(View.VISIBLE);
             holder.commentSend.setVisibility(View.VISIBLE);
-            //recyclerViewCom.setVisibility(View.VISIBLE);
             holder.commentImage.setVisibility(View.VISIBLE);
             holder.inputComment.setVisibility(View.VISIBLE);
             holder.commentSend.setVisibility(View.VISIBLE);
@@ -111,31 +97,10 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         }
 
 
-
-//        //just with image
-//        holder.postImage.setVisibility(View.VISIBLE);
-//        holder.commentSend.setVisibility(View.VISIBLE);
-//        //recyclerViewCom.setVisibility(View.VISIBLE);
-//        holder.commentImage.setVisibility(View.VISIBLE);
-//        holder.inputComment.setVisibility(View.VISIBLE);
-//        holder.commentSend.setVisibility(View.VISIBLE);
-//        holder.likeCounter.setVisibility(View.VISIBLE);
-//        holder.likeImage.setVisibility(View.VISIBLE);
-//        holder.commentsCounter.setVisibility(View.VISIBLE);
-//
-//        Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
-
-
-//        if(model.getPostImageUrl() == null){
-//            holder.postImage.setLayoutParams(new ViewGroup.LayoutParams(0xffffffff,1));
-//        }
-
-
-
-
-
+        //for setting comments part invisible at first
         holder.commentsPart.setVisibility(View.GONE);
 
+        //loading the user profile pic on post
         Picasso.get().load(model.getUserProfileImage()).into(holder.profileImage);
 
         holder.postImage.setOnClickListener(new View.OnClickListener() {
