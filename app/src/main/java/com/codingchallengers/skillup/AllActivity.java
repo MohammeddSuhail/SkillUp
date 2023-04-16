@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.codingchallengers.skillup.Notes.NotesActivity;
 import com.codingchallengers.skillup.databinding.ActivityAllBinding;
 
+import com.codingchallengers.skillup.fragments.CommunityFragment;
 import com.codingchallengers.skillup.fragments.CoursesFragment;
 import com.codingchallengers.skillup.fragments.ProfileFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -133,9 +134,9 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
 
 
 
-//            case R.id.nav_community:
-//                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
-//                break;
+            case R.id.nav_community:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
+                break;
 
 
 //
