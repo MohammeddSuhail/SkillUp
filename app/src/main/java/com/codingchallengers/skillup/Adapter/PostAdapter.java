@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -133,7 +134,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 
 
 
-
+        holder.commentsPart.setVisibility(View.GONE);
 
         Picasso.get().load(model.getUserProfileImage()).into(holder.profileImage);
 
@@ -213,6 +214,23 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         loadComment(postKey);
         //counting counting and setting commentCounter
         holder.countComments(postKey,userId);
+
+
+
+        //for appearing and disappearing comments
+        holder.commentsImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(holder.commentsPart.getVisibility() == View.VISIBLE){
+                    holder.commentsPart.setVisibility(View.GONE);
+                }else{
+                    holder.commentsPart.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+
     }
 
 
@@ -294,10 +312,11 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
     public class MyViewHolder extends RecyclerView.ViewHolder {
         CardView postWithImage;
         CircleImageView profileImage;
-        ImageView postImage,likeImage,commentImage,commentSend;
+        ImageView postImage,likeImage,commentImage,commentSend,commentsImage;
         TextView username,timeAgo,postDesc,likeCounter,commentsCounter;
         EditText inputComment;
         View editTextTextPersonName;
+        LinearLayout commentsPart;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -315,6 +334,8 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
             inputComment = itemView.findViewById(R.id.inputComment);
             recyclerViewCom = itemView.findViewById(R.id.recyclerViewComments);
             editTextTextPersonName = itemView.findViewById(R.id.editTextTextPersonName);
+            commentsImage = itemView.findViewById(R.id.commentsImage);
+            commentsPart = itemView.findViewById(R.id.commentsPart);
         }
 
         public void countLikes(String postKey, String userId, DatabaseReference likeRef) {
