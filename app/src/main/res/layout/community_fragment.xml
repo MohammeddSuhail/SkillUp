@@ -25,11 +25,11 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="15dp"
         android:fontFamily="@font/mulish"
         android:text="The below sections help you to post any doubts regarding respective fields. Also, you can clarify others' doubts."
         android:textColor="@color/white"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/csDSA"
@@ -61,7 +61,7 @@
                 android:paddingLeft="10dp"
                 android:text="DSA"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -78,7 +78,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@color/white"
         />
 
@@ -111,7 +111,7 @@
                 android:paddingLeft="10dp"
                 android:text="Computer Networks"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -127,7 +127,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@color/white"
         />
 
@@ -160,7 +160,7 @@
                 android:paddingLeft="10dp"
                 android:text="DBMS and SQL"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -176,7 +176,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@color/white"
         />
 
@@ -210,7 +210,7 @@
                 android:paddingLeft="10dp"
                 android:text="Operating System"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -226,7 +226,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="@color/white"
         />
 
@@ -259,7 +259,7 @@
                 android:paddingLeft="10dp"
                 android:text="OOPS"
                 android:textColor="@color/white"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <ImageView
