@@ -171,9 +171,20 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
             }
         });
 
+
+/*
+        //old: for only post with image
         //count the likes and changes it's color
         if(model.getPostImageUrl() != null)
             holder.countLikes(postKey,userId,likeRef);
+*/
+
+        //new: for post with image and without image
+        //count the likes and changes it's color
+        holder.countLikes(postKey,userId,likeRef);
+
+
+
 
         holder.commentSend.setOnClickListener(new View.OnClickListener() {
             @Override
