@@ -50,6 +50,8 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 
     public RecyclerView recyclerViewCom;
 
+    //public static final int MATCH_PARENT;
+
 
     public PostAdapter(@NonNull FirebaseRecyclerOptions<Posts> options) {
         super(options);
@@ -68,20 +70,30 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         holder.username.setText(model.getUsername());
 
 
-        //some changes with or without image
-        if(model.getPostImageUrl() == null){
-            holder.postImage.setVisibility(View.GONE);
-            holder.commentSend.setVisibility(View.GONE);
-            //recyclerViewCom.setVisibility(View.GONE);
-            holder.commentImage.setVisibility(View.GONE);
-            holder.inputComment.setVisibility(View.GONE);
-            holder.commentSend.setVisibility(View.GONE);
-            holder.likeCounter.setVisibility(View.GONE);
-            holder.likeImage.setVisibility(View.GONE);
-            holder.commentsCounter.setVisibility(View.GONE);
-
-//            //new
+//        //some changes with or without image
+//        if(model.getPostImageUrl() == null){
 //            holder.postImage.setVisibility(View.GONE);
+//            holder.commentSend.setVisibility(View.GONE);
+//            //recyclerViewCom.setVisibility(View.GONE);
+//            holder.commentImage.setVisibility(View.GONE);
+//            holder.inputComment.setVisibility(View.GONE);
+//            holder.commentSend.setVisibility(View.GONE);
+//            holder.likeCounter.setVisibility(View.GONE);
+//            holder.likeImage.setVisibility(View.GONE);
+//            holder.commentsCounter.setVisibility(View.GONE);
+//
+////            //new
+////            holder.postImage.setVisibility(View.GONE);
+////            holder.commentSend.setVisibility(View.VISIBLE);
+////            //recyclerViewCom.setVisibility(View.VISIBLE);
+////            holder.commentImage.setVisibility(View.VISIBLE);
+////            holder.inputComment.setVisibility(View.VISIBLE);
+////            holder.commentSend.setVisibility(View.VISIBLE);
+////            holder.likeCounter.setVisibility(View.VISIBLE);
+////            holder.likeImage.setVisibility(View.VISIBLE);
+////            holder.commentsCounter.setVisibility(View.VISIBLE);
+//        }else{
+//            holder.postImage.setVisibility(View.VISIBLE);
 //            holder.commentSend.setVisibility(View.VISIBLE);
 //            //recyclerViewCom.setVisibility(View.VISIBLE);
 //            holder.commentImage.setVisibility(View.VISIBLE);
@@ -90,22 +102,12 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 //            holder.likeCounter.setVisibility(View.VISIBLE);
 //            holder.likeImage.setVisibility(View.VISIBLE);
 //            holder.commentsCounter.setVisibility(View.VISIBLE);
-        }else{
-            holder.postImage.setVisibility(View.VISIBLE);
-            holder.commentSend.setVisibility(View.VISIBLE);
-            //recyclerViewCom.setVisibility(View.VISIBLE);
-            holder.commentImage.setVisibility(View.VISIBLE);
-            holder.inputComment.setVisibility(View.VISIBLE);
-            holder.commentSend.setVisibility(View.VISIBLE);
-            holder.likeCounter.setVisibility(View.VISIBLE);
-            holder.likeImage.setVisibility(View.VISIBLE);
-            holder.commentsCounter.setVisibility(View.VISIBLE);
-
-            Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
-        }
+//
+//            Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
+//        }
 
 
-        /*
+
         //just with image
         holder.postImage.setVisibility(View.VISIBLE);
         holder.commentSend.setVisibility(View.VISIBLE);
@@ -119,13 +121,16 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 
         Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
 
-         */
+
+//        if(model.getPostImageUrl() == null){
+//            holder.postImage.setLayoutParams(new ViewGroup.LayoutParams(0xffffffff,1));
+//        }
 
 
 
 
 
-//        Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
+
 
         Picasso.get().load(model.getUserProfileImage()).into(holder.profileImage);
 
@@ -184,7 +189,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 
         //new: for post with image and without image
         //count the likes and changes it's color
-        holder.countLikes(postKey,userId,likeRef);
+//        holder.countLikes(postKey,userId,likeRef);
 
 
 
@@ -227,7 +232,6 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 
             }
         });
-
     }
 
     private String getTimeAgo(String datePost) {
