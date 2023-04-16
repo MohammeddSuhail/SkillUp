@@ -175,9 +175,9 @@ public class EachCommunityFragment extends Fragment {
         if(postDesc.isEmpty()){
             postDesc=" ";
         }
-        else if(imageUri==null){
-            Toast.makeText(getContext(),"Select a image",Toast.LENGTH_SHORT).show();
-        }
+//        else if(imageUri==null){
+//            Toast.makeText(getContext(),"Select a image",Toast.LENGTH_SHORT).show();
+//        }
         else{
             mLoadingBar.setTitle("Posting");
             mLoadingBar.setCanceledOnTouchOutside(false);
@@ -190,121 +190,135 @@ public class EachCommunityFragment extends Fragment {
             String finalPostDesc = postDesc;
 
 
-//
-//            //New Code
-//            if(imageUri != null){
-//
-//                postImgRef.child(mUser.getUid()+strDate).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
-//
-//                        if(task.isSuccessful()){//image successfully added to firebase
-//                            //getting the url of the place where image is stored
-//                            postImgRef.child(mUser.getUid()+strDate).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-//                                @Override
-//                                public void onSuccess(Uri uri) {
-//
-//                                    //storing in the real-time database
-//                                    HashMap hashMap = new HashMap();
-//                                    hashMap.put("datePost",strDate);
-//                                    hashMap.put("postImageUrl",uri.toString());
-//                                    hashMap.put("postDec", finalPostDesc);
-//                                    hashMap.put("userProfileImage",profileImageUrlV);
-//                                    hashMap.put("username",usernameV);
-//
-//                                    PostRef.child(com).child(mUser.getUid()+strDate).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
-//                                        @Override
-//                                        public void onComplete(@NonNull Task task) {
-//                                            if(task.isSuccessful()){
-//                                                mLoadingBar.dismiss();
-//                                                Toast.makeText(getContext(),"Post added",Toast.LENGTH_SHORT).show();
-//                                                addImagePost.setImageResource(R.drawable.ic_add_post_image);
-//                                                inputPostDesc.setText("");
-//                                            }
-//                                            else{
-//                                                mLoadingBar.dismiss();
-//                                                Toast.makeText(getContext(),""+task.getException().toString(),Toast.LENGTH_SHORT).show();
-//                                            }
-//                                        }
-//                                    });
-//                                }
-//                            });
-//                        }else{
-//                            mLoadingBar.dismiss();
-//                            Toast.makeText(getContext(),""+task.getException().toString(),Toast.LENGTH_SHORT).show();
-//                        }
-//
-//                    }
-//                });
-//            }else{
-//
-//                //without image post
-//                HashMap hashMap = new HashMap();
-//                hashMap.put("datePost",strDate);
-//                hashMap.put("postImageUrl",null);
-//                hashMap.put("postDec", finalPostDesc);
-//                hashMap.put("userProfileImage",profileImageUrlV);
-//                hashMap.put("username",usernameV);
-//
-//                PostRef.child(com).child(mUser.getUid()+strDate).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
-//                    @Override
-//                    public void onComplete(@NonNull Task task) {
-//                        if(task.isSuccessful()){
-//                            mLoadingBar.dismiss();
-//                            Toast.makeText(getContext(),"Post added",Toast.LENGTH_SHORT).show();
-//                            addImagePost.setImageResource(R.drawable.ic_add_post_image);
-//                            inputPostDesc.setText("");
-//                        }
-//                        else{
-//                            mLoadingBar.dismiss();
-//                            Toast.makeText(getContext(),""+task.getException().toString(),Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
-//            }
 
 
-            //old code: for posting image with image
-            postImgRef.child(mUser.getUid()+strDate).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
 
-                    if(task.isSuccessful()){//image successfully added to firebase
-                        //getting the url of the place where image is stored
-                        postImgRef.child(mUser.getUid()+strDate).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                HashMap hashMap = new HashMap();
-                                hashMap.put("datePost",strDate);
-                                hashMap.put("postImageUrl",uri.toString());
-                                hashMap.put("postDec", finalPostDesc);
-                                hashMap.put("userProfileImage",profileImageUrlV);
-                                hashMap.put("username",usernameV);
 
-                                PostRef.child(com).child(mUser.getUid()+strDate).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
-                                    @Override
-                                    public void onComplete(@NonNull Task task) {
-                                        if(task.isSuccessful()){
-                                            mLoadingBar.dismiss();
-                                            Toast.makeText(getContext(),"Post added",Toast.LENGTH_SHORT).show();
-                                            addImagePost.setImageResource(R.drawable.ic_add_post_image);
-                                            inputPostDesc.setText("");
+
+
+            //New Code
+            if(imageUri != null){
+
+                postImgRef.child(mUser.getUid()+strDate).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+
+                        if(task.isSuccessful()){//image successfully added to firebase
+                            //getting the url of the place where image is stored
+                            postImgRef.child(mUser.getUid()+strDate).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+
+                                    //storing in the real-time database
+                                    HashMap hashMap = new HashMap();
+                                    hashMap.put("datePost",strDate);
+                                    hashMap.put("postImageUrl",uri.toString());
+                                    hashMap.put("postDec", finalPostDesc);
+                                    hashMap.put("userProfileImage",profileImageUrlV);
+                                    hashMap.put("username",usernameV);
+
+                                    PostRef.child(com).child(mUser.getUid()+strDate).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+                                        @Override
+                                        public void onComplete(@NonNull Task task) {
+                                            if(task.isSuccessful()){
+                                                mLoadingBar.dismiss();
+                                                Toast.makeText(getContext(),"Post added",Toast.LENGTH_SHORT).show();
+                                                addImagePost.setImageResource(R.drawable.ic_add_post_image);
+                                                inputPostDesc.setText("");
+                                            }
+                                            else{
+                                                mLoadingBar.dismiss();
+                                                Toast.makeText(getContext(),""+task.getException().toString(),Toast.LENGTH_SHORT).show();
+                                            }
                                         }
-                                        else{
-                                            mLoadingBar.dismiss();
-                                            Toast.makeText(getContext(),""+task.getException().toString(),Toast.LENGTH_SHORT).show();
-                                        }
-                                    }
-                                });
-                            }
-                        });
-                    }else{
-                        mLoadingBar.dismiss();
-                        Toast.makeText(getContext(),""+task.getException().toString(),Toast.LENGTH_SHORT).show();
+                                    });
+                                }
+                            });
+                        }else{
+                            mLoadingBar.dismiss();
+                            Toast.makeText(getContext(),""+task.getException().toString(),Toast.LENGTH_SHORT).show();
+                        }
+
                     }
+                });
+            }else{
 
-                }
-            });
+                //without image post
+                HashMap hashMap = new HashMap();
+                hashMap.put("datePost",strDate);
+                hashMap.put("postImageUrl",null);
+                hashMap.put("postDec", finalPostDesc);
+                hashMap.put("userProfileImage",profileImageUrlV);
+                hashMap.put("username",usernameV);
+
+                PostRef.child(com).child(mUser.getUid()+strDate).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+                    @Override
+                    public void onComplete(@NonNull Task task) {
+                        if(task.isSuccessful()){
+                            mLoadingBar.dismiss();
+                            Toast.makeText(getContext(),"Post added",Toast.LENGTH_SHORT).show();
+                            addImagePost.setImageResource(R.drawable.ic_add_post_image);
+                            inputPostDesc.setText("");
+                        }
+                        else{
+                            mLoadingBar.dismiss();
+                            Toast.makeText(getContext(),""+task.getException().toString(),Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+
+
+
+
+
+
+
+//
+//            //old code: for posting image with image
+//            postImgRef.child(mUser.getUid()+strDate).putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+//                @Override
+//                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+//
+//                    if(task.isSuccessful()){//image successfully added to firebase
+//                        //getting the url of the place where image is stored
+//                        postImgRef.child(mUser.getUid()+strDate).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+//                            @Override
+//                            public void onSuccess(Uri uri) {
+//                                HashMap hashMap = new HashMap();
+//                                hashMap.put("datePost",strDate);
+//                                hashMap.put("postImageUrl",uri.toString());
+//                                hashMap.put("postDec", finalPostDesc);
+//                                hashMap.put("userProfileImage",profileImageUrlV);
+//                                hashMap.put("username",usernameV);
+//
+//                                PostRef.child(com).child(mUser.getUid()+strDate).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+//                                    @Override
+//                                    public void onComplete(@NonNull Task task) {
+//                                        if(task.isSuccessful()){
+//                                            mLoadingBar.dismiss();
+//                                            Toast.makeText(getContext(),"Post added",Toast.LENGTH_SHORT).show();
+//                                            addImagePost.setImageResource(R.drawable.ic_add_post_image);
+//                                            inputPostDesc.setText("");
+//                                        }
+//                                        else{
+//                                            mLoadingBar.dismiss();
+//                                            Toast.makeText(getContext(),""+task.getException().toString(),Toast.LENGTH_SHORT).show();
+//                                        }
+//                                    }
+//                                });
+//                            }
+//                        });
+//                    }else{
+//                        mLoadingBar.dismiss();
+//                        Toast.makeText(getContext(),""+task.getException().toString(),Toast.LENGTH_SHORT).show();
+//                    }
+//
+//                }
+//            });
+//
+
+
 
 
 

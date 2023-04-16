@@ -72,8 +72,8 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         holder.username.setText(model.getUsername());
 
 
-//        //some changes with or without image
-//        if(model.getPostImageUrl() == null){
+        //some changes with or without image
+        if(model.getPostImageUrl() == null){
 //            holder.postImage.setVisibility(View.GONE);
 //            holder.commentSend.setVisibility(View.GONE);
 //            //recyclerViewCom.setVisibility(View.GONE);
@@ -83,45 +83,46 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 //            holder.likeCounter.setVisibility(View.GONE);
 //            holder.likeImage.setVisibility(View.GONE);
 //            holder.commentsCounter.setVisibility(View.GONE);
+//            holder.editTextTextPersonName.setVisibility(View.GONE);
+
+            //new
+            holder.postImage.setVisibility(View.GONE);
+            holder.commentSend.setVisibility(View.VISIBLE);
+            //recyclerViewCom.setVisibility(View.VISIBLE);
+            holder.commentImage.setVisibility(View.VISIBLE);
+            holder.inputComment.setVisibility(View.VISIBLE);
+            holder.commentSend.setVisibility(View.VISIBLE);
+            holder.likeCounter.setVisibility(View.VISIBLE);
+            holder.likeImage.setVisibility(View.VISIBLE);
+            holder.commentsCounter.setVisibility(View.VISIBLE);
+        }else{
+            holder.postImage.setVisibility(View.VISIBLE);
+            holder.commentSend.setVisibility(View.VISIBLE);
+            //recyclerViewCom.setVisibility(View.VISIBLE);
+            holder.commentImage.setVisibility(View.VISIBLE);
+            holder.inputComment.setVisibility(View.VISIBLE);
+            holder.commentSend.setVisibility(View.VISIBLE);
+            holder.likeCounter.setVisibility(View.VISIBLE);
+            holder.likeImage.setVisibility(View.VISIBLE);
+            holder.commentsCounter.setVisibility(View.VISIBLE);
+
+            Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
+        }
+
+
+
+//        //just with image
+//        holder.postImage.setVisibility(View.VISIBLE);
+//        holder.commentSend.setVisibility(View.VISIBLE);
+//        //recyclerViewCom.setVisibility(View.VISIBLE);
+//        holder.commentImage.setVisibility(View.VISIBLE);
+//        holder.inputComment.setVisibility(View.VISIBLE);
+//        holder.commentSend.setVisibility(View.VISIBLE);
+//        holder.likeCounter.setVisibility(View.VISIBLE);
+//        holder.likeImage.setVisibility(View.VISIBLE);
+//        holder.commentsCounter.setVisibility(View.VISIBLE);
 //
-////            //new
-////            holder.postImage.setVisibility(View.GONE);
-////            holder.commentSend.setVisibility(View.VISIBLE);
-////            //recyclerViewCom.setVisibility(View.VISIBLE);
-////            holder.commentImage.setVisibility(View.VISIBLE);
-////            holder.inputComment.setVisibility(View.VISIBLE);
-////            holder.commentSend.setVisibility(View.VISIBLE);
-////            holder.likeCounter.setVisibility(View.VISIBLE);
-////            holder.likeImage.setVisibility(View.VISIBLE);
-////            holder.commentsCounter.setVisibility(View.VISIBLE);
-//        }else{
-//            holder.postImage.setVisibility(View.VISIBLE);
-//            holder.commentSend.setVisibility(View.VISIBLE);
-//            //recyclerViewCom.setVisibility(View.VISIBLE);
-//            holder.commentImage.setVisibility(View.VISIBLE);
-//            holder.inputComment.setVisibility(View.VISIBLE);
-//            holder.commentSend.setVisibility(View.VISIBLE);
-//            holder.likeCounter.setVisibility(View.VISIBLE);
-//            holder.likeImage.setVisibility(View.VISIBLE);
-//            holder.commentsCounter.setVisibility(View.VISIBLE);
-//
-//            Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
-//        }
-
-
-
-        //just with image
-        holder.postImage.setVisibility(View.VISIBLE);
-        holder.commentSend.setVisibility(View.VISIBLE);
-        //recyclerViewCom.setVisibility(View.VISIBLE);
-        holder.commentImage.setVisibility(View.VISIBLE);
-        holder.inputComment.setVisibility(View.VISIBLE);
-        holder.commentSend.setVisibility(View.VISIBLE);
-        holder.likeCounter.setVisibility(View.VISIBLE);
-        holder.likeImage.setVisibility(View.VISIBLE);
-        holder.commentsCounter.setVisibility(View.VISIBLE);
-
-        Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
+//        Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
 
 
 //        if(model.getPostImageUrl() == null){
@@ -185,13 +186,13 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 
         //old: for only post with image
         //count the likes and changes it's color
-        if(model.getPostImageUrl() != null)
-            holder.countLikes(postKey,userId,likeRef);
+//        if(model.getPostImageUrl() != null)
+//            holder.countLikes(postKey,userId,likeRef);
 
 
         //new: for post with image and without image
         //count the likes and changes it's color
-//        holder.countLikes(postKey,userId,likeRef);
+        holder.countLikes(postKey,userId,likeRef);
 
 
 
@@ -296,6 +297,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         ImageView postImage,likeImage,commentImage,commentSend;
         TextView username,timeAgo,postDesc,likeCounter,commentsCounter;
         EditText inputComment;
+        View editTextTextPersonName;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -312,6 +314,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
             commentSend = itemView.findViewById(R.id.commentSend);
             inputComment = itemView.findViewById(R.id.inputComment);
             recyclerViewCom = itemView.findViewById(R.id.recyclerViewComments);
+            editTextTextPersonName = itemView.findViewById(R.id.editTextTextPersonName);
         }
 
         public void countLikes(String postKey, String userId, DatabaseReference likeRef) {
