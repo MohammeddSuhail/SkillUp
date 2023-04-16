@@ -98,7 +98,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 
 
         //for setting comments part invisible at first
-        holder.commentsPart.setVisibility(View.GONE);
+        holder.commentsPart.setVisibility(View.VISIBLE);
 
         //loading the user profile pic on post
         Picasso.get().load(model.getUserProfileImage()).into(holder.profileImage);
@@ -123,6 +123,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         holder.likeImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 likeRef.child(postKey).child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
