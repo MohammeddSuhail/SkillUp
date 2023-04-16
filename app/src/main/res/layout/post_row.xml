@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_marginBottom="6dp">
+    android:layout_marginBottom="6dp"
+    android:orientation="vertical">
 
 
     <androidx.cardview.widget.CardView
@@ -17,12 +17,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingBottom="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profileImagePost"
                     android:layout_width="65dp"
@@ -36,8 +38,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginStart="16dp">
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
                     <TextView
                         android:id="@+id/profileUsername"
                         android:layout_width="match_parent"
@@ -99,22 +102,23 @@
                     android:id="@+id/likeCounter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
                     android:layout_marginStart="5dp"
+                    android:layout_marginTop="7dp"
                     android:text="26" />
 
                 <View
                     android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
                 <TextView
                     android:id="@+id/commentCounter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="5dp"
                     android:layout_marginTop="7dp"
-                    android:text="15"/>
+                    android:layout_marginRight="5dp"
+                    android:text="15" />
+
                 <ImageView
                     android:id="@+id/commentsImage"
                     android:layout_width="wrap_content"
@@ -123,36 +127,40 @@
                     app:srcCompat="@drawable/ic_comment" />
 
             </LinearLayout>
+
             <View
                 android:id="@+id/editTextTextPersonName"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="#A9A9A9"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="28dp"
-                android:text="Name"/>
+                android:background="#A9A9A9"
+                android:text="Name" />
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewComments"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="28dp"/>
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="28dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/input_comment_bg"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="28dp">
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="28dp"
+                android:background="@drawable/input_comment_bg"
+                android:orientation="horizontal">
+
                 <EditText
                     android:id="@+id/inputComment"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:ems="10"
                     android:hint="Enter Comment"
@@ -160,7 +168,7 @@
                     android:paddingStart="10dp"
                     android:paddingLeft="20dp"
                     android:paddingTop="5dp"
-                    android:paddingBottom="5dp"/>
+                    android:paddingBottom="5dp" />
 
                 <ImageView
                     android:id="@+id/commentSend"

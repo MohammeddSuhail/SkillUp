@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -290,6 +291,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 
     //ViewHolder
     public class MyViewHolder extends RecyclerView.ViewHolder {
+        CardView postWithImage;
         CircleImageView profileImage;
         ImageView postImage,likeImage,commentImage,commentSend;
         TextView username,timeAgo,postDesc,likeCounter,commentsCounter;
