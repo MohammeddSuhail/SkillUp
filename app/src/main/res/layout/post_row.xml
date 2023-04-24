@@ -4,20 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="6dp"
-    android:orientation="vertical">
+    android:layout_marginBottom="16dp"
+    android:orientation="vertical"
+    android:background="@color/black2">
 
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="10dp">
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/black2">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -26,62 +27,73 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profileImagePost"
-                    android:layout_width="65dp"
-                    android:layout_height="65dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
                     android:src="@drawable/profile"
                     app:civ_border_color="#818185"
-                    app:civ_border_width="2dp"
+                    app:civ_border_width="1dp"
                     app:civ_circle_background_color="@color/white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:orientation="vertical">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="18dp"
+                    android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/profileUsername"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="username"
+                        android:text="Username"
                         android:textColor="#FFFFFF"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:fontFamily="@font/mulish"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginRight="8dp"/>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#9f9ea1"
+                        android:text="\u2022"
+                        android:textSize="16sp"
+                        android:layout_marginRight="8dp"/>
 
                     <TextView
                         android:id="@+id/timeAgo"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#9f9ea1"
+                        android:layout_gravity="center_vertical"
                         android:text="0hrs ago"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/profileUsername"
-                        app:layout_constraintTop_toBottomOf="@+id/profileUsername" />
+                        android:textSize="12sp" />
 
-                    <TextView
-                        android:id="@+id/postDesc"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Post description goes here" />
                 </LinearLayout>
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/postDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/mulish"
+                android:text="Post description goes here"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp" />
 
             <ImageView
                 android:id="@+id/postImage"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="160dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
                 android:scaleType="centerCrop"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/postDesc"
-                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/naruto" />
 
             <LinearLayout
