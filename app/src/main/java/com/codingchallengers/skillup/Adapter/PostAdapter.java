@@ -81,11 +81,11 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         if(model.getPostImageUrl() == null){
             holder.cv_postImage.setVisibility(View.GONE);
         }else{
-            Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
+            Picasso.get().load(model.getPostImageUrl()).fit().centerCrop().into(holder.postImage);
         }
 
         //loading the user profile pic on post
-        Picasso.get().load(model.getUserProfileImage()).into(holder.profileImage);
+        Picasso.get().load(model.getUserProfileImage()).fit().centerCrop().into(holder.profileImage);
 
         holder.postImage.setOnClickListener(new View.OnClickListener() {
             @Override

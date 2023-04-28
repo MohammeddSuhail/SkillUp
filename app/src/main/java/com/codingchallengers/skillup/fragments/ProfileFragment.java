@@ -157,7 +157,7 @@ public class ProfileFragment extends Fragment {
                     currYear = snapshot.child("currYear").getValue().toString();
                     profession = snapshot.child("profession").getValue().toString();
 
-                    Picasso.get().load(profileImageUrl).into(profileImageView);
+                    Picasso.get().load(profileImageUrl).fit().centerCrop().into(profileImageView);
                     tv_userName.setText(userName);
                     tv_usn.setText(usn);
                     tv_phone.setText(phoneNo);

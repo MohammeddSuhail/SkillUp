@@ -5,45 +5,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#242527">
+    android:background="@color/black1">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#2a2b2d"
-        android:layout_margin="10dp"
-        android:padding="10dp"
-        android:weightSum="1"
-        >
+        android:paddingTop="16dp"
+        android:paddingLeft="32dp"
+        android:background="@color/black1"
+        android:elevation="1dp">
 
-        <ImageView
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_add_post_image"
-            android:id="@+id/add_image_to_post"/>
+        <TextView
+            android:id="@+id/communityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="com"
+            android:textSize="18sp"
+            android:layout_marginEnd="5dp"
+            android:textColor="#949595"
+            android:fontFamily="@font/mulish_bold"/>
 
-        <EditText
-            android:id="@+id/text_to_post"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="35dp"
-            android:paddingLeft="10dp"
-            android:background="@drawable/unput_add_post_bg"
-            android:hint="Enter Here" />
-
-        <ImageView
-            android:id="@+id/send_img"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/ic_send_image"
-            android:paddingLeft="10dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Community"
+            android:textSize="18sp"
+            android:textColor="#949595"
+            android:fontFamily="@font/mulish_bold"/>
 
     </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/openNewPostDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@color/black1"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/expand_plus_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create new post"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/mulish"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="8dp"
+                android:layout_gravity="right|center_vertical|end"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/right_arrow" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#424244"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recylerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"/>
 
 </LinearLayout>

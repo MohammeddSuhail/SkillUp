@@ -126,10 +126,10 @@ public class CommunityPostCommentsFragment extends Fragment {
                     cv_postImage2.setVisibility(View.GONE);
                 }
                 else{
-                    Picasso.get().load(postImageUrl).into(postImage2);
+                    Picasso.get().load(postImageUrl).fit().centerCrop().into(postImage2);
                 }
 
-                Picasso.get().load(userProfileImage).into(profileImagePost);
+                Picasso.get().load(userProfileImage).fit().centerCrop().into(profileImagePost);
                 profileUsername.setText(username);
                 timeAgo.setText(getTimeAgo(datePost));
                 postDesc.setText(postDec);
@@ -141,7 +141,7 @@ public class CommunityPostCommentsFragment extends Fragment {
             }
         });
 
-        Picasso.get().load(EachCommunityFragment.profileImageUrlV).into(addCommentProfilePic);
+        Picasso.get().load(EachCommunityFragment.profileImageUrlV).fit().centerCrop().into(addCommentProfilePic);
 
         postImage2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -302,7 +302,7 @@ public class CommunityPostCommentsFragment extends Fragment {
         CommentAdapter = new FirebaseRecyclerAdapter<Comment, CommentViewHolder>(CommentOption) {
             @Override
             protected void onBindViewHolder(@NonNull @NotNull CommentViewHolder holder, int position, @NonNull @NotNull Comment model) {
-                Picasso.get().load(model.getProfileImage()).into(holder.profileImage);
+                Picasso.get().load(model.getProfileImage()).fit().centerCrop().into(holder.profileImage);
                 holder.username.setText(model.getUsername());
                 holder.comment.setText(model.getComment());
                 holder.timeAgo.setText(getTimeAgo(model.getCommentDate()));

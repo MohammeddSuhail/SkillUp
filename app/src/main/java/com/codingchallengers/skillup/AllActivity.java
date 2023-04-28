@@ -181,7 +181,7 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                     usernameV = snapshot.child("userName").getValue().toString();
                     professionV = snapshot.child("profession").getValue().toString();
 
-                    Picasso.get().load(profileImageUrlV).into(profileImage);
+                    Picasso.get().load(profileImageUrlV).fit().centerCrop().into(profileImage);
                     name.setText(usernameV);
                     profession.setText(professionV);
 
