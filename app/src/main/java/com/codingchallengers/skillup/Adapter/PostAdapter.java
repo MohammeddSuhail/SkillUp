@@ -1,7 +1,9 @@
 package com.codingchallengers.skillup.Adapter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,12 +15,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.codingchallengers.skillup.ImageViewActivity;
 import com.codingchallengers.skillup.R;
+import com.codingchallengers.skillup.fragments.CommunityPostCommentsFragment;
 import com.codingchallengers.skillup.fragments.EachCommunityFragment;
 import com.codingchallengers.skillup.model.Comment;
 import com.codingchallengers.skillup.model.Posts;
@@ -48,10 +53,8 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
     DatabaseReference likeRef;
     DatabaseReference commentsRef;
 
-    FirebaseRecyclerOptions<Comment> CommentOption;
-    FirebaseRecyclerAdapter<Comment,CommentViewHolder> CommentAdapter;
-
-    public RecyclerView recyclerViewCom;
+    Context context;
+    FragmentManager manager;
 
     //public static final int MATCH_PARENT;
 
@@ -64,6 +67,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
     protected void onBindViewHolder(@NonNull MyViewHolder holder, int position, @NotNull Posts model) {
         //loading the post
         final String postKey = getRef(position).getKey();
+        String com = model.getCom();
 
         holder.postDesc.setText(model.getPostDec());
 
@@ -75,30 +79,10 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
 
         //some changes with or without image
         if(model.getPostImageUrl() == null){
-            holder.postImage.setVisibility(View.GONE);
-            holder.commentSend.setVisibility(View.VISIBLE);
-            holder.commentImage.setVisibility(View.VISIBLE);
-            holder.inputComment.setVisibility(View.VISIBLE);
-            holder.commentSend.setVisibility(View.VISIBLE);
-            holder.likeCounter.setVisibility(View.VISIBLE);
-            holder.likeImage.setVisibility(View.VISIBLE);
-            holder.commentsCounter.setVisibility(View.VISIBLE);
+            holder.cv_postImage.setVisibility(View.GONE);
         }else{
-            holder.postImage.setVisibility(View.VISIBLE);
-            holder.commentSend.setVisibility(View.VISIBLE);
-            holder.commentImage.setVisibility(View.VISIBLE);
-            holder.inputComment.setVisibility(View.VISIBLE);
-            holder.commentSend.setVisibility(View.VISIBLE);
-            holder.likeCounter.setVisibility(View.VISIBLE);
-            holder.likeImage.setVisibility(View.VISIBLE);
-            holder.commentsCounter.setVisibility(View.VISIBLE);
-
             Picasso.get().load(model.getPostImageUrl()).into(holder.postImage);
         }
-
-
-        //for setting comments part invisible at first
-        holder.commentsPart.setVisibility(View.VISIBLE);
 
         //loading the user profile pic on post
         Picasso.get().load(model.getUserProfileImage()).into(holder.profileImage);
@@ -113,11 +97,13 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         });
 
 
+
         //creating Likes folder in database
         likeRef = FirebaseDatabase.getInstance().getReference().child("Likes");
         commentsRef = FirebaseDatabase.getInstance().getReference().child("Comments");
         //getting id
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
 
         //for changing the color of like adding and removing the likes(as well as user) from Likes folder in firebase
         holder.likeImage.setOnClickListener(new View.OnClickListener() {
@@ -132,12 +118,10 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
                             //then second time pressing of like button means removing the like
                             likeRef.child(postKey).child(userId).removeValue();
                             holder.likeImage.setColorFilter(Color.GRAY);
-                            notifyDataSetChanged();
                         }else{
                             //user clicking the like button for fist time for a post
                             likeRef.child(postKey).child(userId).setValue("like");
                             holder.likeImage.setColorFilter(Color.GREEN);
-                            notifyDataSetChanged();
                         }
                     }
 
@@ -162,67 +146,26 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         holder.countLikes(postKey,userId,likeRef);
 
 
-
-
-        holder.commentSend.setOnClickListener(new View.OnClickListener() {
+        holder.openCommentsFragment.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String comment = holder.inputComment.getText().toString();
-                if(comment.isEmpty()){
-                    Toast.makeText(v.getContext(), "Enter the comment",Toast.LENGTH_SHORT).show();
-                }else{
-                    addComment(holder,postKey,commentsRef,userId,comment);
-                }
+            public void onClick(View view) {
+
+                CommunityPostCommentsFragment communityPostCommentsFragment = new CommunityPostCommentsFragment();
+                Bundle args = new Bundle();
+                args.putString("postId",postKey);
+                args.putString("com",com);
+                communityPostCommentsFragment.setArguments(args);
+                manager.beginTransaction().replace(R.id.fragment_container,communityPostCommentsFragment).addToBackStack("each community fragment").commit();
             }
         });
 
-        //loading comment
-        loadComment(postKey);
         //counting counting and setting commentCounter
         holder.countComments(postKey,userId);
 
-
-
-        //for appearing and disappearing comments
-        holder.commentsImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(holder.commentsPart.getVisibility() == View.VISIBLE){
-                    holder.commentsPart.setVisibility(View.GONE);
-                }else{
-                    holder.commentsPart.setVisibility(View.VISIBLE);
-                }
-            }
-        });
-
-
-
-    }
-
-
-    private void addComment(MyViewHolder holder, String postKey, DatabaseReference commentsRef, String userId, String comment) {
-        HashMap hashMap = new HashMap();
-        hashMap.put("username", EachCommunityFragment.usernameV);
-        hashMap.put("profileImage", EachCommunityFragment.profileImageUrlV);
-        hashMap.put("comment",comment);
-
-        Date date1 = new Date();
-        SimpleDateFormat formatter1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String strDate1 = formatter1.format(date1);
-
-        commentsRef.child(postKey).child(strDate1+userId).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
-            @Override
-            public void onComplete(@NonNull @NotNull Task task) {
-                if (task.isSuccessful()){
-                    Toast.makeText(holder.commentImage.getContext(),"Comment Added",Toast.LENGTH_SHORT).show();
-                    notifyDataSetChanged();
-                    holder.inputComment.setText(null);
-                }else{
-                    Toast.makeText(holder.commentImage.getContext(),task.getException().toString(),Toast.LENGTH_SHORT).show();
-                }
-
-            }
-        });
+        //to check if the post is uploaded by other user
+        if(!model.getUserId().equals(userId)){
+            holder.flag = true;
+        }
     }
 
     private String getTimeAgo(String datePost) {
@@ -241,33 +184,6 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         return "";
     }
 
-
-
-    private void loadComment(String postKey) {
-        recyclerViewCom.setLayoutManager(new LinearLayoutManager(recyclerViewCom.getContext()));
-        CommentOption = new FirebaseRecyclerOptions.Builder<Comment>().setQuery(commentsRef.child(postKey), Comment.class).build();
-        CommentAdapter = new FirebaseRecyclerAdapter<Comment, CommentViewHolder>(CommentOption) {
-            @Override
-            protected void onBindViewHolder(@NonNull @NotNull CommentViewHolder holder, int position, @NonNull @NotNull Comment model) {
-                Picasso.get().load(model.getProfileImage()).into(holder.profileImage);
-                holder.username.setText(model.getUsername());
-                holder.comment.setText(model.getComment());
-            }
-
-            @NonNull
-            @NotNull
-            @Override
-            public CommentViewHolder onCreateViewHolder(@NonNull @NotNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_comment, parent, false);
-                return new CommentViewHolder(view);
-            }
-        };
-        CommentAdapter.startListening();
-        recyclerViewCom.setAdapter(CommentAdapter);
-    }
-
-
-
     @NonNull
     @NotNull
     @Override
@@ -276,17 +192,15 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         return new MyViewHolder(view);
     }
 
-
-
     //ViewHolder
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        CardView postWithImage;
+        CardView openCommentsFragment;
+        CardView cv_postImage;
         CircleImageView profileImage;
-        ImageView postImage,likeImage,commentImage,commentSend,commentsImage;
-        TextView username,timeAgo,postDesc,likeCounter,commentsCounter;
-        EditText inputComment;
-        View editTextTextPersonName;
+        ImageView postImage,likeImage;
+        TextView username,timeAgo,postDesc,likeCounter,commentsCounter, tv_comment;
         LinearLayout commentsPart;
+        boolean flag = false;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -297,15 +211,14 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
             timeAgo = itemView.findViewById(R.id.timeAgo);
             postDesc = itemView.findViewById(R.id.postDesc);
             likeImage = itemView.findViewById(R.id.likeImage);
-            commentImage = itemView.findViewById(R.id.commentsImage);
             likeCounter = itemView.findViewById(R.id.likeCounter);
             commentsCounter = itemView.findViewById(R.id.commentCounter);
-            commentSend = itemView.findViewById(R.id.commentSend);
-            inputComment = itemView.findViewById(R.id.inputComment);
-            recyclerViewCom = itemView.findViewById(R.id.recyclerViewComments);
-            editTextTextPersonName = itemView.findViewById(R.id.editTextTextPersonName);
-            commentsImage = itemView.findViewById(R.id.commentsImage);
             commentsPart = itemView.findViewById(R.id.commentsPart);
+            openCommentsFragment = itemView.findViewById(R.id.openCommentsFragment);
+            cv_postImage = itemView.findViewById(R.id.cv_postImage);
+            tv_comment = itemView.findViewById(R.id.tv_comment);
+            context = itemView.getContext();
+            manager = ((AppCompatActivity)context).getSupportFragmentManager();
         }
 
         public void countLikes(String postKey, String userId, DatabaseReference likeRef) {
@@ -347,6 +260,11 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
                         commentsCounter.setText(""+totalComs);
                     }else{
                         commentsCounter.setText("0");
+                        if(flag){
+                            commentsCounter.setVisibility(View.GONE);
+                            tv_comment.setText("Be the first to comment");
+                            tv_comment.setTextColor(Color.parseColor("#a0a0a2"));
+                        }
                     }
                 }
 

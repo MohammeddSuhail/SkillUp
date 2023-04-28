@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -70,6 +71,7 @@ public class EachCommunityFragment extends Fragment {
 
     Bitmap bmp;
     ByteArrayOutputStream baos;
+
 
     @Nullable
     @Override
@@ -224,6 +226,8 @@ public class EachCommunityFragment extends Fragment {
                                     hashMap.put("postDec", finalPostDesc);
                                     hashMap.put("userProfileImage",profileImageUrlV);
                                     hashMap.put("username",usernameV);
+                                    hashMap.put("userId",mUser.getUid());
+                                    hashMap.put("com",com);
 
                                     PostRef.child(com).child(strDate+mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                                         @Override
@@ -258,6 +262,8 @@ public class EachCommunityFragment extends Fragment {
                 hashMap.put("postDec", finalPostDesc);
                 hashMap.put("userProfileImage",profileImageUrlV);
                 hashMap.put("username",usernameV);
+                hashMap.put("userId",mUser.getUid());
+                hashMap.put("com",com);
 
                 PostRef.child(com).child(strDate+mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                     @Override

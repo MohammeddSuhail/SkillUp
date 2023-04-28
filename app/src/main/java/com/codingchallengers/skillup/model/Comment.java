@@ -1,9 +1,10 @@
 package com.codingchallengers.skillup.model;
 
 public class Comment {
-        String username,profileImage,comment;
+        String username,profileImage,comment,commentDate,userId;
 
-        public Comment() {
+
+    public Comment() {
         }
 
         public Comment(String username, String profileImage, String comment) {
@@ -12,6 +13,36 @@ public class Comment {
             this.comment = comment;
         }
 
+    public Comment(String username, String profileImage, String comment, String commentDate) {
+        this.username = username;
+        this.profileImage = profileImage;
+        this.comment = comment;
+        this.commentDate = commentDate;
+    }
+
+    public Comment(String username, String profileImage, String comment, String commentDate, String userId) {
+        this.username = username;
+        this.profileImage = profileImage;
+        this.comment = comment;
+        this.commentDate = commentDate;
+        this.userId = userId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getCommentDate() {
+        return commentDate;
+    }
+
+    public void setCommentDate(String commentDate) {
+        this.commentDate = commentDate;
+    }
         public String getUsername() {
             return username;
         }

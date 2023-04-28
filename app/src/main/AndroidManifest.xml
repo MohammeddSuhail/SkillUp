@@ -130,7 +130,8 @@
         <activity
             android:name="com.codingchallengers.skillup.AllActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Design.NoActionBar" />
+            android:theme="@style/Theme.Design.NoActionBar"
+            />
         <activity android:name="com.codingchallengers.skillup.SetUpActivity" />
 
         <meta-data

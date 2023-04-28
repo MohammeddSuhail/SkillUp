@@ -131,7 +131,7 @@ public class ProfileFragment extends Fragment {
 
 
         //getting the user details and putting in the views of profile
-        mUserRef.child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
+        mUserRef.child(mUser.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
                 if (snapshot.exists()){

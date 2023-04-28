@@ -17,7 +17,8 @@
             android:layout_height="wrap_content"
             android:background="#2a2b2d"
             android:paddingTop="15dp"
-            android:paddingBottom="15dp">
+            android:paddingBottom="15dp"
+            android:elevation="1dp">
 
             <TextView
                 android:id="@+id/textView7"

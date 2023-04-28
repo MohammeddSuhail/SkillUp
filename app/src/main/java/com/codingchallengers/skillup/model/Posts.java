@@ -2,7 +2,17 @@ package com.codingchallengers.skillup.model;
 
 public class Posts {
     //must have the same name as the fields of firebase
-    private String datePost,postDec,postImageUrl,userProfileImage,username;
+    private String datePost,postDec,postImageUrl,userProfileImage,username,userId,com;
+
+
+    public Posts(String datePost, String postDec, String postImageUrl, String userProfileImage, String username, String userId) {
+        this.datePost = datePost;
+        this.postDec = postDec;
+        this.postImageUrl = postImageUrl;
+        this.userProfileImage = userProfileImage;
+        this.username = username;
+        this.userId = userId;
+    }
 
     public Posts() {
     }
@@ -15,6 +25,31 @@ public class Posts {
         this.username = username;
     }
 
+    public Posts(String datePost, String postDec, String postImageUrl, String userProfileImage, String username, String userId, String com) {
+        this.datePost = datePost;
+        this.postDec = postDec;
+        this.postImageUrl = postImageUrl;
+        this.userProfileImage = userProfileImage;
+        this.username = username;
+        this.userId = userId;
+        this.com = com;
+    }
+
+    public String getCom() {
+        return com;
+    }
+
+    public void setCom(String com) {
+        this.com = com;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
     public String getDatePost() {
         return datePost;
