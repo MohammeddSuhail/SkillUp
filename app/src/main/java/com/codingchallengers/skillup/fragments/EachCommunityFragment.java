@@ -329,7 +329,7 @@ public class EachCommunityFragment extends Fragment {
                                 recyclerView.scrollToPosition(recyclerView.getAdapter().getItemCount() - 1);
                                 Toast.makeText(getContext(),"Post added",Toast.LENGTH_SHORT).show();
                             }
-                        }, 1000); // 2 second delay
+                        }, 1000); // 1 second delay
                     }
                     else{
                         mLoadingBar.dismiss();

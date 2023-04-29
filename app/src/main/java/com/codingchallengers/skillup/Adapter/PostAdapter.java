@@ -1,16 +1,20 @@
 package com.codingchallengers.skillup.Adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +34,8 @@ import com.codingchallengers.skillup.model.Posts;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -51,7 +57,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyViewHolder> {
 
     DatabaseReference likeRef;
-    DatabaseReference commentsRef;
+    DatabaseReference commentsRef, postRef;
 
     Context context;
     FragmentManager manager;
@@ -75,7 +81,6 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         holder.timeAgo.setText(timeAgo);
 
         holder.username.setText(model.getUsername());
-
 
         //some changes with or without image
         if(model.getPostImageUrl() == null){
@@ -101,9 +106,60 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         //creating Likes folder in database
         likeRef = FirebaseDatabase.getInstance().getReference().child("Likes");
         commentsRef = FirebaseDatabase.getInstance().getReference().child("Comments");
+        postRef = FirebaseDatabase.getInstance().getReference().child("Posts");
         //getting id
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+        if(!userId.equals(model.getUserId())){
+            holder.btnMenu.setVisibility(View.GONE);
+        }
+
+        // Attach a PopupMenu to the button view
+        holder.btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popupMenu = new PopupMenu(view.getContext(), view);
+                popupMenu.inflate(R.menu.community_post_menu);
+
+                // Set an OnMenuItemClickListener for the menu options
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+
+                    @Override
+                    public boolean onMenuItemClick(MenuItem menuItem) {
+                        int id = menuItem.getItemId();
+                        if (id == R.id.action_delete) {
+                            // Handle the Delete option
+                            // Create a new AlertDialog.Builder object
+                            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+
+                            builder.setTitle("Delete Post")
+                                    .setMessage("Are you sure you want to delete this post?")
+                                    .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            DeletePost(com, postKey);
+                                        }
+                                    })
+                                    .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            // Do nothing and dismiss the dialog box
+                                            dialog.dismiss();
+                                        }
+                                    });
+
+                            AlertDialog dialog = builder.create();
+                            dialog.show();
+
+                            return true;
+                        }
+                        return false;
+                    }
+                });
+
+                popupMenu.show();
+            }
+        });
 
         //for changing the color of like adding and removing the likes(as well as user) from Likes folder in firebase
         holder.likeImage.setOnClickListener(new View.OnClickListener() {
@@ -168,6 +224,26 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         }
     }
 
+    private void DeletePost(String com, String postId) {
+        postRef.child(com).child(postId).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                         // Node deleted successfully
+                        //likes and comments of the post are deleted
+                        likeRef.child(postId).removeValue();
+                        commentsRef.child(postId).removeValue();
+                        //notifyItemRemoved(position);
+                        Toast.makeText(context.getApplicationContext(), "Post deleted successfully",Toast.LENGTH_SHORT).show();
+                     }
+            }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Failed to delete node
+                        Toast.makeText(context.getApplicationContext(), "Post could not be deleted",Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
     private String getTimeAgo(String datePost) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
@@ -201,6 +277,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         TextView username,timeAgo,postDesc,likeCounter,commentsCounter, tv_comment;
         LinearLayout commentsPart;
         boolean flag = false;
+        LinearLayout btnMenu;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -219,6 +296,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
             tv_comment = itemView.findViewById(R.id.tv_comment);
             context = itemView.getContext();
             manager = ((AppCompatActivity)context).getSupportFragmentManager();
+            btnMenu = itemView.findViewById(R.id.postMenu);
         }
 
         public void countLikes(String postKey, String userId, DatabaseReference likeRef) {

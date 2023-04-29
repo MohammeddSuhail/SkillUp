@@ -337,7 +337,6 @@ public class CommunityPostCommentsFragment extends Fragment {
             @Override
             public void onComplete(@NonNull @NotNull Task task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(getContext(),"Comment Added",Toast.LENGTH_SHORT).show();
 
                     //to hide the keyboard
                     InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -351,8 +350,9 @@ public class CommunityPostCommentsFragment extends Fragment {
                         @Override
                         public void run() {
                             recyclerViewCom.scrollToPosition(recyclerViewCom.getAdapter().getItemCount() - 1);
+                            Toast.makeText(getContext(),"Comment Added",Toast.LENGTH_SHORT).show();
                         }
-                    }, 2000); // 2 second delay
+                    }, 500); // 0.5 second delay
                 }else{
                     Toast.makeText(getContext(),task.getException().toString(),Toast.LENGTH_SHORT).show();
                 }
