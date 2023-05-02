@@ -23,9 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SkillUp"
         tools:targetApi="31">
-        <activity
-            android:name=".resumeActivity"
-            android:exported="false" />
+
         <activity
             android:name=".DSASheet"
             android:exported="true">
@@ -110,8 +108,16 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity> <!-- <activity android:name=".SplashScreen" /> -->
+
+
+        <activity android:name=".resumeActivity" />
+
         <activity
             android:name=".SplashScreen"
+            android:exported="false" />
+
+        <activity
+            android:name=".EditDetailsActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -120,6 +126,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
         <activity android:name=".SignInActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".ExpViewActivity" />
