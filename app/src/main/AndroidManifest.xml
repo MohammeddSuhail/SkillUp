@@ -127,10 +127,10 @@
         </activity> <!-- <activity android:name=".SplashScreen" /> -->
         <activity android:name=".resumeActivity" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".EditDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".EditDetailsActivity"
+            android:name=".SplashScreen"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
