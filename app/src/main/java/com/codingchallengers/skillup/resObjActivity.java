@@ -28,6 +28,7 @@ public class resObjActivity extends AppCompatActivity {
                 EditDetailsActivity.Objective = form_obj_et_obj.getText().toString().trim();
 
                 Intent intent = new Intent(resObjActivity.this, EditDetailsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

@@ -37,6 +37,7 @@ public class resExpActivity extends AppCompatActivity {
                 EditDetailsActivity.ExpComp1Desc = desc_et.getText().toString();
 
                 Intent intent = new Intent(resExpActivity.this, EditDetailsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

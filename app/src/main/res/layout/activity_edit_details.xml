@@ -196,13 +196,19 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:text="View CV"
+                android:text="Create Resume"
                 android:textSize="20sp"
                 app:icon="@drawable/ic_remove_red_eye_black_24dp"
                 app:iconGravity="textStart"/>
 
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
 
     </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

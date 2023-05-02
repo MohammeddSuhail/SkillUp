@@ -34,6 +34,7 @@ public class resEduActivity extends AppCompatActivity {
                 EditDetailsActivity.CollegeBEYear = year_et.getText().toString();
 
                 Intent intent = new Intent(resEduActivity.this, EditDetailsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

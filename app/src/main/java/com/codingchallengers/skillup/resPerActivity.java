@@ -31,11 +31,12 @@ public class resPerActivity extends AppCompatActivity {
         form_personal_btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EditDetailsActivity.name = form_personal_et_name.getText().toString().trim();
-                EditDetailsActivity.email = form_personal_et_email.getText().toString().trim();
-                EditDetailsActivity.contact = form_personal_et_contact.getText().toString().trim();
+                EditDetailsActivity.FullName = form_personal_et_name.getText().toString().trim();
+                EditDetailsActivity.myFullEmail = form_personal_et_email.getText().toString().trim();
+                EditDetailsActivity.myPhoneNumber = form_personal_et_contact.getText().toString().trim();
 
                 Intent intent = new Intent(resPerActivity.this, EditDetailsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

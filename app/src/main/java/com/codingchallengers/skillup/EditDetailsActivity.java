@@ -1,12 +1,18 @@
 package com.codingchallengers.skillup;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.print.PrintAttributes;
+import android.print.PrintDocumentAdapter;
+import android.print.PrintJob;
+import android.print.PrintManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -24,11 +30,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 public class EditDetailsActivity extends AppCompatActivity {
 
     FragmentManager fm = getSupportFragmentManager();
     private Button btn_per, btn_edu, btn_exp, btn_skill, btn_obj, btn_pro, btn_view_cv;
-    public static String name ,email, contact;
+    public static String FullName, myFullEmail, myPhoneNumber;
     public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks;
     public static String ExpComp1Name, ExpComp1Desc, ExpComp1Start, ExpComp1End,ExpComp1Role;
     public static String Skill1, Skill2;
@@ -40,6 +49,10 @@ public class EditDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_details);
+
+        WebView webView = (WebView) findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.setVisibility(View.GONE);
 
 
 
@@ -98,20 +111,86 @@ public class EditDetailsActivity extends AppCompatActivity {
         btn_view_cv = findViewById(R.id.view_cv_btn);
 
 
-//        btn_view_cv.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startViewCVActivity();
-//            }
-//        });
+        btn_view_cv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //edit html
+                InputStream is = null;
+                int size = 0;
+
+                try {
+                    is = getAssets().open("index.html");
+                    size = is.available();
+
+                    byte[] buffer = new byte[size];
+                    is.read(buffer);
+                    //is.close();
+
+                    String str = new String(buffer);
+
+
+                    /*
+    public static String FullName, myFullEmail, myPhoneNumber;
+
+    public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks;
+
+    public static String ExpComp1Name, ExpComp1Desc, ExpComp1Start, ExpComp1End,ExpComp1Role;
+
+    public static String Skill1, Skill2;
+    public static String Objective;
+    public static String Project1Name, Project1Desc, Project2Name, Project2Desc;
+
+                     */
+
+                    str = str.replace("FullName", FullName);
+                    str = str.replace("myFullEmail", myFullEmail);
+                    str = str.replace("myPhoneNumber", myPhoneNumber);
+
+                    str = str.replace("CollegeBEName", CollegeBEName);
+                    str = str.replace("CollegeBECourse", CollegeBECourse);
+                    str = str.replace("CollegeBEYear", CollegeBEYear);
+                    str = str.replace("CollegeBEMarks", CollegeBEMarks);
+
+                    str = str.replace("ExpComp1Name", ExpComp1Name);
+                    str = str.replace("ExpComp1Desc", ExpComp1Desc);
+                    str = str.replace("ExpComp1Start", ExpComp1Start);
+                    str = str.replace("ExpComp1End", ExpComp1End);
+                    str = str.replace("ExpComp1Role", ExpComp1Role);
+
+                    str = str.replace("Skill1", Skill1);
+                    str = str.replace("Skill2", Skill2);
+
+                    str = str.replace("Objective", Objective);
+
+                    str = str.replace("Project1Name", Project1Name);
+                    str = str.replace("Project1Desc", Project1Desc);
+                    str = str.replace("Project2Name", Project2Name);
+                    str = str.replace("Project2Desc", Project2Desc);
 
 
 
 
 
-        if(name != null){
-            Toast.makeText(EditDetailsActivity.this, EditDetailsActivity.name, Toast.LENGTH_LONG).show();
-        }
+
+
+                    webView.loadDataWithBaseURL("fake://not/needed", str,"text/html","utf-8","");
+
+
+                    PrintManager printManager = (PrintManager) EditDetailsActivity.this.getSystemService(Context.PRINT_SERVICE);
+                    String jobName = "Resume Document";
+                    // Get a print adapter instance
+                    PrintDocumentAdapter printAdapter = webView.createPrintDocumentAdapter(jobName);
+                    // Create a print job with name and adapter instance
+                    PrintJob printJob = printManager.print(jobName, printAdapter, new PrintAttributes.Builder().build());
+
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+
+
 
 
     }

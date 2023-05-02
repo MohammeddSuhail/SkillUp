@@ -31,10 +31,11 @@ public class resProjActivity extends AppCompatActivity {
             public void onClick(View view) {
                 EditDetailsActivity.Project1Name = title_et.getText().toString().trim();
                 EditDetailsActivity.Project1Desc = desc_et.getText().toString().trim();
-                EditDetailsActivity.Project2Name = title_et.getText().toString().trim();
-                EditDetailsActivity.Project2Desc = desc_et.getText().toString().trim();
+                EditDetailsActivity.Project2Name = title_et2.getText().toString().trim();
+                EditDetailsActivity.Project2Desc = desc_et2.getText().toString().trim();
 
                 Intent intent = new Intent(resProjActivity.this, EditDetailsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

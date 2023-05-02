@@ -30,6 +30,7 @@ public class resSkillActivity extends AppCompatActivity {
                 EditDetailsActivity.Skill2 = skill_et2.getText().toString();
 
                 Intent intent = new Intent(resSkillActivity.this, EditDetailsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
