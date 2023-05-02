@@ -12,6 +12,7 @@
     <color name="secondary">#F2F4FF</color>
     <color name="dark_grey">#6E6D6D</color>
     <color name="orange">#FFA500</color>
+    <color name="success">#00b894</color>
 
     <color name="good_grey">#3A3939</color>
     <color name="almost_black">#121212</color>

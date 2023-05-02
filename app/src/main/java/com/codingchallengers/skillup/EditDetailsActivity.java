@@ -50,38 +50,44 @@ public class EditDetailsActivity extends AppCompatActivity {
         btn_per.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(EditDetailsActivity.this, resEduActivity.class);
+                Intent intent = new Intent(EditDetailsActivity.this, resPerActivity.class);
                 startActivity(intent);
             }
         });
+
         btn_edu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addFormFragment("frag_edu");
+                Intent intent = new Intent(EditDetailsActivity.this, resEduActivity.class);
+                startActivity(intent);
             }
         });
         btn_exp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addFormFragment("frag_exp");
+                Intent intent = new Intent(EditDetailsActivity.this, resExpActivity.class);
+                startActivity(intent);
             }
         });
         btn_skill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addFormFragment("frag_skill");
+                Intent intent = new Intent(EditDetailsActivity.this, resSkillActivity.class);
+                startActivity(intent);
             }
         });
         btn_obj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addFormFragment("frag_obj");
+                Intent intent = new Intent(EditDetailsActivity.this, resObjActivity.class);
+                startActivity(intent);
             }
         });
         btn_pro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addFormFragment("frag_pro");
+                Intent intent = new Intent(EditDetailsActivity.this, resProjActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -105,23 +111,6 @@ public class EditDetailsActivity extends AppCompatActivity {
 //        intent2.putExtra("TemplateImgPath", templateImgPath);
 //        startActivity(intent2);
 //    }
-
-    protected void addFormFragment(String actName){
-
-
-        switch (actName){
-//            case "frag_per": transaction.replace(R.id.container_main, PersonalFragment.newInstance()); break;
-//            case "frag_edu": transaction.replace(R.id.container_main, EducationFragment.newInstance()); break;
-//            case "frag_exp":  transaction.replace(R.id.container_main, ExperienceFragment.newInstance()); break;
-//            case "frag_skill":  transaction.replace(R.id.container_main, SkillsFragment.newInstance()); break;
-//            case "frag_obj": transaction.replace(R.id.container_main, ObjectiveFragment.newInstance()); break;
-//            case "frag_pro":  transaction.replace(R.id.container_main, ProjectFragment.newInstance()); break;
-            default:
-                Toast.makeText(getApplicationContext(), "addFormFragment() not Working!", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
 
 
 }

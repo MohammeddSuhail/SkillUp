@@ -37,6 +37,12 @@
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_player.xml" value="0.2" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_player2.xml" value="0.24728260869565216" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_res_edu.xml" value="0.25" />
+        <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_res_exp.xml" value="0.25" />
+        <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_res_obj.xml" value="0.25" />
+        <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_res_per.xml" value="0.25" />
+        <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_res_proj.xml" value="0.25" />
+        <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_res_skill.xml" value="0.25" />
+        <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_res_skill2.xml" value="0.25" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_resume.xml" value="0.25" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_set_up.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_sign_in.xml" value="0.22826086956521738" />
@@ -44,6 +50,7 @@
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/activity_splash_screen.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/cn_fragment.xml" value="0.24728260869565216" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/community_fragment.xml" value="0.24728260869565216" />
+        <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/content_res_skill.xml" value="0.25" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/course_fragment.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/courses_fragment.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/custom_grid_layout.xml" value="0.10989583333333333" />
@@ -56,9 +63,11 @@
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/find_friend_row.xml" value="0.24728260869565216" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/fragment_education.xml" value="0.25" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/fragment_experience.xml" value="0.25" />
+        <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/fragment_first.xml" value="0.25" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/fragment_objective.xml" value="0.25" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/fragment_personal.xml" value="0.25" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/fragment_project.xml" value="0.25" />
+        <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/fragment_second.xml" value="0.25" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/fragment_skills.xml" value="0.25" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/ic_personal.xml" value="0.25" />
         <entry key="..\:/Users/Mohammed Suhail/AndroidStudioProjects/SkillUp/app/src/main/res/layout/ie_each_fragment.xml" value="0.25" />
