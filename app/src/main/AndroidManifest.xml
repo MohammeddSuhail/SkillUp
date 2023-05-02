@@ -24,6 +24,9 @@
         android:theme="@style/Theme.SkillUp"
         tools:targetApi="31">
         <activity
+            android:name=".resSkillActivity"
+            android:exported="false" />
+        <activity
             android:name=".resProjActivity"
             android:exported="false" />
         <activity
