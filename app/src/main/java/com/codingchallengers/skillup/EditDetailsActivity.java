@@ -35,7 +35,6 @@ import java.io.InputStream;
 
 public class EditDetailsActivity extends AppCompatActivity {
 
-    FragmentManager fm = getSupportFragmentManager();
     private Button btn_per, btn_edu, btn_exp, btn_skill, btn_obj, btn_pro, btn_view_cv;
     public static String FullName, myFullEmail, myPhoneNumber;
     public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks;
