@@ -23,7 +23,26 @@ public class resProjActivity extends AppCompatActivity {
         desc_et = findViewById(R.id.form_pro_et_desc);
         title_et2 = findViewById(R.id.form_pro_et_title2);
         desc_et2 = findViewById(R.id.form_pro_et_desc2);
+
         form_proj_btn_save = findViewById(R.id.form_proj_btn_save);
+
+
+        //setting values, if already existing
+        if(isItOk(EditDetailsActivity.Project1Name )){
+            title_et.setText(EditDetailsActivity.Project1Name);
+        }
+
+        if(isItOk(EditDetailsActivity.Project1Desc)){
+            desc_et.setText(EditDetailsActivity.Project1Desc);
+        }
+
+        if(isItOk(EditDetailsActivity.Project2Name )){
+            title_et2.setText(EditDetailsActivity.Project2Name);
+        }
+
+        if(isItOk(EditDetailsActivity.Project2Desc)){
+            desc_et2.setText(EditDetailsActivity.Project2Desc);
+        }
 
 
         form_proj_btn_save.setOnClickListener(new View.OnClickListener() {
@@ -40,5 +59,11 @@ public class resProjActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    private boolean isItOk(String str) {
+        if(str == null || str.equals(""))
+            return false;
+        return true;
     }
 }

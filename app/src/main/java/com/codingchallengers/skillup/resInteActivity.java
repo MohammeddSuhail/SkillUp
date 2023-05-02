@@ -20,7 +20,16 @@ public class resInteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_res_inte);
 
         form_obj_et_obj_inte = findViewById(R.id.form_obj_et_obj_inte);
+
         form_obj_btn_save_inte = findViewById(R.id.form_obj_btn_save_inte);
+
+
+        //setting values, if already existing
+        if(isItOk(EditDetailsActivity.MyInterests  )){
+            form_obj_et_obj_inte.setText(EditDetailsActivity.MyInterests );
+        }
+
+
 
         form_obj_btn_save_inte.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,5 +41,11 @@ public class resInteActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private boolean isItOk(String str) {
+        if(str == null || str.equals(""))
+            return false;
+        return true;
     }
 }

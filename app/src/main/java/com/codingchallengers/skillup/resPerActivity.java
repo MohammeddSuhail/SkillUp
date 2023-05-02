@@ -24,7 +24,22 @@ public class resPerActivity extends AppCompatActivity {
         form_personal_et_name = findViewById(R.id.form_personal_et_name);
         form_personal_et_email = findViewById(R.id.form_personal_et_email);
         form_personal_et_contact = findViewById(R.id.form_personal_et_contact);
+
         form_personal_btn_save = findViewById(R.id.form_personal_btn_save);
+
+
+        //setting values, if already existing
+        if(isItOk(EditDetailsActivity.FullName)){
+            form_personal_et_name.setText(EditDetailsActivity.FullName);
+        }
+
+        if(isItOk(EditDetailsActivity.myFullEmail)){
+            form_personal_et_email.setText(EditDetailsActivity.myFullEmail);
+        }
+
+        if(isItOk(EditDetailsActivity.myPhoneNumber)){
+            form_personal_et_contact.setText(EditDetailsActivity.myPhoneNumber);
+        }
 
 
 
@@ -40,5 +55,11 @@ public class resPerActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private boolean isItOk(String str) {
+        if(str == null || str.equals(""))
+            return false;
+        return true;
     }
 }

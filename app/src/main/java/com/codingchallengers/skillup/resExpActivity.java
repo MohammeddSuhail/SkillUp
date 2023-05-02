@@ -34,6 +34,53 @@ public class resExpActivity extends AppCompatActivity {
         form_exp_btn_save = findViewById(R.id.form_exp_btn_save);
 
 
+
+        //setting values, if already existing
+        if(isItOk(EditDetailsActivity.ExpComp1Name)){
+            company_et.setText(EditDetailsActivity.ExpComp1Name);
+        }
+
+        if(isItOk(EditDetailsActivity.ExpComp1Role)){
+            job_et.setText(EditDetailsActivity.ExpComp1Role);
+        }
+
+        if(isItOk(EditDetailsActivity.ExpComp1Start)){
+            sdate_et.setText(EditDetailsActivity.ExpComp1Start);
+        }
+
+        if(isItOk(EditDetailsActivity.ExpComp1End)){
+            edate_et.setText(EditDetailsActivity.ExpComp1End);
+        }
+
+        if(isItOk(EditDetailsActivity.ExpComp1Desc)){
+            desc_et.setText(EditDetailsActivity.ExpComp1Desc);
+        }
+
+
+
+        if(isItOk(EditDetailsActivity.ExpComp2Name)){
+            company_et2.setText(EditDetailsActivity.ExpComp2Name);
+        }
+
+        if(isItOk(EditDetailsActivity.ExpComp2Role)){
+            job_et2.setText(EditDetailsActivity.ExpComp2Role);
+        }
+
+        if(isItOk(EditDetailsActivity.ExpComp2Start)){
+            sdate_et2.setText(EditDetailsActivity.ExpComp2Start);
+        }
+
+        if(isItOk(EditDetailsActivity.ExpComp2End)){
+            edate_et2.setText(EditDetailsActivity.ExpComp2End);
+        }
+
+        if(isItOk(EditDetailsActivity.ExpComp2Desc)){
+            desc_et2.setText(EditDetailsActivity.ExpComp2Desc);
+        }
+
+
+
+
         form_exp_btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,5 +105,12 @@ public class resExpActivity extends AppCompatActivity {
 
 
 
+    }
+
+
+    private boolean isItOk(String str) {
+        if(str == null || str.equals(""))
+            return false;
+        return true;
     }
 }

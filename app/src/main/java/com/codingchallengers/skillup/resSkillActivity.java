@@ -21,7 +21,19 @@ public class resSkillActivity extends AppCompatActivity {
 
         skill_et = findViewById(R.id.form_skill_et_skill);
         skill_et2 = findViewById(R.id.form_skill_et_skill2);
+
         form_skill_btn_save = findViewById(R.id.form_skill_btn_save);
+
+
+        //setting values, if already existing
+        if(isItOk(EditDetailsActivity.Skill1)){
+            skill_et.setText(EditDetailsActivity.Skill1);
+        }
+
+        if(isItOk(EditDetailsActivity.Skill2)){
+            skill_et2.setText(EditDetailsActivity.Skill2);
+        }
+
 
         form_skill_btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,5 +47,12 @@ public class resSkillActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+
+    private boolean isItOk(String str) {
+        if(str == null || str.equals(""))
+            return false;
+        return true;
     }
 }

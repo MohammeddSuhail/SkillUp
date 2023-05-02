@@ -20,7 +20,16 @@ public class resObjActivity extends AppCompatActivity {
         setContentView(R.layout.activity_res_obj);
 
         form_obj_et_obj = findViewById(R.id.form_obj_et_obj);
+
         form_obj_btn_save = findViewById(R.id.form_obj_btn_save);
+
+
+        //setting values, if already existing
+        if(isItOk(EditDetailsActivity.Objective)){
+            form_obj_et_obj.setText(EditDetailsActivity.Objective);
+        }
+
+
 
         form_obj_btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,5 +41,11 @@ public class resObjActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private boolean isItOk(String str) {
+        if(str == null || str.equals(""))
+            return false;
+        return true;
     }
 }

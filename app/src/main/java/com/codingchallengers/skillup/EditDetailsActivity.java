@@ -131,67 +131,109 @@ public class EditDetailsActivity extends AppCompatActivity {
                 int size = 0;
 
                 try {
-                    is = getAssets().open("index.html");
-                    size = is.available();
 
-                    byte[] buffer = new byte[size];
-                    is.read(buffer);
-                    //is.close();
+                    boolean personal = true, edu = true, exp1 = true, exp2 = true, skills = true, obj = true, proj1 = true , proj2 = true, inte = true;
 
-                    String str = new String(buffer);
+                    //personal info
+                    if(! (isItOk(FullName) && isItOk(myFullEmail) && isItOk(myPhoneNumber))){
+                        personal = false;
+                        Toast.makeText(EditDetailsActivity.this,"Fill Personal Details",Toast.LENGTH_LONG).show();
+                    }
+                    else if(! (isItOk(CollegeBEName) && isItOk(CollegeBECourse) && isItOk(CollegeBEYear) && isItOk(CollegeBEMarks)  &&  isItOk(CollegeOtherName) && isItOk(CollegeBECourse) && isItOk(CollegeOtherYear) && isItOk(CollegeOtherMarks)) ){
+                        edu = false;
+                        Toast.makeText(EditDetailsActivity.this,"Fill Education Details",Toast.LENGTH_LONG).show();
+                    }
+                    else if(! (isItOk(ExpComp1Name) && isItOk(ExpComp1Desc) && isItOk(ExpComp1Start) && isItOk(ExpComp1End) && isItOk(ExpComp1Role)) ){
+                        exp1 = false;
+                        Toast.makeText(EditDetailsActivity.this,"Fill Experience 1 Details",Toast.LENGTH_LONG).show();
+                    }
+                    else if(! (isItOk(ExpComp2Name) && isItOk(ExpComp2Desc) && isItOk(ExpComp2Start) && isItOk(ExpComp2End) && isItOk(ExpComp2Role)) ){
+                        exp2 = false;
+                        Toast.makeText(EditDetailsActivity.this,"Fill Experience 2 Details",Toast.LENGTH_LONG).show();
+                    }
+                    else if(! (isItOk(Skill1) && isItOk(Skill2))){
+                        skills = false;
+                        Toast.makeText(EditDetailsActivity.this,"Fill Skill Details",Toast.LENGTH_LONG).show();
+                    }
+                    else if(! isItOk(Objective)){
+                        obj = false;
+                        Toast.makeText(EditDetailsActivity.this,"Fill Objective",Toast.LENGTH_LONG).show();
+                    }
+                    else if(! (isItOk(Project1Name) && isItOk(Project1Desc))){
+                        proj1 = false;
+                        Toast.makeText(EditDetailsActivity.this,"Fill Project 1 Details",Toast.LENGTH_LONG).show();
+                    }
+                    else if(! (isItOk(Project2Name) && isItOk(Project2Desc))){
+                        proj2 = false;
+                        Toast.makeText(EditDetailsActivity.this,"Fill Project 2 Details",Toast.LENGTH_LONG).show();
+                    }
+                    else if(! isItOk(MyInterests)){
+                        inte = false;
+                        Toast.makeText(EditDetailsActivity.this,"Fill Interest Details",Toast.LENGTH_LONG).show();
+                    }else{
 
+                        is = getAssets().open("index.html");
+                        size = is.available();
 
-                    str = str.replace("FullName", FullName);
-                    str = str.replace("myFullEmail", myFullEmail);
-                    str = str.replace("myPhoneNumber", myPhoneNumber);
+                        byte[] buffer = new byte[size];
+                        is.read(buffer);
+                        //is.close();
 
-                    str = str.replace("CollegeBEName", CollegeBEName);
-                    str = str.replace("CollegeBECourse", CollegeBECourse);
-                    str = str.replace("CollegeBEYear", CollegeBEYear);
-                    str = str.replace("CollegeBEMarks", CollegeBEMarks);
-                    str = str.replace("CollegeOtherName", CollegeOtherName);
-                    str = str.replace("CollegeOtherCourse", CollegeOtherCourse);
-                    str = str.replace("CollegeOtherYear", CollegeOtherYear);
-                    str = str.replace("CollegeOtherMarks", CollegeOtherMarks);
-
-
-                    str = str.replace("ExpComp1Name", ExpComp1Name);
-                    str = str.replace("ExpComp1Desc", ExpComp1Desc);
-                    str = str.replace("ExpComp1Start", ExpComp1Start);
-                    str = str.replace("ExpComp1End", ExpComp1End);
-                    str = str.replace("ExpComp1Role", ExpComp1Role);
-                    str = str.replace("ExpComp2Name", ExpComp2Name);
-                    str = str.replace("ExpComp2Desc", ExpComp2Desc);
-                    str = str.replace("ExpComp2Start", ExpComp2Start);
-                    str = str.replace("ExpComp2End", ExpComp2End);
-                    str = str.replace("ExpComp2Role", ExpComp2Role);
-
-
-                    str = str.replace("Skill1", Skill1);
-                    str = str.replace("Skill2", Skill2);
-
-                    str = str.replace("Objective", Objective);
-
-                    str = str.replace("Project1Name", Project1Name);
-                    str = str.replace("Project1Desc", Project1Desc);
-                    str = str.replace("Project2Name", Project2Name);
-                    str = str.replace("Project2Desc", Project2Desc);
-
-                    str = str.replace("MyInterests", MyInterests);
-
-
-
-
-
-                    webView.loadDataWithBaseURL("fake://not/needed", str,"text/html","utf-8","");
+                        String str = new String(buffer);
 
 
-                    PrintManager printManager = (PrintManager) EditDetailsActivity.this.getSystemService(Context.PRINT_SERVICE);
-                    String jobName = "Resume Document";
-                    // Get a print adapter instance
-                    PrintDocumentAdapter printAdapter = webView.createPrintDocumentAdapter(jobName);
-                    // Create a print job with name and adapter instance
-                    PrintJob printJob = printManager.print(jobName, printAdapter, new PrintAttributes.Builder().build());
+                        str = str.replace("FullName", FullName);
+                        str = str.replace("myFullEmail", myFullEmail);
+                        str = str.replace("myPhoneNumber", myPhoneNumber);
+
+                        str = str.replace("CollegeBEName", CollegeBEName);
+                        str = str.replace("CollegeBECourse", CollegeBECourse);
+                        str = str.replace("CollegeBEYear", CollegeBEYear);
+                        str = str.replace("CollegeBEMarks", CollegeBEMarks);
+                        str = str.replace("CollegeOtherName", CollegeOtherName);
+                        str = str.replace("CollegeOtherCourse", CollegeOtherCourse);
+                        str = str.replace("CollegeOtherYear", CollegeOtherYear);
+                        str = str.replace("CollegeOtherMarks", CollegeOtherMarks);
+
+
+                        str = str.replace("ExpComp1Name", ExpComp1Name);
+                        str = str.replace("ExpComp1Desc", ExpComp1Desc);
+                        str = str.replace("ExpComp1Start", ExpComp1Start);
+                        str = str.replace("ExpComp1End", ExpComp1End);
+                        str = str.replace("ExpComp1Role", ExpComp1Role);
+                        str = str.replace("ExpComp2Name", ExpComp2Name);
+                        str = str.replace("ExpComp2Desc", ExpComp2Desc);
+                        str = str.replace("ExpComp2Start", ExpComp2Start);
+                        str = str.replace("ExpComp2End", ExpComp2End);
+                        str = str.replace("ExpComp2Role", ExpComp2Role);
+
+
+                        str = str.replace("Skill1", Skill1);
+                        str = str.replace("Skill2", Skill2);
+
+                        str = str.replace("Objective", Objective);
+
+                        str = str.replace("Project1Name", Project1Name);
+                        str = str.replace("Project1Desc", Project1Desc);
+                        str = str.replace("Project2Name", Project2Name);
+                        str = str.replace("Project2Desc", Project2Desc);
+
+                        str = str.replace("MyInterests", MyInterests);
+
+
+
+
+
+                        webView.loadDataWithBaseURL("fake://not/needed", str,"text/html","utf-8","");
+
+
+                        PrintManager printManager = (PrintManager) EditDetailsActivity.this.getSystemService(Context.PRINT_SERVICE);
+                        String jobName = "Resume Document";
+                        // Get a print adapter instance
+                        PrintDocumentAdapter printAdapter = webView.createPrintDocumentAdapter(jobName);
+                        // Create a print job with name and adapter instance
+                        PrintJob printJob = printManager.print(jobName, printAdapter, new PrintAttributes.Builder().build());
+                    }
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -205,14 +247,10 @@ public class EditDetailsActivity extends AppCompatActivity {
 
     }
 
-//    protected void startViewCVActivity(){
-//        Intent intent2 = new Intent(getApplicationContext(), ViewCVActivity.class);
-//        intent2.putExtra("ProfileId", ProfileId);
-//        intent2.putExtra("CategoryName", categoryName);
-//        intent2.putExtra("TemplateFilePath", templateFilePath);
-//        intent2.putExtra("TemplateImgPath", templateImgPath);
-//        startActivity(intent2);
-//    }
-
+    private boolean isItOk(String str) {
+        if(str == null || str.equals(""))
+            return false;
+        return true;
+    }
 
 }

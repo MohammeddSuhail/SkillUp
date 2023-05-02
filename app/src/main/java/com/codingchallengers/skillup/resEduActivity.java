@@ -31,6 +31,44 @@ public class resEduActivity extends AppCompatActivity {
 
         form_edu_btn_save = findViewById(R.id.form_edu_btn_save);
 
+
+        //setting values, if already existing
+        if(isItOk(EditDetailsActivity.CollegeBECourse)){
+            degree_et.setText(EditDetailsActivity.CollegeBECourse);
+        }
+
+        if(isItOk(EditDetailsActivity.CollegeBEName)){
+            university_et.setText(EditDetailsActivity.CollegeBEName);
+        }
+
+        if(isItOk(EditDetailsActivity.CollegeBEMarks)){
+            grade_et.setText(EditDetailsActivity.CollegeBEMarks);
+        }
+
+        if(isItOk(EditDetailsActivity.CollegeBEYear)){
+            year_et.setText(EditDetailsActivity.CollegeBEYear);
+        }
+
+
+
+        if(isItOk(EditDetailsActivity.CollegeOtherCourse)){
+            degree_et2.setText(EditDetailsActivity.CollegeOtherCourse);
+        }
+
+        if(isItOk(EditDetailsActivity.CollegeOtherName)){
+            university_et2.setText(EditDetailsActivity.CollegeOtherName);
+        }
+
+        if(isItOk(EditDetailsActivity.CollegeOtherMarks)){
+            grade_et2.setText(EditDetailsActivity.CollegeOtherMarks);
+        }
+
+        if(isItOk(EditDetailsActivity.CollegeOtherYear)){
+            year_et2.setText(EditDetailsActivity.CollegeOtherYear);
+        }
+
+
+
         form_edu_btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,5 +89,12 @@ public class resEduActivity extends AppCompatActivity {
         });
 
 
+    }
+
+
+    private boolean isItOk(String str) {
+        if(str == null || str.equals(""))
+            return false;
+        return true;
     }
 }
