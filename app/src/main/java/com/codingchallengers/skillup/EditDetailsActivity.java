@@ -2,6 +2,7 @@ package com.codingchallengers.skillup;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -27,7 +28,10 @@ public class EditDetailsActivity extends AppCompatActivity {
 
     FragmentManager fm = getSupportFragmentManager();
     private Button btn_per, btn_edu, btn_exp, btn_skill, btn_obj, btn_pro, btn_view_cv;
-    private String ProfileId, categoryName, templateImgPath, templateFilePath;
+    public static String name ,email, contact;
+    public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks;
+    public static String ExpComp1Name, ExpComp1Loc, ExpComp1Year;
+
 
 
     private Intent intent;
@@ -100,6 +104,15 @@ public class EditDetailsActivity extends AppCompatActivity {
 //                startViewCVActivity();
 //            }
 //        });
+
+
+
+
+
+        if(name != null){
+            Toast.makeText(EditDetailsActivity.this, EditDetailsActivity.name, Toast.LENGTH_LONG).show();
+        }
+
 
     }
 
