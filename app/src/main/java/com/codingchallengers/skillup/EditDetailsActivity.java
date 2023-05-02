@@ -35,13 +35,14 @@ import java.io.InputStream;
 
 public class EditDetailsActivity extends AppCompatActivity {
 
-    private Button btn_per, btn_edu, btn_exp, btn_skill, btn_obj, btn_pro, btn_view_cv;
+    private Button btn_per, btn_edu, btn_exp, btn_skill, btn_obj, btn_pro, btn_view_cv, btn_interest_detail;
     public static String FullName, myFullEmail, myPhoneNumber;
     public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks, CollegeOtherName, CollegeOtherCourse, CollegeOtherYear, CollegeOtherMarks;
     public static String ExpComp1Name, ExpComp1Desc, ExpComp1Start, ExpComp1End,ExpComp1Role, ExpComp2Name, ExpComp2Desc, ExpComp2Start ,ExpComp2End, ExpComp2Role;
     public static String Skill1, Skill2;
     public static String Objective;
     public static String Project1Name, Project1Desc, Project2Name, Project2Desc;
+    public static String MyInterests;
 
 
     @Override
@@ -62,6 +63,7 @@ public class EditDetailsActivity extends AppCompatActivity {
         btn_skill = findViewById(R.id.btn_skill_detail);
         btn_obj = findViewById(R.id.btn_objective_detail);
         btn_pro = findViewById(R.id.btn_project_detail);
+        btn_interest_detail = findViewById(R.id.btn_interest_detail);
 
         btn_per.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +108,17 @@ public class EditDetailsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        btn_interest_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EditDetailsActivity.this, resInteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         btn_view_cv = findViewById(R.id.view_cv_btn);
 
@@ -164,7 +177,7 @@ public class EditDetailsActivity extends AppCompatActivity {
                     str = str.replace("Project2Name", Project2Name);
                     str = str.replace("Project2Desc", Project2Desc);
 
-
+                    str = str.replace("MyInterests", MyInterests);
 
 
 
