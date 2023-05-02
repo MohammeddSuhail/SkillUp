@@ -129,19 +129,6 @@ public class EditDetailsActivity extends AppCompatActivity {
                     String str = new String(buffer);
 
 
-                    /*
-    public static String FullName, myFullEmail, myPhoneNumber;
-
-    public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks;
-
-    public static String ExpComp1Name, ExpComp1Desc, ExpComp1Start, ExpComp1End,ExpComp1Role;
-
-    public static String Skill1, Skill2;
-    public static String Objective;
-    public static String Project1Name, Project1Desc, Project2Name, Project2Desc;
-
-                     */
-
                     str = str.replace("FullName", FullName);
                     str = str.replace("myFullEmail", myFullEmail);
                     str = str.replace("myPhoneNumber", myPhoneNumber);
