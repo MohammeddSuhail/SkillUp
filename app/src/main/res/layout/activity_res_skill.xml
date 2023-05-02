@@ -34,30 +34,38 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/form_skill_radiogroup"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/form_skill_til_skill2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
+            android:layout_height="60dp"
+            app:errorEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
-            <RadioButton android:id="@+id/form_skill_radio_beginner"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_skill_et_skill2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Beginner"/>
-            <RadioButton android:id="@+id/form_skill_radio_intermediate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Intermediate"/>
-            <RadioButton android:id="@+id/form_skill_radio_advanced"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Advanced"/>
-            <RadioButton android:id="@+id/form_skill_radio_expert"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Expert"/>
-        </RadioGroup>
+                android:hint="Skill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/form_skill_btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#00b894"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:icon="@drawable/ic_check_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/form_personal_ll_form" />
+
+
 
     </LinearLayout>
 

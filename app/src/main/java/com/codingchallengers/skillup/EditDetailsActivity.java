@@ -30,11 +30,11 @@ public class EditDetailsActivity extends AppCompatActivity {
     private Button btn_per, btn_edu, btn_exp, btn_skill, btn_obj, btn_pro, btn_view_cv;
     public static String name ,email, contact;
     public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks;
-    public static String ExpComp1Name, ExpComp1Loc, ExpComp1Year;
+    public static String ExpComp1Name, ExpComp1Desc, ExpComp1Start, ExpComp1End,ExpComp1Role;
+    public static String Skill1, Skill2;
+    public static String Objective;
+    public static String Project1Name, Project1Desc, Project2Name, Project2Desc;
 
-
-
-    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
