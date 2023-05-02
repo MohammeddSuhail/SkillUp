@@ -37,8 +37,8 @@ public class EditDetailsActivity extends AppCompatActivity {
 
     private Button btn_per, btn_edu, btn_exp, btn_skill, btn_obj, btn_pro, btn_view_cv;
     public static String FullName, myFullEmail, myPhoneNumber;
-    public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks;
-    public static String ExpComp1Name, ExpComp1Desc, ExpComp1Start, ExpComp1End,ExpComp1Role;
+    public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks, CollegeOtherName, CollegeOtherCourse, CollegeOtherYear, CollegeOtherMarks;
+    public static String ExpComp1Name, ExpComp1Desc, ExpComp1Start, ExpComp1End,ExpComp1Role, ExpComp2Name, ExpComp2Desc, ExpComp2Start ,ExpComp2End, ExpComp2Role;
     public static String Skill1, Skill2;
     public static String Objective;
     public static String Project1Name, Project1Desc, Project2Name, Project2Desc;
@@ -136,12 +136,23 @@ public class EditDetailsActivity extends AppCompatActivity {
                     str = str.replace("CollegeBECourse", CollegeBECourse);
                     str = str.replace("CollegeBEYear", CollegeBEYear);
                     str = str.replace("CollegeBEMarks", CollegeBEMarks);
+                    str = str.replace("CollegeOtherName", CollegeOtherName);
+                    str = str.replace("CollegeOtherCourse", CollegeOtherCourse);
+                    str = str.replace("CollegeOtherYear", CollegeOtherYear);
+                    str = str.replace("CollegeOtherMarks", CollegeOtherMarks);
+
 
                     str = str.replace("ExpComp1Name", ExpComp1Name);
                     str = str.replace("ExpComp1Desc", ExpComp1Desc);
                     str = str.replace("ExpComp1Start", ExpComp1Start);
                     str = str.replace("ExpComp1End", ExpComp1End);
                     str = str.replace("ExpComp1Role", ExpComp1Role);
+                    str = str.replace("ExpComp2Name", ExpComp2Name);
+                    str = str.replace("ExpComp2Desc", ExpComp2Desc);
+                    str = str.replace("ExpComp2Start", ExpComp2Start);
+                    str = str.replace("ExpComp2End", ExpComp2End);
+                    str = str.replace("ExpComp2Role", ExpComp2Role);
+
 
                     str = str.replace("Skill1", Skill1);
                     str = str.replace("Skill2", Skill2);

@@ -11,7 +11,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class resEduActivity extends AppCompatActivity {
 
-    TextInputEditText degree_et, university_et , grade_et ,year_et;
+    TextInputEditText degree_et, university_et , grade_et, year_et, degree_et2, university_et2 , grade_et2, year_et2;
     Button form_edu_btn_save;
 
     @Override
@@ -23,6 +23,12 @@ public class resEduActivity extends AppCompatActivity {
         university_et = findViewById(R.id.form_edu_et_university);
         grade_et = findViewById(R.id.form_edu_et_grade);
         year_et = findViewById(R.id.form_edu_et_year);
+
+        degree_et2 = findViewById(R.id.form_edu_et_degreePU);
+        university_et2 = findViewById(R.id.form_edu_et_universityPU);
+        grade_et2 = findViewById(R.id.form_edu_et_gradePU);
+        year_et2 = findViewById(R.id.form_edu_et_yearPU);
+
         form_edu_btn_save = findViewById(R.id.form_edu_btn_save);
 
         form_edu_btn_save.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +38,11 @@ public class resEduActivity extends AppCompatActivity {
                 EditDetailsActivity.CollegeBEName = university_et.getText().toString();
                 EditDetailsActivity.CollegeBEMarks = grade_et.getText().toString();
                 EditDetailsActivity.CollegeBEYear = year_et.getText().toString();
+
+                EditDetailsActivity.CollegeOtherCourse = degree_et2.getText().toString();
+                EditDetailsActivity.CollegeOtherName = university_et2.getText().toString();
+                EditDetailsActivity.CollegeOtherMarks = grade_et2.getText().toString();
+                EditDetailsActivity.CollegeOtherYear = year_et2.getText().toString();
 
                 Intent intent = new Intent(resEduActivity.this, EditDetailsActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

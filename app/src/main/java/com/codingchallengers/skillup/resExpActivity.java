@@ -11,7 +11,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 public class resExpActivity extends AppCompatActivity {
 
-    TextInputEditText company_et, job_et, sdate_et, edate_et, desc_et;
+    TextInputEditText company_et, job_et, sdate_et, edate_et, desc_et, company_et2, job_et2, sdate_et2, edate_et2, desc_et2;
     Button form_exp_btn_save;
 
     @Override
@@ -24,6 +24,13 @@ public class resExpActivity extends AppCompatActivity {
         sdate_et = findViewById(R.id.form_exp_et_sdate);
         edate_et = findViewById(R.id.form_exp_et_edate);
         desc_et = findViewById(R.id.form_exp_et_desc);
+
+        company_et2 = findViewById(R.id.form_exp_et_company2);
+        job_et2 = findViewById(R.id.form_exp_et_job2);
+        sdate_et2 = findViewById(R.id.form_exp_et_sdate2);
+        edate_et2 = findViewById(R.id.form_exp_et_edate2);
+        desc_et2 = findViewById(R.id.form_exp_et_desc2);
+
         form_exp_btn_save = findViewById(R.id.form_exp_btn_save);
 
 
@@ -35,6 +42,13 @@ public class resExpActivity extends AppCompatActivity {
                 EditDetailsActivity.ExpComp1Start = sdate_et.getText().toString();
                 EditDetailsActivity.ExpComp1End = edate_et.getText().toString();
                 EditDetailsActivity.ExpComp1Desc = desc_et.getText().toString();
+
+                EditDetailsActivity.ExpComp2Name = company_et2.getText().toString();
+                EditDetailsActivity.ExpComp2Role = job_et2.getText().toString();
+                EditDetailsActivity.ExpComp2Start = sdate_et2.getText().toString();
+                EditDetailsActivity.ExpComp2End = edate_et2.getText().toString();
+                EditDetailsActivity.ExpComp2Desc = desc_et2.getText().toString();
+
 
                 Intent intent = new Intent(resExpActivity.this, EditDetailsActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
