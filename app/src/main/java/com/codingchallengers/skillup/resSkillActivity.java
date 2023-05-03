@@ -3,7 +3,10 @@ package com.codingchallengers.skillup;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.Button;
 
@@ -18,6 +21,9 @@ public class resSkillActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_res_skill);
+
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>SkillUp</font>"));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2a2b2d")));
 
         skill_et1 = findViewById(R.id.form_skill_et_skill1);
         skill_et2 = findViewById(R.id.form_skill_et_skill2);
