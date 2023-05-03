@@ -41,7 +41,7 @@ public class EditDetailsActivity extends AppCompatActivity {
     public static String ExpComp1Name, ExpComp1Desc, ExpComp1Start, ExpComp1End,ExpComp1Role, ExpComp2Name, ExpComp2Desc, ExpComp2Start ,ExpComp2End, ExpComp2Role;
     public static String Skill1, Skill2;
     public static String Objective;
-    public static String Project1Name, Project1Desc, Project2Name, Project2Desc;
+    public static String Project1Name, Project1Desc, Project2Name, Project2Desc, Project3Name, Project3Desc;
     public static String MyInterests;
 
 
@@ -132,9 +132,10 @@ public class EditDetailsActivity extends AppCompatActivity {
 
                 try {
 
-                    boolean personal = true, edu = true, exp1 = true, exp2 = true, skills = true, obj = true, proj1 = true , proj2 = true, inte = true;
+                    boolean personal = true, edu = true, exp1 = true, exp2 = true, skills = true, obj = true, proj1 = true , proj2 = true, proj3 = true, inte = true;
 
 
+                    //checking null or empty string for exp section
                     if(! (isItOk(ExpComp1Name) && isItOk(ExpComp1Desc) && isItOk(ExpComp1Start) && isItOk(ExpComp1End) && isItOk(ExpComp1Role)) ){
                         exp1 = false;
                         //Toast.makeText(EditDetailsActivity.this,"Fill Experience 1 Details",Toast.LENGTH_LONG).show();
@@ -142,6 +143,21 @@ public class EditDetailsActivity extends AppCompatActivity {
                     if(! (isItOk(ExpComp2Name) && isItOk(ExpComp2Desc) && isItOk(ExpComp2Start) && isItOk(ExpComp2End) && isItOk(ExpComp2Role)) ){
                         exp2 = false;
                         //Toast.makeText(EditDetailsActivity.this,"Fill Experience 2 Details",Toast.LENGTH_LONG).show();
+                    }
+
+
+                    //checking null or empty string for proj section
+                    if(! (isItOk(Project1Name) && isItOk(Project1Desc))){
+                        proj1 = false;
+                        //Toast.makeText(EditDetailsActivity.this,"Fill Project 1 Details",Toast.LENGTH_LONG).show();
+                    }
+                    if(! (isItOk(Project2Name) && isItOk(Project2Desc))){
+                        proj2 = false;
+                        //Toast.makeText(EditDetailsActivity.this,"Fill Project 2 Details",Toast.LENGTH_LONG).show();
+                    }
+                    if(! (isItOk(Project3Name) && isItOk(Project3Desc))){
+                        proj3 = false;
+                        //Toast.makeText(EditDetailsActivity.this,"Fill Project 3 Details",Toast.LENGTH_LONG).show();
                     }
 
 
@@ -162,14 +178,7 @@ public class EditDetailsActivity extends AppCompatActivity {
                         obj = false;
                         Toast.makeText(EditDetailsActivity.this,"Fill Objective",Toast.LENGTH_LONG).show();
                     }
-                    else if(! (isItOk(Project1Name) && isItOk(Project1Desc))){
-                        proj1 = false;
-                        Toast.makeText(EditDetailsActivity.this,"Fill Project 1 Details",Toast.LENGTH_LONG).show();
-                    }
-                    else if(! (isItOk(Project2Name) && isItOk(Project2Desc))){
-                        proj2 = false;
-                        Toast.makeText(EditDetailsActivity.this,"Fill Project 2 Details",Toast.LENGTH_LONG).show();
-                    }
+
                     else if(! isItOk(MyInterests)){
                         inte = false;
                         Toast.makeText(EditDetailsActivity.this,"Fill Interest Details",Toast.LENGTH_LONG).show();
@@ -291,10 +300,53 @@ public class EditDetailsActivity extends AppCompatActivity {
 
                         str = str.replace("Objective", Objective);
 
-                        str = str.replace("Project1Name", Project1Name);
-                        str = str.replace("Project1Desc", Project1Desc);
-                        str = str.replace("Project2Name", Project2Name);
-                        str = str.replace("Project2Desc", Project2Desc);
+
+
+                        //proj section
+
+                        String projItemStart = "<div class=\"section__list\">\n" +
+                                "        <div class=\"section__list-item\">\n" +
+                                "          <div class=\"name\">";
+
+
+                        String projItemMid = "</div>\n" +
+                                "          <div class=\"text\">";
+
+                        String projItemEnd = "</div>\n" +
+                                "        </div>\n" +
+                                "      </div>";
+
+
+                        String projWhole = "<div class=\"section\">\n" +
+                                "      <div class=\"section__title\">Projects</div>\n" +
+                                "      ProjectList\n" +
+                                "    </div>";
+
+
+                        String ProjectList = "";
+
+
+                        if((!proj1) && (!proj2) && (!proj3)){
+                            //all 3 proj not there
+                            str = str.replace(projWhole, "");
+                        }else{
+                            //if proj is there
+                            if(proj1){
+                                ProjectList += projItemStart + Project1Name + projItemMid + Project1Desc + projItemEnd;
+                            }
+                            if(proj2){
+                                if(proj1)
+                                    ProjectList += "<br>";
+                                ProjectList +=  projItemStart + Project2Name + projItemMid + Project2Desc + projItemEnd;
+                            }
+                            if(proj3){
+                                if(proj1 || proj2)
+                                    ProjectList += "<br>";
+                                ProjectList += projItemStart + Project3Name + projItemMid + Project3Desc + projItemEnd;
+                            }
+                            str = str.replace("ProjectList", ProjectList);
+                        }
+
 
                         str = str.replace("MyInterests", MyInterests);
 
