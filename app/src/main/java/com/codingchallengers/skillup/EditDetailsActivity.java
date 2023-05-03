@@ -289,7 +289,7 @@ public class EditDetailsActivity extends AppCompatActivity {
 
 
 
-                        //skilll section
+                        //skill section
                         String skillItemStart = "<div class=\"skills__item\">\n" +
                                 "          <div class=\"left\"><div class=\"name\">\n" +
                                 "            ";
@@ -315,7 +315,6 @@ public class EditDetailsActivity extends AppCompatActivity {
 
 
                         //proj section
-
                         String projItemStart = "<div class=\"section__list\">\n" +
                                 "        <div class=\"section__list-item\">\n" +
                                 "          <div class=\"name\">";
@@ -361,7 +360,8 @@ public class EditDetailsActivity extends AppCompatActivity {
 
 
 
-                        //for interest sectiom
+
+                        //for interest section
                         if(MyInterests == null || MyInterests.equals("")){
                             //no interests
                             str = str.replace("<div class=\"section\">\n" +
