@@ -134,6 +134,17 @@ public class EditDetailsActivity extends AppCompatActivity {
 
                     boolean personal = true, edu = true, exp1 = true, exp2 = true, skills = true, obj = true, proj1 = true , proj2 = true, inte = true;
 
+
+                    if(! (isItOk(ExpComp1Name) && isItOk(ExpComp1Desc) && isItOk(ExpComp1Start) && isItOk(ExpComp1End) && isItOk(ExpComp1Role)) ){
+                        exp1 = false;
+                        //Toast.makeText(EditDetailsActivity.this,"Fill Experience 1 Details",Toast.LENGTH_LONG).show();
+                    }
+                    if(! (isItOk(ExpComp2Name) && isItOk(ExpComp2Desc) && isItOk(ExpComp2Start) && isItOk(ExpComp2End) && isItOk(ExpComp2Role)) ){
+                        exp2 = false;
+                        //Toast.makeText(EditDetailsActivity.this,"Fill Experience 2 Details",Toast.LENGTH_LONG).show();
+                    }
+
+
                     //personal info
                     if(! (isItOk(FullName) && isItOk(myFullEmail) && isItOk(myPhoneNumber))){
                         personal = false;
@@ -142,14 +153,6 @@ public class EditDetailsActivity extends AppCompatActivity {
                     else if(! (isItOk(CollegeBEName) && isItOk(CollegeBECourse) && isItOk(CollegeBEYear) && isItOk(CollegeBEMarks)  &&  isItOk(CollegeOtherName) && isItOk(CollegeBECourse) && isItOk(CollegeOtherYear) && isItOk(CollegeOtherMarks)) ){
                         edu = false;
                         Toast.makeText(EditDetailsActivity.this,"Fill Education Details",Toast.LENGTH_LONG).show();
-                    }
-                    else if(! (isItOk(ExpComp1Name) && isItOk(ExpComp1Desc) && isItOk(ExpComp1Start) && isItOk(ExpComp1End) && isItOk(ExpComp1Role)) ){
-                        exp1 = false;
-                        Toast.makeText(EditDetailsActivity.this,"Fill Experience 1 Details",Toast.LENGTH_LONG).show();
-                    }
-                    else if(! (isItOk(ExpComp2Name) && isItOk(ExpComp2Desc) && isItOk(ExpComp2Start) && isItOk(ExpComp2End) && isItOk(ExpComp2Role)) ){
-                        exp2 = false;
-                        Toast.makeText(EditDetailsActivity.this,"Fill Experience 2 Details",Toast.LENGTH_LONG).show();
                     }
                     else if(! (isItOk(Skill1) && isItOk(Skill2))){
                         skills = false;
@@ -196,16 +199,91 @@ public class EditDetailsActivity extends AppCompatActivity {
                         str = str.replace("CollegeOtherMarks", CollegeOtherMarks);
 
 
-                        str = str.replace("ExpComp1Name", ExpComp1Name);
-                        str = str.replace("ExpComp1Desc", ExpComp1Desc);
-                        str = str.replace("ExpComp1Start", ExpComp1Start);
-                        str = str.replace("ExpComp1End", ExpComp1End);
-                        str = str.replace("ExpComp1Role", ExpComp1Role);
-                        str = str.replace("ExpComp2Name", ExpComp2Name);
-                        str = str.replace("ExpComp2Desc", ExpComp2Desc);
-                        str = str.replace("ExpComp2Start", ExpComp2Start);
-                        str = str.replace("ExpComp2End", ExpComp2End);
-                        str = str.replace("ExpComp2Role", ExpComp2Role);
+
+                        //for experience
+                        if((!exp1) && (!exp2)){
+                            //both exp2 not there
+                            str = str.replace("<div class=\"section\">\n" +
+                                    "      <div class=\"section__title\">Experience</div>\n" +
+                                    "      <div class=\"section__list\">\n" +
+                                    "        <div class=\"section__list-item\">\n" +
+                                    "          <div class=\"left\">\n" +
+                                    "            <div class=\"name\">ExpComp1Name</div>\n" +
+                                    "            <div class=\"addr\">ExpComp1Desc</div>\n" +
+                                    "            <div class=\"duration\">ExpComp1Start - ExpComp1End</div>\n" +
+                                    "          </div>\n" +
+                                    "          <div class=\"right\">\n" +
+                                    "            <div class=\"name\">ExpComp1Role</div>\n" +
+                                    "          </div>\n" +
+                                    "        </div>\n" +
+                                    "        <div class=\"section__list-item\">\n" +
+                                    "          <div class=\"left\">\n" +
+                                    "            <div class=\"name\">ExpComp2Name</div>\n" +
+                                    "            <div class=\"addr\">ExpComp2Desc</div>\n" +
+                                    "            <div class=\"duration\">ExpComp2Start - ExpComp2End</div>\n" +
+                                    "          </div>\n" +
+                                    "          <div class=\"right\">\n" +
+                                    "            <div class=\"name\">ExpComp2Role</div>\n" +
+                                    "          </div>\n" +
+                                    "        </div>\n" +
+                                    "\n" +
+                                    "      </div>\n" +
+                                    "    </div>", "");
+                        }
+                        else if(exp1 && (!exp2)){
+                            //exp1 is there but exp2 not there
+                            str = str.replace("ExpComp1Name", ExpComp1Name);
+                            str = str.replace("ExpComp1Desc", ExpComp1Desc);
+                            str = str.replace("ExpComp1Start", ExpComp1Start);
+                            str = str.replace("ExpComp1End", ExpComp1End);
+                            str = str.replace("ExpComp1Role", ExpComp1Role);
+
+                            str = str.replace("<div class=\"section__list-item\">\n" +
+                                    "          <div class=\"left\">\n" +
+                                    "            <div class=\"name\">ExpComp2Name</div>\n" +
+                                    "            <div class=\"addr\">ExpComp2Desc</div>\n" +
+                                    "            <div class=\"duration\">ExpComp2Start - ExpComp2End</div>\n" +
+                                    "          </div>\n" +
+                                    "          <div class=\"right\">\n" +
+                                    "            <div class=\"name\">ExpComp2Role</div>\n" +
+                                    "          </div>\n" +
+                                    "        </div>", "");
+                        }
+                        else if((!exp1) && exp2){
+                            //no exp1 but exp2 is there
+                            str = str.replace("ExpComp2Name", ExpComp2Name);
+                            str = str.replace("ExpComp2Desc", ExpComp2Desc);
+                            str = str.replace("ExpComp2Start", ExpComp2Start);
+                            str = str.replace("ExpComp2End", ExpComp2End);
+                            str = str.replace("ExpComp2Role", ExpComp2Role);
+
+                            str = str.replace("<div class=\"section__list-item\">\n" +
+                                    "          <div class=\"left\">\n" +
+                                    "            <div class=\"name\">ExpComp1Name</div>\n" +
+                                    "            <div class=\"addr\">ExpComp1Desc</div>\n" +
+                                    "            <div class=\"duration\">ExpComp1Start - ExpComp1End</div>\n" +
+                                    "          </div>\n" +
+                                    "          <div class=\"right\">\n" +
+                                    "            <div class=\"name\">ExpComp1Role</div>\n" +
+                                    "          </div>\n" +
+                                    "        </div>", "");
+                        }
+                        else{
+                            //both exp1 and exp2 are there
+                            str = str.replace("ExpComp1Name", ExpComp1Name);
+                            str = str.replace("ExpComp1Desc", ExpComp1Desc);
+                            str = str.replace("ExpComp1Start", ExpComp1Start);
+                            str = str.replace("ExpComp1End", ExpComp1End);
+                            str = str.replace("ExpComp1Role", ExpComp1Role);
+                            str = str.replace("ExpComp2Name", ExpComp2Name);
+                            str = str.replace("ExpComp2Desc", ExpComp2Desc);
+                            str = str.replace("ExpComp2Start", ExpComp2Start);
+                            str = str.replace("ExpComp2End", ExpComp2End);
+                            str = str.replace("ExpComp2Role", ExpComp2Role);
+                        }
+
+
+
 
 
                         str = str.replace("Skill1", Skill1);
