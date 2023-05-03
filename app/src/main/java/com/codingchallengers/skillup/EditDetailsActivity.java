@@ -32,6 +32,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 
 public class EditDetailsActivity extends AppCompatActivity {
 
@@ -39,7 +40,7 @@ public class EditDetailsActivity extends AppCompatActivity {
     public static String FullName, myFullEmail, myPhoneNumber;
     public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks, CollegeOtherName, CollegeOtherCourse, CollegeOtherYear, CollegeOtherMarks;
     public static String ExpComp1Name, ExpComp1Desc, ExpComp1Start, ExpComp1End,ExpComp1Role, ExpComp2Name, ExpComp2Desc, ExpComp2Start ,ExpComp2End, ExpComp2Role;
-    public static String Skill1, Skill2;
+    public static ArrayList<String> skillList = new ArrayList<>();
     public static String Objective;
     public static String Project1Name, Project1Desc, Project2Name, Project2Desc, Project3Name, Project3Desc;
     public static String MyInterests;
@@ -132,7 +133,7 @@ public class EditDetailsActivity extends AppCompatActivity {
 
                 try {
 
-                    boolean personal = true, edu = true, exp1 = true, exp2 = true, skills = true, obj = true, proj1 = true , proj2 = true, proj3 = true, inte = true;
+                    boolean personal = true, edu = true, exp1 = true, exp2 = true, skills = true, obj = true, proj1 = true , proj2 = true, proj3 = true;
 
 
                     //checking null or empty string for exp section
@@ -160,7 +161,6 @@ public class EditDetailsActivity extends AppCompatActivity {
                         //Toast.makeText(EditDetailsActivity.this,"Fill Project 3 Details",Toast.LENGTH_LONG).show();
                     }
 
-
                     //personal info
                     if(! (isItOk(FullName) && isItOk(myFullEmail) && isItOk(myPhoneNumber))){
                         personal = false;
@@ -170,7 +170,7 @@ public class EditDetailsActivity extends AppCompatActivity {
                         edu = false;
                         Toast.makeText(EditDetailsActivity.this,"Fill Education Details",Toast.LENGTH_LONG).show();
                     }
-                    else if(! (isItOk(Skill1) && isItOk(Skill2))){
+                    else if(skillList.size() == 0){
                         skills = false;
                         Toast.makeText(EditDetailsActivity.this,"Fill Skill Details",Toast.LENGTH_LONG).show();
                     }
@@ -178,11 +178,7 @@ public class EditDetailsActivity extends AppCompatActivity {
                         obj = false;
                         Toast.makeText(EditDetailsActivity.this,"Fill Objective",Toast.LENGTH_LONG).show();
                     }
-
-                    else if(! isItOk(MyInterests)){
-                        inte = false;
-                        Toast.makeText(EditDetailsActivity.this,"Fill Interest Details",Toast.LENGTH_LONG).show();
-                    }else{
+                    else{
 
                         is = getAssets().open("index.html");
                         size = is.available();
@@ -293,11 +289,27 @@ public class EditDetailsActivity extends AppCompatActivity {
 
 
 
+                        //skilll section
+                        String skillItemStart = "<div class=\"skills__item\">\n" +
+                                "          <div class=\"left\"><div class=\"name\">\n" +
+                                "            ";
+
+                        String skillItemEnd = "</div></div>\n" +
+                                "        </div>";
+
+                        String skillListStr = "";
+
+                        for (int i = 0; i < skillList.size(); i++) {
+                            skillListStr += skillItemStart + skillList.get(i) + skillItemEnd;
+                        }
+
+                        //skillList
+                        str = str.replace("skillList", skillListStr);
 
 
-                        str = str.replace("Skill1", Skill1);
-                        str = str.replace("Skill2", Skill2);
 
+
+                        //objective section
                         str = str.replace("Objective", Objective);
 
 
@@ -348,7 +360,24 @@ public class EditDetailsActivity extends AppCompatActivity {
                         }
 
 
-                        str = str.replace("MyInterests", MyInterests);
+
+                        //for interest sectiom
+                        if(MyInterests == null || MyInterests.equals("")){
+                            //no interests
+                            str = str.replace("<div class=\"section\">\n" +
+                                    "      <div class=\"section__title\">\n" +
+                                    "        Interests\n" +
+                                    "      </div>\n" +
+                                    "      <div class=\"section__list\">\n" +
+                                    "        <div class=\"section__list-item\">\n" +
+                                    "          MyInterests\n" +
+                                    "        </div>\n" +
+                                    "      </div>\n" +
+                                    "    </div>", "");
+                        }else {
+                            str = str.replace("MyInterests", MyInterests);
+                        }
+
 
 
 

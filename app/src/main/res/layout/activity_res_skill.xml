@@ -19,7 +19,7 @@
         app:layout_constraintTop_toBottomOf="@+id/form_skill_ll_heading">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/form_skill_til_skill"
+            android:id="@+id/form_skill_til_skill1"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             app:errorEnabled="true"
@@ -27,7 +27,7 @@
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/form_skill_et_skill"
+                android:id="@+id/form_skill_et_skill1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Skill" />
@@ -44,6 +44,54 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_skill_et_skill2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Skill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/form_skill_til_skill3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:errorEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_skill_et_skill3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Skill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/form_skill_til_skill4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:errorEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_skill_et_skill4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Skill" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/form_skill_til_skill5"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:errorEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/form_skill_et_skill5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Skill" />
