@@ -217,28 +217,18 @@ public class EditDetailsActivity extends AppCompatActivity {
                                 "          <div class=\"left\">\n" +
                                 "            <div class=\"name\">";
 
-                        String name;
-
                         String tillDescExp = "</div>\n" +
                                 "            <div class=\"addr\">";
-
-                        String desc;
 
                         String tillYearExp = "</div>\n" +
                                 "            <div class=\"duration\">";
 
-                        String sDateExp;
-
                         String dash = " - ";
-
-                        String eDateExp;
 
                         String tillRoleExp = "</div>\n" +
                                 "          </div>\n" +
                                 "          <div class=\"right\">\n" +
                                 "            <div class=\"name\">";
-
-                        String role;
 
                         String endItemExp = "</div>\n" +
                                 "          </div>\n" +
@@ -256,8 +246,6 @@ public class EditDetailsActivity extends AppCompatActivity {
                                 "      <div class=\"section__title\">Experience</div>\n" +
                                 "      <div class=\"section__list\">\n" +
                                 "        ";
-
-                        String list;
 
                         String expEnd = "\n" +
                                 "      </div>\n" +
