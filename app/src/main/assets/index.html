@@ -34,38 +34,38 @@
         .header {
           margin-bottom: 30px;}
 
-          .full-name {
+          .header .full-name {
             font-size: 40px;
             text-transform: uppercase;
             margin-bottom: 5px;
           }
 
-          .first-name {
+          .header .first-name {
             font-weight: 700;
           }
 
-          .last-name {
+          .header .last-name {
             font-weight: 300;
           }
 
-          .contact-info {
+          .header .contact-info {
             margin-bottom: 20px;
           }
 
-          .email ,
+          .header .email ,
           .phone {
             color: #999;
             font-weight: 300;
           }
 
-          .separator {
+          .header .separator {
             height: 10px;
             display: inline-block;
             border-left: 2px solid #999;
             margin: 0px 10px;
           }
 
-          .position {
+          .header .position {
             font-weight: bold;
             display: inline-block;
             margin-right: 10px;
@@ -73,18 +73,19 @@
           }
 
 
+
         .details {
           line-height: 20px;}
 
-          .section {
+          .details .section {
             margin-bottom: 20px;
           }
 
-          .section:last-of-type {
+          .details .section:last-of-type {
             margin-bottom: 0px;
           }
 
-          .section__title {
+          .details .section__title {
             letter-spacing: 2px;
             color: #54AFE4;
             font-weight: bold;
@@ -92,57 +93,60 @@
             text-transform: uppercase;
           }
 
-          .section__list-item {
+          .details .section__list-item {
             margin-bottom: 20px;
           }
 
-          .section__list-item:last-of-type {
+          .details .section__list-item:last-of-type {
             margin-bottom: 0;
           }
 
-          .left ,
+          .details .left ,
           .right {
             vertical-align: top;
             display: inline-block;
           }
 
-          .left {
+          .details .left {
             width: 60%;
           }
 
-          .right {
+          .details .right {
             tex-align: right;
             width: 39%;
           }
 
-          .name {
+          .details .name {
             font-weight: bold;
           }
 
-          a {
+          .details a {
             text-decoration: none;
             color: #000;
             font-style: italic;
           }
 
-          a:hover {
+          .details a:hover {
             text-decoration: underline;
             color: #000;
           }
 
-          .skills {
+          .details .skills {
 
           }
 
-          .skills__item {
+          .details .skills__item {
             margin-bottom: 10px;
           }
 
-          .skills__item .right input {
+          .details .skills__item .right {
+
+          }
+            .details .skills__item input {
               display: none;
             }
 
-            .skills__item .right label {
+            .details .skills__item .details label {
               display: inline-block;
               width: 20px;
               height: 20px;
@@ -151,12 +155,9 @@
               margin-right: 3px;
             }
 
-            .skills__item .right input:checked + label {
+            .details .skills__item .details input:checked + label {
               background: #79A9CE;
             }
-
-
-
 
 
     </style>
