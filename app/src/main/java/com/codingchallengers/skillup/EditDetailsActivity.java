@@ -2,11 +2,14 @@ package com.codingchallengers.skillup;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.print.PrintAttributes;
 import android.print.PrintDocumentAdapter;
 import android.print.PrintJob;
 import android.print.PrintManager;
+import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -50,6 +53,9 @@ public class EditDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_details);
+
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>SkillUp</font>"));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2a2b2d")));
 
         WebView webView = (WebView) findViewById(R.id.webview);
         webView.getSettings().setJavaScriptEnabled(true);
@@ -206,86 +212,72 @@ public class EditDetailsActivity extends AppCompatActivity {
 
 
                         //for experience
+
+                        String tillNameExp = "<div class=\"section__list-item\">\n" +
+                                "          <div class=\"left\">\n" +
+                                "            <div class=\"name\">";
+
+                        String tillDescExp = "</div>\n" +
+                                "            <div class=\"addr\">";
+
+                        String tillYearExp = "</div>\n" +
+                                "            <div class=\"duration\">";
+
+                        String dash = " - ";
+
+                        String tillRoleExp = "</div>\n" +
+                                "          </div>\n" +
+                                "          <div class=\"right\">\n" +
+                                "            <div class=\"name\">";
+
+                        String endItemExp = "</div>\n" +
+                                "          </div>\n" +
+                                "        </div>";
+
+
+                        String wholeExp = "<div class=\"section\">\n" +
+                                "      <div class=\"section__title\">Experience</div>\n" +
+                                "      <div class=\"section__list\">\n" +
+                                "        ExpListHere\n" +
+                                "      </div>\n" +
+                                "    </div>";
+
+                        String expStart = "<div class=\"section\">\n" +
+                                "      <div class=\"section__title\">Experience</div>\n" +
+                                "      <div class=\"section__list\">\n" +
+                                "        ";
+
+                        String expEnd = "\n" +
+                                "      </div>\n" +
+                                "    </div>";
+
+
+
+                        String ExpList =  expStart;
+
+
                         if((!exp1) && (!exp2)){
                             //both exp2 not there
-                            str = str.replace("<div class=\"section\">\n" +
-                                    "      <div class=\"section__title\">Experience</div>\n" +
-                                    "      <div class=\"section__list\">\n" +
-                                    "        <div class=\"section__list-item\">\n" +
-                                    "          <div class=\"left\">\n" +
-                                    "            <div class=\"name\">ExpComp1Name</div>\n" +
-                                    "            <div class=\"addr\">ExpComp1Desc</div>\n" +
-                                    "            <div class=\"duration\">ExpComp1Start - ExpComp1End</div>\n" +
-                                    "          </div>\n" +
-                                    "          <div class=\"right\">\n" +
-                                    "            <div class=\"name\">ExpComp1Role</div>\n" +
-                                    "          </div>\n" +
-                                    "        </div>\n" +
-                                    "        <div class=\"section__list-item\">\n" +
-                                    "          <div class=\"left\">\n" +
-                                    "            <div class=\"name\">ExpComp2Name</div>\n" +
-                                    "            <div class=\"addr\">ExpComp2Desc</div>\n" +
-                                    "            <div class=\"duration\">ExpComp2Start - ExpComp2End</div>\n" +
-                                    "          </div>\n" +
-                                    "          <div class=\"right\">\n" +
-                                    "            <div class=\"name\">ExpComp2Role</div>\n" +
-                                    "          </div>\n" +
-                                    "        </div>\n" +
-                                    "\n" +
-                                    "      </div>\n" +
-                                    "    </div>", "");
-                        }
-                        else if(exp1 && (!exp2)){
-                            //exp1 is there but exp2 not there
-                            str = str.replace("ExpComp1Name", ExpComp1Name);
-                            str = str.replace("ExpComp1Desc", ExpComp1Desc);
-                            str = str.replace("ExpComp1Start", ExpComp1Start);
-                            str = str.replace("ExpComp1End", ExpComp1End);
-                            str = str.replace("ExpComp1Role", ExpComp1Role);
-
-                            str = str.replace("<div class=\"section__list-item\">\n" +
-                                    "          <div class=\"left\">\n" +
-                                    "            <div class=\"name\">ExpComp2Name</div>\n" +
-                                    "            <div class=\"addr\">ExpComp2Desc</div>\n" +
-                                    "            <div class=\"duration\">ExpComp2Start - ExpComp2End</div>\n" +
-                                    "          </div>\n" +
-                                    "          <div class=\"right\">\n" +
-                                    "            <div class=\"name\">ExpComp2Role</div>\n" +
-                                    "          </div>\n" +
-                                    "        </div>", "");
-                        }
-                        else if((!exp1) && exp2){
-                            //no exp1 but exp2 is there
-                            str = str.replace("ExpComp2Name", ExpComp2Name);
-                            str = str.replace("ExpComp2Desc", ExpComp2Desc);
-                            str = str.replace("ExpComp2Start", ExpComp2Start);
-                            str = str.replace("ExpComp2End", ExpComp2End);
-                            str = str.replace("ExpComp2Role", ExpComp2Role);
-
-                            str = str.replace("<div class=\"section__list-item\">\n" +
-                                    "          <div class=\"left\">\n" +
-                                    "            <div class=\"name\">ExpComp1Name</div>\n" +
-                                    "            <div class=\"addr\">ExpComp1Desc</div>\n" +
-                                    "            <div class=\"duration\">ExpComp1Start - ExpComp1End</div>\n" +
-                                    "          </div>\n" +
-                                    "          <div class=\"right\">\n" +
-                                    "            <div class=\"name\">ExpComp1Role</div>\n" +
-                                    "          </div>\n" +
-                                    "        </div>", "");
+                            str = str.replace("ExpListHere", "");
                         }
                         else{
-                            //both exp1 and exp2 are there
-                            str = str.replace("ExpComp1Name", ExpComp1Name);
-                            str = str.replace("ExpComp1Desc", ExpComp1Desc);
-                            str = str.replace("ExpComp1Start", ExpComp1Start);
-                            str = str.replace("ExpComp1End", ExpComp1End);
-                            str = str.replace("ExpComp1Role", ExpComp1Role);
-                            str = str.replace("ExpComp2Name", ExpComp2Name);
-                            str = str.replace("ExpComp2Desc", ExpComp2Desc);
-                            str = str.replace("ExpComp2Start", ExpComp2Start);
-                            str = str.replace("ExpComp2End", ExpComp2End);
-                            str = str.replace("ExpComp2Role", ExpComp2Role);
+                            if(exp1){
+                                ExpList += tillNameExp + ExpComp1Name + tillDescExp + ExpComp1Desc + tillYearExp + ExpComp1Start + dash + ExpComp1End + tillRoleExp + ExpComp1Role + endItemExp;
+                            }
+
+                            if(exp2){
+                                ExpList += tillNameExp + ExpComp2Name + tillDescExp + ExpComp2Desc + tillYearExp + ExpComp2Start + dash + ExpComp2End + tillRoleExp + ExpComp2Role + endItemExp;
+                            }
+
+                            ExpList += expEnd;
+
+                            str = str.replace("ExpListHere", ExpList);
                         }
+
+
+
+
+
 
 
 
@@ -377,12 +369,7 @@ public class EditDetailsActivity extends AppCompatActivity {
                         }else {
                             str = str.replace("MyInterests", MyInterests);
                         }
-
-
-
-
-
-
+                        
                         webView.loadDataWithBaseURL("fake://not/needed", str,"text/html","utf-8","");
 
 
