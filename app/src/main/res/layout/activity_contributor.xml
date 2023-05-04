@@ -298,7 +298,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/ranjan"
+                android:id="@+id/nagaraj"
                 android:layout_width="168dp"
                 android:layout_height="224dp"
                 android:layout_weight="1"
@@ -309,7 +309,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/ranjan"
+                    android:src="@drawable/nagaraj"
                     android:scaleType="centerCrop"
                     />
                 <View
@@ -329,10 +329,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
-                        android:text="Ranjan Upadhya"
+                        android:text="Nagaraj M"
                         android:fontFamily="@font/mulish_bold"
                         android:textStyle="bold"
-
                         android:textSize="16dp"
                         />
 
@@ -340,7 +339,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
-                        android:text="Daimler Truck (Mercedes)"
+                        android:text="Dream Company"
                         android:fontFamily="@font/mulish"
                         android:textSize="12dp"
                         />
@@ -349,7 +348,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
-                        android:text="CTC: 10 Lakhs"
+                        android:text="CTC: Lakhs"
                         android:fontFamily="@font/mulish"
                         android:textSize="12dp"
                         />
@@ -606,14 +605,13 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-
+                android:id="@+id/ranjan"
                 android:layout_width="168dp"
                 android:layout_height="224dp"
                 android:layout_weight="1"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 app:cardCornerRadius="16dp"
-                android:visibility="invisible"
                 >
                 <ImageView
                     android:layout_width="match_parent"

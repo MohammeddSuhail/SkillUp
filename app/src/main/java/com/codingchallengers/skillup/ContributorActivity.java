@@ -3,6 +3,7 @@ package com.codingchallengers.skillup;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,8 +11,9 @@ import android.widget.ImageView;
 
 public class ContributorActivity extends AppCompatActivity {
 
-    CardView prathamesh, suhail, ranjan, ranjith, anuroop, sabarinath, prajith;
+    CardView prathamesh, suhail, ranjan, ranjith, anuroop, sabarinath, prajith,nagaraj;
     ImageView back_press;
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,7 @@ public class ContributorActivity extends AppCompatActivity {
         anuroop = findViewById(R.id.anuroop);
         sabarinath = findViewById(R.id.sabarinath);
         prajith = findViewById(R.id.prajith);
+        nagaraj = findViewById(R.id.nagaraj);
 
         prathamesh.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +70,15 @@ public class ContributorActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i1 = new Intent(ContributorActivity.this, ContriDetailActivity.class);
                 i1.putExtra("name", "Prajith Shetty");
+                startActivity(i1);
+            }
+        });
+
+        nagaraj.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i1 = new Intent(ContributorActivity.this, ContriDetailActivity.class);
+                i1.putExtra("name", "Nagaraj M");
                 startActivity(i1);
             }
         });

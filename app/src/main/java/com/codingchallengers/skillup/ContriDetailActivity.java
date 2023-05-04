@@ -107,6 +107,16 @@ public class ContriDetailActivity extends AppCompatActivity {
             img.setImageResource(R.drawable.prajith);
         }
 
+        if(Objects.equals(name, "Nagaraj M")){
+            ctc="Lakhs";
+            companies_placed = "• Dream Company (CTC: Lakhs)";
+            cgpa = "9.07";
+            core = "• Web Development\n• Android App Development";
+
+            linkedId = "nagaraj-m-69499a234";
+            img.setImageResource(R.drawable.nagaraj);
+        }
+
         if(Objects.equals(name, "Ranjith Kumar R")){
             ctc="12 Lakhs";
             companies_placed = "• Daimler Truck (CTC: 10 Lakhs)\n• Accenture (MRC - CTC: 4.5 Lakhs)\n• Capgemini (MRC - CTC: 4.25 Lakhs)\n• DXC (MRC - CTC: 4.2 Lakhs)";
