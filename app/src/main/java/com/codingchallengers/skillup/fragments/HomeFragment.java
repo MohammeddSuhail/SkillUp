@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,7 @@ public class HomeFragment extends Fragment {
 
 
     CardView courses,faq,mentor, ie, resBuilder;
+    TextView actiontext;
 
     public static String course;
 
@@ -34,6 +36,9 @@ public class HomeFragment extends Fragment {
 //        getFragmentManager().popBackStack();
 
         f = getFragmentManager().beginTransaction();
+
+        actiontext = getActivity().findViewById(R.id.v_action_text);
+        actiontext.setText("Dashboard");
 
         courses = (CardView) view.findViewById(R.id.cscourse);
         faq = (CardView) view.findViewById(R.id.faqcardiew1);

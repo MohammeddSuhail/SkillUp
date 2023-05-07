@@ -47,8 +47,8 @@
 
                     <ImageView
                         android:id="@+id/cnimageView2"
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:layout_marginStart="8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +63,7 @@
                         android:text="Computer Science Courses"
                         android:layout_marginLeft="12dp"
                         android:textColor="#FFF"
-                        android:textSize="18dp"
+                        android:textSize="16dp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@+id/cnimageView2"
@@ -101,8 +101,8 @@
 
                 <ImageView
                     android:id="@+id/cnimageView"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +117,7 @@
                     android:text="Student Interview Experiences"
                     android:layout_marginLeft="12dp"
                     android:textColor="#FFF"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cnimageView"
@@ -156,8 +156,8 @@
 
                 <ImageView
                     android:id="@+id/cnimageiew"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -172,7 +172,7 @@
                     android:text="Placement FAQs"
                     android:layout_marginLeft="12dp"
                     android:textColor="#FFF"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cnimageiew"
@@ -211,8 +211,8 @@
 
                 <ImageView
                     android:id="@+id/nimageiew"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -227,7 +227,7 @@
                     android:text="NMAMIT Alumini Mentors"
                     android:layout_marginLeft="12dp"
                     android:textColor="#FFF"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/nimageiew"
@@ -266,8 +266,8 @@
 
                 <ImageView
                     android:id="@+id/cnimageVew"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
                     android:layout_marginStart="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -282,7 +282,7 @@
                     android:text="Quick Resume Builder"
                     android:layout_marginLeft="12dp"
                     android:textColor="#FFF"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cnimageVew"

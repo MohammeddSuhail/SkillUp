@@ -6,6 +6,8 @@ package com.codingchallengers.skillup.fragments;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
+        import android.widget.TextView;
+
         import androidx.annotation.NonNull;
         import androidx.annotation.Nullable;
         import androidx.cardview.widget.CardView;
@@ -19,7 +21,6 @@ public class CoursesFragment extends Fragment {
     public static FragmentTransaction f;
 
     CardView cn,dbms,os,oops, dsa, ie, res, rescardviewBuilder;
-
     public static String course;
 
     @Nullable
@@ -38,27 +39,29 @@ public class CoursesFragment extends Fragment {
         dsa=(CardView)view.findViewById(R.id.dsacardview);
         res = (CardView)view.findViewById(R.id.rescardview);
 
+        TextView actiontext = getActivity().findViewById(R.id.v_action_text);
+        actiontext.setText("Courses");
 
-        HomeFragment cf = new HomeFragment();
+        CoursesFragment cf = new CoursesFragment();
         cn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 course = "CN";
-                HomeFragment.f.replace(R.id.fragment_container, new CnFragment()).addToBackStack(null).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).addToBackStack(null).commit();
             }
         });
         dbms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 course = "DBMS";
-                HomeFragment.f.replace(R.id.fragment_container, new DbmsFragment()).addToBackStack(null).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new DbmsFragment()).addToBackStack(null).commit();
             }
         });
         os.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 course = "OS";
-                HomeFragment.f.replace(R.id.fragment_container, new OsFragment()).addToBackStack(null).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new OsFragment()).addToBackStack(null).commit();
             }
         });
 
@@ -94,7 +97,7 @@ public class CoursesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 course = "DSA";
-                HomeFragment.f.replace(R.id.fragment_container, new DSAFragment()).addToBackStack(null).commit();
+                CoursesFragment.f.replace(R.id.fragment_container, new DSAFragment()).addToBackStack(null).commit();
             }
         });
 

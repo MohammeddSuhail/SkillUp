@@ -116,6 +116,7 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
             //for indicating that home fragment is checked
             navigationView.setCheckedItem(R.id.nav_courses);
         }
+        getSupportActionBar().hide();
     }
 
 
@@ -229,6 +230,7 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
             });
         }
     }
+
     protected void setNavigationVisibility(boolean visible) {
         bottomNavigationView.setVisibility(visible ? View.VISIBLE : View.GONE);
     }

@@ -74,7 +74,7 @@ public class ProfileFragment extends Fragment {
     String usn, phoneNo;
 
     CardView cv_userName,cv_usn,cv_phone,cv_yearOfGrad, cv_course, cv_branch, cv_currYear, cv_profession;
-
+TextView actiontext;
     Bitmap bmp;
     ByteArrayOutputStream baos;
 
@@ -85,7 +85,8 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.profile_fragment,container,false);
 
-
+        actiontext = getActivity().findViewById(R.id.v_action_text);
+        actiontext.setText("Profile");
 
         //getActivity().getSupportFragmentManager().popBackStack();
         //CircleImageView profileImage = view.findViewById(R.id.profile_pic_header);
