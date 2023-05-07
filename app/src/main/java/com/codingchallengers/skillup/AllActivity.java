@@ -18,7 +18,7 @@ import com.codingchallengers.skillup.Notes.NotesActivity;
 import com.codingchallengers.skillup.databinding.ActivityAllBinding;
 
 import com.codingchallengers.skillup.fragments.CommunityFragment;
-import com.codingchallengers.skillup.fragments.CoursesFragment;
+import com.codingchallengers.skillup.fragments.HomeFragment;
 import com.codingchallengers.skillup.fragments.ProfileFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -63,7 +63,7 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                         switch (item.getItemId()) {
                             case R.id.bottom_nav_home:
                                 // handle home item selection
-                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CoursesFragment()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
                                 return true;
                             case R.id.bottom_nav_notes:
                                 // handle notifications item selection
@@ -112,7 +112,7 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
 
         if(savedInstanceState == null){
             //at first home fragment is loaded so
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CoursesFragment()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
             //for indicating that home fragment is checked
             navigationView.setCheckedItem(R.id.nav_courses);
         }
@@ -133,7 +133,7 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.nav_courses:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CoursesFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
                 break;
 
             case R.id.nav_profile:

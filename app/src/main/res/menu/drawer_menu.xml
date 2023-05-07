@@ -5,31 +5,37 @@
         <item
             android:id="@+id/nav_courses"
             android:icon="@drawable/ic_home"
+            android:visible="false"
             android:title="Home"/>
         <item
             android:id="@+id/nav_profile"
+            android:visible="false"
             android:icon="@drawable/ic_profile"
             android:title="Profile"/>
 
         <item
             android:id="@+id/nav_notes"
+            android:visible="false"
             android:icon="@drawable/ic_baseline_note_add_24"
             android:title="Add Notes"/>
 
         <item
             android:id="@+id/nav_community"
+            android:visible="false"
             android:icon="@drawable/ic_invite_friend"
             android:title="Community"/>
 
 
         <item
             android:id="@+id/nav_scanner"
+            android:visible="false"
             android:icon="@drawable/ic_baseline_qr_code_scanner_24"
             android:title="QR Code Scanner"/>
 
 
         <item
             android:id="@+id/nav_guide"
+            android:visible="false"
             android:icon="@drawable/guide"
             android:title="Placement FAQs"/>
 
@@ -42,6 +48,7 @@
 
         <item
             android:id="@+id/nav_contributors"
+            android:visible="false"
             android:icon="@drawable/ic_baseline_assistant_24"
             android:title="Mentors"/>
 

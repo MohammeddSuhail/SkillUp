@@ -1,31 +1,26 @@
 package com.codingchallengers.skillup.fragments;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-
-import com.codingchallengers.skillup.EditDetailsActivity;
-import com.codingchallengers.skillup.R;
-import com.codingchallengers.skillup.resSkillActivity;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.view.KeyEvent;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
+        import androidx.annotation.NonNull;
+        import androidx.annotation.Nullable;
+        import androidx.cardview.widget.CardView;
+        import androidx.fragment.app.Fragment;
+        import androidx.fragment.app.FragmentTransaction;
+        import com.codingchallengers.skillup.EditDetailsActivity;
+        import com.codingchallengers.skillup.R;
 
 public class CoursesFragment extends Fragment {
 
     public static FragmentTransaction f;
 
-
     CardView cn,dbms,os,oops, dsa, ie, res, rescardviewBuilder;
 
     public static String course;
-
 
     @Nullable
     @Override
@@ -36,39 +31,34 @@ public class CoursesFragment extends Fragment {
 
         f = getFragmentManager().beginTransaction();
 
-//        getSupportActionBar().setTitle("");
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        cn = (CardView) view.findViewById(R.id.cncardview);
+        cn = (CardView)view.findViewById(R.id.cncardview);
         dbms = (CardView)view.findViewById(R.id.dbmscardview);
         os = (CardView)view.findViewById(R.id.oscardview);
-        oops =(CardView) view.findViewById(R.id.oopscardview);
-        dsa=(CardView) view.findViewById(R.id.dsacardview);
-        ie = (CardView) view.findViewById(R.id.ie_cardview);
-        res = (CardView) view.findViewById(R.id.rescardview);
-        rescardviewBuilder = (CardView) view.findViewById(R.id.rescardviewBuilder);
+        oops =(CardView)view.findViewById(R.id.oopscardview);
+        dsa=(CardView)view.findViewById(R.id.dsacardview);
+        res = (CardView)view.findViewById(R.id.rescardview);
 
 
-        CoursesFragment cf = new CoursesFragment();
+        HomeFragment cf = new HomeFragment();
         cn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 course = "CN";
-                CoursesFragment.f.replace(R.id.fragment_container, new CnFragment()).addToBackStack(null).commit();
+                HomeFragment.f.replace(R.id.fragment_container, new CnFragment()).addToBackStack(null).commit();
             }
         });
         dbms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 course = "DBMS";
-                CoursesFragment.f.replace(R.id.fragment_container, new DbmsFragment()).addToBackStack(null).commit();
+                HomeFragment.f.replace(R.id.fragment_container, new DbmsFragment()).addToBackStack(null).commit();
             }
         });
         os.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 course = "OS";
-                CoursesFragment.f.replace(R.id.fragment_container, new OsFragment()).addToBackStack(null).commit();
+                HomeFragment.f.replace(R.id.fragment_container, new OsFragment()).addToBackStack(null).commit();
             }
         });
 
@@ -104,26 +94,10 @@ public class CoursesFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 course = "DSA";
-                CoursesFragment.f.replace(R.id.fragment_container, new DSAFragment()).addToBackStack(null).commit();
+                HomeFragment.f.replace(R.id.fragment_container, new DSAFragment()).addToBackStack(null).commit();
             }
         });
 
-        ie.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CoursesFragment.f.replace(R.id.fragment_container, new IntExpListFragment()).addToBackStack(null).commit();
-            }
-        });
-
-
-        rescardviewBuilder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), EditDetailsActivity.class);
-                //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-            }
-        });
 
 
 
@@ -132,18 +106,18 @@ public class CoursesFragment extends Fragment {
         view.setFocusableInTouchMode(true);
         view.requestFocus();
 
-        view.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (event.getAction() == KeyEvent.ACTION_DOWN) {
-                    if (keyCode == KeyEvent.KEYCODE_BACK) {
-                        getActivity().finish();
-                        return true;
-                    }
-                }
-                return false;
-            }
-        });
+//        view.setOnKeyListener(new View.OnKeyListener() {
+//            @Override
+//            public boolean onKey(View v, int keyCode, KeyEvent event) {
+//                if (event.getAction() == KeyEvent.ACTION_DOWN) {
+//                    if (keyCode == KeyEvent.KEYCODE_BACK) {
+//                        getActivity().finish();
+//                        return true;
+//                    }
+//                }
+//                return false;
+//            }
+//        });
 
 
         return view;

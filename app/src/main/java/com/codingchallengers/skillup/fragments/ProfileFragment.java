@@ -363,7 +363,7 @@ public class ProfileFragment extends Fragment {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (event.getAction() == KeyEvent.ACTION_DOWN) {
                     if (keyCode == KeyEvent.KEYCODE_BACK) {
-                        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new CoursesFragment()).commit();
+                        getFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
                         return true;
                     }
                 }
