@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -39,7 +40,8 @@ import java.util.ArrayList;
 
 public class EditDetailsActivity extends AppCompatActivity {
 
-    private Button btn_per, btn_edu, btn_exp, btn_skill, btn_obj, btn_pro, btn_view_cv, btn_interest_detail;
+    private CardView btn_per, btn_edu, btn_exp, btn_skill, btn_obj, btn_pro, btn_interest_detail;
+    private Button btn_view_cv;
     public static String FullName, myFullEmail, myPhoneNumber;
     public static String CollegeBEName, CollegeBECourse, CollegeBEYear,CollegeBEMarks, CollegeOtherName, CollegeOtherCourse, CollegeOtherYear, CollegeOtherMarks;
     public static String ExpComp1Name, ExpComp1Desc, ExpComp1Start, ExpComp1End,ExpComp1Role, ExpComp2Name, ExpComp2Desc, ExpComp2Start ,ExpComp2End, ExpComp2Role;
@@ -70,7 +72,7 @@ public class EditDetailsActivity extends AppCompatActivity {
         btn_skill = findViewById(R.id.btn_skill_detail);
         btn_obj = findViewById(R.id.btn_objective_detail);
         btn_pro = findViewById(R.id.btn_project_detail);
-        btn_interest_detail = findViewById(R.id.btn_interest_detail);
+        btn_interest_detail =  findViewById(R.id.btn_interest_detail);
 
         btn_per.setOnClickListener(new View.OnClickListener() {
             @Override
