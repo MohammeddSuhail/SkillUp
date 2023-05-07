@@ -217,6 +217,11 @@ public class EditDetailsActivity extends AppCompatActivity {
                                 "          <div class=\"left\">\n" +
                                 "            <div class=\"name\">";
 
+                        String tillRole = "</div>\n" +
+                                "            <div class=\"name\">";
+
+                        String role = "";
+
                         String tillDescExp = "</div>\n" +
                                 "            <div class=\"addr\">";
 
@@ -225,10 +230,10 @@ public class EditDetailsActivity extends AppCompatActivity {
 
                         String dash = " - ";
 
-                        String tillRoleExp = "</div>\n" +
-                                "          </div>\n" +
-                                "          <div class=\"right\">\n" +
-                                "            <div class=\"name\">";
+//                        String tillRoleExp = "</div>\n" +
+//                                "          </div>\n" +
+//                                "          <div class=\"right\">\n" +
+//                                "            <div class=\"name\">";
 
                         String endItemExp = "</div>\n" +
                                 "          </div>\n" +
@@ -262,11 +267,11 @@ public class EditDetailsActivity extends AppCompatActivity {
                         }
                         else{
                             if(exp1){
-                                ExpList += tillNameExp + ExpComp1Name + tillDescExp + ExpComp1Desc + tillYearExp + ExpComp1Start + dash + ExpComp1End + tillRoleExp + ExpComp1Role + endItemExp;
+                                ExpList += tillNameExp + ExpComp1Name + tillRole + ExpComp1Role + tillDescExp + ExpComp1Desc + tillYearExp + ExpComp1Start + dash + ExpComp1End + endItemExp;
                             }
 
                             if(exp2){
-                                ExpList += tillNameExp + ExpComp2Name + tillDescExp + ExpComp2Desc + tillYearExp + ExpComp2Start + dash + ExpComp2End + tillRoleExp + ExpComp2Role + endItemExp;
+                                ExpList += tillNameExp + ExpComp2Name + tillRole + ExpComp2Role + tillDescExp + ExpComp2Desc + tillYearExp + ExpComp2Start + dash + ExpComp2End + endItemExp;
                             }
 
                             ExpList += expEnd;
