@@ -20,6 +20,7 @@ import com.codingchallengers.skillup.databinding.ActivityAllBinding;
 import com.codingchallengers.skillup.fragments.CommunityFragment;
 import com.codingchallengers.skillup.fragments.CoursesFragment;
 import com.codingchallengers.skillup.fragments.ProfileFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -45,11 +46,45 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
     public static CircleImageView profileImage;
     TextView name,profession;
 
+    private BottomNavigationView bottomNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityAllBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.bottom_nav_home:
+                                // handle home item selection
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CoursesFragment()).commit();
+                                return true;
+                            case R.id.bottom_nav_notes:
+                                // handle notifications item selection
+                                Intent intent = new Intent(AllActivity.this, NotesActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                                return true;
+                            case R.id.bottom_nav_community:
+                                // handle dashboard item selection
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new CommunityFragment()).commit();
+                                return true;
+                            case R.id.bottom_nav_profile:
+                                // handle notifications item selection
+                                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new ProfileFragment()).commit();
+                                return true;
+                        }
+                        return false;
+                    }
+                });
+        setNavigationVisibility(true);
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
@@ -193,6 +228,9 @@ public class AllActivity extends AppCompatActivity implements NavigationView.OnN
                 }
             });
         }
+    }
+    protected void setNavigationVisibility(boolean visible) {
+        bottomNavigationView.setVisibility(visible ? View.VISIBLE : View.GONE);
     }
 
 }

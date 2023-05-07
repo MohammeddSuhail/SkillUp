@@ -105,14 +105,14 @@
                 android:fontFamily="@font/mulish"
                 android:text="Post description goes here"
                 android:layout_marginStart="56dp"
-                android:layout_marginEnd="16dp" />
+                android:layout_marginEnd="20dp" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv_postImage"
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
+                android:layout_height="170dp"
                 android:layout_marginStart="56dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/black2"
                 app:cardCornerRadius="10dp">
@@ -132,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="56dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:orientation="horizontal">
@@ -150,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginTop="7dp"
-                    android:text="26" />
+                    android:text="0" />
 
                 <View
                     android:layout_width="0dp"
@@ -181,7 +181,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="56dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="20dp"
                     app:cardElevation="0dp">
 
                     <LinearLayout
@@ -208,7 +208,7 @@
                             android:textColor="@color/white"
                             android:fontFamily="@font/mulish"
                             android:layout_marginEnd="5dp"
-                            android:text="21"/>
+                            android:text="0"/>
                         <TextView
                             android:id="@+id/tv_comment"
                             android:layout_width="wrap_content"
