@@ -5,7 +5,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:background="@android:color/white"
+android:background="@color/almost_black"
 android:padding="10dp"
 android:clickable="true"
 tools:context=".resInteActivity">
@@ -20,7 +20,7 @@ tools:context=".resInteActivity">
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Edit Interests"
-            android:textColor="@android:color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:fontFamily="@font/raleway_bold"/>
 
@@ -40,6 +40,8 @@ tools:context=".resInteActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
@@ -48,6 +50,7 @@ tools:context=".resInteActivity">
                 android:id="@+id/form_obj_et_obj_inte"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Objective" />
 
         </com.google.android.material.textfield.TextInputLayout>

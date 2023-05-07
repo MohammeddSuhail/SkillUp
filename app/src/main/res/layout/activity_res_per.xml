@@ -4,7 +4,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-android:background="@android:color/white"
+android:background="@color/almost_black"
 tools:layout_editor_absoluteX="20dp"
 tools:context=".resPerActivity">
 
@@ -12,7 +12,7 @@ tools:context=".resPerActivity">
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".FormFragments.PersonalFragment"
-    android:background="@android:color/white"
+    android:background="@color/almost_black"
     android:padding="10dp"
     android:clickable="true">
 
@@ -26,7 +26,7 @@ tools:context=".resPerActivity">
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Edit Personal Details"
-            android:textColor="@android:color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:fontFamily="@font/raleway_bold"/>
 
@@ -50,6 +50,8 @@ tools:context=".resPerActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             app:errorEnabled="true"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -57,6 +59,7 @@ tools:context=".resPerActivity">
                 android:id="@+id/form_personal_et_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Name" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -67,6 +70,8 @@ tools:context=".resPerActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             app:errorEnabled="true"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -75,6 +80,7 @@ tools:context=".resPerActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress"
+                android:textColor="@color/white"
                 android:hint="Email" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -86,6 +92,8 @@ tools:context=".resPerActivity">
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             app:errorEnabled="true"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -94,6 +102,7 @@ tools:context=".resPerActivity">
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
+                android:textColor="@color/white"
                 android:hint="Contact" />
 
         </com.google.android.material.textfield.TextInputLayout>

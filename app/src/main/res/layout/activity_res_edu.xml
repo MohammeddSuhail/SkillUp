@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/almost_black"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -21,7 +22,7 @@
             android:layout_marginTop="9dp"
             android:fontFamily="@font/mulish"
             android:text="BE"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="19dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -29,6 +30,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
@@ -37,6 +40,7 @@
                 android:id="@+id/form_edu_et_degree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Degree / Course" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -45,6 +49,8 @@
             android:id="@+id/form_edu_til_university"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -54,6 +60,7 @@
                 android:id="@+id/form_edu_et_university"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="University / School" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -64,6 +71,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -71,6 +80,7 @@
                 android:id="@+id/form_edu_et_grade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Grade / Score" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -81,6 +91,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -88,6 +100,8 @@
                 android:id="@+id/form_edu_et_year"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 android:hint="Year" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -101,7 +115,7 @@
             android:layout_marginTop="25dp"
             android:fontFamily="@font/mulish"
             android:text="PUC / Diploma"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="19dp" />
 
         <com.google.android.material.textfield.TextInputLayout
@@ -109,6 +123,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
@@ -116,6 +132,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_edu_et_degreePU"
                 android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 android:layout_height="wrap_content"
                 android:hint="Degree / Course" />
 
@@ -126,6 +144,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
@@ -133,6 +153,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_edu_et_universityPU"
                 android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 android:layout_height="wrap_content"
                 android:hint="University / School" />
 
@@ -143,7 +165,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             app:errorEnabled="true"
+
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -151,6 +176,7 @@
                 android:id="@+id/form_edu_et_gradePU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Grade / Score" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -161,6 +187,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -168,6 +196,7 @@
                 android:id="@+id/form_edu_et_yearPU"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Year" />
 
         </com.google.android.material.textfield.TextInputLayout>

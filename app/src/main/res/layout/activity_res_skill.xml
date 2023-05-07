@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingStart="20dp"
+    android:background="@color/almost_black"
     android:paddingEnd="20dp"
     tools:context=".resSkillActivity">
 
@@ -23,12 +24,15 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_skill_et_skill1"
                 android:layout_width="match_parent"
+                android:textColor="@color/white"
                 android:layout_height="wrap_content"
                 android:hint="Skill" />
 
@@ -39,6 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -46,6 +52,7 @@
                 android:id="@+id/form_skill_et_skill2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Skill" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -54,6 +61,8 @@
             android:id="@+id/form_skill_til_skill3"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
@@ -62,6 +71,7 @@
                 android:id="@+id/form_skill_et_skill3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Skill" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -71,6 +81,8 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -78,6 +90,7 @@
                 android:id="@+id/form_skill_et_skill4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Skill" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -87,6 +100,8 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -94,6 +109,7 @@
                 android:id="@+id/form_skill_et_skill5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Skill" />
 
         </com.google.android.material.textfield.TextInputLayout>
