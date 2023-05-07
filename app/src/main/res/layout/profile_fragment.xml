@@ -5,12 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:background="#242527">
+    android:background="#2a2b2d">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="30dp">
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -502,6 +502,23 @@
                     app:srcCompat="@drawable/right_arrow" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/logout"
+
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:fontFamily="@font/mulish_bold"
+            android:background="#F44336"
+            android:shadowRadius="16"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:textSize="18dp"
+            android:layout_alignParentBottom="true"
+            />
     </LinearLayout>
 
 </ScrollView>
