@@ -14,7 +14,7 @@
         >
 <ImageView
     android:layout_width="200dp"
-    android:layout_height="150dp"
+    android:layout_height="120dp"
     android:layout_margin="16dp"
     android:src="@drawable/skillup_close"
     />
@@ -22,10 +22,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cscourse"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="1dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1"
             android:clickable="true"
@@ -40,35 +40,51 @@
             app:layout_constraintVertical_bias="0.6">
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CSE Courses"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/mulish"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Computer Science key concepts"
+                        android:textSize="14sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white2"
+                        android:fontFamily="@font/mulish"/>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
 
                 <ImageView
-                    android:id="@+id/cnimageView2"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/cn_logo" />
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/home_page_course" />
 
-                <TextView
-                    android:id="@+id/cntextView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:fontFamily="@font/mulish_bold"
-                    android:text="Computer Science Courses"
-                    android:textColor="#FFF"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/cnimageView2"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
@@ -76,10 +92,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/ie_cardview"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="4dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1"
             android:clickable="true"
@@ -94,35 +110,51 @@
             app:layout_constraintVertical_bias="0.6">
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-
-                <ImageView
-                    android:id="@+id/cnimageView"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/cn_logo" />
-
-                <TextView
-                    android:id="@+id/cntextView"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:fontFamily="@font/mulish_bold"
-                    android:text="Student Interview Experiences"
-                    android:textColor="#FFF"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/cnimageView"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Interview Experiences"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/mulish"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Interview experiences from placed students"
+                        android:textSize="14sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white2"
+                        android:fontFamily="@font/mulish"/>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/home_page_interview" />
+
+
+            </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
@@ -130,10 +162,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/faqcardiew1"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="4dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1"
             android:clickable="true"
@@ -148,35 +180,51 @@
             app:layout_constraintVertical_bias="0.6">
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-
-                <ImageView
-                    android:id="@+id/cnimageiew"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/cn_logo" />
-
-                <TextView
-                    android:id="@+id/cntextiew"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:fontFamily="@font/mulish_bold"
-                    android:text="Placement FAQs"
-                    android:textColor="#FFF"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/cnimageiew"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Placement FAQs"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/mulish"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Answers to top placement questions"
+                        android:textSize="14sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white2"
+                        android:fontFamily="@font/mulish"/>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/home_page_faq" />
+
+
+            </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
@@ -184,10 +232,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/mentorcardview"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="4dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1"
             android:clickable="true"
@@ -202,35 +250,51 @@
             app:layout_constraintVertical_bias="0.6">
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-
-                <ImageView
-                    android:id="@+id/nimageiew"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/cn_logo" />
-
-                <TextView
-                    android:id="@+id/ntextiew"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:fontFamily="@font/mulish_bold"
-                    android:text="NMAMIT Alumini Mentors"
-                    android:textColor="#FFF"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/nimageiew"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mentors"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/mulish"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="NMAMIT Alumni Mentors"
+                        android:textSize="14sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white2"
+                        android:fontFamily="@font/mulish"/>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/home_page_mentors" />
+
+
+            </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
@@ -238,10 +302,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/resumebuildcardview"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginStart="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="4dp"
-            android:layout_marginEnd="30dp"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="8dp"
             android:layout_weight="1"
             android:clickable="true"
@@ -256,35 +320,51 @@
             app:layout_constraintVertical_bias="0.6">
 
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-
-                <ImageView
-                    android:id="@+id/cnimageVew"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginStart="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/cn_logo" />
-
-                <TextView
-                    android:id="@+id/cntextVew"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:fontFamily="@font/mulish_bold"
-                    android:text="Quick Resume Builder"
-                    android:textColor="#FFF"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/cnimageVew"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Resume Builder"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/mulish"/>
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="Quick Resume Builder"
+                        android:textSize="14sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white2"
+                        android:fontFamily="@font/mulish"/>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    app:srcCompat="@drawable/home_page_resume" />
+
+
+            </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
