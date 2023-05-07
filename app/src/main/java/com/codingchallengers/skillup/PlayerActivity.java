@@ -12,7 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.codingchallengers.skillup.fragments.HomeFragment;
+import com.codingchallengers.skillup.fragments.CoursesFragment;
 import com.codingchallengers.skillup.model.Video;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -113,7 +113,7 @@ public class PlayerActivity extends AppCompatActivity {
 
 
                 //Toast.makeText(PlayerActivity.this, CoursesFragment.course, Toast.LENGTH_SHORT).show();   .setValue(vide) or .updateChildren(hashMap)
-                mRef.child("Pinned").child(mUser.getUid()).child(HomeFragment.course).child(vid[0]).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void unused) {
                         Toast.makeText(PlayerActivity.this, "Added", Toast.LENGTH_SHORT).show();
@@ -178,7 +178,7 @@ public class PlayerActivity extends AppCompatActivity {
         unPinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mRef.child("Pinned").child(mUser.getUid()).child(HomeFragment.course).child(vid[0]).removeValue();
+                mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).removeValue();
                 Toast.makeText(PlayerActivity.this,"Removed",Toast.LENGTH_SHORT).show();
             }
         });
@@ -186,7 +186,7 @@ public class PlayerActivity extends AppCompatActivity {
     }
 
     private void setPin() {
-        mRef.child("Pinned").child(mUser.getUid()).child(HomeFragment.course).child(vid[0]).addValueEventListener(new ValueEventListener() {
+        mRef.child("Pinned").child(mUser.getUid()).child(CoursesFragment.course).child(vid[0]).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
