@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#2a2b2d"
-            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
             android:layout_alignParentTop="true"
             android:paddingTop="15dp"
             android:paddingBottom="15dp">
@@ -31,10 +31,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
                 android:fontFamily="@font/mulish_bold"
-                android:paddingLeft="0dp"
                 android:text="SkillUp"
                 android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <androidx.appcompat.widget.Toolbar
@@ -45,6 +44,10 @@
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#424244"/>
 
         <FrameLayout
             android:id="@+id/fragment_container"
