@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/almost_black"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -21,7 +22,7 @@
             android:layout_marginTop="9dp"
             android:fontFamily="@font/mulish"
             android:text="Experience 1"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="19dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
 
 
@@ -31,6 +32,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -38,6 +41,8 @@
                 android:id="@+id/form_exp_et_company"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 android:hint="Company Name" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -48,6 +53,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -55,6 +62,8 @@
                 android:id="@+id/form_exp_et_job"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 android:hint="Job Title" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -69,6 +78,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 app:errorEnabled="true"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 android:layout_weight="1"
                 android:layout_marginEnd="15dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -78,6 +89,8 @@
                     android:id="@+id/form_exp_et_sdate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textColorHint="#878787"
                     android:hint="Start Date" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -87,6 +100,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 app:errorEnabled="true"
                 android:layout_weight="1"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -95,6 +110,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/form_exp_et_edate"
                     android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:textColorHint="#878787"
                     android:layout_height="wrap_content"
                     android:hint="End Date" />
 
@@ -107,12 +124,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_exp_et_desc"
                 android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 android:layout_height="wrap_content"
                 android:hint="Description" />
 
@@ -132,7 +153,8 @@
             android:layout_marginTop="25dp"
             android:fontFamily="@font/mulish"
             android:text="Experience 2"
-            android:textColor="@color/black"
+
+            android:textColor="@color/white"
             android:textSize="19dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
 
 
@@ -142,6 +164,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -149,7 +173,9 @@
                 android:id="@+id/form_exp_et_company2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Company Name" />
+                android:hint="Company Name"
+                android:textColor="@color/white"
+                android:textColorHint="#878787" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -159,12 +185,16 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_exp_et_job2"
                 android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 android:layout_height="wrap_content"
                 android:hint="Job Title" />
 
@@ -181,6 +211,8 @@
                 android:layout_marginTop="10dp"
                 app:errorEnabled="true"
                 android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 android:layout_marginEnd="15dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:hintTextAppearance="@android:style/TextAppearance.Medium">
@@ -189,6 +221,8 @@
                     android:id="@+id/form_exp_et_sdate2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textColorHint="#878787"
                     android:hint="Start Date" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -200,12 +234,16 @@
                 android:layout_marginTop="10dp"
                 app:errorEnabled="true"
                 android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textColorHint="#878787"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/form_exp_et_edate2"
                     android:layout_width="match_parent"
+                    android:textColor="@color/white"
+                    android:textColorHint="#878787"
                     android:layout_height="wrap_content"
                     android:hint="End Date" />
 
@@ -217,6 +255,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">

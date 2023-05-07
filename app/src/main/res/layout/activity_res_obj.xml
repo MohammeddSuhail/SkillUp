@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/almost_black"
     android:padding="10dp"
     android:clickable="true"
     tools:context=".resObjActivity">
@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="Edit Objective"
-            android:textColor="@android:color/black"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:fontFamily="@font/raleway_bold"/>
 
@@ -41,6 +41,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             app:errorEnabled="true"
+            android:textColor="@color/white"
+            android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:hintTextAppearance="@android:style/TextAppearance.Medium">
 
@@ -48,6 +50,7 @@
                 android:id="@+id/form_obj_et_obj"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white"
                 android:hint="Objective" />
 
         </com.google.android.material.textfield.TextInputLayout>
