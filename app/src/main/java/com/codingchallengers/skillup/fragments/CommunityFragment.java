@@ -5,6 +5,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,7 +16,7 @@ import com.codingchallengers.skillup.R;
 
 public class CommunityFragment extends Fragment {
     CardView csDSA, csCN, csDBMS, csOS, csOOPS; //community section options
-
+    TextView actiontext;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -26,6 +27,9 @@ public class CommunityFragment extends Fragment {
         csDBMS = view.findViewById(R.id.csDBMS);
         csOS = view.findViewById(R.id.csOS);
         csOOPS = view.findViewById(R.id.csOOPS);
+
+        actiontext = getActivity().findViewById(R.id.v_action_text);
+        actiontext.setText("Community");
 
         EachCommunityFragment eachCommunityFragment = new EachCommunityFragment();
         Bundle args = new Bundle();

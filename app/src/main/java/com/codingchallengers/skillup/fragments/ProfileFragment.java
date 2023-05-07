@@ -13,6 +13,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,7 +23,9 @@ import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import com.codingchallengers.skillup.AllActivity;
 import com.codingchallengers.skillup.R;
+import com.codingchallengers.skillup.SignInActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -57,7 +60,7 @@ public class ProfileFragment extends Fragment {
     ImageView editProfileImage;
 
     Uri imageUri;
-
+    Button logout;
     DatabaseReference mUserRef;
     FirebaseAuth mAuth;
     FirebaseUser mUser;
@@ -71,7 +74,7 @@ public class ProfileFragment extends Fragment {
     String usn, phoneNo;
 
     CardView cv_userName,cv_usn,cv_phone,cv_yearOfGrad, cv_course, cv_branch, cv_currYear, cv_profession;
-
+TextView actiontext;
     Bitmap bmp;
     ByteArrayOutputStream baos;
 
@@ -82,7 +85,8 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(@NonNull @NotNull LayoutInflater inflater, @Nullable @org.jetbrains.annotations.Nullable ViewGroup container, @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.profile_fragment,container,false);
 
-
+        actiontext = getActivity().findViewById(R.id.v_action_text);
+        actiontext.setText("Profile");
 
         //getActivity().getSupportFragmentManager().popBackStack();
         //CircleImageView profileImage = view.findViewById(R.id.profile_pic_header);
@@ -114,10 +118,21 @@ public class ProfileFragment extends Fragment {
         cv_currYear = view.findViewById(R.id.cv_currYear);
         cv_profession = view.findViewById(R.id.cv_profession);
 
+        logout = view.findViewById(R.id.logout);
+
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
         mUserRef = FirebaseDatabase.getInstance().getReference().child("Users");
         StorageRef = FirebaseStorage.getInstance().getReference().child("ProfileImage");
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+                Intent i = new Intent(getActivity(), SignInActivity.class);
+                startActivity(i);
+            }
+        });
 
         editProfileImage.setOnClickListener(new View.OnClickListener() {
             @Override

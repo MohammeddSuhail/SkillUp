@@ -54,7 +54,7 @@ public class EditDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_details);
 
-        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>SkillUp</font>"));
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#ffffff'>Quick Resume Builder</font>"));
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#2a2b2d")));
 
         WebView webView = (WebView) findViewById(R.id.webview);

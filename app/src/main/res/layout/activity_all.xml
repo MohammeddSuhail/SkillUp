@@ -13,6 +13,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2a2b2d"
+            android:paddingLeft="20dp"
+            android:layout_alignParentTop="true"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+
+
+            <TextView
+                android:id="@+id/v_action_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:fontFamily="@font/mulish_bold"
+                android:paddingLeft="0dp"
+                android:text="SkillUp"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+        </LinearLayout>
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -54,6 +77,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:visibility="gone"
         app:menu="@menu/drawer_menu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
