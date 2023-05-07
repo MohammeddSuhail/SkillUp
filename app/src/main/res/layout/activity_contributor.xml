@@ -339,7 +339,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
-                        android:text="Dream Company"
+                        android:text="Accenture"
                         android:fontFamily="@font/mulish"
                         android:textSize="12dp"
                         />
@@ -348,7 +348,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
-                        android:text="CTC: Lakhs"
+                        android:text="CTC: 8 Lakhs"
                         android:fontFamily="@font/mulish"
                         android:textSize="12dp"
                         />

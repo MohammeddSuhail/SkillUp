@@ -108,8 +108,8 @@ public class ContriDetailActivity extends AppCompatActivity {
         }
 
         if(Objects.equals(name, "Nagaraj M")){
-            ctc="Lakhs";
-            companies_placed = "• Dream Company (CTC: Lakhs)";
+            ctc="12 Lakhs";
+            companies_placed = "• Accenture (CTC: 8 Lakhs)";
             cgpa = "9.07";
             core = "• Web Development\n• Android App Development";
 
