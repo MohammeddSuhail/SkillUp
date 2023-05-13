@@ -130,6 +130,7 @@ TextView actiontext;
             public void onClick(View view) {
                 mAuth.signOut();
                 Intent i = new Intent(getActivity(), SignInActivity.class);
+                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);
             }
         });
