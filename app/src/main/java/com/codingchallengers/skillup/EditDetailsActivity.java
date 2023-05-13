@@ -215,8 +215,13 @@ public class EditDetailsActivity extends AppCompatActivity {
 
                         //for experience
 
+//                        String tillNameExp = "<div class=\"section__list-item\">\n" +
+//                                "          <div class=\"left\">\n" +
+//                                "            <div class=\"name\">";
+
+
                         String tillNameExp = "<div class=\"section__list-item\">\n" +
-                                "          <div class=\"left\">\n" +
+                                "          <div >\n" +
                                 "            <div class=\"name\">";
 
                         String tillRole = "</div>\n" +
