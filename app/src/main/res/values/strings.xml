@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">SkillUp</string>
+    <string name="app_name">Placemate</string>
 
-    <string name="new_to_app">New to SkillUp?</string>
-    <string name="get_placement_ready_with_app">Get Placement ready with SkillUp!</string>
+    <string name="new_to_app">New to Placemate?</string>
+    <string name="get_placement_ready_with_app">Get Placement ready with Placemate!</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

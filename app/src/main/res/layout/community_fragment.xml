@@ -25,10 +25,21 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="5dp"
         android:fontFamily="@font/mulish"
         android:text="The below sections help you to post any doubts regarding respective fields. Also, you can clarify others' doubts."
         android:textColor="@color/white"
+        android:textSize="14sp" />
+    <TextView
+        android:id="@+id/textView66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/mulish"
+        android:text="Please contribute responsibly and respectfully. If you encounter any misuse, please report it to the Placement Department."
+        android:textColor="#FF5722"
         android:textSize="14sp" />
 
     <androidx.cardview.widget.CardView
@@ -48,7 +59,7 @@
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="15dp"
-                app:srcCompat="@drawable/dsa_logo" />
+                app:srcCompat="@drawable/quer" />
 
             <TextView
                 android:id="@+id/textViewDSA"
@@ -59,7 +70,7 @@
                 android:fontFamily="@font/mulish_bold"
                 android:gravity="center|left"
                 android:paddingLeft="10dp"
-                android:text="DSA"
+                android:text="Placement Corner"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -257,7 +268,7 @@
                 android:fontFamily="@font/mulish_bold"
                 android:gravity="center|left"
                 android:paddingLeft="10dp"
-                android:text="OOPS"
+                android:text="DSA and OOPS"
                 android:textColor="@color/white"
                 android:textSize="20sp"
                 android:textStyle="bold" />

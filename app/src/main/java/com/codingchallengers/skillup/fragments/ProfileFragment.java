@@ -74,7 +74,7 @@ public class ProfileFragment extends Fragment {
     String usn, phoneNo;
 
     CardView cv_userName,cv_usn,cv_phone,cv_yearOfGrad, cv_course, cv_branch, cv_currYear, cv_profession;
-TextView actiontext;
+    TextView actiontext;
     Bitmap bmp;
     ByteArrayOutputStream baos;
 
@@ -153,7 +153,7 @@ TextView actiontext;
                 if (snapshot.exists()){
                     profileImageUrl = snapshot.child("profileImage").getValue().toString();
                     //String city = snapshot.child("city").getValue().toString();
-                 // String country = snapshot.child("country").getValue().toString();
+                    // String country = snapshot.child("country").getValue().toString();
                     userName = snapshot.child("userName").getValue().toString();
                     try {
                         usn = snapshot.child("usn").getValue().toString();

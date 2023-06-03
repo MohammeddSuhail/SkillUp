@@ -12,6 +12,7 @@ public class Posts {
         this.userProfileImage = userProfileImage;
         this.username = username;
         this.userId = userId;
+
     }
 
     public Posts() {

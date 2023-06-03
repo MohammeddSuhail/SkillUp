@@ -12,12 +12,14 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         >
-<ImageView
-    android:layout_width="200dp"
-    android:layout_height="120dp"
-    android:layout_margin="16dp"
-    android:src="@drawable/skillup_close"
-    />
+
+        <ImageView
+            android:layout_width="239dp"
+            android:layout_height="123dp"
+
+            android:layout_margin="16dp"
+            android:cropToPadding="false"
+            android:src="@drawable/placemate" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cscourse"
@@ -64,7 +66,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Computer Science key concepts"
+                        android:text="Computer Science Key Concepts"
                         android:textSize="14sp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
@@ -134,7 +136,7 @@
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="Interview experiences from placed students"
+                        android:text="Interview Experiences from Placed Students"
                         android:textSize="14sp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
@@ -204,7 +206,7 @@
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="Answers to top placement questions"
+                        android:text="Answers to Top Placement Questions"
                         android:textSize="14sp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"
@@ -263,7 +265,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mentors"
+                        android:text="Top Contributors"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginStart="10dp"
@@ -274,7 +276,7 @@
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="NMAMIT Alumni Mentors"
+                        android:text="Connect with NMAMIT Alumni"
                         android:textSize="14sp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"

@@ -108,7 +108,12 @@ public class EachCommunityFragment extends Fragment {
 
         FirebaseRecyclerOptions<Posts> options = new FirebaseRecyclerOptions.Builder<Posts>().setQuery(PostRef.child(com),Posts.class).build();
 
-        communityTitle.setText(com);
+        if(com.equals("DSA"))
+            communityTitle.setText("Placement Corner");
+        else if(com.equals("OOPS"))
+            communityTitle.setText("DSA and OOPS");
+        else
+            communityTitle.setText(com);
 
         openNewPostDialog.setOnClickListener(new View.OnClickListener() {
             @Override
