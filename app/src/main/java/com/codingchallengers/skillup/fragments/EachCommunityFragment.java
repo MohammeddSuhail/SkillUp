@@ -64,7 +64,7 @@ public class EachCommunityFragment extends Fragment {
     ProgressDialog mLoadingBar;
 
     Uri imageUri;
-    public static String profileImageUrlV,usernameV;
+    public static String profileImageUrlV,usernameV,postUsn;
 
     RecyclerView recyclerView;
 
@@ -129,6 +129,7 @@ public class EachCommunityFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 profileImageUrlV = snapshot.child("profileImage").getValue().toString();
                 usernameV = snapshot.child("userName").getValue().toString();
+                postUsn = snapshot.child("usn").getValue().toString();
             }
 
             @Override
@@ -267,6 +268,7 @@ public class EachCommunityFragment extends Fragment {
                                 hashMap.put("username",usernameV);
                                 hashMap.put("userId",mUser.getUid());
                                 hashMap.put("com",com);
+                                hashMap.put("postUsn",postUsn);
 
                                 PostRef.child(com).child(strDate+mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                                     @Override
@@ -317,6 +319,7 @@ public class EachCommunityFragment extends Fragment {
             hashMap.put("username",usernameV);
             hashMap.put("userId",mUser.getUid());
             hashMap.put("com",com);
+            hashMap.put("postUsn",postUsn);
 
             PostRef.child(com).child(strDate+mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                 @Override

@@ -81,12 +81,14 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         holder.timeAgo.setText(timeAgo);
 
         holder.username.setText(model.getUsername());
+        holder.post_usn.setText(model.getPostUsn());
 
         //some changes with or without image
         if(model.getPostImageUrl() == null){
             holder.cv_postImage.setVisibility(View.GONE);
         }else{
             Picasso.get().load(model.getPostImageUrl()).fit().centerCrop().into(holder.postImage);
+            //.fit().centerCrop() is helpful in solving lag issue while scrolling
         }
 
         //loading the user profile pic on post
@@ -274,7 +276,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
         CardView cv_postImage;
         CircleImageView profileImage;
         ImageView postImage,likeImage;
-        TextView username,timeAgo,postDesc,likeCounter,commentsCounter, tv_comment;
+        TextView username,timeAgo,postDesc,likeCounter,commentsCounter, tv_comment, post_usn;
         LinearLayout commentsPart;
         boolean flag = false;
         LinearLayout btnMenu;
@@ -297,6 +299,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
             context = itemView.getContext();
             manager = ((AppCompatActivity)context).getSupportFragmentManager();
             btnMenu = itemView.findViewById(R.id.postMenu);
+            post_usn = itemView.findViewById(R.id.post_usn);
         }
 
         public void countLikes(String postKey, String userId, DatabaseReference likeRef) {
