@@ -41,7 +41,7 @@
         android:fontFamily="@font/mulish"
         android:textSize="24dp"
         android:textColor="@color/white"
-
+        android:backgroundTint="#9E9E9E"
         android:singleLine="true"
 
         android:layout_width="match_parent"
