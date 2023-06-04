@@ -20,10 +20,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="9dp"
-            android:fontFamily="@font/mulish"
             android:text="BE"
             android:textColor="@color/white"
-            android:textSize="19dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
+            android:textSize="20sp"
+            android:fontFamily="@font/mulish_bold" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/form_edu_til_degree"
@@ -34,7 +34,9 @@
             android:textColorHint="#878787"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_edu_et_degree"
@@ -54,7 +56,9 @@
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_edu_et_university"
@@ -74,7 +78,9 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_edu_et_grade"
@@ -94,7 +100,9 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_edu_et_year"
@@ -113,10 +121,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:fontFamily="@font/mulish"
+            android:fontFamily="@font/mulish_bold"
             android:text="PUC / Diploma"
             android:textColor="@color/white"
-            android:textSize="19dp" />
+            android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/form_edu_til_degreePU"
@@ -127,7 +135,9 @@
             android:textColorHint="#878787"
             android:layout_marginTop="10dp"
             app:errorEnabled="true"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_edu_et_degreePU"
@@ -148,7 +158,9 @@
             android:textColorHint="#878787"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_edu_et_universityPU"
@@ -170,7 +182,9 @@
             app:errorEnabled="true"
 
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_edu_et_gradePU"
@@ -190,7 +204,9 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_edu_et_yearPU"

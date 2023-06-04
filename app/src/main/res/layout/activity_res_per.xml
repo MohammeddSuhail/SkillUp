@@ -28,7 +28,7 @@ tools:context=".resPerActivity">
             android:text="Edit Personal Details"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:fontFamily="@font/raleway_bold"/>
+            android:fontFamily="@font/mulish_bold"/>
 
     </LinearLayout>
 
@@ -53,7 +53,9 @@ tools:context=".resPerActivity">
             android:textColor="@color/white"
             android:textColorHint="#878787"
             app:errorEnabled="true"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_personal_et_name"
@@ -73,7 +75,9 @@ tools:context=".resPerActivity">
             android:textColor="@color/white"
             android:textColorHint="#878787"
             app:errorEnabled="true"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_personal_et_email"
@@ -95,7 +99,9 @@ tools:context=".resPerActivity">
             android:textColor="@color/white"
             android:textColorHint="#878787"
             app:errorEnabled="true"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_personal_et_contact"

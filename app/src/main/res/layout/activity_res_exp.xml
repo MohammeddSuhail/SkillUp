@@ -20,10 +20,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="9dp"
-            android:fontFamily="@font/mulish"
-            android:text="Experience 1"
+            android:text="Experience 1 (*optional)"
             android:textColor="@color/white"
-            android:textSize="19dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
+            android:textSize="20sp"
+            android:fontFamily="@font/mulish_bold"/>
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -35,7 +35,9 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_exp_et_company"
@@ -56,7 +58,9 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_exp_et_job"
@@ -83,7 +87,9 @@
                 android:layout_weight="1"
                 android:layout_marginEnd="15dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:hintTextAppearance="@android:style/TextAppearance.Medium">
+                app:boxStrokeColor="@drawable/outlined_box_border_color"
+                app:hintTextColor="#878787"
+                app:hintTextAppearance="@android:style/TextAppearance.Small">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/form_exp_et_sdate"
@@ -105,7 +111,9 @@
                 app:errorEnabled="true"
                 android:layout_weight="1"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:hintTextAppearance="@android:style/TextAppearance.Medium">
+                app:boxStrokeColor="@drawable/outlined_box_border_color"
+                app:hintTextColor="#878787"
+                app:hintTextAppearance="@android:style/TextAppearance.Small">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/form_exp_et_edate"
@@ -127,7 +135,9 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_exp_et_desc"
@@ -140,22 +150,16 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-
-
-
-
-
-
         <TextView
             android:id="@+id/ttt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:fontFamily="@font/mulish"
-            android:text="Experience 2"
+            android:text="Experience 2 (*optional)"
 
             android:textColor="@color/white"
-            android:textSize="19dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" />
+            android:textSize="20sp"
+            android:fontFamily="@font/mulish_bold" />
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -167,7 +171,9 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_exp_et_company2"
@@ -188,7 +194,9 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_exp_et_job2"
@@ -215,7 +223,9 @@
                 android:textColorHint="#878787"
                 android:layout_marginEnd="15dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:hintTextAppearance="@android:style/TextAppearance.Medium">
+                app:boxStrokeColor="@drawable/outlined_box_border_color"
+                app:hintTextColor="#878787"
+                app:hintTextAppearance="@android:style/TextAppearance.Small">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/form_exp_et_sdate2"
@@ -237,7 +247,9 @@
                 android:textColor="@color/white"
                 android:textColorHint="#878787"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                app:hintTextAppearance="@android:style/TextAppearance.Medium">
+                app:boxStrokeColor="@drawable/outlined_box_border_color"
+                app:hintTextColor="#878787"
+                app:hintTextAppearance="@android:style/TextAppearance.Small">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/form_exp_et_edate2"
@@ -259,7 +271,9 @@
             android:textColorHint="#878787"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_exp_et_desc2"

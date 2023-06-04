@@ -27,14 +27,16 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_skill_et_skill1"
                 android:layout_width="match_parent"
                 android:textColor="@color/white"
                 android:layout_height="wrap_content"
-                android:hint="Skill" />
+                android:hint="Skill 1" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,14 +48,16 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_skill_et_skill2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:hint="Skill" />
+                android:hint="Skill 2" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,14 +69,16 @@
             android:textColorHint="#878787"
             app:errorEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_skill_et_skill3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:hint="Skill" />
+                android:hint="Skill 3" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -84,14 +90,16 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_skill_et_skill4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:hint="Skill" />
+                android:hint="Skill 4" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,14 +111,16 @@
             android:textColor="@color/white"
             android:textColorHint="#878787"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            app:hintTextAppearance="@android:style/TextAppearance.Medium">
+            app:boxStrokeColor="@drawable/outlined_box_border_color"
+            app:hintTextColor="#878787"
+            app:hintTextAppearance="@android:style/TextAppearance.Small">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/form_skill_et_skill5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:hint="Skill" />
+                android:hint="Skill 5" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
