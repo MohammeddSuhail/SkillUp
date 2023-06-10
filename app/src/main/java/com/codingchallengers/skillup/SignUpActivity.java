@@ -19,6 +19,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.codingchallengers.skillup.Notes.NotesActivity;
+import com.codingchallengers.skillup.Notes.NotesTakerActivity;
 import com.codingchallengers.skillup.databinding.ActivitySignUpBinding;
 import com.codingchallengers.skillup.model.Users;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -237,5 +239,13 @@ public class SignUpActivity extends AppCompatActivity {
     private void showError(EditText input, String s) {
         input.setError(s);
         input.requestFocus();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }

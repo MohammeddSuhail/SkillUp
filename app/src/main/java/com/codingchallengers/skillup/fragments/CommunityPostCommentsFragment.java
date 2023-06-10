@@ -65,7 +65,7 @@ public class CommunityPostCommentsFragment extends Fragment {
     EditText inputComment2;
 
     int totalComs;
-    String username, userProfileImage, datePost, postImageUrl, postDec;
+    String username, userProfileImage, datePost, postImageUrl, postDec, usn;
 
     FirebaseRecyclerOptions<Comment> CommentOption;
     FirebaseRecyclerAdapter<Comment, CommentViewHolder> CommentAdapter;
@@ -130,6 +130,7 @@ public class CommunityPostCommentsFragment extends Fragment {
                 }
 
                 Picasso.get().load(userProfileImage).fit().centerCrop().into(profileImagePost);
+                                         //here
                 profileUsername.setText(username);
                 timeAgo.setText(getTimeAgo(datePost));
                 postDesc.setText(postDec);
