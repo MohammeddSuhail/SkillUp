@@ -121,7 +121,7 @@ public class ContriDetailActivity extends AppCompatActivity {
             ctc="12 Lakhs";
             companies_placed = "• Daimler Truck (CTC: 10 Lakhs)\n• Accenture (MRC - CTC: 4.5 Lakhs)\n• Capgemini (MRC - CTC: 4.25 Lakhs)\n• DXC (MRC - CTC: 4.2 Lakhs)";
             cgpa = "9.31";
-            core = "Web Development";
+            core = "• Full-Stack Web Development\n• Kubernetes";
             linkedId = "ranjithkumarr999";
             img.setImageResource(R.drawable.ran);
         }
