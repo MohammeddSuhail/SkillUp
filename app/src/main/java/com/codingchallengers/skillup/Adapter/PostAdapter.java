@@ -116,7 +116,7 @@ public class PostAdapter extends FirebaseRecyclerAdapter<Posts, PostAdapter.MyVi
             holder.btnMenu.setVisibility(View.GONE);
         }
 
-        // Attach a PopupMenu to the button view
+        // To attach a delete popupMenu to the button view
         holder.btnMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
