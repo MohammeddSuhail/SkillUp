@@ -54,7 +54,7 @@ public class ContriDetailActivity extends AppCompatActivity {
         if(Objects.equals(name, "Prathamesh S Pai")){
             ctc="15 Lakhs";
             companies_placed = "• Informatica \n• TCS (MRC)";
-            cgpa = "8.50";
+            cgpa = "8.60";
             core = "• Mobile Application Development\n• API/UI Testing";
             linkedId = "prathameshspai";
             img.setImageResource(R.drawable.me);
@@ -78,12 +78,12 @@ public class ContriDetailActivity extends AppCompatActivity {
             linkedId = "anuroop-ravindra-821b67231";
         }
 
-        if(Objects.equals(name, "Ranjan Upadhya")){
+        if(Objects.equals(name, "Ranjan R Upadhya")){
             ctc="14.5 Lakhs";
             companies_placed = "Daimler Truck";
-            cgpa = "9.17";
-            core = "• Web Development\n• Core Java";
-            linkedId = "ranjanrupadhya180901";
+            cgpa = "9.24";
+            core = "• Web Development\n• Core Java\n• Spring boot";
+            linkedId = "ranjan-r-upadhya-9b6a39267";
             img.setImageResource(R.drawable.ranjan);
         }
 

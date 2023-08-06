@@ -60,7 +60,7 @@ public class ContributorActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i1 = new Intent(ContributorActivity.this, ContriDetailActivity.class);
-                i1.putExtra("name", "Ranjan Upadhya");
+                i1.putExtra("name", "Ranjan R Upadhya");
                 startActivity(i1);
             }
         });

@@ -644,7 +644,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="#FFF"
-                        android:text="Ranjan Upadhya"
+                        android:text="Ranjan R Upadhya"
                         android:fontFamily="@font/mulish_bold"
                         android:textStyle="bold"
 
