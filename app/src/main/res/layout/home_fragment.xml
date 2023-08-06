@@ -16,7 +16,6 @@
         <ImageView
             android:layout_width="239dp"
             android:layout_height="123dp"
-
             android:layout_margin="16dp"
             android:cropToPadding="false"
             android:src="@drawable/placemate" />
@@ -265,7 +264,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Top Contributors"
+                        android:text="About"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginStart="10dp"
@@ -276,7 +275,7 @@
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
-                        android:text="Connect with NMAMIT Alumni"
+                        android:text="Know the people behind this App and connect with them"
                         android:textSize="14sp"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="5dp"

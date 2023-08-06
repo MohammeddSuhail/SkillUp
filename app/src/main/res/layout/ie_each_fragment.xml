@@ -109,6 +109,7 @@
                 android:layout_marginLeft="17.5dp"
                 android:fontFamily="@font/mulish"
                 android:text="CTC Offered: "
+                android:visibility="gone"
                 android:textColor="@color/white"
                 android:textSize="18dp"
                 android:textStyle="bold"
@@ -117,6 +118,7 @@
 
             <TextView
                 android:id="@+id/ctc"
+                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/mulish"

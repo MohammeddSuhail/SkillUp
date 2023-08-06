@@ -53,7 +53,7 @@ public class ContriDetailActivity extends AppCompatActivity {
         full_desc.startAnimation(AnimationUtils.loadAnimation(this,R.anim.go_up));
         if(Objects.equals(name, "Prathamesh S Pai")){
             ctc="15 Lakhs";
-            companies_placed = "• Informatica (CTC: 15 Lakhs)\n• TCS (MRC - CTC: 3.3 Lakhs)";
+            companies_placed = "• Informatica \n• TCS (MRC)";
             cgpa = "8.50";
             core = "• Mobile Application Development\n• API/UI Testing";
             linkedId = "prathameshspai";
@@ -62,7 +62,7 @@ public class ContriDetailActivity extends AppCompatActivity {
 
         if(Objects.equals(name, "Sabarinath")){
             ctc="22 Lakhs";
-            companies_placed = "• Cohesity (CTC: 22 Lakhs)\n• Tismo (CTC: 7.25 Lakhs)";
+            companies_placed = "• Cohesity \n• Tismo";
             cgpa = "8.88";
             core = "• Web Development (MERN)\n• Cloud Computing";
             img.setImageResource(R.drawable.sab);
@@ -71,7 +71,7 @@ public class ContriDetailActivity extends AppCompatActivity {
 
         if(Objects.equals(name, "R Anuroop")){
             ctc="14.5 Lakhs";
-            companies_placed = "Capillary Technologies (CTC: 14 Lakhs)";
+            companies_placed = "Capillary Technologies";
             cgpa = "9.61";
             core = "• Web Development\n• Blockchain";
             img.setImageResource(R.drawable.anuroop);
@@ -80,7 +80,7 @@ public class ContriDetailActivity extends AppCompatActivity {
 
         if(Objects.equals(name, "Ranjan Upadhya")){
             ctc="14.5 Lakhs";
-            companies_placed = "Daimler Truck (CTC: 10 Lakhs)";
+            companies_placed = "Daimler Truck";
             cgpa = "9.17";
             core = "• Web Development\n• Core Java";
             linkedId = "ranjanrupadhya180901";
@@ -89,7 +89,7 @@ public class ContriDetailActivity extends AppCompatActivity {
 
         if(Objects.equals(name, "Mohammed Suhail")){
             ctc="12 Lakhs";
-            companies_placed = "• ACI Worldwide (CTC: 12 Lakhs)\n• Accenture (MRC - CTC: 4.5 Lakhs)";
+            companies_placed = "• ACI Worldwide \n• Accenture (MRC)";
             cgpa = "9.39";
             core = "• Android Development\n• Web Development";
 
@@ -99,7 +99,7 @@ public class ContriDetailActivity extends AppCompatActivity {
 
         if(Objects.equals(name, "Prajith Shetty")){
             ctc="12 Lakhs";
-            companies_placed = "• Tismo Technology (CTC: 7.25 Lakhs)\n• Capgemini (CTC: 4.25 Lakhs)";
+            companies_placed = "• Tismo Technology\n• Capgemini (MRC)";
             cgpa = "9.50";
             core = "• Web & App Development\n• Machine Learning";
 
@@ -109,7 +109,7 @@ public class ContriDetailActivity extends AppCompatActivity {
 
         if(Objects.equals(name, "Nagaraj M")){
             ctc="12 Lakhs";
-            companies_placed = "• Sony (CTC: 6.25 Lakhs)";
+            companies_placed = "• Sony";
             cgpa = "9.07";
             core = "• Web Development\n• Android App Development";
 
@@ -119,7 +119,7 @@ public class ContriDetailActivity extends AppCompatActivity {
 
         if(Objects.equals(name, "Ranjith Kumar R")){
             ctc="12 Lakhs";
-            companies_placed = "• Daimler Truck (CTC: 10 Lakhs)\n• Accenture (MRC - CTC: 4.5 Lakhs)\n• Capgemini (MRC - CTC: 4.25 Lakhs)\n• DXC (MRC - CTC: 4.2 Lakhs)";
+            companies_placed = "• Daimler Truck \n• Accenture (MRC)\n• Capgemini (MRC)\n• DXC (MRC)";
             cgpa = "9.31";
             core = "• Full-Stack Web Development\n• Kubernetes";
             linkedId = "ranjithkumarr999";
