@@ -100,7 +100,7 @@ public class ContriDetailActivity extends AppCompatActivity {
         if(Objects.equals(name, "Prajith Shetty")){
             ctc="12 Lakhs";
             companies_placed = "• Tismo Technology\n• Capgemini (MRC)";
-            cgpa = "9.50";
+            cgpa = "9.51";
             core = "• Web & App Development\n• Machine Learning";
 
             linkedId = "prajith-shetty";
