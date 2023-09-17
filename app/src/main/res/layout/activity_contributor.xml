@@ -1000,12 +1000,12 @@
             android:layout_height="1dp"
             android:background="#9C9999"
             android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="16dp"
             android:layout_marginRight="15dp"
             android:layout_marginLeft="15dp"/>
 
         <TextView
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -1020,7 +1020,7 @@
             />
 
         <TextView
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

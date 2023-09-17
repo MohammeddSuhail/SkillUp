@@ -29,7 +29,7 @@ public class CommunityFragment extends Fragment {
         csOOPS = view.findViewById(R.id.csOOPS);
 
         actiontext = getActivity().findViewById(R.id.v_action_text);
-        actiontext.setText("Community");
+        actiontext.setText("Placemates' Community");
 
         EachCommunityFragment eachCommunityFragment = new EachCommunityFragment();
         Bundle args = new Bundle();

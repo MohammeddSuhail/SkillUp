@@ -109,9 +109,15 @@ public class EachCommunityFragment extends Fragment {
         FirebaseRecyclerOptions<Posts> options = new FirebaseRecyclerOptions.Builder<Posts>().setQuery(PostRef.child(com),Posts.class).build();
 
         if(com.equals("DSA"))
-            communityTitle.setText("Placement Corner");
+            communityTitle.setText("App Updates");
         else if(com.equals("OOPS"))
             communityTitle.setText("DSA and OOPS");
+        else if(com.equals("CN"))
+            communityTitle.setText("Placement Corner");
+        else if(com.equals("OS"))
+            communityTitle.setText("Conceptual Doubts");
+        else if(com.equals("DBMS"))
+            communityTitle.setText("Seniors");
         else
             communityTitle.setText(com);
 

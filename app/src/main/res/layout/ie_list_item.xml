@@ -1,127 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/wholeVidRowId"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingBottom="8dp"
-    android:foreground="?android:attr/selectableItemBackground"
-    android:clickable="true"
-    android:background="@color/almost_black">
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cscourse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#24282b"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="2dp"
-        android:layout_marginBottom="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
-        android:orientation="vertical">
-
-
-
-        <TextView
-
-            android:id="@+id/company_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:text="Hewlett Packard Enterprises"
-            android:textColor="@color/moduleBLUE"
-            android:fontFamily="@font/mulish_bold"
-            android:textSize="16.5dp"
-            android:textStyle="bold" />
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:text="NMAMIT, "
-            android:textColor="@color/moduleBLUE"
-            android:fontFamily="@font/mulish_bold"
-            android:textSize="16.5dp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/placed_year"
+                android:id="@+id/company_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
-                android:text="2022"
+                android:text="Hewlett Packard Enterprises"
                 android:textColor="@color/moduleBLUE"
                 android:fontFamily="@font/mulish_bold"
-                android:textSize="16.5dp"
+                android:textSize="14.5dp"
                 android:textStyle="bold" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/role"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="1dp"
-            android:fontFamily="@font/mulish_bold"
-            android:text="Software Development Engineer"
-            android:textColor="@android:color/holo_orange_light"
-            android:textSize="13dp"
-
-            />
-        <TextView
-            android:id="@+id/type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="1dp"
-            android:text="Internship + Full time"
-            android:fontFamily="@font/mulish_bold"
-            android:textColor="@color/white"
-            android:textSize="13dp"
-
-            />
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="2dp"
-            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/role"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
+                android:layout_marginBottom="1dp"
                 android:fontFamily="@font/mulish_bold"
-                android:text="CTC: "
-                android:visibility="gone"
+                android:text="Software Development Engineer"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="13sp" />
+                android:textSize="12dp"
 
-
+                />
             <TextView
-                android:id="@+id/ctc"
+                android:id="@+id/type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="0dp"
-                android:fontFamily="@font/mulish"
-                android:visibility="gone"
-                android:text="Rs. 9.6LPA + $7000 RSU"
-                android:textAllCaps="true"
-                android:textColor="@android:color/holo_orange_light"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:layout_marginBottom="1dp"
+                android:text="Internship + Full time"
+                android:fontFamily="@font/mulish_bold"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:text="NMAMIT, "
+                    android:textColor="@color/moduleBLUE"
+                    android:fontFamily="@font/mulish_bold"
+                    android:textSize="14.5dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/placed_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:text="2022"
+                    android:textColor="@color/moduleBLUE"
+                    android:fontFamily="@font/mulish_bold"
+                    android:textSize="14.5dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/mulish_bold"
+                    android:text="CTC: "
+                    android:visibility="gone"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                    android:id="@+id/ctc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/mulish"
+                    android:visibility="gone"
+                    android:text="Rs. 9.6LPA + $7000 RSU"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+
+
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="4dp"
-            android:background="#FFF"/>
-    </LinearLayout>
 
-</LinearLayout>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>

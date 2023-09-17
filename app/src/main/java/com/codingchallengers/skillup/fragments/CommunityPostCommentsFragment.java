@@ -115,6 +115,7 @@ public class CommunityPostCommentsFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 username = snapshot.child("username").getValue().toString();
+                usn = snapshot.child("postUsn").getValue().toString();
                 userProfileImage = snapshot.child("userProfileImage").getValue().toString();
                 datePost = snapshot.child("datePost").getValue().toString();
                 postDec = snapshot.child("postDec").getValue().toString();
